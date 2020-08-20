@@ -1,0 +1,14 @@
+2020/03/31 02:38:17 Micro started
+2020/03/31 02:38:18 Filetype is:toml
+2020/03/31 02:38:18 editorconfig log: Running on file /home/rochacbruno/Projects/rust/dynaconf/Cargo.toml
+2020/03/31 02:38:18 Filetype is:unknown
+2020/03/31 02:38:18 Filetype is:unknown
+2020/03/31 02:38:18 editorconfig log: editorconfig core output: 
+
+2020/03/31 02:38:18 editorconfig log: Done.
+2020/03/31 02:38:21 snippets-plugin -> function onBeforeTextEvent(ev) = userdata: 0xc000aa2c00
+2020/03/31 02:38:22 snippets-plugin -> function onBeforeTextEvent(ev) = userdata: 0xc000af5860
+2020/03/31 02:38:22 snippets-plugin -> function onBeforeTextEvent(ev) = userdata: 0xc000af5a10
+2020/03/31 02:38:23 snippets-plugin -> function onBeforeTextEvent(ev) = userdata: 0xc000afe4b0
+2020/03/31 02:38:23 snippets-plugin -> function onBeforeTextEvent(ev) = userdata: 0xc000817110
+2020/03/31 02:38:23 snippets-plugin -> function onBeforeTextEvent(ev) = userdata: 0xc000b12360

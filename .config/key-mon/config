@@ -1,0 +1,32 @@
+[ui]
+visible_click_timeout = 0.2
+follow-mouse = 0
+key_timeout = 0.5
+scale = 0.6
+sticky_mode = 1
+theme = oblivion
+visible-click = 0
+opacity = 1.0
+backgroundless = 0
+mouse_timeout = 0.2
+no_press_fadeout = 0.0
+decorated = 0
+only_combo = 0
+
+[buttons]
+ctrl = 1
+meta = 1
+alt = 1
+mouse = 1
+shift = 1
+old-keys = 4
+
+[devices]
+emulate_middle = 0
+map = us.kbd
+swap_buttons = 0
+
+[position]
+x = 1797
+y = 588
+

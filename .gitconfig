@@ -1,0 +1,18 @@
+[user]
+	name = Bruno Rocha
+	email = rochacbruno@gmail.com
+[color]
+	ui = true
+[push]
+	default = simple
+[alias]
+	hist = log --decorate --graph --pretty=oneline --abbrev-commit --all
+        cleanup = "!git branch -D $(git branch| grep -v master) || echo 'No branch to delete'"
+        up = "!git fetch upstream && git rebase upstream/master || git pull"
+[core]
+excludesfile = ~/.gitignore
+	editor = micro
+[hub]
+	protocol = git
+[http]
+	sslVerify = true
