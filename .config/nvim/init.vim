@@ -301,7 +301,8 @@ let $FZF_DEFAULT_OPTS='--reverse'
 let no_buffers_menu=1
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+"let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'base16_gruvbox_dark_hard'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -469,6 +470,14 @@ let g:airline#extensions#virtualenv#enabled = 1
 " polyglot breaks markdown fences
 let g:polyglot_disabled = ['python', 'markdown', 'mkd']
 let python_highlight_all = 1
+
+
+" Unicode and ponctuation
+"" em dashes for markdown
+autocmd FileType markdown imap -- –
+autocmd FileType markdown imap -+ —
+autocmd FileType markdown imap -o º
+autocmd FileType markdown imap -a ª
 
 " Sweet Sweet FuGITive
 nmap <leader>gh :diffget //3<CR>

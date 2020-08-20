@@ -6,7 +6,7 @@
     "backup": false,
     "basename": false,
     "colorcolumn": 100,
-    "colorscheme": "geany",
+    "colorscheme": "gruvbox-tc",
     "comment": true,
     "cursorline": true,
     "diff": true,
