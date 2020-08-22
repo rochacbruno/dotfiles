@@ -5,10 +5,8 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 
 ## Glossary
 
-- **L** = Leader Key, mapped to a single space " "
-- **C** = Control
-- **S** = Shift
-- **A** = Left Alt
+- **Leader** = Leader Key, mapped to a single space " "
+- **Alt** = Left Alt
 
 ## Idiom
 
@@ -33,7 +31,7 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 | :qa! | N | Quit not saving all buffers (ZQ) |
 | . | N | Repeat last registered action |
 | u | N | Undo |
-| C-r | N | Redo |
+| Ctrl-r | N | Redo |
 
 
 ## Movement
@@ -70,7 +68,7 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 | s/word/other/g | N | replaces all word in current line |
 | %s/word/other/g | N | replaces all word in whole file |
 | 10,15s/word/other/g | N | replaces word on lines 10-15 |
-
+| Leader-s | N | Search Current File |
 
 ## Text Manipulation
 
@@ -85,28 +83,30 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 | ds" | N |  Delete surrounding " |
 | cst" | N | Change `<foo>` to `"foo"` |
 | viwS" | N | Select and Surround with "quote" |
-| ysiw | N | Add surrounds to a word "foo" |
+| ysiw" | N | Add surrounds to a word "foo" |
 | I | N | Insert at start of the line |
 | a | N | Insert after cursor |
 | A | N | Insert at the end of the line |
 | o | N | New line above |
 | O | N | New line below |
 | r | N | Replace Char |
-| x | N |  Delete current char |
+| dl | N | Delete current Letter |
 | cc | N | Replace line |
 | cw | N | Replace to the end of workd |
 | ciw | N | Replace the inner word |
 | c$ | N | Replace to the end of word |
 | ~ | N | Change char case, repeat with . |
-| C-A | N | Increment a number |
+| Ctrl-A | N | Increment a number |
 | dd | N | Delete line |
+| xx | N | Cut line |
 | diw | N | Delete inside word |
 | cis | N | Change inside sentence |
 | ci" | N | Change inside quote |
 | c/foo | N | Change until foo |
-| ctX | N | Change until T |
-| A-= | V | Assign value to a name it, move it then ESC. |
-
+| ctX | N | Change until X |
+| Alt-= | V | Assign value to a name it, move it then ESC. |
+| S | N | Substitute the current line from the beginning |
+| s | N | Enters substitute mode on current word |
 
 ## Text Selection and Copying
 
@@ -120,6 +120,7 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 | y$ | N | Copy to the end of the line |
 | y2/foo | N | Copy until second foo |
 | p | N |  Paste after cursor |
+| Leader-p | N |  Paste the same thing multiple times |
 | 4p | N |  Paste after cursor 4 times |
 | P | N |  Paste before cursor |
 | dd | N | Cut line |
@@ -130,6 +131,9 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 | dt" | N | Delete to the next " |
 | /s | N | Search |
 | vap | N | Visual Select Around Paragraph |
+| vib | N | Visual Select Inner Parentheses |
+| dib | N | Delete Inner Parentheses |
+
 
 ## Visual mode
 
@@ -145,8 +149,8 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 
 | Key         | Mode | Description |
 | ----------- | ---- | ----------- |
-| 0 C-q select I-- Esc | N | Enters block mode, selects all first columns, add -- |
-| C-q select $ A-- Esc | N | Adds -- to the end of all lines |
+| 0 Ctrl-v select I-- Esc | N | Enters block mode, selects all first columns, add -- |
+| Ctrl-v select $ A-- Esc | N | Adds -- to the end of all lines |
 | J | V | Join selected lines |
 | gJ | V | Join selected block in a one liner |
 | gS | V | Split selected line in 2 |
@@ -156,61 +160,65 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 
 ## Files
 
+> Most commands support CTRL-T / CTRL-X / CTRL-V key bindings to open in a new
+> tab, a new split, or in a new vertical split
+
 | Key         | Mode | Description |
 | ----------- | ---- | ----------- |
-| L-pw | N | Rg search the current word |
-| L-ps | N |Rg content search in current folder files |
-| L-pf | N | Open/Preview files in current folder |
-| L-b | N | Open buffers preview |
-| L-f | N | Another File NAvigator |
-| C-P | N | Git Giles |
+| Leader-pw | N | Rg search the current word |
+| Leader-ps | N |Rg content search in current folder files |
+| Leader-f | N | Open/Preview files in current folder |
+| Leader-b | N | Open buffers preview |
+| Leader-s | N | Search Current File with Preview |
+| Leader-gf | N | Git Files |
+| Leader-gt | N | Git Status |
 | F3 | N | NERDTree |
 | F4 | N | TagBar |
-| L-e | N | Opens a file in the current dir |
-| L-e | N | Opens a file n the current dir |
-| L-te | N | Opens a file in the current dir on a tab |
-| L-prw | N | CocSearch current word on all buffers |
-| L-ghw | N | Get Help for Word |
+| Leader-e | N | Opens a file in the current dir |
+| Leader-o | N | Opens a blank split |
+| Leader-te | N | Opens a file in the current dir on a tab |
+| Leader-prw | N | CocSearch current word on all buffers |
+| Leader-ghw | N | Get Help for Word |
+| :sav name | N | Save file as a new name, keep the original opened |
 
 
 ## Windows
 
 | Key         | Mode | Description |
 | ----------- | ---- | ----------- |
-| L-hjkl | N | Switch windows (C-W-hjkl) |
-| L-z, L-x | N | Next/Previous Buffer |
-| L-c | N | Close current buffer |
-| L-q | N | Close current split (C-w-c) |
-| L-o | N | Open new file in vertical (vnew) |
-| L-] | N | New Horizontal Split |
-| L-\ | N | New vertical split |
-| C-w-n | N | New file on horizontal split |
-| C-w-s | N | Split horizontal current file |
-| C-w-v | N | Split vertically current file |
-| C-w-w | N | Next Split |
-| C-w-p | N | Prev Split |
-| C-w-arrows | N | Move to split |
-| C-w-hjkl | N | Jump to Split |
-| C-w-g hjkl | N | Move windows |
-| C-w-T | N | Move split to a tab (why?) |
-| C-w->,< | N | Increase/DEcrease width |
-| C-w-+,- | N | Increase/DEcrease height |
-| C-w-q | N | Close Split and file |
-| C-w-o | N |  Keep only current split |
-| C-w-`|` | N | Maximize Vertical Split |
-| C-w-_ | N | Maximize Horizontal Split |
-| C-w-= | N | Restore split sizes |
-| C-w-m | N | Maximize toggle current split |
+| Leader-z, L-x | N | Next/Previous Buffer |
+| Leader-c | N | Close current buffer |
+| Leader-q | N | Close current split (C-w-c) |
+| Leader-o | N | Open new file in vertical (vnew) |
+| Leader-] | N | New Horizontal Split |
+| Leader-\ | N | New vertical split |
+| Ctrl-w-n | N | New file on horizontal split |
+| Ctrl-w-s | N | Split horizontal current file |
+| Ctrl-w-v | N | Split vertically current file |
+| Ctrl-w-w | N | Next Split |
+| Ctrl-w-p | N | Prev Split |
+| Ctrl-w-arrows | N | Move to split |
+| Ctrl-w-hjkl | N | Jump to Split |
+| Ctrl-w-g hjkl | N | Move windows |
+| Ctrl-w-T | N | Move split to a tab (why?) |
+| Ctrl-w->,< | N | Increase/DEcrease width |
+| Ctrl-w-+,- | N | Increase/DEcrease height |
+| Ctrl-w-q | N | Close Split and file |
+| Ctrl-w-o | N |  Keep only current split |
+| Ctrl-w-`|` | N | Maximize Vertical Split |
+| Ctrl-w-_ | N | Maximize Horizontal Split |
+| Ctrl-w-= | N | Restore split sizes |
+| Ctrl-w-m | N | Maximize toggle current split |
 
 ## Code Analysis
 
 | Key         | Mode | Description |
 | ----------- | ---- | ----------- |
-| L-gd | N | Go to definition |
-| L-gy | N | Go to type definition |
-| L-gi | N | Go to implementations |
-| L-gr | N | Go to references |
-| L-cr | N | Coc Restart |
+| Leader-gd | N | Go to definition |
+| Leader-gy | N | Go to type definition |
+| Leader-gi | N | Go to implementations |
+| Leader-gr | N | Go to references |
+| Leader-cr | N | Coc Restart |
 
 
 ## Utilities
@@ -218,12 +226,14 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 
 | Key         | Mode | Description |
 | ----------- | ---- | ----------- |
-| L-u | N |  Undo tree |
-| L-y | N |  Undo History |
-| L-, | N |  Clear highlivght (noh) |
-| L-. | N |  Set working dir |
-| L-g | N | Current line on git |
-| L-gm | N | Show git message for current line |
+| Leader-u | N |  Undo tree |
+| Leader-hf | N | File  History |
+| Leader-hse | N | Search  History |
+| Leader-hc | N | Commands  History |
+| Leader-, | N |  Clear highlight (noh) |
+| Leader-. | N |  Set working dir |
+| Leader-g | N | Current line on git |
+| Leader-gm | N | Show git message for current line |
 
 ## More
 
@@ -232,7 +242,7 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 | 100ifoo [ESC] | N | Will write "foo" 100 times |
 | 100ifoo[ENTER][ESC] | N | Will write "foo" in 100 lines |
 | 3. | N | Will write "foo" 3 times after above command |
-| L-id | N |  Generates an UUID |
+| Leader-id | N |  Generates an UUID |
 
 
 ## Plugins
@@ -245,7 +255,50 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 - `:Dispatch` - Run command in BG
 - `:Black` - Format python code
 
+* File System Changes
+  * `:Delete`: Delete a buffer and the file on disk simultaneously.
+  * `:Unlink`: Like `:Delete`, but keeps the now empty buffer.
+  * `:Move`: Rename a buffer and the file on disk simultaneously.
+  * `:Rename`: Like `:Move`, but relative to the current file's containing directory.
+  * `:Chmod`: Change the permissions of the current file.
+  * `:Mkdir`: Create a directory, defaulting to the parent of the current file.
+  * `:Cfind`: Run `find` and load the results into the quickfix list.
+  * `:Clocate`: Run `locate` and load the results into the quickfix list.
+  * `:Lfind`/`:Llocate`: Like above, but use the location list.
+  * `:Wall`: Write every open window.  Handy for kicking off tools like [guard][].
+  * `:SudoWrite`: Write a privileged file with `sudo`.
+  * `:SudoEdit`: Edit a privileged file with `sudo`.
+  * File type detection for `sudo -e` is based on original file name.
+  * New files created with a shebang line are automatically made executable.
+
 ## Tricks
+
+
+### Sort
+
+- Select lines in visual mode or use `%` for whole file
+- `:sort` Sort Alphabetically
+- `:sort!` Reverse order
+- `:sort u` Remove duplicates
+- `:sort n` Numeric wise sorting
+
+### Removing sourrounding brackets w/o plugin
+
+Having:
+
+```python
+{
+  "foo": 1,
+  "bar": 2,
+}
+```
+
+Place the cursor inside the {} and type in normal mode: `di{va{p`
+
+- `di{` cuts everything inside the brackets
+- `va{` selects the empty brackets
+- `p` replaces it with previously cut content
+
 
 ### Macro
 

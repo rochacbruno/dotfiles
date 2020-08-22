@@ -1,7 +1,6 @@
 syntax on
 filetype plugin indent on
 
-set nocompatible
 set guicursor=
 set number relativenumber
 set ruler
@@ -33,6 +32,9 @@ set ignorecase
 set fileformats=unix,dos,mac
 set autoread
 set nowritebackup
+
+set splitbelow
+set splitright
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -78,7 +80,6 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 " Show tabs and spavces visually
 set list
 set listchars+=tab:>-,space:.
-
 
 " Start Plugin Management
 call plug#begin('~/.vim/plugged')
@@ -165,10 +166,6 @@ call plug#begin('~/.vim/plugged')
     " Auto Format
     Plug 'sbdchd/neoformat'
 
-    " Another Fuzzy Finder that can search mru
-    Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-
-
     " Interactive command execution
     let g:make = 'gmake'
     if exists('make')
@@ -231,6 +228,12 @@ call plug#begin('~/.vim/plugged')
 
     " text moving (Select a text and A-hjkl)
     Plug 'matze/vim-move'
+
+    " Provides :Rename, :Move, :Delete, :Chmod, :SudoEdit
+    Plug 'tpope/vim-eunuch'
+
+    " Delete instead of cut (cut is mapped to x, single char is  dl)
+    Plug 'svermeulen/vim-cutlass'
 
 "" End of plugin management
 call plug#end()
@@ -323,25 +326,38 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
-nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 
 "" I prefer NERDTree so I kept it here just as an example.
 " nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
+" Get Help for Word
+nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
+" Preview Refactor on Word
+nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" Preview Search
 nnoremap <Leader>ps :Rg<SPACE>
-nnoremap <C-p> :GFiles<CR>
-nnoremap <Leader>pf :Files<CR>
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+" Preview Search Word
+nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+" Git Files
+nnoremap <Leader>gf :GFiles<CR>
+" Git Status
+nnoremap <Leader>gt :GFiles?<CR>
+" Local Directory Files
+nnoremap <Leader>f :Files<CR>
+" File History
+nnoremap <Leader>hf :History<CR>
+" Search History
+nnoremap <Leader>hse :History/<CR>
+"Commands History
+nnoremap <leader>hc :History:<CR>
+
+" Search the current file with preview
+nnoremap <leader>s :BLines<CR>
+
+noremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
-nnoremap <Leader>rp :resize 100<CR>
 
 "" Coding snippets here?
 "nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
@@ -380,8 +396,6 @@ nnoremap <silent> <leader>b :Buffers<CR>
 " Dont needd this because we have <leader>ps to open Rg:
 "nnoremap <silent> <leader>e :FZF -m<CR>
 
-"Recovery commands from history through FZF
-nmap <leader>y :History:<CR>
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -407,9 +421,17 @@ if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
 
-noremap YY "+y<CR>
-noremap <leader>p "+gP<CR>
-noremap XX "+x<CR>
+" x X is now the cut command
+" dl is used to Delete a single Letter
+nnoremap x d
+xnoremap x d
+nnoremap xx dd
+nnoremap X D
+
+" This really deletes (no cut) - Shift-x + d (delete a line)
+" nnoremap X "_d
+" This Allows to Paste the same thing multiple times
+noremap <leader>p "0p
 
 
 "" Set working directory
@@ -439,7 +461,6 @@ endif
 nnoremap <leader>ob :colorscheme gruvbox<CR>
 nmap <leader>tb :hi Normal guibg=NONE ctermbg=NONE<CR>
 
-vnoremap X "_d
 inoremap <C-c> <esc>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
