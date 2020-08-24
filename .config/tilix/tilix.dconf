@@ -1,13 +1,13 @@
 [/]
 control-scroll-zoom=true
-enable-wide-handle=true
+enable-wide-handle=false
 paste-strip-first-char=true
 quake-specific-monitor=0
 tab-position='bottom'
 terminal-title-show-when-single=false
 terminal-title-style='none'
 theme-variant='dark'
-use-overlay-scrollbar=true
+use-overlay-scrollbar=false
 use-tabs=false
 window-style='borderless'
 
@@ -101,6 +101,8 @@ font='Monospace 16'
 foreground-color='#EBDBB2'
 highlight-colors-set=false
 palette=['#1D2021', '#CC241D', '#98971A', '#D79921', '#458588', '#B16286', '#689D6A', '#BDAE93', '#7C6F64', '#FB4934', '#B8BB26', '#FABD2F', '#83A598', '#D3869B', '#8EC07C', '#EBDBB2']
+scroll-on-output=false
+show-scrollbar=false
 use-custom-command=false
 use-system-font=false
 use-theme-colors=false

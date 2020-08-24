@@ -1,18 +1,28 @@
 [user]
-	name = Bruno Rocha
-	email = rochacbruno@gmail.com
+    name = Bruno Rocha
+    email = rochacbruno@gmail.com
 [color]
-	ui = true
+    ui = true
 [push]
-	default = simple
+    default = simple
 [alias]
-	hist = log --decorate --graph --pretty=oneline --abbrev-commit --all
-        cleanup = "!git branch -D $(git branch| grep -v master) || echo 'No branch to delete'"
-        up = "!git fetch upstream && git rebase upstream/master || git pull"
+    hist = log --decorate --graph --pretty=oneline --abbrev-commit --all
+    cleanup = "!git branch -D $(git branch| grep -v master) || echo 'No branch to delete'"
+    up = "!git fetch upstream && git rebase upstream/master || git pull"
 [core]
-excludesfile = ~/.gitignore
-	editor = micro
+    excludesfile = ~/.gitignore
+    editor = micro
+    pager = delta
 [hub]
-	protocol = git
+    protocol = git
 [http]
-	sslVerify = true
+    sslVerify = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none

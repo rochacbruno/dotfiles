@@ -156,7 +156,8 @@ Based on configuration provided in [.config/nvim/init.vim](./.config/nvim/init.v
 | gS | V | Split selected line in 2 |
 | < > | V | Indent |
 | = | V | auto indent |
-
+| Ctrl-N | N | Select word occurence and add cursor, navigate usinf n/N [/], q skip |
+| Ctrl-arrows | N | Add multi cursor on column, Q remove cursor |
 
 ## Files
 

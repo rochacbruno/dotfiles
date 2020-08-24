@@ -151,3 +151,10 @@ alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
 edit() {
     nvim $(fzf -m -q $1)
 }
+
+if [ "$(command -v bat)" ]; then
+  unalias -m 'cat'
+  alias cat='bat -pp --theme="ansi-dark"'
+fi
+
+alias v="nvim"

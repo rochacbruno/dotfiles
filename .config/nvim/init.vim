@@ -84,8 +84,15 @@ set listchars+=tab:>-,space:.
 " Start Plugin Management
 call plug#begin('~/.vim/plugged')
 
+    "Multi cursor
+    " C-N select words, C-move add cur, Shift move single char, n/N Next/Prev
+    " [] next/prev cur, q skip, Q remove cursor
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
     " Markdown editing and preview
-    Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+    " Highlight and hints (little annoying)
     Plug 'gabrielelana/vim-markdown'
     " Soft or Hard Word Wrapping
     Plug 'reedes/vim-pencil'
@@ -238,6 +245,14 @@ call plug#begin('~/.vim/plugged')
 "" End of plugin management
 call plug#end()
 
+
+"" Markdown options
+" set to 1, nvim will open the preview window after entering the markdown buffer
+let g:mkdp_auto_start = 0
+" set to 1, the nvim will auto close current preview window when change
+let g:mkdp_auto_close = 0
+
+
 "" Apprearance
 colorscheme gruvbox
 set guifont=DroidSansMono\ Nerd\ Font\ 11
@@ -336,7 +351,7 @@ nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 " Preview Refactor on Word
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 " Preview Search
-nnoremap <Leader>ps :Rg<SPACE>
+nnoremap <Leader>ps :Rg<CR>
 " Preview Search Word
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 " Git Files
@@ -354,6 +369,7 @@ nnoremap <leader>hc :History:<CR>
 
 " Search the current file with preview
 nnoremap <leader>s :BLines<CR>
+nnoremap <leader>l :Lines<CR>
 
 noremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
@@ -379,6 +395,12 @@ noremap <leader>x :bn<CR>
 "" Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 noremap <leader>c :bp <BAR> bd #<CR>
+
+" delete the current buffer, but not the split
+nmap <leader>d :b#<bar>bd#<CR>
+
+" This closes all buffers except current
+noremap <leader>ac :w <BAR> %bd <BAR> e# <BAR> bd# <CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader>, :noh<cr>
@@ -596,4 +618,12 @@ endif
 " -- sudo save
 cmap w!! w !sudo tee >/dev/null %
 
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
