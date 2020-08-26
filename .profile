@@ -6,6 +6,6 @@ export BROWSER=/usr/bin/google-chrome-stable
 
 export PATH="$HOME/.bin:$HOME/.cargo/bin:$PATH"
 
-echo "started profile"
+#echo "started profile"
 
 export PATH="$HOME/.poetry/bin:$PATH"

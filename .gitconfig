@@ -11,7 +11,7 @@
     up = "!git fetch upstream && git rebase upstream/master || git pull"
 [core]
     excludesfile = ~/.gitignore
-    editor = micro
+    editor = vim
     pager = delta
 [hub]
     protocol = git
