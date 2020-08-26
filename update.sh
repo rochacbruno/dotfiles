@@ -41,6 +41,9 @@ cp -R ~/.config/tilix .config/
 dconf dump /com/gexperts/Tilix/ > .config/tilix/tilix.dconf
 
 
+# Alacritty
+cp -R ~/.config/alacritty .config/
+
 # Arandr
 cp -R ~/.screenlayout .
 
