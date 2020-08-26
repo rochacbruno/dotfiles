@@ -6,7 +6,16 @@ cp ~/.gitignore .
 cp ~/.gtkrc-2.0 .
 cp ~/.Xresources .
 
+
 cp -R  ~/.i3 .
+
+# Tmux
+
+# Only needs local, everything else is in https://github.com/gpakosz/.tmux.git
+#cp -R ~/.tmux .
+#cp -R ~/.tmux.conf .
+
+cp -R ~/.tmux.conf.local .
 
 # Config
 
@@ -35,7 +44,7 @@ dconf dump /com/gexperts/Tilix/ > .config/tilix/tilix.dconf
 # Arandr
 cp -R ~/.screenlayout .
 
-# Packages 
+# Packages
 pacman -Qe > pacman_installed.txt
 pacman -Q > pacman_all.txt
 pip freeze > pip_install.txt

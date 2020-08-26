@@ -38,7 +38,7 @@ set splitbelow
 set splitright
 
 " Give more space for displaying messages.
-set cmdheight=2
+" set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -84,6 +84,14 @@ set listchars+=tab:>-,space:.
 
 " Start Plugin Management
 call plug#begin('~/.vim/plugged')
+
+    " Show colors
+    "Plug 'gko/vim-coloresque'
+    Plug 'chrisbra/Colorizer'
+
+    "Tmux integration
+    Plug 'benmills/vimux'
+    Plug 'tmux-plugins/vim-tmux-focus-events'
 
     "Multi cursor
     " C-N select words, C-move add cur, Shift move single char, n/N Next/Prev
@@ -627,4 +635,38 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+
+function! s:small_terminal() abort
+  new
+  wincmd J
+  call nvim_win_set_height(0, 6)
+  set winfixheight
+  term
+endfunction
+
+" Make a small terminal at the bottom of the screen.
+nnoremap <leader>st :call <SID>small_terminal()<CR>
+
+ " Run the current file with runner
+ autocmd FileType rust map <Leader>rb :call VimuxRunCommand("cargo eval " . bufname("%"))<CR>
+ autocmd FileType python map <Leader>rb :call VimuxRunCommand("python3 " . bufname("%"))<CR>
+
+ " Prompt for a command to run
+ map <Leader>vp :VimuxPromptCommand<CR>
+
+ " Run last command executed by VimuxRunCommand
+ map <Leader>vl :VimuxRunLastCommand<CR>
+
+ " Inspect runner pane
+ map <Leader>vi :VimuxInspectRunner<CR>
+
+ " Close vim tmux runner opened by VimuxRunCommand
+ map <Leader>vq :VimuxCloseRunner<CR>
+
+ " Interrupt any command running in the runner pane
+ map <Leader>vx :VimuxInterruptRunner<CR>
+
+ " Zoom the runner pane (use <bind-key> z to restore runner pane)
+ map <Leader>vz :call VimuxZoomRunner()<CR>
 
