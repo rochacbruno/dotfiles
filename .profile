@@ -9,3 +9,4 @@ export PATH="$HOME/.bin:$HOME/.cargo/bin:$PATH"
 #echo "started profile"
 
 export PATH="$HOME/.poetry/bin:$PATH"
+export GPG_TTY=$(tty)

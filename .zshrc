@@ -158,3 +158,8 @@ if [ "$(command -v bat)" ]; then
 fi
 
 alias v="nvim"
+alias iv="nvim ~/.i3/config ~/.i3/status.toml"
+alias vv="nvim ~/.config/nvim/init.vim"
+alias tv="nvim ~/.tmux.conf.local"
+alias :q="exit"
+alias :wq="exit"
