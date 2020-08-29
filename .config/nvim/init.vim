@@ -251,6 +251,22 @@ call plug#begin('~/.vim/plugged')
     " Delete instead of cut (cut is mapped to x, single char is  dl)
     Plug 'svermeulen/vim-cutlass'
 
+    " tmux status line maker (beautiful but misses zoom indicator)
+    " Plug 'edkolev/tmuxline.vim'
+
+    " HTML
+    Plug 'mattn/emmet-vim'
+
+    " Create gist with :Gist -c
+    Plug 'mattn/gist-vim'
+    Plug 'mattn/webapi-vim'
+
+    " Make me dirs
+    Plug 'pbrisbin/vim-mkdir'
+
+    " Auto Completion from ZSH
+    Plug 'tjdevries/coc-zsh'
+
 "" End of plugin management
 call plug#end()
 
@@ -335,6 +351,14 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
+
+
+" Gist
+let g:gist_clip_command = 'xclip -selection clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
 
 
 "" Bindings
@@ -496,6 +520,7 @@ inoremap <C-c> <esc>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 inoremap <silent><expr> <C-space> coc#refresh()
+
 
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
@@ -670,3 +695,5 @@ nnoremap <leader>st :call <SID>small_terminal()<CR>
  " Zoom the runner pane (use <bind-key> z to restore runner pane)
  map <Leader>vz :call VimuxZoomRunner()<CR>
 
+
+ set statusline+=%F

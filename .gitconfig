@@ -1,6 +1,7 @@
 [user]
     name = Bruno Rocha
     email = rochacbruno@gmail.com
+	signingkey = AB110BDC10ED0A39
 [color]
     ui = true
 [push]
@@ -26,3 +27,7 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+[github]
+	user = rochacbruno
+[commit]
+	gpgsign = true

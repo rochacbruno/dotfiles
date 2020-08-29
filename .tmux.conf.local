@@ -282,7 +282,7 @@ tmux_conf_copy_to_os_clipboard=true
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-set -g mouse on
+# set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -336,3 +336,4 @@ bind-key "-" split-window -v -c "#{pane_current_path}"
 bind-key "_" split-window -fv -c "#{pane_current_path}"
 bind-key "%" split-window -h -c "#{pane_current_path}"
 bind-key '"' split-window -v -c "#{pane_current_path}"
+bind-key -n F11 resize-pane -Z
