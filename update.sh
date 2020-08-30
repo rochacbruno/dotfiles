@@ -17,6 +17,11 @@ cp -R  ~/.i3 .
 
 cp -R ~/.tmux.conf.local .
 
+cp -R ~/.themes .
+rm -rf .themes/gruvbox-gtk/.git
+cp -R ~/.icons .
+rm -rf .icons/gruvbox-dark-icons-gtk/.git
+
 # Config
 
 cp  ~/.config/nvim/init.vim .config/nvim/
@@ -35,6 +40,7 @@ rm -rf .config/micro/buffers/
 
 cp -R  ~/.config/rofi .config/
 cp -R  ~/.config/clipit .config/
+cp -R  ~/.config/dunst .config/
 
 # Tilix
 cp -R ~/.config/tilix .config/

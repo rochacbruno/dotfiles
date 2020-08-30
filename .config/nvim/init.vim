@@ -345,7 +345,9 @@ let no_buffers_menu=1
 
 " vim-airline
 "let g:airline_theme = 'powerlineish'
-let g:airline_theme = 'base16_gruvbox_dark_hard'
+"let g:airline_theme = 'base16_gruvbox_dark_hard'
+"let g:airline_theme = 'minimalist'
+let g:airline_theme = 'zenburn'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
