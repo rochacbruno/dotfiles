@@ -135,7 +135,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'sheerun/vim-polyglot'
 
     " Rainbow match pairs
-    Plug 'junegunn/rainbow_parentheses.vim'
+    Plug 'frazrepo/vim-rainbow'
 
     " Colorize the copied block
     Plug 'machakann/vim-highlightedyank'
@@ -290,11 +290,14 @@ call plug#begin('~/.vim/plugged')
     " CW-gr resizes to selection
     Plug 'wellle/visual-split.vim'
 
+    " A color picker
+    Plug 'KabbAmine/vCoolor.vim'
+
 "" End of plugin management
 call plug#end()
 
 " where to save `gs` scratch?
-let g:scratch_persistence_file = '~/vim_scratch.md'
+let g:scratch_persistence_file = '~/vim_scratch/' . strftime("%Y-%m-%d")  . '.md'
 
 " i3 file detection
 aug i3config_ft_detection
@@ -307,6 +310,9 @@ xmap <C-W>gr  <Plug>(Visual-Split-VSResize)
 xmap <C-W>gss <Plug>(Visual-Split-VSSplit)
 xmap <C-W>gsa <Plug>(Visual-Split-VSSplitAbove)
 xmap <C-W>gsb <Plug>(Visual-Split-VSSplitBelow)
+
+" rainbow
+let g:rainbow_active = 1
 
 "" Markdown options
 " set to 1, nvim will open the preview window after entering the markdown buffer
@@ -382,9 +388,9 @@ let no_buffers_menu=1
 
 " vim-airline
 "let g:airline_theme = 'powerlineish'
-"let g:airline_theme = 'base16_gruvbox_dark_hard'
+let g:airline_theme = 'base16_gruvbox_dark_hard'
 "let g:airline_theme = 'minimalist'
-let g:airline_theme = 'zenburn'
+"let g:airline_theme = 'zenburn'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -490,6 +496,8 @@ nnoremap <silent> <leader>b :Buffers<CR>
 " Dont needd this because we have <leader>ps to open Rg:
 "nnoremap <silent> <leader>e :FZF -m<CR>
 
+" Open a color picker
+nnoremap <leader>C :VCoolor<CR>
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -716,3 +724,6 @@ nnoremap <leader>st :call <SID>small_terminal()<CR>
 
 "DimInactive fade color
 highlight ColorColumn ctermbg=0 guibg=#282828
+
+" insert current datetime
+nmap <F6> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
