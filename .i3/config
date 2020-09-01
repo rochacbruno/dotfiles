@@ -8,7 +8,7 @@ set $alt Mod1
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 5
+default_border pixel 2
 default_floating_border normal
 
 # Hide borders
@@ -16,7 +16,7 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 5
+bindsym $mod+y border pixel 2
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -108,7 +108,8 @@ bindsym $mod+Return exec alacritty
 # bindsym $mod+d exec --no-startup-id dmenu_recency
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+F2 exec --no-startup-id dmenu_run
-bindsym $alt+Tab exec --no-startup-id "rofi -combi-modi window,drun,emoji,calc -show combi -modi combi"
+# bindsym $alt+Tab exec --no-startup-id "rofi -combi-modi window,drun,emoji,calc -show combi -modi combi"
+bindsym $alt+Tab exec --no-startup-id "rofi -show"
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -566,7 +567,7 @@ client.background   $bg
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
+gaps inner 7
 gaps outer -2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

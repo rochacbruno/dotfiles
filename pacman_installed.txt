@@ -130,6 +130,7 @@ ipython 7.17.0-1
 jfsutils 1.1.15-7
 kdenlive 20.08.0-1
 key-mon 1.17-1
+kitty 0.18.3-1
 kvantum-manjaro 0.13.5-1
 languagetool 5.0-1
 lazygit 0.22.1-1

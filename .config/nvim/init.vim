@@ -89,10 +89,6 @@ call plug#begin('~/.vim/plugged')
     "Plug 'gko/vim-coloresque'
     Plug 'chrisbra/Colorizer'
 
-    "Tmux integration
-    Plug 'benmills/vimux'
-    Plug 'tmux-plugins/vim-tmux-focus-events'
-
     "Multi cursor
     " C-N select words, C-move add cur, Shift move single char, n/N Next/Prev
     " [] next/prev cur, q skip, Q remove cursor
@@ -149,16 +145,21 @@ call plug#begin('~/.vim/plugged')
 
     " Highlight word under cursor
     Plug 'RRethy/vim-illuminate'
+    "Space-k highlight more worlds, n, N navigates, Space-K cleans it.
+    Plug 'lfv89/vim-interestingwords'
 
     " Fade inactive buffers
-    Plug 'TaDaa/vimade'
+    "Plug 'TaDaa/vimade'
+    Plug 'blueyed/vim-diminactive'
 
     " Fuzzy Search :)
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+    " adds FZFMru
+    Plug 'pbogut/fzf-mru.vim'
 
-    " competitor to fzf
+    " Alternative to fzf taht allows preview colorschemes `Clap colors`
     Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
     " Zoom! C-w-m (maximize)
@@ -251,9 +252,6 @@ call plug#begin('~/.vim/plugged')
     " Delete instead of cut (cut is mapped to x, single char is  dl)
     Plug 'svermeulen/vim-cutlass'
 
-    " tmux status line maker (beautiful but misses zoom indicator)
-    " Plug 'edkolev/tmuxline.vim'
-
     " HTML
     Plug 'mattn/emmet-vim'
 
@@ -267,9 +265,48 @@ call plug#begin('~/.vim/plugged')
     " Auto Completion from ZSH
     Plug 'tjdevries/coc-zsh'
 
+    "Better repeatable f/t searching
+    Plug 'rhysd/clever-f.vim'
+
+    "`dsf`  deletes surrounding function `csf` change it
+    Plug 'AndrewRadev/dsf.vim'
+
+    " `cx` exchange 2 words `cxx` exchange 2 line
+    Plug 'tommcdo/vim-exchange'
+
+    " After a visual selection use + and - to expand it
+    Plug 'landock/vim-expand-region'
+
+    " Sets working dir
+    Plug 'airblade/vim-rooter'
+
+    "Scratch `gs`
+    Plug 'mtth/scratch.vim'
+
+    "i3 filetype
+    Plug 'mboughaba/i3config.vim'
+
+    " C-W-gsa creates a split above with the selection C-W-gss on right
+    " CW-gr resizes to selection
+    Plug 'wellle/visual-split.vim'
+
 "" End of plugin management
 call plug#end()
 
+" where to save `gs` scratch?
+let g:scratch_persistence_file = '~/vim_scratch.md'
+
+" i3 file detection
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.i3/config set filetype=i3config
+aug end
+
+"Visual split
+xmap <C-W>gr  <Plug>(Visual-Split-VSResize)
+xmap <C-W>gss <Plug>(Visual-Split-VSSplit)
+xmap <C-W>gsa <Plug>(Visual-Split-VSSplitAbove)
+xmap <C-W>gsb <Plug>(Visual-Split-VSSplitBelow)
 
 "" Markdown options
 " set to 1, nvim will open the preview window after entering the markdown buffer
@@ -338,7 +375,7 @@ let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+" let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 
 let no_buffers_menu=1
@@ -675,27 +712,7 @@ endfunction
 " Make a small terminal at the bottom of the screen.
 nnoremap <leader>st :call <SID>small_terminal()<CR>
 
- " Run the current file with runner
- autocmd FileType rust map <Leader>rb :call VimuxRunCommand("cargo eval " . bufname("%"))<CR>
- autocmd FileType python map <Leader>rb :call VimuxRunCommand("python3 " . bufname("%"))<CR>
+"set statusline+=%F
 
- " Prompt for a command to run
- map <Leader>vp :VimuxPromptCommand<CR>
-
- " Run last command executed by VimuxRunCommand
- map <Leader>vl :VimuxRunLastCommand<CR>
-
- " Inspect runner pane
- map <Leader>vi :VimuxInspectRunner<CR>
-
- " Close vim tmux runner opened by VimuxRunCommand
- map <Leader>vq :VimuxCloseRunner<CR>
-
- " Interrupt any command running in the runner pane
- map <Leader>vx :VimuxInterruptRunner<CR>
-
- " Zoom the runner pane (use <bind-key> z to restore runner pane)
- map <Leader>vz :call VimuxZoomRunner()<CR>
-
-
- set statusline+=%F
+"DimInactive fade color
+highlight ColorColumn ctermbg=0 guibg=#282828
