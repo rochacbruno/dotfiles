@@ -47,9 +47,6 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-set colorcolumn=80,100,120
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-highlight Comment ctermfg=red
 
 set mousemodel=popup
 set t_Co=256
@@ -722,8 +719,11 @@ nnoremap <leader>st :call <SID>small_terminal()<CR>
 
 "set statusline+=%F
 
-"DimInactive fade color
-highlight ColorColumn ctermbg=0 guibg=#282828
+" ColorScheme tweaks
+set colorcolumn=80,100,120
+highlight ColorColumn ctermbg=0 guibg=#32302f
+highlight CursorLine ctermbg=0 guibg=#282828
+highlight Comment ctermfg=red
 
 " insert current datetime
 nmap <F6> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
