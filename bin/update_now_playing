@@ -23,11 +23,11 @@ sed -i -e 's/<[^>]*>//g' ~/np.txt
 # Remove deezer URL
 sed -i -e 's/www.deezer.com//g' ~/np.txt
 
-# REmove blank lines
+# Remove blank lines
 sed -i -r '/^\s*$/d' ~/np.txt
 
 # Join 2 lines in one
-sed -i 'N;s/\n/ - /' np.txt
+sed -i 'N;s/\n/ - /' ~/np.txt
 
 
 # Alternattive to this script
