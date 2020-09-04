@@ -503,7 +503,7 @@ bar {
 	# font pango:DejaVu Sans Mono, FontAwesome 12
     #font pango:Font Awesome 5 Free
     font pango:PowerlineSymbols, Font Awesome 5 Free 8
-    position bottom
+    position top
     tray_output primary
     status_command /usr/bin/i3status-rs $HOME/.i3/status.toml
     colors {
