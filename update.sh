@@ -53,6 +53,14 @@ cp -R ~/.config/alacritty .config/
 # Arandr
 cp -R ~/.screenlayout .
 
+# bins
+cp -R ~/bin/battery ./bin
+cp -R ~/bin/allcolors ./bin
+cp -R ~/bin/update_now_playing ./bin
+cp -R ~/bin/galaxy ./bin
+cp -R ~/bin/galaxy_shell ./bin
+cp -R ~/bin/set_windows ./bin
+
 # Packages
 pacman -Qe > pacman_installed.txt
 pacman -Q > pacman_all.txt

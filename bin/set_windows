@@ -1,0 +1,2 @@
+i3-msg "workspace 8; append_layout ~/layout_i3_for_obs_vertical.json"
+i3-msg "workspace 5; append_layout ~/layout_i3_for_obs_laptop.json"
