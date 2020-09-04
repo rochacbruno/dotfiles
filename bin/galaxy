@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+# This is a dev only local Token (no problem sharing it)
+http  :8002$1 "Authorization: Token c1619fb504d3ef3251a95a338903554581ce88f1"

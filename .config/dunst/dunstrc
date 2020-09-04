@@ -32,7 +32,7 @@
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
-    history = ctrl+grave
+    history = ctrl+shift+F9
     context = ctrl+shift+period
 
 [urgency_low]
@@ -49,3 +49,7 @@
     background = "#282828"
     foreground = "#ebdbb2"
     timeout = 0
+
+[now_playing]
+   body = "*deezer*"
+   script = /home/rochacbruno/bin/update_now_playing

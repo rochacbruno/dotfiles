@@ -1,0 +1,1 @@
+./compose run --rm api /bin/bash -c "pip install ipython ipdb django-extensions && ./entrypoint.sh manage shell_plus"
