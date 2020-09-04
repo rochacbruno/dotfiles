@@ -60,6 +60,7 @@ cp -R ~/bin/update_now_playing ./bin
 cp -R ~/bin/galaxy ./bin
 cp -R ~/bin/galaxy_shell ./bin
 cp -R ~/bin/set_windows ./bin
+cp -R ~/bin/streamtimer ./bin
 
 # Packages
 pacman -Qe > pacman_installed.txt
