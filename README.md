@@ -46,6 +46,8 @@ inspiration to create yours.
 * Tilix
   * [Guide](./guides/tilix.md)
   * [Config](./.config/tilix/)
+* Alacritty
+  * [Config](./.config/alacritty/alacritty.yml)
 * Zsh
   * [Config](./.zshrc)
 * Starship

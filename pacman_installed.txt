@@ -276,6 +276,7 @@ screenfetch 3.9.1-1
 screenkey 1.2-1
 sed 4.8-1
 shadow 4.8.1-3
+shell-color-scripts 0.1-1
 shotwell 2:0.30.10-2
 skim 0.8.2-2
 slop 7.5-3
@@ -318,6 +319,7 @@ vertex-maia-themes 20180519-4
 vi 1:070224-4
 vibrancy-icons-teal 2.7-1
 viewnior 1.7-3
+vifm 0.10.1-3
 vim 8.2.1490-0.1
 virt-manager 2.2.1-2
 virtualbox 6.1.12-3
