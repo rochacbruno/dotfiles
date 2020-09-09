@@ -1,4 +1,4 @@
-" Neovim Configuration - @rochacbruno - 2020
+"" Neovim Configuration - @rochacbruno - 2020
 " <leader> = Space
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -6,6 +6,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
+
+    "" Code Runner, Select a block and :SnipRun
+    Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 
     "" Python sort imports - C-i on Visual mode or :Isort
     Plug 'fisadev/vim-isort'
@@ -42,6 +45,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
     Plug 'airblade/vim-gitgutter'
     Plug 'rhysd/git-messenger.vim'
+    Plug 'stsewd/fzf-checkout.vim' " The  Primeagen told me to install it.
+                                   " C-n (new-branch), C-d (del), C-e (Merge),
+                                   " C-r (rebase)
 
     "" Commenting - gcc, gcap
     Plug 'tpope/vim-commentary'
@@ -263,6 +269,7 @@ set fileformats=unix,dos,mac    " file formats
 set nowritebackup               " No backup before write
 set splitbelow                  " :split creates below window
 set splitright                  " :vspclit creates right window
+set noequalalways               " Don't change window sizes when opening new
 set updatetime=50               " Makes things faster
 set shortmess+=c                " Don't pass messages to |ins-completion-menu|.
 set mousemodel=popup            " Mouse right click opens term menu (if exists)
@@ -288,8 +295,19 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
                                 " overriden by vim-airline
 
 set list                        " Show tabs and spavces visually
-set listchars+=tab:>-,space:.
 
+set showbreak=↳
+set listchars+=tab:→→\|,space:.,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
+set nojoinspaces                " No space when joining lines
+
+set confirm                     " Dialog to confirm operations
+
+set foldmethod=indent           " Folds are done by indentation
+set foldlevelstart=1            " When opening a file only folds 1 level
+
+set virtualedit=block           " Allow placing cursor where there is no char
+                                " adding: ,onemore will allow cursor on the  end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Custom settings and Plugin Settings
@@ -395,7 +413,7 @@ let g:airline_skip_empty_sections = 1
 set colorcolumn=80,100,120                     " Limit rulers
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Bindings
+"" Bindings  Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "" I use NERDTree so I kept it here just as an example.
@@ -420,6 +438,13 @@ xmap <C-W>gsb <Plug>(Visual-Split-VSSplitBelow)
 
 " Opens undotree history
 nnoremap <leader>u :UndotreeShow<CR>
+
+
+" Git Stuff
+nnoremap <leader>gc :GBranches<CR>
+nnoremap <leader>ga :Git fetch --all<CR>
+nnoremap <leader>grum :Git rebase upstream/master<CR>
+nnoremap <leader>grom :Git rebase origin/master<CR>
 
 " Get Help for Word
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
