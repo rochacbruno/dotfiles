@@ -19,18 +19,18 @@ icons = "awesome"
 # interval = 5
 # use_bits = false
 
-[[block]]
-block = "focused_window"
-max_width = 50
-show_marks = "visible"
+# [[block]]
+# block = "focused_window"
+# max_width = 50
+# show_marks = "visible"
 
-[[block]]
-block ="custom"
-command = "echo 🎵"
+# [[block]]
+# block ="custom"
+# command = "echo 🎵"
 
 [[block]]
 block = "custom"
-command = ''' cat ~/np.txt '''
+command = ''' echo "🎧 $(cat ~/np.txt)" '''
 
 # [[block]]
 # block = "networkmanager"
