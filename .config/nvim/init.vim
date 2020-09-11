@@ -1,5 +1,5 @@
 "" Neovim Configuration - @rochacbruno - 2020
-" <leader> = Space
+" <leader> = ,
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Plugins managed by Plug
@@ -167,15 +167,8 @@ call plug#begin('~/.vim/plugged')
     "" Command to show leader commands - :Bufferize Leaders
     Plug 'derekprior/vim-leaders'
 
-    "" Extract variable: in visual mode, Alt =. name it, move it, ESC.
-    Plug 'da-x/name-assign.vim'
-
     "" Interact with output of commands e.g :Bufferize cargo watch
     Plug 'AndrewRadev/bufferize.vim'
-
-    "" Change one liners to multiple and vice-versa:
-    " gS (split a one liner) and gJ (join a block)
-    Plug 'AndrewRadev/splitjoin.vim'
 
     "" text moving (Select a text and Alt-hjkl)
     Plug 'matze/vim-move'
@@ -228,6 +221,10 @@ call plug#begin('~/.vim/plugged')
     "" A color picker - <leader>C
     Plug 'KabbAmine/vCoolor.vim'
 
+    "" Registers history sidebar
+    Plug 'junegunn/vim-peekaboo'
+
+    ""
 "" End of plugin management
 call plug#end()
 
@@ -303,8 +300,8 @@ set nojoinspaces                " No space when joining lines
 
 set confirm                     " Dialog to confirm operations
 
-set foldmethod=indent           " Folds are done by indentation
-set foldlevelstart=1            " When opening a file only folds 1 level
+"set foldmethod=indent           " Folds are done by indentation
+"set foldlevelstart=1            " When opening a file only folds 1 level
 
 set virtualedit=block           " Allow placing cursor where there is no char
                                 " adding: ,onemore will allow cursor on the  end
@@ -312,7 +309,7 @@ set virtualedit=block           " Allow placing cursor where there is no char
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Custom settings and Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = " "             " Leader is <Space>
+let mapleader = ","             " Leader is ,
 
 let g:scratch_persistence_file = '~/vim_scratch/' . strftime("%Y-%m-%d")  . '.md'
                                 " where to save `gs` scratch?
@@ -454,6 +451,7 @@ nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Preview Search
 nnoremap <Leader>ps :Rg<CR>
+nnoremap <Leader>r :Rg<CR>
 
 " Preview Search Word
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
@@ -517,7 +515,7 @@ nmap <leader>d :b#<bar>bd#<CR>
 noremap <leader>ac :w <BAR> %bd <BAR> e# <BAR> bd# <CR>
 
 " Clean Search highlight
-nnoremap <silent> <leader>, :noh<cr>
+nnoremap <silent> <leader><space> :noh<cr>
 
 " Vmap for maintain Visual Mode
 vmap < <gv
@@ -618,6 +616,24 @@ nmap <leader>gh :diffget //3<CR>
 nmap <leader>gu :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
+" Makes j k to move to screen line when there is a wrap
+nnoremap j gj
+nnoremap k gk
+
+" Makes f1 an extra esc key instead of help
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+" Easy to save a file using only ;w
+nnoremap ; :
+
+"Easy window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Functions and customizations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -706,4 +722,4 @@ let g:vim_isort_python_version = 'python3'
 let g:vim_isort_map = '<C-i>'
 
 " Shows a CheatSheet
-nnoremap <silent> <leader> :WhichKey '<space>'<CR>
+nnoremap <silent> <leader> :WhichKey ','<CR>

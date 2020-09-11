@@ -164,5 +164,5 @@ alias vz="nvim ~/.zshrc"
 alias tv="nvim ~/.tmux.conf.local"
 alias :q="exit"
 alias :wq="exit"
-
+alias fm="EDITOR=nvim ranger ."
 colorscript random
