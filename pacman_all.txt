@@ -124,6 +124,7 @@ containerd 1.4.0-2
 convertlit 1.8-10
 cool-retro-term 1.1.1-2
 coreutils 8.32-1
+corny-jokes-git r50.49d5e2d-1
 cpupower 5.7-1
 cracklib 2.9.7-2
 crda 4.14-3
@@ -1517,6 +1518,7 @@ webkit2gtk 2.28.4-1
 webrtc-audio-processing 0.3.1-2
 websocketpp-git-dev 0.8.3.1735.901425a-1
 wget 1.20.3-3
+whatami-git r16.160ac54-1
 which 2.21-5
 wildmidi 0.4.3-2
 wireless-regdb 2020.04.29-1

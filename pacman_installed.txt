@@ -38,6 +38,7 @@ clipit 1:1.4.3-2
 cmatrix 2.0-2
 cool-retro-term 1.1.1-2
 coreutils 8.32-1
+corny-jokes-git r50.49d5e2d-1
 cpupower 5.7-1
 crda 4.14-3
 cronie 1.5.5-1
@@ -331,6 +332,7 @@ w3m 0.5.3.git20200507-1
 wallpapers-juhraya 1.1-2
 websocketpp-git-dev 0.8.3.1735.901425a-1
 wget 1.20.3-3
+whatami-git r16.160ac54-1
 which 2.21-5
 wmutils 1:1.4-1
 workrave 1.10.44-1

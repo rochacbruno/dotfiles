@@ -593,7 +593,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Refresh Coc
 inoremap <silent><expr> <C-space> coc#refresh()
 
-nmap <leader>gd <Plug>(coc-definition)
+" nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gd :sp<CR><Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
