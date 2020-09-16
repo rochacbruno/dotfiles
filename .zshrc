@@ -93,6 +93,7 @@ plugins=(
     colored-man-pages
     zsh-autosuggestions
     zsh-syntax-highlighting
+    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -165,4 +166,25 @@ alias tv="nvim ~/.tmux.conf.local"
 alias :q="exit"
 alias :wq="exit"
 alias fm="EDITOR=nvim ranger ."
-colorscript random
+
+alias cp="cp -i"                          # confirm before overwriting something
+alias rm="rm -i"
+alias mv="mv -i"
+alias ..="cd .."
+
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np='nano -w PKGBUILD'
+alias more=less
+
+alias gs="git status"
+alias vi=nvim
+alias vim=nvim
+alias ls=exa
+
+alias joke="cornyjokes | cat -r 0:7"
+
+export EDITOR=nvim
+
+joke
+#colorscript random

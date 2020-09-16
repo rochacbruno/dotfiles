@@ -23,6 +23,7 @@ click==7.1.2
 colorama==0.4.3
 constantly==15.1.0
 contextlib2==0.6.0.post1
+cornyjokes==2.1.0
 cryptography==3.0
 decorator==4.4.2
 deluge==2.0.4.dev38
@@ -180,5 +181,6 @@ virtualenvwrapper==4.8.4
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==0.57.0
+whatami==1.1.0
 zipp==3.1.0
 zope.interface==5.1.0
