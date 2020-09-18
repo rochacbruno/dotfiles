@@ -61,10 +61,15 @@ call plug#begin('~/.vim/plugged')
     "" Linter
     Plug 'w0rp/ale'
 
+
     "" Show the visual mark on indendation blocks ┆
     Plug 'Yggdroot/indentLine'
 
     "" Syntax Highlighting
+    " Default highlight for Python is better than polyglot
+    " Polyglot breaks markdown fences
+    let g:polyglot_disabled = ['python', 'markdown', 'mkd']
+    let python_highlight_all = 1
     Plug 'sheerun/vim-polyglot'
 
     "" Rainbow match pairs
@@ -377,11 +382,6 @@ endif
 let g:ale_linters = {}            " Extend the linters
 :call extend(g:ale_linters, {
     \'python': ['flake8'], })
-
-" Default highlight for Python is better than polyglot
-" Polyglot breaks markdown fences
-let g:polyglot_disabled = ['python', 'markdown', 'mkd']
-let python_highlight_all = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Appearance
