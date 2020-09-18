@@ -25,6 +25,7 @@ rm -rf .icons/gruvbox-dark-icons-gtk/.git
 # Config
 
 cp  ~/.config/nvim/init.vim .config/nvim/
+cp  ~/.vim/coc-settings.json .config/.vim/
 cp ~/.config/starship.toml .config/
 cp ~/.config/pavucontrol.ini .config/
 
