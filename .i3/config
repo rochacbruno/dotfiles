@@ -270,10 +270,12 @@ popup_during_fullscreen smart
 bindsym $mod+F8 [instance="chatterino"] scratchpad show
 bindsym $mod+F7 [instance="telegram-desktop"] scratchpad show
 bindsym $mod+F6 [instance="discord"] scratchpad show
+bindsym $mod+F9 [instance="spotify"] scratchpad show
 
 # Open specific applications in floating mode
 for_window [instance="chatterino"] floating enable
 for_window [instance="telegram-desktop"] floating enable
+for_window [instance="spotify"] floating enable
 for_window [instance="crx_chfbpgnooceecdoohagngmjnndbbaeip"] floating enable
 for_window [instance="discord"] floating enable
 for_window [instance="camdesk"] floating enable
