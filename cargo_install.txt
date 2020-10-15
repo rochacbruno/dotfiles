@@ -66,3 +66,5 @@ starship v0.41.3:
     starship
 swp v1.0.3:
     swp
+tokei v12.0.4:
+    tokei

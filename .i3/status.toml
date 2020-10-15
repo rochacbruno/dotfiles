@@ -29,8 +29,13 @@ icons = "awesome"
 # command = "echo 🎵"
 
 [[block]]
-block = "custom"
-command = ''' echo "🎧 $(cat ~/np.txt)" '''
+block = "music"
+player = "spotify"
+buttons = ["play", "next"]
+
+# [[block]]
+# block = "custom"
+# command = ''' echo "🎧 $(cat ~/np.txt)" '''
 
 # [[block]]
 # block = "networkmanager"

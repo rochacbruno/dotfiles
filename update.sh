@@ -51,6 +51,10 @@ dconf dump /com/gexperts/Tilix/ > .config/tilix/tilix.dconf
 # Alacritty
 cp -R ~/.config/alacritty .config/
 
+# wtfutil
+cp -R ~/.config/wtf/config.yml .config/wtf/config.yml
+sed -i 's/apiKey:.*/apiKey: GITHUB_API_KEY_HERE/' .config/wtf/config.yml
+
 # Arandr
 cp -R ~/.screenlayout .
 
