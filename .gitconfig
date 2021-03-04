@@ -1,6 +1,6 @@
 [user]
-    name = Bruno Rocha
-    email = rochacbruno@gmail.com
+	name = Bruno Rocha
+	email = rochacbruno@gmail.com
 	signingkey = AB110BDC10ED0A39
 [color]
     ui = true

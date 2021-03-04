@@ -6,7 +6,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
-
     "" Code Runner, Select a block and :SnipRun
     Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 
@@ -30,6 +29,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'reedes/vim-pencil' " Soft or Hard Word Wrapping - :SoftPencil
     Plug 'junegunn/goyo.vim' " Distraction free - :Goyo
     Plug 'godlygeek/tabular' " Align tables - :Tabularize
+
+    "" Asciidoc
+    Plug 'habamax/vim-asciidoctor'
+    Plug 'shuntaka9576/preview-asciidoc.nvim', { 'do': 'yarn install'  }
 
     "" Auto Complete and Language Server
     " Leader-prw = Previewable Refactor Work Under Cursor
@@ -60,7 +63,6 @@ call plug#begin('~/.vim/plugged')
 
     "" Linter
     Plug 'w0rp/ale'
-
 
     "" Show the visual mark on indendation blocks ┆
     Plug 'Yggdroot/indentLine'
@@ -157,14 +159,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'ryanoasis/vim-devicons'
 
     "" File Manager - F3 - `s` open on split
-    Plug 'preservim/nerdtree'
+    " Plug 'preservim/nerdtree'
+    Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
     "" Auto complete navigation with tab
     Plug 'ervandew/supertab'
 
     "" SQL Stuff
-    Plug 'tpope/vim-dadbod'
-    Plug 'kristijanhusak/vim-dadbod-ui'
+    " Plug 'tpope/vim-dadbod'
+    " Plug 'kristijanhusak/vim-dadbod-ui'
 
     "" Move windows in a good way using C-wg-hjkl
     Plug 'andymass/vim-tradewinds'
@@ -181,7 +184,7 @@ call plug#begin('~/.vim/plugged')
     "" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
     Plug 'tpope/vim-eunuch'
 
-    "" Delete instead of cut (cut is mapped to x, single char is  dl)
+    "" Delete instead of cut (cut is mapped to x, single char is dl)
     Plug 'svermeulen/vim-cutlass'
 
     "" HTML magic - Ctrl-y
@@ -203,7 +206,7 @@ call plug#begin('~/.vim/plugged')
     "" `dsf`  deletes surrounding function `csf` change it
     Plug 'AndrewRadev/dsf.vim'
 
-    "" `cx` exchange 2 words `cxx` exchange 2 line
+    "" `cxiw` exchange 2 words `cxx` exchange 2 line (cxc cleans marks)
     Plug 'tommcdo/vim-exchange'
 
     "" After a visual selection use + and - to expand it
@@ -226,10 +229,9 @@ call plug#begin('~/.vim/plugged')
     "" A color picker - <leader>C
     Plug 'KabbAmine/vCoolor.vim'
 
-    "" Registers history sidebar
+    "" Registers history sidebar - press @
     Plug 'junegunn/vim-peekaboo'
 
-    ""
 "" End of plugin management
 call plug#end()
 
@@ -314,7 +316,7 @@ set virtualedit=block           " Allow placing cursor where there is no char
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Custom settings and Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","             " Leader is ,
+let mapleader = " "             " Leader is <space>
 
 let g:scratch_persistence_file = '~/vim_scratch/' . strftime("%Y-%m-%d")  . '.md'
                                 " where to save `gs` scratch?
@@ -515,7 +517,7 @@ nmap <leader>d :b#<bar>bd#<CR>
 noremap <leader>ac :w <BAR> %bd <BAR> e# <BAR> bd# <CR>
 
 " Clean Search highlight
-nnoremap <silent> <leader><space> :noh<cr>
+nnoremap <silent> <leader>, :noh<cr>
 
 " Vmap for maintain Visual Mode
 vmap < <gv
@@ -536,7 +538,8 @@ nnoremap <silent> <leader>w :Windows<CR>
 nnoremap <leader>C :VCoolor<CR>
 
 " NERDTree File Manager
-nmap <silent> <F3> :NERDTreeToggle<CR>
+" nmap <silent> <F3> :NERDTreeToggle<CR>
+nmap <silent> <F3> :CHADopen<CR>
 
 " Show Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -723,4 +726,5 @@ let g:vim_isort_python_version = 'python3'
 let g:vim_isort_map = '<C-i>'
 
 " Shows a CheatSheet
-nnoremap <silent> <leader> :WhichKey ','<CR>
+" nnoremap <silent> <leader> :WhichKey ','<CR>
+nnoremap <silent> <leader> :WhichKey ' '<CR>
