@@ -10,3 +10,5 @@ export PATH="$HOME/.bin:$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export GPG_TTY=$(tty)
+
+export PATH="/opt/python/3.8.8/bin/:$PATH"

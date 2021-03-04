@@ -29,6 +29,10 @@ icons = "awesome"
 # command = "echo 🎵"
 
 [[block]]
+block = "custom"
+command = "/home/rochacbruno/bin/portugal"
+
+[[block]]
 block = "music"
 player = "spotify"
 buttons = ["play", "next"]
@@ -106,10 +110,10 @@ on_click = "orage"
 # [[block]]
 # block = "backlight"
 
-# [[block]]
-# block = "battery"
-# interval = 10
-# format = "{percentage}%"
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}%"
 
 # [[block]]
 # block = "toggle"

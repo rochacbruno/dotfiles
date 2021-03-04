@@ -1,8 +1,10 @@
 /usr/lib
+├── atom-package-manager@2.6.1
 ├── http-tui@0.0.4
 ├── instant-markdown-d@0.2.0-rc.2
-├── node-gyp@7.1.0
-├── npm@6.14.7
-├── rofi-search@0.3.0
-└── yarn@1.22.5
+├── localtunnel@2.0.0
+├── node-gyp@7.1.2
+├── npm@6.14.11
+├── rofi-search@1.0.0
+└── yarn@1.22.10
 

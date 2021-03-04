@@ -182,9 +182,12 @@ alias vi=nvim
 alias vim=nvim
 alias ls=exa
 
-alias joke="cornyjokes | cat -r 0:7"
+#alias joke="cornyjokes | cat -r 0:7"
 
 export EDITOR=nvim
 
-joke
+#joke
 #colorscript random
+
+
+fpath=(~/.zsh/completion $fpath)
