@@ -101,7 +101,7 @@ bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle; aplay ~/.i3/sound/volu
 # Start Applications
 
 # start a terminal
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec terminator
 # bindsym $mod+Return exec alacritty
 
 # start program launcher

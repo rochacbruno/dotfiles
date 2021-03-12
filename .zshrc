@@ -191,3 +191,5 @@ export EDITOR=nvim
 
 
 fpath=(~/.zsh/completion $fpath)
+
+export PATH="$HOME/.poetry/bin:$PATH"

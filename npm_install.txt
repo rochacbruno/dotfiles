@@ -4,7 +4,8 @@
 ├── instant-markdown-d@0.2.0-rc.2
 ├── localtunnel@2.0.0
 ├── node-gyp@7.1.2
-├── npm@6.14.11
+├── npm@7.6.0
 ├── rofi-search@1.0.0
+├── semver@7.3.4
 └── yarn@1.22.10
 
