@@ -47,6 +47,8 @@ cp -R  ~/.config/dunst .config/
 cp -R ~/.config/tilix .config/
 dconf dump /com/gexperts/Tilix/ > .config/tilix/tilix.dconf
 
+# Terminator
+cp -R ~/.config/terminator .config/
 
 # Alacritty
 cp -R ~/.config/alacritty .config/

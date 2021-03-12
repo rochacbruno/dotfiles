@@ -38,6 +38,8 @@ lsd v0.17.0:
     lsd
 maple v0.1.0:
     maple
+mdbook v0.4.7:
+    mdbook
 nu v0.17.0:
     nu
     nu_plugin_core_inc
