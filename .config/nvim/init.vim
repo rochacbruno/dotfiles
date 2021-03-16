@@ -230,7 +230,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'KabbAmine/vCoolor.vim'
 
     "" Registers history sidebar - press @
-    Plug 'junegunn/vim-peekaboo'
+    "Plug 'junegunn/vim-peekaboo'
+
+    "" ONLY ON 0.5+
+    "" registers explorer - " or Ctrl R - arrows and enter.
+    " Plug 'tversteeg/registers.nvim'
 
 "" End of plugin management
 call plug#end()

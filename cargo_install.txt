@@ -38,6 +38,8 @@ lsd v0.17.0:
     lsd
 maple v0.1.0:
     maple
+mcfly v0.5.5:
+    mcfly
 mdbook v0.4.7:
     mdbook
 nu v0.17.0:
