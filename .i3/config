@@ -269,7 +269,7 @@ popup_during_fullscreen smart
 # bindsym $mod+F9 [instance="crx_chfbpgnooceecdoohagngmjnndbbaeip"] scratchpad show
 bindsym $mod+F8 [instance="chatterino"] scratchpad show
 bindsym $mod+F7 [instance="telegram-desktop"] scratchpad show
-bindsym $mod+F6 [instance="discord"] scratchpad show
+bindsym $mod+F6 [instance="slack"] scratchpad show
 bindsym $mod+F9 [instance="spotify"] scratchpad show
 
 # Open specific applications in floating mode

@@ -193,3 +193,8 @@ export EDITOR=nvim
 fpath=(~/.zsh/completion $fpath)
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+
+eval "$(mcfly init zsh)"
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_FUZZY=true

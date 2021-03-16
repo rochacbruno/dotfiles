@@ -7,11 +7,16 @@
 [push]
     default = simple
 [alias]
-    pushu = "!git push -u origin HEAD"
-    pushf = "!git push -f origin HEAD"
-    hist = log --decorate --graph --pretty=oneline --abbrev-commit --all
+    pushu = "push -u origin HEAD"
+    pushf = "push -f origin HEAD"
+    hist = "log --decorate --graph --pretty=oneline --abbrev-commit --all"
     cleanup = "!git branch -D $(git branch| grep -v master) || echo 'No branch to delete'"
     up = "!git fetch upstream && git rebase upstream/master || git pull"
+    nvm = "reset --soft HEAD~1"
+    s = "status"
+    l = "log -n 2"
+    work = "checkout -b"
+    m = "checkout master"
 [core]
     excludesfile = ~/.gitignore
     editor = vim
