@@ -29,6 +29,9 @@ cp  ~/.vim/coc-settings.json .config/.vim/
 cp ~/.config/starship.toml .config/
 cp ~/.config/pavucontrol.ini .config/
 
+cp -R  ~/.config/pet .config/
+sed -i 's/access_token =.*/access_token = GITHUB_API_KEY_HERE/' .config/pet/config.toml
+
 cp -R  ~/.config/nu .config/
 cp -R  ~/.config/key-mon .config/
 

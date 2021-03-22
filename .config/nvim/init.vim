@@ -1,5 +1,5 @@
 "" Neovim Configuration - @rochacbruno - 2020
-" <leader> = ,
+" <leader> = Space
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Plugins managed by Plug
@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 
     "" Show a popup with leader mappings - :WhichKey or press <Leader> and wait
     Plug 'liuchengxu/vim-which-key'
+    "" Plug 'spinks/vim-leader-guide'
 
     "" Show rgb and hexa colors :ColorHighlight
     Plug 'chrisbra/Colorizer'

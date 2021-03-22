@@ -1205,6 +1205,7 @@ perl-xml-parser 2.46-2
 perl-xml-sax 1.02-1
 perl-xml-sax-base 1.09-4
 perl-xml-writer 0.625-6
+pet-bin 0.3.6-1
 phodav 2.5-1
 phonon-qt5 4.11.1-2
 phonon-qt5-vlc 0.11.2-1

@@ -1,0 +1,22 @@
+[General]
+  snippetfile = "/home/rochacbruno/.config/pet/snippet.toml"
+  editor = "nvim"
+  column = 40
+  selectcmd = "fzf"
+  backend = "gist"
+  sortby = ""
+
+[Gist]
+  file_name = "pet-snippet.toml"
+  access_token = GITHUB_API_KEY_HERE
+  gist_id = "49833904a93fcd5947c032d3cfa53ee7"
+  public = false
+  auto_sync = false
+
+[GitLab]
+  file_name = "pet-snippet.toml"
+  access_token = GITHUB_API_KEY_HERE
+  url = ""
+  id = ""
+  visibility = "private"
+  auto_sync = false
