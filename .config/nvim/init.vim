@@ -6,6 +6,16 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
+
+    "" Copy paste improvements using system clipboard
+    "" cp (+ movement to copy)
+    "" cv (+ movement to paste)
+    "" cP/cV mapped to the current line
+    "" e.g: cpiw (copy word to clipboard)
+    ""      cpi' (copy inside ' to clipboard)
+    ""      cpap (copy around paragraph to clipboard)
+    Plug 'christoomey/vim-system-copy'
+
     "" Code Runner, Select a block and :SnipRun
     Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 
@@ -16,7 +26,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'liuchengxu/vim-which-key'
     "" Plug 'spinks/vim-leader-guide'
 
-    "" Show rgb and hexa colors :ColorHighlight
+    "" Show rgb and hexa  :ColorHighlight
     Plug 'chrisbra/Colorizer'
 
     "" Multi cursor
@@ -105,7 +115,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 
-    " Alternative to fzf taht allows preview colorschemes `:Clap colors`
+    " Alternative to fzf taht allows preview  `:Clap `
     Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
     " Zoom a window! Ctrl-w-m (maximize)
@@ -237,6 +247,10 @@ call plug#begin('~/.vim/plugged')
     "" registers explorer - " or Ctrl R - arrows and enter.
     " Plug 'tversteeg/registers.nvim'
 
+    "" Float term
+    Plug 'voldikss/vim-floaterm'
+    "" :Floattermtoggle
+
 "" End of plugin management
 call plug#end()
 
@@ -266,7 +280,7 @@ set nobackup                    " Don't make backups
 set undodir=~/.vim/undodir      " Where to save undo history
 set undofile                    " Enable the undo saving
 set incsearch                   " Start searching before enter is pressed
-set termguicolors               " Enable 24 bit colors
+set termguicolors               " Enable 24 bit
 set scrolloff=8                 " Scroll line offser kept above cursor
 set noshowmode                  " Don't print mode in status line
 set encoding=utf-8              " default encoding for buffers
@@ -283,7 +297,7 @@ set updatetime=50               " Makes things faster
 set shortmess+=c                " Don't pass messages to |ins-completion-menu|.
 set mousemodel=popup            " Mouse right click opens term menu (if exists)
 set mouse=a                     " Mouse enabled in all modes/features
-set t_Co=256                    " Something about tmux and colors :/
+set t_Co=256                    " Something about tmux and  :/
 
 if exists('$SHELL')             " Sets the shell to open inside vim
     set shell=$SHELL
@@ -331,6 +345,9 @@ aug i3config_ft_detection
   au BufNewFile,BufRead ~/.i3/config set filetype=i3config
 aug end
                                 " Dynamically i3 filetype setting
+
+let g:system_copy#copy_command='xclip -sel clipboard'
+let g:system_copy#paste_command='xclip -sel clipboard -o'
 
 let g:rainbow_active = 1        " rainbow brackets enabled
 
@@ -394,10 +411,10 @@ let g:ale_linters = {}            " Extend the linters
 "" Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:gruvbox_contrast_dark = 'hard'       " Set gruvbox bg to real dark
-let g:gruvbox_material_background = 'hard' " Same but for -material alt
-let g:gruvbox_invert_selection='0'         " Don't invert selection
-set background=dark                        " Set global background to dark
+"let g:gruvbox_contrast_dark = 'hard'       " Set gruvbox bg to real dark
+"let g:gruvbox_material_background = 'hard' " Same but for -material alt
+"let g:gruvbox_invert_selection='0'         " Don't invert selection
+set background=light                       " Set global background to dark
 colorscheme gruvbox-material               " Default colorscheme
 
 " Set original bg
@@ -729,6 +746,10 @@ let g:vim_isort_config_overrides = {
   \ 'include_trailing_comma': 1, 'multi_line_output': 3}
 let g:vim_isort_python_version = 'python3'
 let g:vim_isort_map = '<C-i>'
+
+""Floaterm
+nnoremap <Leader>tt :FloatermToggle<CR>
+nnoremap <C-\><C-n><Esc><Esc> :FloatermHide<CR>
 
 " Shows a CheatSheet
 " nnoremap <silent> <leader> :WhichKey ','<CR>

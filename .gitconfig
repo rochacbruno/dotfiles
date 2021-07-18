@@ -38,3 +38,6 @@
 	user = rochacbruno
 [commit]
 	gpgsign = true
+[merge]
+	tool = vimdiff
+	conflicstyle = diff3
