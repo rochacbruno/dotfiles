@@ -119,7 +119,7 @@ bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+Ctrl+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+# bindsym $mod+F5 exec terminal -e 'mocp'
 #bindsym $mod+t exec --no-startup-id pkill compton
 #bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -267,9 +267,9 @@ popup_during_fullscreen smart
 # for_window [instance="discord"] move scratchpad
 
 # bindsym $mod+F9 [instance="crx_chfbpgnooceecdoohagngmjnndbbaeip"] scratchpad show
-bindsym $mod+F8 [instance="chatterino"] scratchpad show
-bindsym $mod+F7 [instance="telegram-desktop"] scratchpad show
 bindsym $mod+F6 [instance="slack"] scratchpad show
+bindsym $mod+F7 [instance="telegram-desktop"] scratchpad show
+bindsym $mod+F8 [instance="element"] scratchpad show
 bindsym $mod+F9 [instance="spotify"] scratchpad show
 
 # Open specific applications in floating mode

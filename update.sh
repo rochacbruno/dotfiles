@@ -9,6 +9,8 @@ cp ~/.Xresources .
 
 cp -R  ~/.i3 .
 
+cp -R /usr/lib/python3.9/sitecustomize.py .
+
 # Tmux
 
 # Only needs local, everything else is in https://github.com/gpakosz/.tmux.git
@@ -71,6 +73,9 @@ cp -R ~/bin/galaxy ./bin
 cp -R ~/bin/galaxy_shell ./bin
 cp -R ~/bin/set_windows ./bin
 cp -R ~/bin/streamtimer ./bin
+cp -R ~/bin/portugal ./bin
+cp -R ~/bin/brtime ./bin
+cp -R ~/bin/ustime ./bin
 
 # Packages
 pacman -Qe > pacman_installed.txt

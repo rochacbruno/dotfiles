@@ -3,9 +3,9 @@
 ├── http-tui@0.0.4
 ├── instant-markdown-d@0.2.0-rc.2
 ├── localtunnel@2.0.0
-├── node-gyp@7.1.2
-├── npm@7.6.0
+├── node-gyp@8.1.0
+├── npm@7.16.0
 ├── rofi-search@1.0.0
-├── semver@7.3.4
+├── semver@7.3.5
 └── yarn@1.22.10
 

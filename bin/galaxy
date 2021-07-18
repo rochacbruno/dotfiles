@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
 # This is a dev only local Token (no problem sharing it)
-http  :8002$1 "Authorization: Token b1a99acc28ebfd33fc2ce4684408079456efe6de"
+http --verify=no  $GALAXY_HOST$1 "Authorization: Token $GALAXY_TOKEN"

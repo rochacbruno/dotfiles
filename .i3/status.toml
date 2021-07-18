@@ -29,13 +29,27 @@ icons = "awesome"
 # command = "echo 🎵"
 
 [[block]]
+block = "docker"
+interval = 2
+format = "{running}/{total}/{images}"
+
+[[block]]
 block = "custom"
 command = "/home/rochacbruno/bin/portugal"
+
+[[block]]
+block = "custom"
+command = "/home/rochacbruno/bin/ustime"
+
+[[block]]
+block = "custom"
+command = "/home/rochacbruno/bin/brtime"
 
 [[block]]
 block = "music"
 player = "spotify"
 buttons = ["play", "next"]
+marquee = false
 
 # [[block]]
 # block = "custom"
@@ -78,8 +92,8 @@ buttons = ["play", "next"]
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mup}%"
-format_swap = "{SUp}%"
+# format_mem = "{Mup}%"
+# format_swap = "{SUp}%"
 
 [[block]]
 block = "cpu"
@@ -91,13 +105,18 @@ interval = 1
 # format = "{1m}"
 
 [[block]]
+block = "bluetooth"
+mac = "5C:C6:E9:23:88:18"
+format = ""
+
+[[block]]
 block = "sound"
 on_click = "pavucontrol"
 
 [[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R"
+format = "%a %d/%m %R in 🇵🇹"
 on_click = "orage"
 
 # [[block]]
