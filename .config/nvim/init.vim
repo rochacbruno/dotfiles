@@ -414,7 +414,7 @@ let g:ale_linters = {}            " Extend the linters
 "let g:gruvbox_contrast_dark = 'hard'       " Set gruvbox bg to real dark
 "let g:gruvbox_material_background = 'hard' " Same but for -material alt
 "let g:gruvbox_invert_selection='0'         " Don't invert selection
-set background=light                       " Set global background to dark
+set background=dark                       " Set global background to dark
 colorscheme gruvbox-material               " Default colorscheme
 
 " Set original bg

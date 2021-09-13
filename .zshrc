@@ -4,6 +4,14 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.cargo/bin:$HOME/.poetry/bin:$P
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rochacbruno/.oh-my-zsh"
 
+
+HISTSIZE=999999999
+SAVEHIST=999999999
+
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt hist_ignore_all_dups
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME

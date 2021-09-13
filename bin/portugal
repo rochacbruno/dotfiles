@@ -1,0 +1,7 @@
+#!/bin/bash
+
+target_date="Apr 05 2021"
+today=`echo $(($(date --utc --date "$1" +%s)/86400))`
+target=`echo $(($(date --utc --date "$target_date" +%s)/86400))`
+days=`expr $today - $target`
+echo "$days days in 🇵🇹"

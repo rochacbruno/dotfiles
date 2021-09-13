@@ -41,3 +41,5 @@
 [merge]
 	tool = vimdiff
 	conflicstyle = diff3
+[init]
+	defaultBranch = main
