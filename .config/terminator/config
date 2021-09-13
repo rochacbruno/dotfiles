@@ -3,6 +3,7 @@
   tab_position = bottom
   broadcast_default = off
   enabled_plugins = CustomCommandsMenu,
+  suppress_multiple_term_dialog = True
   title_use_system_font = False
   title_font = Source Code Pro 16
 [keybindings]
@@ -10,13 +11,14 @@
   full_screen = ""
 [profiles]
   [[default]]
-    background_color = "#002b36"
+    background_color = "#282828"
     cursor_color = "#aaaaaa"
     font = Source Code Pro 16
-    foreground_color = "#839496"
+    foreground_color = "#ebdbb2"
     show_titlebar = False
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
+    bold_is_bright = True
   [[solar]]
     cursor_color = "#aaaaaa"
 [layouts]
