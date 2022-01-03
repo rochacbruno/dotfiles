@@ -1,5 +1,5 @@
 configuration {
-	modi: "drun,window,run,calc,emoji";
+	modi: "combi,emoji,calc";
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -32,7 +32,7 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-/*	combi-modi: "window,run";*/
+    combi-modi: "window,drun,run";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -42,7 +42,7 @@ configuration {
 /*	scroll-method: 0;*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
-	theme: "/usr/share/rofi/themes/gruvbox-dark-hard.rasi" ;
+/*	theme: "/usr/share/rofi/themes/gruvbox-dark-hard.rasi" ; */
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	matching-negate-char: '-' /* unsupported */;*/
@@ -148,3 +148,5 @@ configuration {
       sorting-method:    "name";
   }
 }
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"

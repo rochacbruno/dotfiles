@@ -8,8 +8,8 @@ export ZSH="/home/rochacbruno/.oh-my-zsh"
 HISTSIZE=999999999
 SAVEHIST=999999999
 
-setopt SHARE_HISTORY
-setopt APPEND_HISTORY
+#setopt SHARE_HISTORY
+#setopt APPEND_HISTORY
 setopt hist_ignore_all_dups
 
 # Set name of the theme to load --- if set to "random", it will
@@ -102,6 +102,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     vi-mode
+    k
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -138,7 +139,7 @@ fi
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
 
-eval "$(~/.cargo/bin/starship init zsh)"
+eval "$(starship init zsh)"
 
 
 # enable control-s and control-q
@@ -186,13 +187,11 @@ alias np='nano -w PKGBUILD'
 alias more=less
 
 alias gs="git status"
-alias vi=nvim
-alias vim=nvim
 alias ls=exa
 
 #alias joke="cornyjokes | cat -r 0:7"
 
-export EDITOR=nvim
+export EDITOR=vim
 
 #joke
 #colorscript random
