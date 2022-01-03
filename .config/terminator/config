@@ -11,6 +11,9 @@
   full_screen = ""
 [profiles]
   [[default]]
+    audible_bell = True
+    visible_bell = True
+    urgent_bell = True
     background_color = "#282828"
     cursor_color = "#aaaaaa"
     font = Source Code Pro 16

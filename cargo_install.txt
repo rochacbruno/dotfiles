@@ -2,8 +2,6 @@ amp v0.6.2:
     amp
 bandwhich v0.14.0:
     bandwhich
-bat v0.16.0:
-    bat
 cargo-edit v0.6.0:
     cargo-add
     cargo-rm
@@ -68,8 +66,6 @@ see v0.0.2:
     see
 so v0.4.2:
     so
-starship v0.47.0:
-    starship
 swp v1.0.3:
     swp
 tokei v12.0.4:

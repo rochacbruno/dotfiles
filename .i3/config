@@ -502,11 +502,34 @@ set $darkgray #1d2021
 # }
 
 bar {
+    #font pango:Font Awesome 5 Free
+    font pango:PowerlineSymbols, Font Awesome 5 Free 12
+    output HDMI-2
+    position bottom
+    status_command /usr/bin/i3status-rs $HOME/.i3/status2.toml
+    tray_output primary
+
+    colors {
+        background $bg
+        statusline $yellow
+        separator  $gray
+
+        #                   border  backgr. text
+        focused_workspace  $aqua $aqua $darkgray
+        active_workspace   $darkgray $darkgray $yellow
+        inactive_workspace $darkgray $darkgray $yellow
+        binding_mode       $green $yellow $bg
+        urgent_workspace   $red $red $bg
+    }
+}
+
+bar {
 	# font pango:DejaVu Sans Mono, FontAwesome 12
     #font pango:Font Awesome 5 Free
     font pango:PowerlineSymbols, Font Awesome 5 Free 12
     position bottom
     tray_output primary
+    output primary
     status_command /usr/bin/i3status-rs $HOME/.i3/status.toml
     colors {
         background $bg
