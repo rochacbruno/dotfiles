@@ -1,4 +1,6 @@
 The following plugins are currently installed:
+run `micro -plugin install <name>` for each one.
+
 initlua (0.0.3)
 bookmark (2.2.0)
 bounce (2.0.0)
