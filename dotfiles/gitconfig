@@ -20,6 +20,7 @@
     main = "checkout main"
     aah = "!f() { git checkout -b aah-$1; }; f"
     amd = "commit --amend --no-edit --allow-empty"
+
 [core]
     excludesfile = ~/.gitignore
     editor = micro

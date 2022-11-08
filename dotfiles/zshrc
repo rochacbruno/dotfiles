@@ -114,7 +114,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
 
+# alias cp="cp -i"      # confirm before overwriting something
+# alias rm="rm -i"
+# alias mv="mv -i"
+alias ..="cd .."
+
+alias df='df -h'      # human-readable sizes
+alias free='free -m'  # show sizes in MB
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
