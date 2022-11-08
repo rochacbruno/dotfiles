@@ -1,4 +1,0 @@
-#!/bin/bash
-
-us_time=`echo $(TZ=America/Sao_Paulo date +%H:%M)`
-echo "$us_time in 🇧🇷"

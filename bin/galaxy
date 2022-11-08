@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-
-# This is a dev only local Token (no problem sharing it)
-http --verify=no  $GALAXY_HOST$1 "Authorization: Token $GALAXY_TOKEN"
