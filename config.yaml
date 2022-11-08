@@ -62,6 +62,12 @@ dotfiles:
   d_obs-studio:
     src: config/obs-studio
     dst: ~/.config/obs-studio
+    cmpignore:
+      - "profiler_data/*"
+      - "logs/*"
+    upignore:
+      - "profiler_data/*"
+      - "logs/*"
   d_rofi:
     src: config/rofi
     dst: ~/.config/rofi
@@ -71,6 +77,18 @@ dotfiles:
   d_bin:
     src: bin
     dst: ~/bin
+    cmpignore:
+      - "kubectl"
+      - "ctlptl"
+      - "gitleaks"
+      - "oc"
+      - "codacy-coverage-reporter"
+    upignore:
+      - "kubectl"
+      - "ctlptl"
+      - "gitleaks"
+      - "oc"
+      - "codacy-coverage-reporter"
   f_bindings.json:
     src: config/micro/bindings.json
     dst: ~/.config/micro/bindings.json
