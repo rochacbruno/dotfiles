@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+echo "$(docker ps -q | wc -l) / $(docker ps -a -q | wc -l) / $(docker images -a -q | wc -l)"

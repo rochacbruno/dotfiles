@@ -1,0 +1,225 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+
+  - trigger: ":pymain"
+    replace: |
+      if __name__ == "__main__":
+          $|$
+          # do something
+
+  - trigger: ":pycls"
+    replace: |
+      class $|$:
+          attribute: type
+
+          def __init__(self, param):
+              self.param = param
+
+          def __str__(self):
+              return str(self.param)
+
+  - trigger: ":pydata"
+    replace: |
+      @dataclass
+      class $|$:
+          attribute: type
+
+  - trigger: ":pyfun"
+    replace: |
+      def $|$(arg, *args, **kwargs):
+          return
+
+  - trigger: ":pyfor"
+    replace: |
+      for item in $|$:
+          print(item)
+
+  - trigger: ":pyloop"
+    replace: |
+      while True:
+          $|$
+
+  - trigger: ":pywhile"
+    replace: |
+      while $|$:
+          # do something
+
+  - trigger: ":pyenumerate"
+    replace: |
+      for idx, item in enumerate($|$):
+          print(idx, item)
+
+  - trigger: ":pycod"
+    replace: "# coding: utf-8"
+
+  - trigger: ":pybang"
+    replace: "#!/usr/bin/env python3"
+
+  - trigger: ":pymatch"
+    replace: |
+      match $|$:
+          case (x):
+              print(x)
+          case _:
+              pass
+
+  - trigger: ":pytry"
+    replace: |
+      try:
+          $|$
+      except Exception as e:
+          print(e)
+
+  - trigger: ":pypdb"
+    replace: "__import__('pdb').set_trace()"
+
+  - trigger: ":pyipdb"
+    replace: "__import__('ipdb').set_trace()"  
+
+  - trigger: ":pyconf"
+    replace: |
+      import os
+      from dynaconf import Dynaconf, Validator
+      
+      APP_NAME = "$|$"
+      WORKDIR = os.path.dirname(os.path.abspath(__file__))
+      settings = Dynaconf(
+          root_path=WORKDIR,
+          settings_files=["settings.toml"],
+          envvar_prefix=APP_NAME,
+          env_switcher=f"{APP_NAME}_ENV",
+          environments=False,
+          validators=[
+              Validator("NAME", must_exist=True)
+          ]
+      )
+
+  - trigger: ":pyflask"
+    replace: |
+      from flask import Flask
+
+      app = Flask(__name__)
+
+
+      @app.route("/")
+      def index():
+          return "$|$"
+
+      # more routes here
+
+  - trigger: ":pyfastapi"
+    replace: |
+      from fastapi import FastAPI
+      
+      app = FastAPI()
+      
+      
+      @app.get("/")
+      def index():
+          return {"Hello": "$|$"}
+      
+      
+      @app.get("/items/{item_id}")
+      def read_item(item_id: int, q: Union[str, None] = None):
+          return {"item_id": item_id, "q": q}
+
+
+  - trigger: ":pytyper"
+    replace: |
+      #!/usr/bin/env python3
+      import typer
+
+      app = typer.Typer()
+
+
+      @app.command()
+      def hello(name: str):
+          print(f"Hello {name}")
+
+
+      @app.command()
+      def goodbye(name: str, formal: bool = False):
+          if formal:
+              print(f"Goodbye Ms. {name}. Have a good day.")
+          else:
+              print(f"Bye {name}!")
+
+
+      if __name__ == "__main__":
+          app()
+
+
+  - trigger: ":pyclick"
+    replace: |
+      #!/usr/bin/env python3
+      import click
+
+
+      @click.group()
+      def cli():
+          pass
+
+
+      @cli.command(name='hello')
+      def hello():
+          click.echo('Hello there')
+
+
+      @cli.command(name='goodbye')
+      def goodbye():
+          click.echo('goodbye')
+
+
+      if __name__ == '__main__':
+          cli()
+
+  - trigger: ":pysetup"
+    replace: |
+      from setuptools import find_packages, setup
+
+
+      def read_requirements(path):
+          return [
+              line.strip()
+              for line in read(path).split("\n")
+              if not line.startswith(('"', "#", "-", "git+"))
+          ]
+
+          
+      setup(
+          name="$|$",
+          version="0.1.0",
+          description="Project Description Here",
+          url="https://github.com/author_name/project_urlname/",
+          long_description=open("README.md", encoding="utf-8").read(),
+          long_description_content_type="text/markdown",
+          author="author_name",
+          packages=find_packages(exclude=["tests", ".github"]),
+          install_requires=read_requirements("requirements.txt"),
+          #entry_points={
+          #    "console_scripts": ["project_name = project_name.__main__:main"]
+          #},
+          #extras_require={"test": read_requirements("requirements-test.txt")},
+      )
+
+  - trigger: ":pydynatoml"
+    replace: |
+      [default]
+      key = "defaultvalue"
+
+      [development]
+      key = "devvalue"
+
+      [production]
+      key = "prodvalue"
+
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/

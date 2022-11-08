@@ -1,0 +1,118 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_gromit-mpx.cfg:
+    src: config/gromit-mpx.cfg
+    dst: ~/.config/gromit-mpx.cfg
+  f_gromit-mpx.ini:
+    src: config/gromit-mpx.ini
+    dst: ~/.config/gromit-mpx.ini
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_gitignore:
+    src: gitignore
+    dst: ~/.gitignore
+  f_gtkrc-2.0:
+    src: gtkrc-2.0
+    dst: ~/.gtkrc-2.0
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  f_pypirc:
+    src: pypirc
+    dst: ~/.pypirc
+  f_wacom_utility:
+    src: wacom_utility
+    dst: ~/.wacom_utility
+  d_screenlayout:
+    src: screenlayout
+    dst: ~/.screenlayout
+  d_autorandr:
+    src: config/autorandr
+    dst: ~/.config/autorandr
+  f_settings.json:
+    src: config/Code/User/settings.json
+    dst: ~/.config/Code/User/settings.json
+  d_espanso:
+    src: config/espanso
+    dst: ~/.config/espanso
+  d_i3:
+    src: config/i3
+    dst: ~/.config/i3
+  d_i3status-rust:
+    src: config/i3status-rust
+    dst: ~/.config/i3status-rust
+  f_kdenlive-layoutsrc:
+    src: config/kdenlive-layoutsrc
+    dst: ~/.config/kdenlive-layoutsrc
+    chmod: '600'
+  f_kdenliverc:
+    src: config/kdenliverc
+    dst: ~/.config/kdenliverc
+    chmod: '600'
+  d_ksnip:
+    src: config/ksnip
+    dst: ~/.config/ksnip
+  d_obs-studio:
+    src: config/obs-studio
+    dst: ~/.config/obs-studio
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+  d_terminator:
+    src: config/terminator
+    dst: ~/.config/terminator
+  d_bin:
+    src: bin
+    dst: ~/bin
+  f_bindings.json:
+    src: config/micro/bindings.json
+    dst: ~/.config/micro/bindings.json
+  f_init.lua:
+    src: config/micro/init.lua
+    dst: ~/.config/micro/init.lua
+  f_installed_plugins.txt:
+    src: config/micro/installed_plugins.txt
+    dst: ~/.config/micro/installed_plugins.txt
+  f_micro_settings.json:
+    src: config/micro/settings.json
+    dst: ~/.config/micro/settings.json
+  d_thunar:
+    src: config/Thunar
+    dst: ~/.config/Thunar
+profiles:
+  rocha:
+    dotfiles:
+    - f_gromit-mpx.cfg
+    - f_gromit-mpx.ini
+    - f_bashrc
+    - f_gitconfig
+    - f_gitignore
+    - f_gtkrc-2.0
+    - f_zshrc
+    - f_pypirc
+    - f_wacom_utility
+    - d_screenlayout
+    - d_autorandr
+    - f_settings.json
+    - d_espanso
+    - d_i3
+    - d_i3status-rust
+    - f_kdenlive-layoutsrc
+    - f_kdenliverc
+    - d_ksnip
+    - d_obs-studio
+    - d_rofi
+    - d_terminator
+    - d_bin
+    - f_bindings.json
+    - f_init.lua
+    - f_installed_plugins.txt
+    - f_micro_settings.json
+    - d_thunar

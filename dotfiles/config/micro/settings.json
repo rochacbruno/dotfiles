@@ -1,0 +1,35 @@
+{
+    "autoclose": false,
+    "backup": false,
+    "colorcolumn": 80,
+    "colorscheme": "bubblegum",
+    "diffgutter": true,
+    "ft:makefile": {
+        "tabstospaces": false
+    },
+    "ft:yaml": {
+        "rmtrailingws": false
+    },
+    "hlsearch": true,
+    "ignorecase": false,
+    "indentchar": "",
+    "mkparents": true,
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": [],
+    "rmtrailingws": true,
+    "rust": true,
+    "rust-plugin.linter-cargo-check": false,
+    "rust-plugin.linter-clippy": false,
+    "rust-plugin.onsave-build": false,
+    "rust-plugin.onsave-fmt": false,
+    "rust-plugin.rustfmt-backup": false,
+    "rust-plugin.tool-cargo-rustc": false,
+    "savecursor": true,
+    "saveundo": true,
+    "scrollbar": true,
+    "softwrap": true,
+    "tabmovement": true,
+    "tabstospaces": true
+}

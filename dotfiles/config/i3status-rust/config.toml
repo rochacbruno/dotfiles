@@ -1,0 +1,75 @@
+theme = "gruvbox-dark"
+icons = "awesome"
+
+
+[[block]]
+block = "focused_window"
+max_width = 50
+show_marks = "visible"
+
+[[block]]
+block = "docker"
+interval = 2
+format = "{running}/{total}/{images}"
+
+[[block]]
+block = "custom"
+command = "/home/rochacbruno/bin/portugal"
+
+[[block]]
+block = "custom"
+command = "/home/rochacbruno/bin/ustime"
+
+[[block]]
+block = "custom"
+command = "/home/rochacbruno/bin/brtime"
+
+[[block]]
+block = "music"
+#player = "spotify"
+buttons = ["play", "next"]
+marquee = false
+smart_trim = true
+hide_when_empty = true
+format = "{combo} {player}"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+# format_mem = "{Mup}%"
+# format_swap = "{SUp}%"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "used"
+#format = "{icon} {used}/{total} ({available} free)"
+format = "{icon} {used}/{total}"
+alert_absolute = true
+unit = "GB"
+alert = 400
+warning = 450
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "bluetooth"
+mac = "5C:C6:E9:23:88:18"
+format = ""
+
+[[block]]
+block = "sound"
+on_click = "pavucontrol"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R 🇵🇹"
+on_click = "gsimplecal"
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}%"

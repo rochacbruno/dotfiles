@@ -1,0 +1,115 @@
+{
+    "workbench.colorTheme": "SynthWave Refined",
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": true
+    },
+    "redhat.telemetry.enabled": false,
+    "editor.inlineSuggest.enabled": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.tox": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/venv*": true,
+        "**/.venv*": true,
+        "**/.env/*": true,
+        "**/.tox": true,
+        "**/.mypy_cache": true,
+        "**/.vim": true,
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.coverage.*": true,
+        "**/.coverage": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.pyc": true,
+        "**/__pycache__": true,
+        "**/.vscode": true,
+        "**/.idea": true,
+        "**/*.egg-info": true,
+        "**/venv": true,
+        "**/venv*": true,
+        "**/dist": true,
+        "**/.pytest_cache": true,
+        "**/.envrc": true,
+        "**/.hidden_*": true
+    },
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py",
+        "**/venv/**/*.py",
+        "**/venv*/**/*.py",
+        "**/.venv/**/*.py",
+        "**/.venv*/**/*.py"
+    ],
+    "extensions.ignoreRecommendations": true,
+    "[python]": {
+        "files.trimTrailingWhitespace": true,
+        "editor.rulers": [79, 99, 119],
+        "editor.fontLigatures": false,
+        "editor.defaultFormatter": "ms-python.python",
+    },
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontSize": 16,
+    "activitusbar.activeColour": "#B2FFFF",
+    "activitusbar.views": [
+
+        {
+            "name": "explorer",
+            "codicon": "explorer-view-icon"
+        },
+        {
+            "name": "search",
+            "codicon": "search-view-icon"
+        },
+        // {
+        //     "name": "scm",
+        //     "codicon": "source-control-view-icon"
+        // },
+        // {
+        //     "name": "debug",
+        //     "codicon": "run-view-icon"
+        // },
+        {
+            "name": "extensions",
+            "codicon": "extensions-view-icon"
+        },
+        {
+            "name": "terminal",
+            "codicon": "terminal-view-icon"
+        },
+        {
+            "name": "extension.thunder-client-sidebar-view",
+            "codicon": "globe"
+        }
+    ],
+    "editor.minimap.enabled": false,
+    "thunder-client.codeSnippetLanguage": "curl",
+    "window.title": "${dirty}${separator}${rootName}/${activeEditorMedium}${separator}${appName}",
+    "editor.mouseWheelZoom": true,
+    "workbench.editor.enablePreview": false,
+    "easyTerminalZoom.step": 3,
+    "terminal.integrated.fontSize": 15,
+    "workbench.sideBar.location": "right",
+    "files.insertFinalNewline": true,
+    "python.analysis.autoImportCompletions": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "gitlens.autolinks": [
+        {
+            "alphanumeric": false,
+            "ignoreCase": false,
+            "prefix": "AAH-",
+            "url": "https://issues.redhat.com/browse/AAH-<num>"
+        }
+    ],
+    "workbench.preferredDarkColorTheme": "SynthWave Refined"
+}

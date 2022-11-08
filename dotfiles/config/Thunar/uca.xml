@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1561037580080073-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>application-image-jpg</icon>
+	<name>Convert to JPG</name>
+	<unique-id>1667911886540376-1</unique-id>
+	<command>~/thunar-actions/convert-to-jpg.sh -f %f</command>
+	<description>Convert FIle to JPG</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>application-image-png</icon>
+	<name>Convert to png</name>
+	<unique-id>1667911946461905-2</unique-id>
+	<command>~/thunar-actions/convert-to-png.sh -f %f</command>
+	<description>Convert image to PNG</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>image-crop</icon>
+	<name>Resize Image</name>
+	<unique-id>1667911994096494-3</unique-id>
+	<command>~/thunar-actions/image_resizer.sh %F</command>
+	<description>Resize image</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>dialog-information</icon>
+	<name>Media Info</name>
+	<unique-id>1667912028920267-4</unique-id>
+	<command>~/thunar-actions/media-info.sh -f %f -t %n</command>
+	<description></description>
+	<patterns>*</patterns>
+	<audio-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>folder-add</icon>
+	<name>New Directory from Selection</name>
+	<unique-id>1667912105348970-5</unique-id>
+	<command>~/thunar-actions/new_directory_from_selection.sh %F</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>git</icon>
+	<name>Paste to gist</name>
+	<unique-id>1667912149215286-6</unique-id>
+	<command>~/thunar-actions/paste-to-gist.sh -f %f</command>
+	<description></description>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon>gpaste</icon>
+	<name>Paste to pastebin</name>
+	<unique-id>1667912256333488-7</unique-id>
+	<command>~/thunar-actions/paste-to-pastebin.sh -f %f</command>
+	<description></description>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon>image-filter</icon>
+	<name>Upload to IMGUR</name>
+	<unique-id>1667912288171921-8</unique-id>
+	<command>~/thunar-actions/upload-to-imgur.sh -f %f</command>
+	<description></description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>application-image-gif</icon>
+	<name>Video to gif</name>
+	<unique-id>1667912312832870-9</unique-id>
+	<command>~/thunar-actions/video-to-gif.sh -f %f -t %n</command>
+	<description></description>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+</actions>

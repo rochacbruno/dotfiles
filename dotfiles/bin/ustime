@@ -1,0 +1,4 @@
+#!/bin/bash
+
+us_time=`echo $(TZ=America/New_York date +%H:%M)`
+echo "$us_time in 🇺🇸"

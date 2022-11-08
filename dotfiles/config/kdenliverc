@@ -1,0 +1,192 @@
+[KFileDialog Settings]
+Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Videos/obs/canal/ar1-f000019.png,file:$HOME/Videos/obs/canal/ar1-f001485.png,file:///tmp/ar1-f000409.png,file:$HOME/Videos/02Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/01Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/karla/dslogo.png,file:$HOME/Videos/karla/À_venda_Moradia_T6_em_Covas_de_450_m²_Manuela_Santos_+351_967_378.mp4,file:$HOME/Videos/curso/D1,file:$HOME/Videos/curso/D1/D1P1-intro-ao-treinamento.mp4
+Recent URLs[$e]=file:$HOME/Videos/curso/D1/,file:$HOME/,file:$HOME/Videos/curso/,file:$HOME/Videos/karla/,file:$HOME/Videos/,file:$HOME/Videos/obs/LT/web/d3/,file:///tmp/,file:$HOME/Videos/obs/canal/
+detailViewIconSize=16
+
+[MainWindow]
+DP3-1 DP3-3=DP3-3
+DP3-1 DP3-3 Height 1080x1920=1254
+DP3-1 DP3-3 Height 1080x1920 DP3-1=722
+DP3-1 DP3-3 Height 1920x1080=1037
+DP3-1 DP3-3 Height 1920x1080 DP3-3=1037
+DP3-1 DP3-3 Width 1080x1920=1068
+DP3-1 DP3-3 Width 1080x1920 DP3-1=789
+DP3-1 DP3-3 Width 1920x1080=1920
+DP3-1 DP3-3 Width 1920x1080 DP3-3=1920
+DP3-1 DP3-3 XPosition 1080x1920=6
+DP3-1 DP3-3 XPosition 1080x1920 DP3-1=0
+DP3-1 DP3-3 XPosition 1920x1080=1080
+DP3-1 DP3-3 XPosition 1920x1080 DP3-3=1080
+DP3-1 DP3-3 YPosition 1080x1920=660
+DP3-1 DP3-3 YPosition 1080x1920 DP3-1=0
+DP3-1 DP3-3 YPosition 1920x1080=557
+DP3-1 DP3-3 YPosition 1920x1080 DP3-3=557
+State=AAAA/wAAAAD9AAAAAgAAAAEAAAEUAAABzvwCAAAAAfsAAAAKAG0AaQB4AGUAcgAAAAIfAAABzgAAAGIBAAACAAAAAgAAB4AAAAGo/AEAAAAP+wAAABQAcwBjAHIAZQBlAG4AZwByAGEAYgAAAAAA/////wAAAJEBAAAD+wAAABoAYQB1AGQAaQBvAHMAcABlAGMAdAByAHUAbQAAAAAA/////wAAAGMBAAAD/AAAAAAAAAFJAAAAiwD////6AAAAAAEAAAAE+wAAABYAcAByAG8AagBlAGMAdABfAGIAaQBuAQAAAAD/////AAAAXAEAAAP7AAAAHgB0AHIAYQBuAHMAaQB0AGkAbwBuAF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAAB4AYwBsAGkAcABfAHAAcgBvAHAAZQByAHQAaQBlAHMBAAAAAP////8AAABXAQAAA/sAAAAYAHUAbgBkAG8AXwBoAGkAcwB0AG8AcgB5AQAAAAD/////AAAAWwEAAAP8AAABVAAAAfcAAAAAAP////r/////AgAAAAP7AAAAGABjAGwAaQBwAF8AbQBvAG4AaQB0AG8AcgAAAABEAAABzQAAAMsBAAAC+wAAABIAUwB1AGIAdABpAHQAbABlAHMAAAAAAP////8AAAE4AQAAAvsAAAAOAGwAaQBiAHIAYQByAHkAAAAAAP////8AAACUAQAAAvsAAAAWAGUAZgBmAGUAYwB0AF8AbABpAHMAdAEAAAFKAAABPwAAAAQBAAAD+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAACigAAAn4AAABXAQAAA/wAAAUJAAACdwAAAUQA////+gAAAAACAAAAAvsAAAAeAHAAcgBvAGoAZQBjAHQAXwBtAG8AbgBpAHQAbwByAQAAAL8AAAEsAAAAywEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAAAAAAA/////wAAAHwBAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABGgEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAACdAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAACaAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABQwEAAAP7AAAAEAB0AGUAeAB0AGUAZABpAHQAAAAAAP////8AAAGZAQAAA/sAAAASAHQAaQBtAGUAcgBlAG0AYQBwAAAAAAD/////AAAAWwEAAAP7AAAAEABiAGkAbgBfAGMAbABpAHAAAAAAAP////8AAAI2AQAAA/sAAAAeAG8AbgBsAGkAbgBlAHIAZQBzAG8AdQByAGMAZQBzAAAAAAD/////AAABPAEAAAMAAAeAAAAB9QAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABgAZQB4AHQAcgBhAFQAbwBvAGwAQgBhAHIBAAACCv////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+eDP1 DP3-3 Height 1920x1080=1060
+eDP1 DP3-3 Width 1920x1080=1920
+eDP1 DP3-3 XPosition 1920x1080=1920
+eDP1 DP3-3 YPosition 1920x1080=20
+eDP1 Height 1920x1080=1017
+eDP1 Width 1920x1080=1920
+eDP1 Window-Maximized 1920x1080=true
+eDP1 XPosition 1920x1080=0
+eDP1 YPosition 1920x1080=28
+
+[OnlineResources]
+provider=Freesound
+zoom=7
+
+[Recent Dirs]
+KdenliveClipFolder[$e]=$HOME/Videos/,$HOME/Videos/obs/LT/web/d3/,$HOME/Videos/curso/
+KdenliveFramesFolder[$e]=$HOME/Videos/obs/canal/,/tmp/,$HOME/Documents
+KdenliveProjectsFolder[$e]=$HOME/Videos/obs/canal/aprendarust/parte3,$HOME/Videos/obs/canal/aprendarust/parte2,$HOME/Videos/obs/canal
+
+[Recent Files]
+File1[$e]=$HOME/Videos/web_kdl/d1p03.kdenlive
+File10[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/pitch_scale.kdenlive
+File2[$e]=$HOME/Videos/karla/ds.kdenlive
+File3[$e]=$HOME/Videos/video_config_django.kdenlive
+File4[$e]=$HOME/Videos/obs/demo-cosign1.kdenlive
+File5[$e]=$HOME/Videos/obs/LT/web/d4/p2.kdenlive
+File6[$e]=$HOME/Videos/obs/canal/aprendarust/parte2/p2.kdenlive
+File7[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/p3_speed.kdenlive
+File8[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/ p3.kdenlive
+File9[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/parte3_spped_try_rubber_kdenlive.kdenlive
+Name1[$e]=d1p03.kdenlive
+Name10[$e]=pitch_scale.kdenlive
+Name2[$e]=ds.kdenlive
+Name3[$e]=video_config_django.kdenlive
+Name4[$e]=demo-cosign1.kdenlive
+Name5[$e]=p2.kdenlive
+Name6[$e]=p2.kdenlive
+Name7[$e]=p3_speed.kdenlive
+Name8[$e]=\sp3.kdenlive
+Name9[$e]=parte3_spped_try_rubber_kdenlive.kdenlive
+
+[RenderWidget]
+showoptions=true
+
+[Scope_Histogram]
+autoRefresh=true
+bEnabled=true
+gEnabled=true
+logScale=false
+rEnabled=true
+realtime=false
+rec601=false
+sEnabled=false
+yEnabled=true
+
+[Scope_RGB Parade]
+autoRefresh=true
+axis=false
+gradref=false
+paintmode=0
+realtime=false
+
+[Scope_Vectorscope]
+75PBox=false
+autoRefresh=true
+axis=false
+backgroundmode=0
+colorspace_ypbpr=false
+gain=1
+iqlines=false
+paintmode=0
+realtime=false
+
+[Scope_Waveform]
+autoRefresh=true
+paintmode=0
+realtime=false
+rec601=false
+
+[Shortcut Schemes]
+Current Scheme=Default
+
+[TitleWidget]
+background_alpha=0
+background_color=0,0,0
+dialog_geometry=AdnQywADAAAAAAXQAAACoAAAChsAAAV3AAAF0gAAAqAAAAoZAAAFdQAAAAEAAAAAB4AAAAXSAAACoAAAChkAAAV1
+font_color=255,255,255
+font_family=Noto Sans Bengali Black,-1,63,5,75,0,0,0,0,0
+font_italic=false
+font_outline=0
+font_outline_color=0,0,0
+font_pixel_size=63
+font_underlined=false
+font_weight=75
+rect_background_alpha=255
+rect_background_color=0,0,0
+rect_foreground_alpha=255
+rect_foreground_color=0,0,0
+rect_line_width=0
+use_grid=false
+
+[UiSettings]
+ColorScheme=Breeze Dark
+ColorSchemePath=BreezeDark.colors
+
+[bin]
+treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAANQAAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAAA1AAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
+
+[capture]
+decklink_capturedevice=4294967295
+decklink_extension=mov
+decklink_parameters=vcodec=dnxhd vb=145000k acodec=pcm_s16le threads=%threads
+defaultaudiocapture=0
+grab_extension=mov
+grab_parameters=-crf 25 -vcodec libx264 -preset veryfast -threads 0
+v4l_extension=mpg
+v4l_parameters=qscale=4 ab=192k vcodec=mpeg2video acodec=mp2 threads=%threads
+
+[env]
+defaultimageapp=/usr/bin/gimp
+defaultprojectfolder[$e]=$HOME/Videos
+ffmpegpath[$e]=/usr/bin/ffmpeg
+ffplaypath[$e]=/usr/bin/ffplay
+ffprobepath[$e]=/usr/bin/ffprobe
+mltpath[$e]=/usr/share/mlt-7/profiles
+rendererpath[$e]=/usr/bin/melt-7
+
+[project]
+audiotracks=3
+enableproxy=true
+externalProxyProfile=./;GL;.LRV;./;GX;.MP4
+generateproxy=true
+parallelrender=false
+videotracks=3
+
+[sdl]
+blackmagic_output_device=-1
+
+[settings]
+dialogSize=1024,700
+
+[shuttle]
+shuttlebuttons=button0=monitor_pause
+
+[timeline]
+headerwidth=168
+trackheight=69
+
+[titles]
+titlerShowbg=true
+
+[unmanaged]
+colorclipcolor=255,255,128
+default_profile=atsc_1080p_30
+defaultrescaleheight=540
+defaultrescalewidth=960
+force_breeze=true
+monitor_audio=false
+producerslist=glaxnimate,decklink,framebuffer,abnormal,color,colour,consumer,hold,loader,melt,melt_file,noise,timewarp,tone,vorbis,avformat,avformat-novalidate,qimage,qtext,kdenlivetitle,blipflash,count,pgm,xml,xml-string,xml-nogl,pango,pixbuf,frei0r.ising0r,frei0r.lissajous0r,frei0r.nois0r,frei0r.onecol0r,frei0r.partik0l,frei0r.plasma,frei0r.test_pat_B,frei0r.test_pat_C,frei0r.test_pat_G,frei0r.test_pat_I,frei0r.test_pat_L,frei0r.test_pat_R
+project_fps=30
+renderProfile=H.264 (libx264+aac)
+showtitlebars=false
+use_dark_breeze=true
+widgetstyle=Default
+
+[version]
+version=22.08.2
