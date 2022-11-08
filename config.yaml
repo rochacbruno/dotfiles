@@ -63,11 +63,11 @@ dotfiles:
     src: config/obs-studio
     dst: ~/.config/obs-studio
     cmpignore:
-      - "profiler_data/*"
-      - "logs/*"
+    - profiler_data/*
+    - logs/*
     upignore:
-      - "profiler_data/*"
-      - "logs/*"
+    - profiler_data/*
+    - logs/*
   d_rofi:
     src: config/rofi
     dst: ~/.config/rofi
@@ -78,17 +78,17 @@ dotfiles:
     src: bin
     dst: ~/bin
     cmpignore:
-      - "kubectl"
-      - "ctlptl"
-      - "gitleaks"
-      - "oc"
-      - "codacy-coverage-reporter"
+    - kubectl
+    - ctlptl
+    - gitleaks
+    - oc
+    - codacy-coverage-reporter
     upignore:
-      - "kubectl"
-      - "ctlptl"
-      - "gitleaks"
-      - "oc"
-      - "codacy-coverage-reporter"
+    - kubectl
+    - ctlptl
+    - gitleaks
+    - oc
+    - codacy-coverage-reporter
   f_bindings.json:
     src: config/micro/bindings.json
     dst: ~/.config/micro/bindings.json
@@ -104,6 +104,9 @@ dotfiles:
   d_thunar:
     src: config/Thunar
     dst: ~/.config/Thunar
+  f_pacman.conf:
+    src: etc/pacman.conf
+    dst: /etc/pacman.conf
 profiles:
   rocha:
     dotfiles:
@@ -134,3 +137,4 @@ profiles:
     - f_installed_plugins.txt
     - f_micro_settings.json
     - d_thunar
+    - f_pacman.conf
