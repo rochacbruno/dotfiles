@@ -13,3 +13,10 @@ rm -rf dotfiles/config/obs-studio/basic/profiles/Untitled/service.json
 touch dotfiles/config/obs-studio/basic/profiles/Untitled/service.json
 rm -rf dotfiles/config/obs-studio/profiler_data/*
 rm -rf dotfiles/config/obs-studio/logs/*
+
+
+git add dotfiles
+git commit -m "Update dotfiles"
+
+# Gitleaks
+gitleaks detect --source dotfiles -v
