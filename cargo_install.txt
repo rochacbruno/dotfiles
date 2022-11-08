@@ -1,0 +1,11 @@
+cargo-edit v0.11.5:
+    cargo-add
+    cargo-rm
+    cargo-set-version
+    cargo-upgrade
+cargo-eval v0.1.0:
+    cargo-eval
+cargo-watch v8.1.2:
+    cargo-watch
+mdcat v0.25.1:
+    mdcat
