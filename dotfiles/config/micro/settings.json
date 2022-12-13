@@ -1,8 +1,8 @@
 {
     "autoclose": false,
     "backup": false,
-    "colorcolumn": 80,
-    "colorscheme": "bubblegum",
+    "colorcolumn": 100,
+    "colorscheme": "catppuccin-mocha",
     "diffgutter": true,
     "ft:makefile": {
         "tabstospaces": false
@@ -13,6 +13,8 @@
     "hlsearch": true,
     "ignorecase": false,
     "indentchar": "",
+    "lsp.ignoreTriggerCharacters": "completion,signature",
+    "lsp.server": "python=pyls,go=gopls,typescript=deno lsp,rust=rust-analyzer",
     "mkparents": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
@@ -31,5 +33,6 @@
     "scrollbar": true,
     "softwrap": true,
     "tabmovement": true,
-    "tabstospaces": true
+    "tabstospaces": true,
+    "wordwrap": true
 }

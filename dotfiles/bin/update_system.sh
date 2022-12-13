@@ -2,6 +2,8 @@ echo "Updating keyring"
 sudo pacman -S archlinux-keyring
 echo "DONE keyring update"
 echo "-------------"
+echo "mirrors cache"
+sudo pacman -Syy
 echo "Pacman update"
 sudo pacman -Syu --noconfirm --needed --overwrite '*'
 echo "DONE pacman update"

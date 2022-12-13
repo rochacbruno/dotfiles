@@ -12,9 +12,9 @@ block = "docker"
 interval = 2
 format = "{running}/{total}/{images}"
 
-[[block]]
-block = "custom"
-command = "/home/rochacbruno/bin/portugal"
+# [[block]]
+# block = "custom"
+# command = "/home/rochacbruno/bin/portugal"
 
 [[block]]
 block = "custom"

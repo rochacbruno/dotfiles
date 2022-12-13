@@ -1,16 +1,16 @@
 [KFileDialog Settings]
-Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Videos/obs/canal/ar1-f000019.png,file:$HOME/Videos/obs/canal/ar1-f001485.png,file:///tmp/ar1-f000409.png,file:$HOME/Videos/02Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/01Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/karla/dslogo.png,file:$HOME/Videos/karla/À_venda_Moradia_T6_em_Covas_de_450_m²_Manuela_Santos_+351_967_378.mp4,file:$HOME/Videos/curso/D1,file:$HOME/Videos/curso/D1/D1P1-intro-ao-treinamento.mp4
-Recent URLs[$e]=file:$HOME/Videos/curso/D1/,file:$HOME/,file:$HOME/Videos/curso/,file:$HOME/Videos/karla/,file:$HOME/Videos/,file:$HOME/Videos/obs/LT/web/d3/,file:///tmp/,file:$HOME/Videos/obs/canal/
+Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Pictures/avatars/landa_browsn-removebg-preview.png,file:$HOME/Pictures/avatars/lensa_red_transp.png,file:$HOME/Videos/advent1.mp4,file:$HOME/Videos/02Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/01Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/karla/dslogo.png,file:$HOME/Videos/karla/À_venda_Moradia_T6_em_Covas_de_450_m²_Manuela_Santos_+351_967_378.mp4,file:$HOME/Videos/curso/D1,file:$HOME/Videos/curso/D1/D1P1-intro-ao-treinamento.mp4
+Recent URLs[$e]=file:$HOME/Videos/curso/D1/,file:$HOME/,file:$HOME/Videos/curso/,file:$HOME/Videos/karla/,file:$HOME/Videos/,file:$HOME/Videos/obs/LT/web/d3/,file:///tmp/,file:$HOME/Videos/obs/canal/,file:$HOME/Videos/obs/canal/aprendarust/parte6/,file:$HOME/Pictures/avatars/,file:$HOME/Pictures/
 detailViewIconSize=16
 
 [MainWindow]
 DP3-1 DP3-3=DP3-3
 DP3-1 DP3-3 Height 1080x1920=1254
-DP3-1 DP3-3 Height 1080x1920 DP3-1=722
+DP3-1 DP3-3 Height 1080x1920 DP3-1=1037
 DP3-1 DP3-3 Height 1920x1080=1037
 DP3-1 DP3-3 Height 1920x1080 DP3-3=1037
 DP3-1 DP3-3 Width 1080x1920=1068
-DP3-1 DP3-3 Width 1080x1920 DP3-1=789
+DP3-1 DP3-3 Width 1080x1920 DP3-1=1920
 DP3-1 DP3-3 Width 1920x1080=1920
 DP3-1 DP3-3 Width 1920x1080 DP3-3=1920
 DP3-1 DP3-3 XPosition 1080x1920=6
@@ -21,7 +21,7 @@ DP3-1 DP3-3 YPosition 1080x1920=660
 DP3-1 DP3-3 YPosition 1080x1920 DP3-1=0
 DP3-1 DP3-3 YPosition 1920x1080=557
 DP3-1 DP3-3 YPosition 1920x1080 DP3-3=557
-State=AAAA/wAAAAD9AAAAAgAAAAEAAAEUAAABzvwCAAAAAfsAAAAKAG0AaQB4AGUAcgAAAAIfAAABzgAAAGIBAAACAAAAAgAAB4AAAAGo/AEAAAAP+wAAABQAcwBjAHIAZQBlAG4AZwByAGEAYgAAAAAA/////wAAAJEBAAAD+wAAABoAYQB1AGQAaQBvAHMAcABlAGMAdAByAHUAbQAAAAAA/////wAAAGMBAAAD/AAAAAAAAAFJAAAAiwD////6AAAAAAEAAAAE+wAAABYAcAByAG8AagBlAGMAdABfAGIAaQBuAQAAAAD/////AAAAXAEAAAP7AAAAHgB0AHIAYQBuAHMAaQB0AGkAbwBuAF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAAB4AYwBsAGkAcABfAHAAcgBvAHAAZQByAHQAaQBlAHMBAAAAAP////8AAABXAQAAA/sAAAAYAHUAbgBkAG8AXwBoAGkAcwB0AG8AcgB5AQAAAAD/////AAAAWwEAAAP8AAABVAAAAfcAAAAAAP////r/////AgAAAAP7AAAAGABjAGwAaQBwAF8AbQBvAG4AaQB0AG8AcgAAAABEAAABzQAAAMsBAAAC+wAAABIAUwB1AGIAdABpAHQAbABlAHMAAAAAAP////8AAAE4AQAAAvsAAAAOAGwAaQBiAHIAYQByAHkAAAAAAP////8AAACUAQAAAvsAAAAWAGUAZgBmAGUAYwB0AF8AbABpAHMAdAEAAAFKAAABPwAAAAQBAAAD+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAACigAAAn4AAABXAQAAA/wAAAUJAAACdwAAAUQA////+gAAAAACAAAAAvsAAAAeAHAAcgBvAGoAZQBjAHQAXwBtAG8AbgBpAHQAbwByAQAAAL8AAAEsAAAAywEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAAAAAAA/////wAAAHwBAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABGgEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAACdAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAACaAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABQwEAAAP7AAAAEAB0AGUAeAB0AGUAZABpAHQAAAAAAP////8AAAGZAQAAA/sAAAASAHQAaQBtAGUAcgBlAG0AYQBwAAAAAAD/////AAAAWwEAAAP7AAAAEABiAGkAbgBfAGMAbABpAHAAAAAAAP////8AAAI2AQAAA/sAAAAeAG8AbgBsAGkAbgBlAHIAZQBzAG8AdQByAGMAZQBzAAAAAAD/////AAABPAEAAAMAAAeAAAAB9QAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABgAZQB4AHQAcgBhAFQAbwBvAGwAQgBhAHIBAAACCv////8AAAAAAAAAAA==
+State=AAAA/wAAAAD9AAAAAgAAAAEAAAEUAAABzvwCAAAAAfsAAAAKAG0AaQB4AGUAcgAAAAIfAAABzgAAAGIBAAACAAAAAgAAB4AAAAJW/AEAAAAP+wAAABQAcwBjAHIAZQBlAG4AZwByAGEAYgAAAAAA/////wAAAJEBAAAD+wAAABoAYQB1AGQAaQBvAHMAcABlAGMAdAByAHUAbQAAAAAA/////wAAAGMBAAAD/AAAAAAAAAHlAAAAiwD////6AAAAAAEAAAAE+wAAABYAcAByAG8AagBlAGMAdABfAGIAaQBuAQAAAAD/////AAAAXAEAAAP7AAAAHgB0AHIAYQBuAHMAaQB0AGkAbwBuAF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAAB4AYwBsAGkAcABfAHAAcgBvAHAAZQByAHQAaQBlAHMBAAAAAP////8AAABXAQAAA/sAAAAYAHUAbgBkAG8AXwBoAGkAcwB0AG8AcgB5AQAAAAD/////AAAAWwEAAAP8AAABVAAAAfcAAAAAAP////r/////AgAAAAP7AAAAGABjAGwAaQBwAF8AbQBvAG4AaQB0AG8AcgAAAABEAAABzQAAAMsBAAAC+wAAABIAUwB1AGIAdABpAHQAbABlAHMAAAAAAP////8AAAE4AQAAAvsAAAAOAGwAaQBiAHIAYQByAHkAAAAAAP////8AAACUAQAAAvsAAAAWAGUAZgBmAGUAYwB0AF8AbABpAHMAdAEAAAHmAAAA8AAAAAQBAAAD+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAAC1wAAAM0AAABXAQAAA/wAAAOlAAAD2wAAAUQA////+gAAAAACAAAAAvsAAAAeAHAAcgBvAGoAZQBjAHQAXwBtAG8AbgBpAHQAbwByAQAAAL8AAAEsAAAAywEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAAAAAAA/////wAAAHwBAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABGgEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAACdAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAACaAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABQwEAAAP7AAAAEAB0AGUAeAB0AGUAZABpAHQAAAAAAP////8AAAGZAQAAA/sAAAASAHQAaQBtAGUAcgBlAG0AYQBwAAAAAAD/////AAAAWwEAAAP7AAAAEABiAGkAbgBfAGMAbABpAHAAAAAAAP////8AAAI2AQAAA/sAAAAeAG8AbgBsAGkAbgBlAHIAZQBzAG8AdQByAGMAZQBzAAAAAAD/////AAABPAEAAAMAAAeAAAABRwAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABgAZQB4AHQAcgBhAFQAbwBvAGwAQgBhAHIBAAACCv////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
 eDP1 DP3-3 Height 1920x1080=1060
 eDP1 DP3-3 Width 1920x1080=1920
@@ -38,31 +38,31 @@ provider=Freesound
 zoom=7
 
 [Recent Dirs]
-KdenliveClipFolder[$e]=$HOME/Videos/,$HOME/Videos/obs/LT/web/d3/,$HOME/Videos/curso/
-KdenliveFramesFolder[$e]=$HOME/Videos/obs/canal/,/tmp/,$HOME/Documents
-KdenliveProjectsFolder[$e]=$HOME/Videos/obs/canal/aprendarust/parte3,$HOME/Videos/obs/canal/aprendarust/parte2,$HOME/Videos/obs/canal
+KdenliveClipFolder[$e]=$HOME/Pictures/avatars/,$HOME/Videos/,$HOME/Videos/obs/LT/web/d3/
+KdenliveFramesFolder[$e]=$HOME/Videos/obs/canal/aprendarust/parte6/,$HOME/Videos/obs/canal/,/tmp/
+KdenliveProjectsFolder[$e]=$HOME/Videos/obs/canal/aprendarust/parte8,$HOME/Videos,$HOME/Videos/obs/canal/aprendarust/parte7
 
 [Recent Files]
-File1[$e]=$HOME/Videos/web_kdl/d1p03.kdenlive
-File10[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/pitch_scale.kdenlive
-File2[$e]=$HOME/Videos/karla/ds.kdenlive
-File3[$e]=$HOME/Videos/video_config_django.kdenlive
-File4[$e]=$HOME/Videos/obs/demo-cosign1.kdenlive
-File5[$e]=$HOME/Videos/obs/LT/web/d4/p2.kdenlive
-File6[$e]=$HOME/Videos/obs/canal/aprendarust/parte2/p2.kdenlive
-File7[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/p3_speed.kdenlive
-File8[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/ p3.kdenlive
-File9[$e]=$HOME/Videos/obs/canal/aprendarust/parte3/parte3_spped_try_rubber_kdenlive.kdenlive
-Name1[$e]=d1p03.kdenlive
-Name10[$e]=pitch_scale.kdenlive
-Name2[$e]=ds.kdenlive
-Name3[$e]=video_config_django.kdenlive
-Name4[$e]=demo-cosign1.kdenlive
-Name5[$e]=p2.kdenlive
-Name6[$e]=p2.kdenlive
-Name7[$e]=p3_speed.kdenlive
-Name8[$e]=\sp3.kdenlive
-Name9[$e]=parte3_spped_try_rubber_kdenlive.kdenlive
+File1[$e]=$HOME/Videos/obs/LT/workshop/p11.kdenlive
+File10[$e]=$HOME/Videos/obs/canal/aprendarust/parte8/p8.kdenlive
+File2[$e]=$HOME/Videos/obs/LT/workshop/p12.kdenlive
+File3[$e]=$HOME/Videos/obs/canal/aprendarust/parte6/p6.kdenlive
+File4[$e]=$HOME/Videos/advent1.kdenlive
+File5[$e]=$HOME/Videos/advent_speed.kdenlive
+File6[$e]=$HOME/Videos/advent2.kdenlive
+File7[$e]=$HOME/Videos/obs/canal/aprendarust/parte7/p7.kdenlive
+File8[$e]=$HOME/Videos/adv3p1.kdenlive
+File9[$e]=$HOME/Videos/adv3p2.kdenlive
+Name1[$e]=p11.kdenlive
+Name10[$e]=p8.kdenlive
+Name2[$e]=p12.kdenlive
+Name3[$e]=p6.kdenlive
+Name4[$e]=advent1.kdenlive
+Name5[$e]=advent_speed.kdenlive
+Name6[$e]=advent2.kdenlive
+Name7[$e]=p7.kdenlive
+Name8[$e]=adv3p1.kdenlive
+Name9[$e]=adv3p2.kdenlive
 
 [RenderWidget]
 showoptions=true
@@ -108,13 +108,13 @@ Current Scheme=Default
 [TitleWidget]
 background_alpha=0
 background_color=0,0,0
-dialog_geometry=AdnQywADAAAAAAXQAAACoAAAChsAAAV3AAAF0gAAAqAAAAoZAAAFdQAAAAEAAAAAB4AAAAXSAAACoAAAChkAAAV1
+dialog_geometry=AdnQywADAAAAAAXgAAACoAAACisAAAV3AAAF4gAAAqAAAAopAAAFdQAAAAEAAAAAB4AAAAXiAAACoAAACikAAAV1
 font_color=255,255,255
-font_family=Noto Sans Bengali Black,-1,63,5,75,0,0,0,0,0
+font_family=Noto Sans Bengali Black,-1,143,5,75,0,0,0,0,0
 font_italic=false
-font_outline=0
+font_outline=40
 font_outline_color=0,0,0
-font_pixel_size=63
+font_pixel_size=143
 font_underlined=false
 font_weight=75
 rect_background_alpha=255
@@ -129,7 +129,7 @@ ColorScheme=Breeze Dark
 ColorSchemePath=BreezeDark.colors
 
 [bin]
-treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAANQAAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAAA1AAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
+treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAAd0AAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAAB3QAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
 
 [capture]
 decklink_capturedevice=4294967295
@@ -180,6 +180,7 @@ default_profile=atsc_1080p_30
 defaultrescaleheight=540
 defaultrescalewidth=960
 force_breeze=true
+lockedGuides=false
 monitor_audio=false
 producerslist=glaxnimate,decklink,framebuffer,abnormal,color,colour,consumer,hold,loader,melt,melt_file,noise,timewarp,tone,vorbis,avformat,avformat-novalidate,qimage,qtext,kdenlivetitle,blipflash,count,pgm,xml,xml-string,xml-nogl,pango,pixbuf,frei0r.ising0r,frei0r.lissajous0r,frei0r.nois0r,frei0r.onecol0r,frei0r.partik0l,frei0r.plasma,frei0r.test_pat_B,frei0r.test_pat_C,frei0r.test_pat_G,frei0r.test_pat_I,frei0r.test_pat_L,frei0r.test_pat_R
 project_fps=30
@@ -189,4 +190,4 @@ use_dark_breeze=true
 widgetstyle=Default
 
 [version]
-version=22.08.2
+version=22.08.3

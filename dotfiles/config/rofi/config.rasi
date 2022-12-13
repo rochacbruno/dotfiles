@@ -1,11 +1,12 @@
 configuration {
 	modi: "combi,emoji";
+  combi-modi: "window,drun,run";
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-	show-icons: true;
+	/* show-icons: true; */
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
@@ -32,7 +33,6 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-    combi-modi: "window,drun,run";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -139,6 +139,22 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
+
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-combi: "   All ";
+    display-run: "   Run ";
+    display-emoji: "   Emoji ";
+    display-window: " 﩯  Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+
   timeout {
       action: "kb-cancel";
       delay:  0;
@@ -149,4 +165,5 @@ configuration {
   }
 }
 
-@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+/*@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"*/ 
+@theme "/home/rochacbruno/.local/share/rofi/themes/catppuccin-mocha.rasi"

@@ -1,0 +1,61 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+
+  - trigger: ":rpr"
+    replace: 'println!("$|$");'
+
+  - trigger: ":rpf"
+    replace: 'println!("{}", $|$);'
+
+  - trigger: ":rpd"
+    replace: 'println!("{:#?}", $|$);'
+
+  - trigger: ":rmn"
+    replace: "fn main() {\n$|$\n}"
+
+  - trigger: ":rst"
+    replace: "struct $|$ {\n}"
+    
+  - trigger: ":renum"
+    replace: "enum $|$ {\n}"
+
+  - trigger: ":rfn"
+    replace: "fn $|$() -> x {\n}"
+
+  - trigger: ":rfor"
+    replace: "for item in $|$ {\n    println!(item);\n\b}"
+
+  - trigger: ":rloop"
+    replace: "loop {\n    $|$\n\b\b\b\b}"
+
+  - trigger: ":rwhile"
+    replace: "while $|$ {\n}"
+
+  - trigger: ":rall"
+    replace: "#![allow(unused, dead_code)]"
+
+  - trigger: ":rmar"
+    replace: "match $|$ {\n    Ok(value) => println!(\"\"),\nErr(_) => panic!()\n\n\b\b\b\b}"
+
+  - trigger: ":rmao"
+    replace: "match $|$ {\n    Some(value) => value,\nNone  => {}\n\b}"
+
+  - trigger: ":riflet"
+    replace: "if let Some($|$) {\n}"
+
+  - trigger: ":rd"
+    replace: "dbg!($|$);"
+
+  - trigger: ":rte"
+    replace: "#[cfg(test)]\nmod tests {\n    use crate::*;\n#[test]\nfn test() {\n    assert_eq!($|$);\n\b}\n\b}"
+
+  
+# And much more! For more information, visit the docs: https://espanso.org/docs/

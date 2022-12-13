@@ -62,7 +62,8 @@ bindsym $alt+F2 exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+Tab exec --no-startup-id "rofi -show"
 bindsym $mod+F3 exec thunar
-bindsym Print --release exec --no-startup-id xfce4-screenshooter
+#bindsym Print --release exec --no-startup-id xfce4-screenshooter
+bindsym Print --release exec --no-startup-id "flameshot gui"
 bindsym Caps_Lock nop
 
 
@@ -398,3 +399,9 @@ bindsym $mod+m bar mode toggle
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move up 30 px
 for_window [class="Tk" title="tk"] floating enable
 for_window [title="KivySum"] floating enable
+
+bindsym $mod+F6 [title="Twilio Authy"] scratchpad show
+bindsym $mod+F7 [title="scratch"] scratchpad show
+
+
+

@@ -7,11 +7,11 @@
 --     - ipython
 --   Rust
 --     - cargo-eval
---     - evcxr_repl
+--     - irust
 --     - clippy
 --     - fmt
 
-VERSION = "0.0.4"
+CONFIG_VERSION = "0.0.5"
 
 local micro = import("micro")
 local config = import("micro/config")
@@ -39,6 +39,35 @@ end
 
 function setContains(set, key)
     return set[key] ~= nil
+end
+
+function file_exists(name)
+    local f=io.open(name,"r")
+    if f~=nil then io.close(f) return true else return false end
+end
+
+function rust_runner(filepath)
+    if file_exists("Cargo.toml") then
+        return "cargo run"
+    else
+        return "cargo eval " .. filepath
+    end
+end
+
+function rust_test_runner(filepath)
+    if file_exists("Cargo.toml") then
+        return "cargo test -v --color always"
+    else
+        return "cargo eval --test " .. filepath
+    end
+end
+
+function rust_formatter(filepath)
+    if file_exists("Cargo.toml") then
+        return "cargo fmt"
+    else
+        return "rustfmt -v -l --backup --edition=2021 " .. filepath
+    end
 end
 
 -- below code adds new buffer with "hello content"
@@ -72,7 +101,7 @@ function output(bp)
     _command = {}
     _command["go"] = "go run " .. buf.Path
     -- cargo install cargo-play
-    _command["rust"] = "cargo eval " .. buf.Path
+    _command["rust"] = rust_runner(buf.Path)
     _command["python"] = "python3 " .. buf.Path
 
     run_action(bp.Buf, _command, "Output", true) -- false=no bottom panel
@@ -87,7 +116,7 @@ function build(bp)
     _command = {}
     _command["go"] = "go run " .. buf.Path
     -- cargo install cargo-play
-    _command["rust"] = "cargo eval " .. buf.Path
+    _command["rust"] = rust_runner(buf.Path)
     _command["python"] = "python3 " .. buf.Path
 
     -- the true means run in the foreground
@@ -105,7 +134,7 @@ function test(bp)
     _command = {}
      _command["go"] = "go test -v " .. buf.Path
     -- TODO: make cargo to run specific file tests
-    _command["rust"] = "cargo eval --test " .. buf.Path
+    _command["rust"] = rust_test_runner(buf.Path)
     -- _command["rust"] = "cargo test -v --color always "
     _command["python"] = "python3 -m pytest -svx " .. buf.Path
 
@@ -125,7 +154,7 @@ function format(bp)
 
     _command = {}
     _command["go"] = "go fmt -w" .. buf.Path
-    _command["rust"] = "rustfmt -v -l --backup --edition=2021 " .. buf.Path
+    _command["rust"] = rust_formatter(buf.Path)
     _command["python"] = "black -l 79 " .. buf.Path
 
     if not setContains(_command, filetype) then
@@ -145,7 +174,7 @@ function sort_imports(bp)
 
     _command = {}
     _command["go"] = "goimports -w " .. buf.Path
-    _command["python"] = "isort " .. buf.Path
+    _command["python"] = "isort -l 79 --profile=black -m 3 " .. buf.Path
 
     if not setContains(_command, filetype) then
         return
@@ -164,9 +193,8 @@ function repl(bp)
 
     _command = {}
     -- _command["go"] = "go ? " .. buf.Path
-    -- cargo install evcxr_repl
-    _command["rust"] = "evcxr "
-    -- TODO: make evcxr interactive? print usage info before opening
+    -- cargo install irust
+    _command["rust"] = "irust "
     _command["python"] = "ipython -i " .. buf.Path
 
     -- the true means run in the foreground

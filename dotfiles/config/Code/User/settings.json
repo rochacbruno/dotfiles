@@ -1,7 +1,10 @@
 {
-    "workbench.colorTheme": "SynthWave Refined",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorCustomizations": {
+        "editorInlayHint.foreground": "#837878",
+    },
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "yaml": true,
         "plaintext": false,
         "markdown": true
@@ -98,7 +101,7 @@
     "editor.mouseWheelZoom": true,
     "workbench.editor.enablePreview": false,
     "easyTerminalZoom.step": 3,
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 9,
     "workbench.sideBar.location": "right",
     "files.insertFinalNewline": true,
     "python.analysis.autoImportCompletions": false,
@@ -111,5 +114,6 @@
             "url": "https://issues.redhat.com/browse/AAH-<num>"
         }
     ],
-    "workbench.preferredDarkColorTheme": "SynthWave Refined"
+    "workbench.preferredDarkColorTheme": "SynthWave Refined",
+    "window.zoomLevel": -1
 }
