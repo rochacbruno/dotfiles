@@ -1,11 +1,29 @@
-cargo-edit v0.11.5:
+bacon v2.2.5:
+    bacon
+cargo-edit v0.11.6:
     cargo-add
     cargo-rm
     cargo-set-version
     cargo-upgrade
 cargo-eval v0.1.0:
     cargo-eval
+cargo-expand v1.0.34:
+    cargo-expand
+cargo-modules v0.7.1:
+    cargo-modules
+cargo-show-asm v0.2.4:
+    cargo-asm
 cargo-watch v8.1.2:
     cargo-watch
+evcxr v0.14.1:
+    testing_runtime
+evcxr_repl v0.14.1:
+    evcxr
+fd-find v8.6.0:
+    fd
+irust v1.66.0:
+    irust
 mdcat v0.25.1:
     mdcat
+ox v0.2.7 (https://github.com/curlpipe/ox#086f6653):
+    ox

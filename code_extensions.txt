@@ -10,6 +10,7 @@ code --install-extension apust.rubber-theme
 code --install-extension Avarayr.synthwave-refined
 code --install-extension bogdansalyp.hotline-vs
 code --install-extension bungcip.better-toml
+code --install-extension Catppuccin.catppuccin-vsc
 code --install-extension connieth.bubblegum
 code --install-extension damildrizzy.fastapi-snippets
 code --install-extension debugpig.highlight

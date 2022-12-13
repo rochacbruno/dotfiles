@@ -1,5 +1,5 @@
 The following plugins are currently installed:
-initlua (0.0.4)
+initlua (0.0.0-unknown)
 bounce (2.0.0)
 detectindent (1.1.0)
 filemanager (3.5.0)

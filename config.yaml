@@ -83,12 +83,14 @@ dotfiles:
     - gitleaks
     - oc
     - codacy-coverage-reporter
+    - lapce
     upignore:
     - kubectl
     - ctlptl
     - gitleaks
     - oc
     - codacy-coverage-reporter
+    - lapce
   f_bindings.json:
     src: config/micro/bindings.json
     dst: ~/.config/micro/bindings.json
@@ -107,6 +109,27 @@ dotfiles:
   f_pacman.conf:
     src: etc/pacman.conf
     dst: /etc/pacman.conf
+  d_lvim:
+    src: config/lvim
+    dst: ~/.config/lvim
+  d_bat:
+    src: config/bat
+    dst: ~/.config/bat
+  d_dunst:
+    src: config/dunst
+    dst: ~/.config/dunst
+  d_share_rofi:
+    src: local/share/rofi
+    dst: ~/.local/share/rofi
+  f_mocha.xresources:
+    src: config/mocha.Xresources
+    dst: ~/.config/mocha.Xresources
+  d_zsh:
+    src: zsh
+    dst: ~/.zsh
+  d_themes:
+    src: config/obs-studio/themes
+    dst: ~/.config/obs-studio/themes
 profiles:
   rocha:
     dotfiles:
@@ -138,3 +161,10 @@ profiles:
     - f_micro_settings.json
     - d_thunar
     - f_pacman.conf
+    - d_lvim
+    - d_bat
+    - d_dunst
+    - d_share_rofi
+    - f_mocha.xresources
+    - d_zsh
+    - d_themes

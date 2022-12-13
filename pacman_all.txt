@@ -81,6 +81,10 @@ cairomm 1.14.4-1
 cantarell-fonts 1:0.303.1-1
 capitaine-cursors 4-2
 catatonit 0.1.7-2
+catppuccin-gtk-theme-frappe 0.4.0-1
+catppuccin-gtk-theme-latte 0.4.0-1
+catppuccin-gtk-theme-macchiato 0.4.0-1
+catppuccin-gtk-theme-mocha 0.4.0-1
 cblas 3.10.1-1
 cdparanoia 10.2-8
 cef-minimal 99.2.14-1
@@ -140,6 +144,8 @@ dmidecode 3.4-1
 dmraid 1.0.0.rc16.3-14
 dnsmasq 2.87-3
 dnssec-anchors 20190629-3
+docbook-xml 4.5-9
+docbook-xsl 1.79.2-7
 docker 1:20.10.21-1
 docker-compose 2.2.2-1
 dosfstools 4.2-2
@@ -206,6 +212,7 @@ filesystem 2022.10.18-1
 findutils 4.9.0-1
 firefox 106.0.5-1
 flac 1.4.2-1
+flameshot 12.1.0-1
 flex 2.6.4-3
 fluidsynth 2.3.0-2
 fontconfig 2:2.14.1-2
@@ -264,6 +271,7 @@ glibc 2.36-6
 glibmm 2.66.5-1
 glibmm-2.68 2.74.0-1
 glm 0.9.9.8-1
+glow 1.4.1-3
 glslang 11.11.0-1
 glu 9.0.2-3
 gmp 6.2.1-2
@@ -274,6 +282,7 @@ gnome-desktop 1:43-1
 gnome-desktop-4 1:43-1
 gnome-desktop-common 1:43-1
 gnome-keyring 1:42.1-2
+gnome-online-accounts 3.46.0-1
 gnome-themes-extra 3.28+r6+g45b1d457-1
 gnome-video-effects 0.5.0+4+g9554041-2
 gnu-netcat 0.7.1-8
@@ -347,11 +356,13 @@ harfbuzz 5.3.1-3
 harfbuzz-icu 5.3.1-3
 haveged 1.9.18-1
 hdparm 9.65-1
+helix 22.08.1-1
 heroku-cli-bin 7.62.0-1
 hicolor-icon-theme 0.17-2
 hidapi 0.12.0-1
 highway 1.0.2-1
 hplip 1:3.22.10-1
+hstr 2.5-1
 htop 3.2.1-1
 http-parser 2.9.4-1
 httpie 3.2.1-1
@@ -619,6 +630,7 @@ libfreeaptx 0.1.1-1
 libfreehand 0.1.2-4
 libftdi 1.5-4
 libgcrypt 1.10.1-1
+libgdata 0.18.1-2
 libgee 0.20.6-1
 libgexiv2 0.14.0-3
 libgit2 1:1.5.0-2
@@ -740,6 +752,7 @@ libraqm 0.9.0-1
 libraw 0.20.2-2
 libraw1394 2.1.2-3
 libreoffice-fresh 7.4.2-2
+librest 0.9.1-2
 librevenge 0.0.4-4
 librsvg 2:2.55.1-1
 libsamplerate 0.2.2-1
@@ -939,6 +952,7 @@ nbd 3.24-1
 ncurses 6.3-3
 ndctl 74-1
 ndisc6 1.0.6-1
+ne 3.3.1-1
 neofetch 7.1.0-2
 neon 0.32.4-2
 neovim 0.8.0-3
@@ -1340,6 +1354,7 @@ sg3_utils 1.47-1
 shaderc 2022.1-4
 shadow 4.11.1-3
 shared-mime-info 2.0+155+gf4e7cbc-1
+shotwell 2:0.30.17-2
 signon-kwallet-extension 22.08.3-1
 signon-plugin-oauth2 0.25-1
 signon-ui 0.17+20171022-3
@@ -1461,7 +1476,7 @@ virt-install 4.1.0-1
 virt-manager 4.1.0-1
 virtualbox 7.0.2-2
 virtualbox-host-dkms 7.0.2-2
-visual-studio-code-bin 1.73.0-1
+visual-studio-code-bin 1.73.1-2
 vlc-luajit 3.0.17.4-12
 vlc-luajit-debug 3.0.17.4-12
 vmaf 2.3.1-1
