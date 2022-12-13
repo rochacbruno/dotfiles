@@ -126,7 +126,7 @@ alias free='free -m'  # show sizes in MB
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-export EDITOR=micro
+export EDITOR=lvim
 GO_PATH=$(go env GOPATH)/bin
 export PATH="/home/rochacbruno/bin/:/home/rochacbruno/.local/bin:$GO_PATH:/home/rochacbruno/.cargo/bin:$PATH"
 unalias -m 'ipython'
