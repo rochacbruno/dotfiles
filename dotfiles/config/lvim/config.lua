@@ -14,12 +14,6 @@ lvim.format_on_save.enabled = false
 lvim.colorscheme = "catppuccin-mocha"
 lvim.builtin.lualine.style = "lvim"
 
-
-lvim.builtin.nvimtree.setup.filters.custom = { "*.egg-info", ".venv", ".git", "__pycache__", "**/__pycache__" }
--- lvim.builtin.lualine.on_config_done = function()
---   lvim.builtin.lualine.sections.lualine_a[1][1] = "mode"
--- end
-
 lvim.builtin.alpha.dashboard.section.header.val = {
   "                ⢀⣀⣤⣤⣤⣶⣶⣶⣶⣶⣶⣤⣤⣤⣀⡀                ",
   "             ⣀⣤⣶⣿⠿⠟⠛⠉⠉⠉⠁⠈⠉⠉⠉⠛⠛⠿⣿⣷⣦⣀             ",
@@ -43,7 +37,9 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   "                ⠈⠉⠙⠛⠻⠿⠿⠿⠿⠿⠿⠟⠛⠋⠉⠁                ",
 }
 
-
+-- lvim.builtin.lualine.on_config_done = function()
+--   lvim.builtin.lualine.sections.lualine_a[1][1] = "mode"
+-- end
 lvim.builtin.lualine.on_config_done = function()
   lvim.builtin.lualine.sections.lualine_a[1].padding = 1
   lvim.builtin.lualine.sections.lualine_a[1][1] = function()
@@ -69,7 +65,6 @@ lvim.builtin.lualine.on_config_done = function()
     return map[mode]
   end
 end
-
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -104,7 +99,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- }
 
 -- Change theme settings
--- lvim.builtin.theme.options.dim_inactive = true
 -- lvim.builtin.theme.options.style = "storm"
 
 -- Use which-key to add extra bindings with the leader-key prefix
@@ -124,8 +118,9 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.filters.custom = { "*.egg-info", ".venv", ".git", "__pycache__", "**/__pycache__" }
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -223,29 +218,32 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
+  -- Inlay Hints for LSP and Rust
   "lvimuser/lsp-inlayhints.nvim",
   "simrat39/rust-tools.nvim",
+  -- Multicursor (ctrl up/down, ctrl-N)
   "mg979/vim-visual-multi",
-  -- "artanikin/vim-synthwave84",
-  "lunarvim/synthwave84.nvim",
-  "lunarvim/Onedarker.nvim",
-  "lunarvim/templeos.nvim",
-  "rktjmp/lush.nvim",
-  "wuelnerdotexe/vim-enfocado",
-  -- "nvim-lua/plenary.nvim",
+  -- highlight TODO:comments
   "folke/todo-comments.nvim",
-  "norcalli/nvim-colorizer.lua",
+  -- highlight colors like  #ffcc00
+  "NvChad/nvim-colorizer.lua",
+  -- Group all the problems in a quick fix list (leader-zz)
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  -- Search and Replace across all files
   {
     "windwp/nvim-spectre",
     event = "BufRead",
     config = function()
-      require("spectre").setup()
+      require("spectre").setup({
+        live_update = true,
+        is_insert_mode = true,
+      })
     end,
   },
+  -- ,w - shows window picker when working with splits
   {
     "s1n7ax/nvim-window-picker",
     tag = "1.*",
@@ -263,19 +261,23 @@ lvim.plugins = {
             buftype = { "terminal" },
           },
         },
-        other_win_hl_color = "#e35e4f",
+        fg_color = "#11111b",
+        current_win_hl_color = "#f5e0dc",
+        other_win_hl_color = "#f38ba8",
       })
     end,
   },
+  -- :DiffViewOpen/Close - For git diffs
   {
     "sindrets/diffview.nvim",
     event = "BufRead",
   },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require "lsp_signature".on_attach() end,
-  },
+  -- IDK if this next one is needed
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function() require "lsp_signature".on_attach() end,
+  -- },
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
@@ -289,11 +291,13 @@ lvim.plugins = {
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
   },
+  -- Markdown viewer embedded
   {
     "npxbr/glow.nvim",
     ft = { "markdown" }
     -- run = "yay -S glow"
   },
+  -- Remenbers where you cursor was when you closed the file
   {
     "ethanholz/nvim-lastplace",
     event = "BufRead",
@@ -307,6 +311,7 @@ lvim.plugins = {
       })
     end,
   },
+  -- highlight the occurences of the word behind the cursor
   {
     "itchyny/vim-cursorword",
     event = { "BufEnter", "BufNewFile" },
@@ -320,9 +325,24 @@ lvim.plugins = {
       vim.api.nvim_command("augroup END")
     end
   },
+  -- Theme 
   { "catppuccin/nvim", as = "catppuccin" },
-  { "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }
+  -- :MarkdownPreview live on the browser
+  { "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+  -- Highlights the current mode changing line color
+  {
+    'mvllow/modes.nvim',
+    tag = 'v0.2.0',
+    config = function()
+      require('modes').setup()
+    end
+  }
 }
 
 -- Can not be placed into the config method of the plugins.
@@ -341,25 +361,15 @@ vim.keymap.set("n", ",w", function()
 end, { desc = "Pick a window" })
 
 -- Swap two windows using the awesome window picker
-local function swap_windows()
-  local window = picker.pick_window({
+-- FIX: This function is not working
+vim.keymap.set("n", ",e", function()
+  local other_window = picker.pick_window({
     include_current_win = false
   })
-  local target_buffer = vim.fn.winbufnr(window)
-  -- Set the target window to contain current buffer
-  vim.api.nvim_win_set_buf(window, 0)
-  -- Set current window to contain target buffer
+  local target_buffer = vim.fn.winbufnr(other_window)
+  vim.api.nvim_win_set_buf(other_window, 0)
   vim.api.nvim_win_set_buf(0, target_buffer)
-end
-
-vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
-
-
-
-
-
-
-
+end, { desc = "Swap windows" })
 
 -- TODO: move to separate files
 
@@ -517,7 +527,7 @@ hints.setup {
   debug_mode = false,
 }
 
-require("todo-comments").setup {}
+require("todo-comments").setup{}
 
 vim.keymap.set("n", "<leader>zz", "<cmd>TroubleToggle<cr>",
   { silent = true, noremap = true }
@@ -537,3 +547,17 @@ vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
   { silent = true, noremap = true }
 )
+
+
+-- Custom keybindings
+-- Map Ctrl + s on insert mode
+vim.keymap.set("i", "<c-s>", "<Esc>:w<CR>a", { silent = true, noremap = true })
+
+-- Map Spectre Search/REplace Window
+vim.keymap.set("n", "<leader>S", "<cmd>lua require('spectre').open()<CR>", { silent = true, noremap = true })
+-- Search current word
+vim.keymap.set("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+  { silent = true, noremap = true })
+vim.keymap.set("v", "<leader>ss", "<esc>:lua require('spectre').open_visual()<CR>", { silent = true, noremap = true })
+-- Search in current file
+vim.keymap.set("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>", { silent = true, noremap = true })
