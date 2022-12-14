@@ -23,7 +23,7 @@
 
 [core]
     excludesfile = ~/.gitignore
-    editor = micro
+    editor = lvim
     pager = delta
 [hub]
     protocol = git
