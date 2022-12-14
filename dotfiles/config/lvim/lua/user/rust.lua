@@ -22,7 +22,7 @@ pcall(function()
       inlay_hints = {
         auto = false,
         only_current_line = false,
-        show_parameter_hints = false,
+        show_parameter_hints = true,
         parameter_hints_prefix = "<-",
         other_hints_prefix = "=>",
         max_len_align = false,
@@ -109,8 +109,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 hints.setup {
   inlay_hints = {
     parameter_hints = {
-      show = false,
-      -- prefix = "<- ",
+      show = true,
+      prefix = "<- ",
       separator = ", ",
     },
     type_hints = {
