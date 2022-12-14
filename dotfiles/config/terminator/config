@@ -1,6 +1,6 @@
 [global_config]
   handle_size = 2
-  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot
+  enabled_plugins = CurrDirOpen, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot
   suppress_multiple_term_dialog = True
 [keybindings]
   go_up = <Primary><Alt>Up
@@ -30,6 +30,8 @@
     background_image = None
     font = Source Code Pro 14
     foreground_color = "#cdd6f4"
+    show_titlebar = False
+    scrollback_infinite = True
     palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
     use_system_font = False
 [layouts]

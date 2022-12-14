@@ -1,5 +1,5 @@
-theme = "gruvbox-dark"
-icons = "awesome"
+theme = "nord-dark"
+icons = "material"
 
 
 [[block]]

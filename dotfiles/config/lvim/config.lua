@@ -20,6 +20,30 @@ lvim.builtin.nvimtree.setup.filters.custom = { "*.egg-info", ".venv", ".git", "_
 --   lvim.builtin.lualine.sections.lualine_a[1][1] = "mode"
 -- end
 
+lvim.builtin.alpha.dashboard.section.header.val = {
+  "                ⢀⣀⣤⣤⣤⣶⣶⣶⣶⣶⣶⣤⣤⣤⣀⡀                ",
+  "             ⣀⣤⣶⣿⠿⠟⠛⠉⠉⠉⠁⠈⠉⠉⠉⠛⠛⠿⣿⣷⣦⣀             ",
+  "          ⢀⣤⣾⡿⠛⠉                ⠉⠛⢿⣷⣤⡀          ",
+  "         ⣴⣿⡿⠃   BRUNO ROCHA LVIM   ⠙⠻⣿⣦         ",
+  " ⢀⣠⣤⣤⣤⣤⣤⣾⣿⣉⣀⡀                        ⠙⢻⣷⡄       ",
+  "⣼⠋⠁   ⢠⣿⡟ ⠉⠉⠉⠛⠛⠶⠶⣤⣄⣀    ⣀⣀      ⢠⣤⣤⡄   ⢻⣿⣆      ",
+  "⢻⡄   ⢰⣿⡟        ⢠⣿⣿⣿⠉⠛⠲⣾⣿⣿⣷    ⢀⣾⣿⣿⠁    ⢻⣿⡆     ",
+  " ⠹⣦⡀ ⣿⣿⠁        ⢸⣿⣿⡇   ⠻⣿⣿⠟⠳⠶⣤⣀⣸⣿⣿⠇      ⣿⣷     ",
+  "   ⠙⢷⣿⡇         ⣸⣿⣿⠃          ⢸⣿⣿⢷⣤⡀     ⢸⣿⡆    ",
+  "    ⢸⣿⠇         ⣿⣿⣿     ⣿⣿⣷  ⢠⣿⣿⡏ ⠈⠙⠳⢦⣄  ⠈⣿⡇    ",
+  "    ⢸⣿⡆        ⢸⣿⣿⡇     ⣿⣿⣿ ⢀⣿⣿⡟      ⠈⠙⠷⣤⣿⡇    ",
+  "    ⠘⣿⡇        ⣼⣿⣿⠁     ⣿⣿⣿ ⣼⣿⣿⠃         ⢸⣿⠷⣄⡀  ",
+  "     ⣿⣿        ⣿⣿⡿      ⣿⣿⣿⢸⣿⣿⠃          ⣾⡿ ⠈⠻⣆ ",
+  "     ⠸⣿⣧      ⢸⣿⣿⣇⣀⣀⣀⣀⣀⣀⣸⣿⣿⣿⣿⠇          ⣼⣿⠇   ⠘⣧",
+  "      ⠹⣿⣧     ⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏          ⣼⣿⠏    ⣠⡿",
+  "       ⠘⢿⣷⣄   ⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉         ⢠⣼⡿⠛⠛⠛⠛⠛⠛⠉ ",
+  "         ⠻⣿⣦⣄                      ⣀⣴⣿⠟         ",
+  "          ⠈⠛⢿⣶⣤⣀                ⣀⣤⣶⡿⠛⠁          ",
+  "             ⠉⠻⢿⣿⣶⣤⣤⣀⣀⡀  ⢀⣀⣀⣠⣤⣶⣿⡿⠟⠋             ",
+  "                ⠈⠉⠙⠛⠻⠿⠿⠿⠿⠿⠿⠟⠛⠋⠉⠁                ",
+}
+
+
 lvim.builtin.lualine.on_config_done = function()
   lvim.builtin.lualine.sections.lualine_a[1].padding = 1
   lvim.builtin.lualine.sections.lualine_a[1][1] = function()
@@ -210,6 +234,7 @@ lvim.plugins = {
   "wuelnerdotexe/vim-enfocado",
   -- "nvim-lua/plenary.nvim",
   "folke/todo-comments.nvim",
+  "norcalli/nvim-colorizer.lua",
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
@@ -492,10 +517,9 @@ hints.setup {
   debug_mode = false,
 }
 
-
 require("todo-comments").setup {}
 
-vim.keymap.set("n", "<leader>zx", "<cmd>TroubleToggle<cr>",
+vim.keymap.set("n", "<leader>zz", "<cmd>TroubleToggle<cr>",
   { silent = true, noremap = true }
 )
 vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
