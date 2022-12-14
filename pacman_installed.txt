@@ -87,10 +87,12 @@ expect 5.45.4-4
 f2fs-tools 1.15.0-2
 fakeroot 1.30.1-1
 ffmpegthumbnailer 2.2.2-4
+figlet 2.2.5-4
 file-roller 43.0-1
 firefox 106.0.5-1
 flameshot 12.1.0-1
 flex 2.6.4-3
+font-manager 0.8.8-1
 foomatic-db 3:20221004-1
 foomatic-db-engine 4:20220521-1
 foomatic-db-gutenprint-ppds 5.3.4-1

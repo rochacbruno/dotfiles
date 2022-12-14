@@ -206,6 +206,7 @@ ffmpeg 2:5.1.2-1
 ffmpeg4.4 4.4.2-3
 ffmpegthumbnailer 2.2.2-4
 fftw 3.3.10-3
+figlet 2.2.5-4
 file 5.43-1
 file-roller 43.0-1
 filesystem 2022.10.18-1
@@ -215,6 +216,7 @@ flac 1.4.2-1
 flameshot 12.1.0-1
 flex 2.6.4-3
 fluidsynth 2.3.0-2
+font-manager 0.8.8-1
 fontconfig 2:2.14.1-2
 foomatic-db 3:20221004-1
 foomatic-db-engine 4:20220521-1
