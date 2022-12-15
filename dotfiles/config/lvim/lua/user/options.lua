@@ -1,6 +1,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "catppuccin-mocha"
+-- lvim.colorscheme = "lunar"
 lvim.builtin.alpha.dashboard.section.header.val = {
   "                ⢀⣀⣤⣤⣤⣶⣶⣶⣶⣶⣶⣤⣤⣤⣀⡀                ",
   "             ⣀⣤⣶⣿⠿⠟⠛⠉⠉⠉⠁⠈⠉⠉⠉⠛⠛⠿⣿⣷⣦⣀             ",
@@ -29,12 +30,12 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-lvim.builtin.nvimtree.setup.filters.custom = { 
-  "*.egg-info", 
-  ".venv", 
-  ".git", 
-  "__pycache__", 
-  "**/__pycache__", 
+lvim.builtin.nvimtree.setup.filters.custom = {
+  "*.egg-info",
+  ".venv",
+  ".git",
+  "__pycache__",
+  "**/__pycache__",
 }
 
 -- if you don't want all the parsers change this to a table of the ones you want

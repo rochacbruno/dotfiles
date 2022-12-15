@@ -373,6 +373,7 @@ set $darkgray #45475a
 # finds out, if available)
 bar {
         font pango:PowerlineSymbols, Font Awesome 5 Free 12, MaterialIcons-Regular  
+        # font pango:PowerlineSymbols, Font Awesome 5 Free 12 
         status_command i3status-rs /home/rochacbruno/.config/i3status-rust/config.toml
         output dp3-3 
         output eDP1 
@@ -394,6 +395,7 @@ bar {
  
 bar { 
         font pango:PowerlineSymbols, Font Awesome 5 Free 12, MaterialIcons-Regular
+        # font pango:PowerlineSymbols, Font Awesome 5 Free 12
         status_command i3status-rs /home/rochacbruno/.config/i3status-rust/config2.toml
         output dp3-1
         hidden_state show
