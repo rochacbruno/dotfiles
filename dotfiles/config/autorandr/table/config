@@ -1,3 +1,5 @@
+output eDP1
+off
 output DP1
 off
 output DP2
@@ -7,8 +9,6 @@ off
 output DP3-2
 off
 output VIRTUAL1
-off
-output eDP1
 off
 output DP3-1
 crtc 0
@@ -24,7 +24,7 @@ x-prop-non_desktop 0
 output DP3-3
 crtc 2
 mode 1920x1080
-pos 1080x537
+pos 1080x614
 rate 60.00
 x-prop-audio auto
 x-prop-broadcast_rgb Automatic

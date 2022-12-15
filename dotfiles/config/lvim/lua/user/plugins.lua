@@ -64,25 +64,36 @@ lvim.plugins = {
   --   event = "BufRead",
   --   config = function() require "lsp_signature".on_attach() end,
   -- },
-  { "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup {
-          plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
-        }
-      end, 100)
-    end,
-  },
+  -- { "zbirenbaum/copilot.lua",
+  --   event = { "VimEnter" },
+  --   config = function()
+  --     vim.defer_fn(function()
+  --       require("copilot").setup {
+  --         plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+  --       }
+  --     end, 100)
+  --   end,
+  -- },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   after = { "copilot.lua" },
+  --   config = function()
+  --     require("copilot_cmp").setup {
+  --       formatters = {
+  --         insert_text = require("copilot_cmp.format").remove_existing,
+  --       },
+  --     }
+  --   end,
+  -- },
   {
     "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
+    event = "InsertEnter",
+    requires = { "zbirenbaum/copilot.lua" },
     config = function()
-      require("copilot_cmp").setup {
-        formatters = {
-          insert_text = require("copilot_cmp.format").remove_existing,
-        },
-      }
+      vim.defer_fn(function()
+        require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+        require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+      end, 100)
     end,
   },
   -- Markdown viewer embedded
@@ -142,7 +153,7 @@ lvim.plugins = {
           visual = "#9745be",
         },
         -- Set opacity for cursorline and number background
-        line_opacity = 0.50,
+        line_opacity = 0.15,
 
         -- Enable cursor highlights
         set_cursor = true,
