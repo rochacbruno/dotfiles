@@ -131,7 +131,20 @@ lvim.plugins = {
     end
   },
   -- Theme
-  { "catppuccin/nvim", as = "catppuccin" },
+  {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      require("catppuccin").setup({
+        flavour = "mocha",
+        dim_inactive = {
+          enabled = true,
+          shade = "dark",
+          percentage = 0.15,
+        },
+      })
+    end
+  },
   -- :MarkdownPreview live on the browser
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
@@ -185,4 +198,25 @@ lvim.plugins = {
       }
     end,
   },
+  -- Cycle buffer c-h and c-l
+  "ghillb/cybu.nvim",
+  -- Prevents closing window layouts
+  "moll/vim-bbye",
+  -- Trim whitespace
+  -- TODO: Find a better way to trim whitespaces
+  {
+    'lewis6991/spaceless.nvim',
+    config = function()
+      require 'spaceless'.setup()
+    end
+  },
+  -- "ntpeters/vim-better-whitespace",
+  -- {
+  --   "cappyzawa/trim.nvim",
+  --   config = function()
+  --     require("trim").setup({
+  --       disable = { "markdown" },
+  --     })
+  --   end,
+  -- },
 }

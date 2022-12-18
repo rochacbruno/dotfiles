@@ -428,5 +428,4 @@ for_window [title="KivySum"] floating enable
 bindsym $mod+F6 [title="Twilio Authy"] scratchpad show
 bindsym $mod+F7 [title="scratch"] scratchpad show
 
-
-
+exec_always --no-startup-id ~/.config/i3/scripts/kensington.sh

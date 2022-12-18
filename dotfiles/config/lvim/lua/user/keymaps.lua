@@ -21,6 +21,47 @@ lvim.builtin.which_key.mappings["t"] = {
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
 
+lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
+lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
+
+lvim.builtin.which_key.mappings["r"] = {
+  name = "Replace",
+  r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+}
+
+lvim.builtin.which_key.mappings["d"] = {
+  name = "Debug",
+  b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
+  c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+  i = { "<cmd>lua require'dap'.step_into()<cr>", "Into" },
+  o = { "<cmd>lua require'dap'.step_over()<cr>", "Over" },
+  O = { "<cmd>lua require'dap'.step_out()<cr>", "Out" },
+  r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl" },
+  l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
+  u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
+  x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
+}
+
+lvim.builtin.which_key.mappings["f"] = {
+  name = "Find",
+  b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+  f = { "<cmd>Telescope find_files<cr>", "Find files" },
+  t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+  s = { "<cmd>Telescope grep_string<cr>", "Find String" },
+  h = { "<cmd>Telescope help_tags<cr>", "Help" },
+  H = { "<cmd>Telescope highlights<cr>", "Highlights" },
+  i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
+  l = { "<cmd>Telescope resume<cr>", "Last Search" },
+  M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+  r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+  R = { "<cmd>Telescope registers<cr>", "Registers" },
+  k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+  C = { "<cmd>Telescope commands<cr>", "Commands" },
+}
+
 -- vim.keymap.set("n", "<leader>zz", "<cmd>TroubleToggle<cr>",
 --   { silent = true, noremap = true }
 -- )
