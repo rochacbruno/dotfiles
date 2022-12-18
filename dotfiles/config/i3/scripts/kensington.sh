@@ -22,7 +22,7 @@ if [[ ! -z "$check" ]]; then
 	# swap right and back button then swap middle and back button
 	xinput set-button-map $mouse_id 1 8 2 4 5 6 7 3 9
 	# enable better scrolling 
-	xinput set-prop $mouse_id "libinput Natural Scrolling Enabled" 1
+	xinput set-prop $mouse_id "libinput Natural Scrolling Enabled" 0
 	# disable acceliration for the ball
 	xinput set-prop $mouse_id "libinput Accel Profile Enabled" 0, 1
 
