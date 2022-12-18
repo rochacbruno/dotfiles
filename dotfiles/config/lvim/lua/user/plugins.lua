@@ -202,21 +202,14 @@ lvim.plugins = {
   "ghillb/cybu.nvim",
   -- Prevents closing window layouts
   "moll/vim-bbye",
-  -- Trim whitespace
-  -- TODO: Find a better way to trim whitespaces
+  -- Show indent guides even on blank lines
   {
-    'lewis6991/spaceless.nvim',
+    "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require 'spaceless'.setup()
-    end
+      require('indent_blankline').setup {
+        char = '┊',
+        show_trailing_blankline_indent = false,
+      }
+    end,
   },
-  -- "ntpeters/vim-better-whitespace",
-  -- {
-  --   "cappyzawa/trim.nvim",
-  --   config = function()
-  --     require("trim").setup({
-  --       disable = { "markdown" },
-  --     })
-  --   end,
-  -- },
 }

@@ -89,3 +89,4 @@ vim.keymap.set("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({sele
 vim.keymap.set("v", "<leader>ss", "<esc>:lua require('spectre').open_visual()<CR>", { silent = true, noremap = true })
 -- Search in current file
 vim.keymap.set("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>", { silent = true, noremap = true })
+
