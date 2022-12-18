@@ -1,6 +1,10 @@
 lvim.leader = "space"
 -- Map Ctrl + s on normal and insert mode
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+
+-- Map Ctrl + z to `undo`
+lvim.keys.normal_mode["<C-z>"] = ":undo<cr>"
+
 vim.keymap.set("i", "<c-s>", "<Esc>:w<CR>a", { silent = true, noremap = true })
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
