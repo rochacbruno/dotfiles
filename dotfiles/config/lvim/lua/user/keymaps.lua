@@ -94,3 +94,7 @@ vim.keymap.set("v", "<leader>ss", "<esc>:lua require('spectre').open_visual()<CR
 -- Search in current file
 vim.keymap.set("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>", { silent = true, noremap = true })
 
+
+vim.keymap.set("x", "<ScrollWheelLeft>", "5z<Left>")
+vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
+

@@ -222,6 +222,7 @@ nbd 3.24-1
 ndisc6 1.0.6-1
 ne 3.3.1-1
 neofetch 7.1.0-2
+neovide-lunarvim 0.1.0-1
 neovim 0.8.1-2
 nerd-fonts-noto-sans-mono 2.2.2-1
 net-tools 2.10-1

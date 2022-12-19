@@ -1,9 +1,25 @@
 # Dotfiles
 
-## Help
 
-[Micro editor](guides/micro.md)
-[i3 wm](guides/i3.md)
+My Environment configurations featuring:
+
+- 🐧 EndeavourOS - Arch Based Linux Distro
+- 🌲 [i3 wm](guides/i3.md) - Window Manager 
+- 🦀 i3 Status Rust - Bar and Tray icons
+- 🐁 XFCE4 applets (for tray network and sound)
+- 📷 Flameshot - Screenshot tool 
+- ✏️  Gromit-mpx - Annotate on the screen
+- 📂 Thunar - File manager with programmable actions
+- 🚀 Rofi - Launcher for apps, emojis and more
+- ⬆️  Espanso - O.S wide snippets
+- 🖥️ Terminator - Terminal emulator
+- 🖥️ ZSH - Terminal Framework
+- 🦇 Bat - Replacement for cat 
+- 🧭 Delta - Better git diff
+- 😼 Hub - Add more commands to git
+- 🚢 Starship - Terminal Line Emojis and cool status
+- 🌙 LunarVim  - Neovim customization
+- 🤏 [Micro editor](guides/micro.md) - Simple text editor
 
 ## Requirements
 
