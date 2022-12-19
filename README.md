@@ -21,6 +21,8 @@ My Environment configurations featuring:
 - 🌙 LunarVim  - Neovim customization
 - 🤏 [Micro editor](guides/micro.md) - Simple text editor
 
+![desktop](guides/desktop.png)
+
 ## Requirements
 
 Managed by [dotdrop](https://github.com/deadc0de6/dotdrop)

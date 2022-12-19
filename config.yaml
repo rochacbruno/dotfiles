@@ -56,9 +56,6 @@ dotfiles:
     src: config/kdenliverc
     dst: ~/.config/kdenliverc
     chmod: '600'
-  d_ksnip:
-    src: config/ksnip
-    dst: ~/.config/ksnip
   d_obs-studio:
     src: config/obs-studio
     dst: ~/.config/obs-studio
@@ -130,6 +127,9 @@ dotfiles:
   d_themes:
     src: config/obs-studio/themes
     dst: ~/.config/obs-studio/themes
+  d_flameshot:
+    src: config/flameshot
+    dst: ~/.config/flameshot
 profiles:
   rocha:
     dotfiles:
@@ -150,7 +150,6 @@ profiles:
     - d_i3status-rust
     - f_kdenlive-layoutsrc
     - f_kdenliverc
-    - d_ksnip
     - d_obs-studio
     - d_rofi
     - d_terminator
@@ -168,3 +167,4 @@ profiles:
     - f_mocha.xresources
     - d_zsh
     - d_themes
+    - d_flameshot
