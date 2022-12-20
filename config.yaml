@@ -130,6 +130,9 @@ dotfiles:
   d_flameshot:
     src: config/flameshot
     dst: ~/.config/flameshot
+  f_starship.toml:
+    src: config/starship.toml
+    dst: ~/.config/starship.toml
 profiles:
   rocha:
     dotfiles:
@@ -168,3 +171,4 @@ profiles:
     - d_zsh
     - d_themes
     - d_flameshot
+    - f_starship.toml
