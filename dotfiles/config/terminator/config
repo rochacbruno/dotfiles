@@ -1,5 +1,6 @@
 [global_config]
-  handle_size = 2
+  borderless = True
+  extra_styling = False
   enabled_plugins = CurrDirOpen, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot
   suppress_multiple_term_dialog = True
 [keybindings]
@@ -11,6 +12,7 @@
   layout_launcher = ""
 [profiles]
   [[default]]
+    icon_bell = False
     background_color = "#1e1e2e"
     background_image = None
     font = FiraCode Nerd Font Mono 14

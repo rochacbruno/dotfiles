@@ -1,8 +1,10 @@
+vim.opt.cursorcolumn = true
+vim.opt.cmdheight = 0
+
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "catppuccin-mocha"
 
-vim.opt.cursorcolumn = true
 
 -- lvim.colorscheme = "lunar"
 lvim.builtin.alpha.dashboard.section.header.val = {

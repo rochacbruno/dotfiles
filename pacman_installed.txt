@@ -170,6 +170,7 @@ jq 1.6-4
 kdenlive 22.12.0-2
 keyserver-rank 1.2.4-1
 kinit 5.101.0-1
+kitty 0.26.5-1
 kompose 1.26.1-1
 ksnip 1.10.0-1
 less 1:608-1

@@ -109,3 +109,8 @@ bindsym $mod+F5 [class="Element"] scratchpad show
 bindsym $mod+F6 [title="Twilio Authy"] scratchpad show
 bindsym $mod+F7 [title="scratch"] scratchpad show
 
+# change borders
+bindsym $mod+u border none
+bindsym $mod+y border pixel 2
+bindsym $mod+n border normal
+

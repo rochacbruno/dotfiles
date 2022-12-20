@@ -214,4 +214,11 @@ lvim.plugins = {
   },
   -- media_files extension doesn't work well
   -- "nvim-telescope/telescope-media-files.nvim",
+  --Show status of LSP
+  {
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup()
+    end,
+  },
 }

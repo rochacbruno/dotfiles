@@ -457,6 +457,9 @@ kinit 5.101.0-1
 kio 5.101.0-1
 kirigami2 5.101.0-1
 kitemviews 5.101.0-1
+kitty 0.26.5-1
+kitty-shell-integration 0.26.5-1
+kitty-terminfo 0.26.5-1
 kjobwidgets 5.101.0-1
 kmod 30-3
 knewstuff 5.101.0-1
@@ -761,6 +764,7 @@ libreoffice-fresh 7.4.3-3
 librest 0.9.1-2
 librevenge 0.0.4-5
 librsvg 2:2.55.1-1
+librsync 1:2.3.2-1
 libsamplerate 0.2.2-1
 libsasl 2.1.28-3
 libseccomp 2.5.4-1
