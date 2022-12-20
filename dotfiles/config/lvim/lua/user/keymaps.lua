@@ -53,6 +53,7 @@ lvim.builtin.which_key.mappings["f"] = {
   b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
   c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
   f = { "<cmd>Telescope find_files<cr>", "Find files" },
+  d = { "<cmd>Telescope fd<cr>", "Find files with Preview" },
   t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
   s = { "<cmd>Telescope grep_string<cr>", "Find String" },
   h = { "<cmd>Telescope help_tags<cr>", "Help" },

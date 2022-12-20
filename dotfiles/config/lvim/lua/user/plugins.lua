@@ -212,4 +212,6 @@ lvim.plugins = {
       }
     end,
   },
+  -- media_files extension doesn't work well
+  -- "nvim-telescope/telescope-media-files.nvim",
 }

@@ -17,6 +17,12 @@ local augroup = vim.api.nvim_create_augroup
 --
 --
 
+-- Set .i3config as extension for i3 files
+autocmd({"BufEnter"}, {
+  pattern = { "*.i3config" },
+  command = "setlocal filetype=i3config",
+})
+
 -- TRIM whitespace on specified patterns when saving.
 autocmd({ "BufWritePre" }, {
   pattern = {

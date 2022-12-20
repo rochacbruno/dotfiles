@@ -1,0 +1,4 @@
+for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move up 30 px
+for_window [class="Tk" title="tk"] floating enable
+for_window [title="KivySum"] floating enable
+
