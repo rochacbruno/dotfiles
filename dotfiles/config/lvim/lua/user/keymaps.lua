@@ -25,6 +25,13 @@ lvim.builtin.which_key.mappings["t"] = {
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
 
+lvim.builtin.which_key.mappings["x"] = {
+  name = "Rest",
+  r = { "<cmd>lua require'rest-nvim'.run()<cr>", "Run" },
+  p = { "<cmd>lua require'rest-nvim'.run(true)<cr>", "Preview" },
+  a = { "<cmd>lua require'rest-nvim'.last()<cr>", "Last Request" },
+}
+
 lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 
@@ -67,35 +74,5 @@ lvim.builtin.which_key.mappings["f"] = {
   C = { "<cmd>Telescope commands<cr>", "Commands" },
 }
 
--- vim.keymap.set("n", "<leader>zz", "<cmd>TroubleToggle<cr>",
---   { silent = true, noremap = true }
--- )
--- vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
---   { silent = true, noremap = true }
--- )
--- vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
---   { silent = true, noremap = true }
--- )
--- vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
---   { silent = true, noremap = true }
--- )
--- vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
---   { silent = true, noremap = true }
--- )
--- vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
---   { silent = true, noremap = true }
--- )
-
--- Map Spectre Search/REplace Window
-vim.keymap.set("n", "<leader>S", "<cmd>lua require('spectre').open()<CR>", { silent = true, noremap = true })
--- Search current word
-vim.keymap.set("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
-  { silent = true, noremap = true })
-vim.keymap.set("v", "<leader>ss", "<esc>:lua require('spectre').open_visual()<CR>", { silent = true, noremap = true })
--- Search in current file
-vim.keymap.set("n", "<leader>sp", "viw:lua require('spectre').open_file_search()<cr>", { silent = true, noremap = true })
-
-
 vim.keymap.set("x", "<ScrollWheelLeft>", "5z<Left>")
 vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
-

@@ -15,7 +15,7 @@
     icon_bell = False
     background_color = "#1e1e2e"
     background_image = None
-    font = FiraCode Nerd Font Mono 14
+    font = FiraCode Nerd Font Mono 13
     foreground_color = "#cdd6f4"
     show_titlebar = False
     scrollback_infinite = True

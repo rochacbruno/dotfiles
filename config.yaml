@@ -81,6 +81,7 @@ dotfiles:
     - oc
     - codacy-coverage-reporter
     - lapce
+    - antares
     upignore:
     - kubectl
     - ctlptl
@@ -88,6 +89,7 @@ dotfiles:
     - oc
     - codacy-coverage-reporter
     - lapce
+    - antares
   f_bindings.json:
     src: config/micro/bindings.json
     dst: ~/.config/micro/bindings.json

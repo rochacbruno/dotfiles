@@ -9,6 +9,9 @@
 # it gets replaced by the "replace" string.
 matches:
 
+  - trigger: ":pyig"
+    replace: "# pyright: ignore"
+
   - trigger: ":pymain"
     replace: |
       if __name__ == "__main__":
