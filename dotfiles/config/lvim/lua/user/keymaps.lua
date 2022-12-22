@@ -91,4 +91,5 @@ vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
 
 -- Remove the Ctrl-\ for terminal
 lvim.builtin.terminal.open_mapping = "<c-t>"
-
+-- Enable the use of C-l to clean the terminal
+lvim.keys.term_mode = { ["<C-l>"] = false }
