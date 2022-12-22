@@ -40,7 +40,12 @@ lvim.builtin.which_key.mappings["r"] = {
   r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+  s = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace Cursor Word" },
 }
+
+-- Replace all similar words
+-- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 
 lvim.builtin.which_key.mappings["d"] = {
   name = "Debug",
@@ -73,6 +78,12 @@ lvim.builtin.which_key.mappings["f"] = {
   k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
   C = { "<cmd>Telescope commands<cr>", "Commands" },
 }
+
+-- Paste over selection
+vim.keymap.set("x", "<leader>p", "\"_dP")
+lvim.builtin.which_key.mappings["p"] = {"\"_dP", "Paste Over"}
+
+
 
 vim.keymap.set("x", "<ScrollWheelLeft>", "5z<Left>")
 vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
