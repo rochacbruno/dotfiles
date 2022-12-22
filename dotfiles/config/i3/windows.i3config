@@ -3,4 +3,5 @@ for_window [class="Tk" title="tk"] floating enable
 for_window [title="KivySum"] floating enable
 
 # Make every window have no borders
-for_window [all] border none
+for_window [tiling] border none
+for_window [floating] border pixel 3
