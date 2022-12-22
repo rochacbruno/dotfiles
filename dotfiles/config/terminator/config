@@ -6,9 +6,15 @@
 [keybindings]
   go_up = <Primary><Alt>Up
   go_down = <Primary><Alt>Down
+  close_term = ""
+  close_window = ""
   toggle_zoom = F11
   scaled_zoom = <Primary><Shift>z
   full_screen = <Super>f
+  group_tab = ""
+  edit_window_title = ""
+  edit_tab_title = ""
+  edit_terminal_title = ""
   layout_launcher = ""
 [profiles]
   [[default]]

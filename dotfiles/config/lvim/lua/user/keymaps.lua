@@ -87,3 +87,8 @@ lvim.builtin.which_key.mappings["p"] = {"\"_dP", "Paste Over"}
 
 vim.keymap.set("x", "<ScrollWheelLeft>", "5z<Left>")
 vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
+
+
+-- Remove the Ctrl-\ for terminal
+lvim.builtin.terminal.open_mapping = "<c-t>"
+
