@@ -277,5 +277,66 @@ lvim.plugins = {
       require("nvim-surround").setup()
     end
   },
-}
+  -- UI improvements (mostly useless but cool)
+  {
+    "folke/drop.nvim",
+    event = "VimEnter",
+    config = function()
+      require("drop").setup({
+        theme = "snow"
+      })
+    end,
+  },
 
+  {
+    "rcarriga/nvim-notify",
+    config = function()
+      require("notify").setup()
+    end
+  },
+  {
+    "folke/noice.nvim",
+    config = function()
+      require("noice").setup({
+        lsp = {
+          -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+          override = {
+            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+            ["vim.lsp.util.stylize_markdown"] = true,
+            ["cmp.entry.get_documentation"] = true,
+          },
+        },
+        -- you can enable a preset for easier configuration
+        presets = {
+          bottom_search = true, -- use a classic bottom cmdline for search
+          command_palette = true, -- position the cmdline and popupmenu together
+          long_message_to_split = true, -- long messages will be sent to a split
+          inc_rename = false, -- enables an input dialog for inc-rename.nvim
+          lsp_doc_border = false, -- add a border to hover docs and signature help
+        },
+      })
+    end,
+    requires = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    }
+  },
+  -- Change colortheme depending on filetype
+  {
+    "folke/styler.nvim",
+    config = function()
+      require("styler").setup({
+        themes = {
+          markdown = { colorscheme = "catppuccin-latte" },
+          -- help = { colorscheme = "catppuccin-mocha", background = "dark" },
+        },
+      })
+    end,
+  },
+  -- Better inputs and UI
+  "stevearc/dressing.nvim",
+}
