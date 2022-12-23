@@ -23,6 +23,18 @@ autocmd({"BufEnter"}, {
   command = "setlocal filetype=i3config",
 })
 
+-- NNUmber mode toggling
+-- Relative numbers shows on: N, V, *, Focus
+-- Normal numbets shows on: I, out focus
+autocmd({"BufLeave", "FocusLost", "InsertEnter", "WinLeave"}, {
+  pattern = { "*" },
+  command = "if &nu | setlocal norelativenumber | endif",
+})
+autocmd({"BufEnter", "FocusGained", "InsertLeave", "WinEnter"}, {
+  pattern = { "*" },
+  command = [[if &nu && mode() != "i" | setlocal relativenumber | endif]],
+})
+
 -- TRIM whitespace on specified patterns when saving.
 autocmd({ "BufWritePre" }, {
   pattern = {

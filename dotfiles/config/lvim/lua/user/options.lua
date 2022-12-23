@@ -1,5 +1,6 @@
 vim.opt.cursorcolumn = true
 vim.opt.cmdheight = 0
+vim.opt.relativenumber = true
 -- vim.opt.nospell = true
 
 lvim.log.level = "warn"
