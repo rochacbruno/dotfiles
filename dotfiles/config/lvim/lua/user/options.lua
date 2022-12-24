@@ -2,7 +2,7 @@ vim.opt.cursorcolumn = true
 vim.opt.cmdheight = 0
 vim.opt.relativenumber = true
 -- vim.opt.nospell = true
-
+vim.g["mkdp_theme"] = "light"
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "catppuccin-mocha"

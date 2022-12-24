@@ -215,12 +215,12 @@ lvim.plugins = {
   -- media_files extension doesn't work well
   -- "nvim-telescope/telescope-media-files.nvim",
   --Show status of LSP
-  {
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup()
-    end,
-  },
+  -- {
+  --   "j-hui/fidget.nvim",
+  --   config = function()
+  --     require("fidget").setup()
+  --   end,
+  -- },
   {
     "rest-nvim/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
@@ -331,7 +331,7 @@ lvim.plugins = {
     config = function()
       require("styler").setup({
         themes = {
-          markdown = { colorscheme = "catppuccin-latte" },
+          markdown = { colorscheme = "catppuccin-frappe" },
           -- help = { colorscheme = "catppuccin-mocha", background = "dark" },
         },
       })
@@ -339,4 +339,13 @@ lvim.plugins = {
   },
   -- Better inputs and UI
   "stevearc/dressing.nvim",
+  -- PErsist sessions
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    module = "persistence",
+    config = function()
+      require("persistence").setup()
+    end,
+  }
 }

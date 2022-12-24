@@ -60,6 +60,13 @@ lvim.builtin.which_key.mappings["d"] = {
   x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
 }
 
+lvim.builtin.which_key.mappings["q"] = {
+  q = { "<cmd>lua require('lvim.utils.functions').smart_quit()<CR>", "Quit" },
+  s = { [[<cmd>lua require("persistence").load()<cr>]], "Restore pwd session"},
+  l = { [[<cmd>lua require("persistence").load({ last = true })<cr>]], "Last Session"},
+  d = { [[<cmd>lua require("persistence").stop()<cr>]], "Dont save current session"}
+}
+
 lvim.builtin.which_key.mappings["f"] = {
   name = "Find",
   b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },

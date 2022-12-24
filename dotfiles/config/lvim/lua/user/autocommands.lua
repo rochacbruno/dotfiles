@@ -62,6 +62,13 @@ autocmd('TextYankPost', {
     end,
 })
 
+
+-- autocmd('RecordingEnter',
+--   callback = function()
+--       require("noice")
+--   end,
+-- )
+
 -- MORE EXAMPLES
 -- local aucmd_dict = {
 --     FileType = {
