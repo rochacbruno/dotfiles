@@ -283,7 +283,8 @@ lvim.plugins = {
     event = "VimEnter",
     config = function()
       require("drop").setup({
-        theme = "snow"
+        theme = "leaves",
+        filetypes = {},
       })
     end,
   },

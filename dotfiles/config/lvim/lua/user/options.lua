@@ -7,29 +7,22 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "catppuccin-mocha"
 
-
--- lvim.colorscheme = "lunar"
 lvim.builtin.alpha.dashboard.section.header.val = {
-  "                ⢀⣀⣤⣤⣤⣶⣶⣶⣶⣶⣶⣤⣤⣤⣀⡀                ",
-  "             ⣀⣤⣶⣿⠿⠟⠛⠉⠉⠉⠁⠈⠉⠉⠉⠛⠛⠿⣿⣷⣦⣀             ",
-  "          ⢀⣤⣾⡿⠛⠉                ⠉⠛⢿⣷⣤⡀          ",
-  "         ⣴⣿⡿⠃   BRUNO ROCHA LVIM   ⠙⠻⣿⣦         ",
-  " ⢀⣠⣤⣤⣤⣤⣤⣾⣿⣉⣀⡀                        ⠙⢻⣷⡄       ",
-  "⣼⠋⠁   ⢠⣿⡟ ⠉⠉⠉⠛⠛⠶⠶⣤⣄⣀    ⣀⣀      ⢠⣤⣤⡄   ⢻⣿⣆      ",
-  "⢻⡄   ⢰⣿⡟        ⢠⣿⣿⣿⠉⠛⠲⣾⣿⣿⣷    ⢀⣾⣿⣿⠁    ⢻⣿⡆     ",
-  " ⠹⣦⡀ ⣿⣿⠁        ⢸⣿⣿⡇   ⠻⣿⣿⠟⠳⠶⣤⣀⣸⣿⣿⠇      ⣿⣷     ",
-  "   ⠙⢷⣿⡇         ⣸⣿⣿⠃          ⢸⣿⣿⢷⣤⡀     ⢸⣿⡆    ",
-  "    ⢸⣿⠇         ⣿⣿⣿     ⣿⣿⣷  ⢠⣿⣿⡏ ⠈⠙⠳⢦⣄  ⠈⣿⡇    ",
-  "    ⢸⣿⡆        ⢸⣿⣿⡇     ⣿⣿⣿ ⢀⣿⣿⡟      ⠈⠙⠷⣤⣿⡇    ",
-  "    ⠘⣿⡇        ⣼⣿⣿⠁     ⣿⣿⣿ ⣼⣿⣿⠃         ⢸⣿⠷⣄⡀  ",
-  "     ⣿⣿        ⣿⣿⡿      ⣿⣿⣿⢸⣿⣿⠃          ⣾⡿ ⠈⠻⣆ ",
-  "     ⠸⣿⣧      ⢸⣿⣿⣇⣀⣀⣀⣀⣀⣀⣸⣿⣿⣿⣿⠇          ⣼⣿⠇   ⠘⣧",
-  "      ⠹⣿⣧     ⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏          ⣼⣿⠏    ⣠⡿",
-  "       ⠘⢿⣷⣄   ⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉         ⢠⣼⡿⠛⠛⠛⠛⠛⠛⠉ ",
-  "         ⠻⣿⣦⣄                      ⣀⣴⣿⠟         ",
-  "          ⠈⠛⢿⣶⣤⣀                ⣀⣤⣶⡿⠛⠁          ",
-  "             ⠉⠻⢿⣿⣶⣤⣤⣀⣀⡀  ⢀⣀⣀⣠⣤⣶⣿⡿⠟⠋             ",
-  "                ⠈⠉⠙⠛⠻⠿⠿⠿⠿⠿⠿⠟⠛⠋⠉⠁                ",
+  [[                                ]],
+  [[  ____                          ]],
+  [[ | __ ) _ __ _   _ _ __   ___   ]],
+  [[ |  _ \| '__| | | | '_ \ / _ \  ]],
+  [[ | |_) | |  | |_| | | | | (_) | ]],
+  [[ |____/|_|   \__,_|_| |_|\___/  ]],
+  [[                                ]],
+  [[          __       __           ]],
+  [[         / <`     '> \          ]],
+  [[        (  / @   @ \  )         ]],
+  [[         \(_ _\_/_ _)/          ]],
+  [[       (\ `-/     \-' /)        ]],
+  [[        "===\     /==="         ]],
+  [[         .==')___(`==.          ]],
+  [[        ' .='     `=.           ]],
 }
 
 lvim.builtin.alpha.active = true
@@ -74,34 +67,34 @@ vim.api.nvim_win_set_option(0, "spell", false)
 -- Text Objects
 --
 lvim.builtin.treesitter.textobjects = {
-	select = {
-		enable = true,
-		-- Automatically jump forward to textobj, similar to targets.vim
-		lookahead = true,
-		keymaps = {
-			-- You can use the capture groups defined in textobjects.scm
-			["af"] = "@function.outer",
-			["if"] = "@function.inner",
-			["at"] = "@class.outer",
-			["it"] = "@class.inner",
-			["ac"] = "@call.outer",
-			["ic"] = "@call.inner",
-			["aa"] = "@parameter.outer",
-			["ia"] = "@parameter.inner",
-			["al"] = "@loop.outer",
-			["il"] = "@loop.inner",
-			["ai"] = "@conditional.outer",
-			["ii"] = "@conditional.inner",
-			["a/"] = "@comment.outer",
-			["i/"] = "@comment.inner",
-			["ab"] = "@block.outer",
-			["ib"] = "@block.inner",
-			["as"] = "@statement.outer",
-			["is"] = "@scopename.inner",
-			["aA"] = "@attribute.outer",
-			["iA"] = "@attribute.inner",
-			["aF"] = "@frame.outer",
-			["iF"] = "@frame.inner",
-		},
-	},
+  select = {
+    enable = true,
+    -- Automatically jump forward to textobj, similar to targets.vim
+    lookahead = true,
+    keymaps = {
+      -- You can use the capture groups defined in textobjects.scm
+      ["af"] = "@function.outer",
+      ["if"] = "@function.inner",
+      ["at"] = "@class.outer",
+      ["it"] = "@class.inner",
+      ["ac"] = "@call.outer",
+      ["ic"] = "@call.inner",
+      ["aa"] = "@parameter.outer",
+      ["ia"] = "@parameter.inner",
+      ["al"] = "@loop.outer",
+      ["il"] = "@loop.inner",
+      ["ai"] = "@conditional.outer",
+      ["ii"] = "@conditional.inner",
+      ["a/"] = "@comment.outer",
+      ["i/"] = "@comment.inner",
+      ["ab"] = "@block.outer",
+      ["ib"] = "@block.inner",
+      ["as"] = "@statement.outer",
+      ["is"] = "@scopename.inner",
+      ["aA"] = "@attribute.outer",
+      ["iA"] = "@attribute.inner",
+      ["aF"] = "@frame.outer",
+      ["iF"] = "@frame.inner",
+    },
+  },
 }
