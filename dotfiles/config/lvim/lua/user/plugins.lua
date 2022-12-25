@@ -347,5 +347,8 @@ lvim.plugins = {
     config = function()
       require("persistence").setup()
     end,
-  }
+  },
+  -- Texto objects allows wuick moves like `cif` change inner function
+  "nvim-treesitter/nvim-treesitter-textobjects",
+
 }
