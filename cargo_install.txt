@@ -27,3 +27,5 @@ mdcat v0.25.1:
     mdcat
 ox v0.2.7 (https://github.com/curlpipe/ox#086f6653):
     ox
+teetty v0.2.0:
+    teetty

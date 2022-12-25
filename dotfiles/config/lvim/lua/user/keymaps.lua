@@ -33,7 +33,7 @@ lvim.builtin.which_key.mappings["x"] = {
 }
 
 lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
-lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
+-- lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
