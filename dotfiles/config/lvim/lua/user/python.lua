@@ -2,9 +2,11 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
 }
+-- NOTE: Ruff can be loaded on ruff.lua
 
--- Set a linter.
+--Set a linter.
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { command = "flake8", filetypes = { "python" } },

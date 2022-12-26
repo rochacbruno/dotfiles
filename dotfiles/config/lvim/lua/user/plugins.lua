@@ -203,15 +203,15 @@ lvim.plugins = {
   -- Prevents closing window layouts
   "moll/vim-bbye",
   -- Show indent guides even on blank lines
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require('indent_blankline').setup {
-        char = '┊',
-        show_trailing_blankline_indent = false,
-      }
-    end,
-  },
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim",
+  --   config = function()
+  --     require('indent_blankline').setup {
+  --       char = '┊',
+  --       show_trailing_blankline_indent = false,
+  --     }
+  --   end,
+  -- },
   -- media_files extension doesn't work well
   -- "nvim-telescope/telescope-media-files.nvim",
   --Show status of LSP
