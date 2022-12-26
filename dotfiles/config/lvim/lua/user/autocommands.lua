@@ -17,8 +17,15 @@ local augroup = vim.api.nvim_create_augroup
 --
 --
 
--- Set .i3config as extension for i3 files
 autocmd({"BufEnter"}, {
+  pattern = "*",
+  command = "setlocal nospell"
+})
+
+-- Set .i3config as extension for i3 files
+local i3_group = augroup("I3Wm", {})
+autocmd({ "BufEnter" }, {
+  group = i3_group,
   pattern = { "*.i3config" },
   command = "setlocal filetype=i3config",
 })
@@ -26,17 +33,22 @@ autocmd({"BufEnter"}, {
 -- NNUmber mode toggling
 -- Relative numbers shows on: N, V, *, Focus
 -- Normal numbets shows on: I, out focus
-autocmd({"BufLeave", "FocusLost", "InsertEnter", "WinLeave"}, {
+local number_group = augroup("Number", {})
+autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave" }, {
+  group = number_group,
   pattern = { "*" },
   command = "if &nu | setlocal norelativenumber | endif",
 })
-autocmd({"BufEnter", "FocusGained", "InsertLeave", "WinEnter"}, {
+autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, {
+  group = number_group,
   pattern = { "*" },
   command = [[if &nu && mode() != "i" | setlocal relativenumber | endif]],
 })
 
 -- TRIM whitespace on specified patterns when saving.
+local trim_group = augroup("Trim", {})
 autocmd({ "BufWritePre" }, {
+  group = trim_group,
   pattern = {
     "*.py",
     "*.rs",
@@ -45,23 +57,41 @@ autocmd({ "BufWritePre" }, {
     "*.txt",
     "*.in",
     "*.lua",
+    "*.json",
+    "*.i3config",
+    "*.conf",
   },
   command = [[%s/\s\+$//e]],
 })
 
 local yank_group = augroup('HighlightYank', {})
-
 autocmd('TextYankPost', {
-    group = yank_group,
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = 2000,
-        })
-    end,
+  group = yank_group,
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = 'IncSearch',
+      timeout = 2000,
+    })
+  end,
 })
 
+-- local customtheme_group = augroup("CustomTheme", {})
+-- autocmd({ "BufWinEnter" }, {
+--   group = customtheme_group,
+--   pattern = "*",
+--   command = "colorscheme catppuccin-mocha",
+-- })
+-- autocmd({ "BufWinEnter" }, {
+--   group = customtheme_group,
+--   pattern = {"markdown"},
+--   command = "echo 'aaaaa'",
+-- })
+-- autocmd({ "BufWinEnter" }, {
+--   group = customtheme_group,
+--   pattern = "markdown",
+--   command = "colorscheme catppuccin-latte",
+-- })
 
 -- autocmd('RecordingEnter',
 --   callback = function()

@@ -1,11 +1,13 @@
 lvim.leader = "space"
 -- Map Ctrl + s on normal and insert mode
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<C-s>"] = ":update<cr>"
+lvim.keys.insert_mode["<C-s>"] = "<Esc>:update<CR>a"
+lvim.keys.visual_mode["<C-s>"] = "<Esc>:update<CR>v"
+
+-- vim.keymap.set("i", "<c-s>", "<Esc>:w<CR>a", { silent = true, noremap = true })
 
 -- Map Ctrl + z to `undo`
 lvim.keys.normal_mode["<C-z>"] = ":undo<cr>"
-
-vim.keymap.set("i", "<c-s>", "<Esc>:w<CR>a", { silent = true, noremap = true })
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
@@ -62,9 +64,9 @@ lvim.builtin.which_key.mappings["d"] = {
 
 lvim.builtin.which_key.mappings["q"] = {
   q = { "<cmd>lua require('lvim.utils.functions').smart_quit()<CR>", "Quit" },
-  s = { [[<cmd>lua require("persistence").load()<cr>]], "Restore pwd session"},
-  l = { [[<cmd>lua require("persistence").load({ last = true })<cr>]], "Last Session"},
-  d = { [[<cmd>lua require("persistence").stop()<cr>]], "Dont save current session"}
+  s = { [[<cmd>lua require("persistence").load()<cr>]], "Restore pwd session" },
+  l = { [[<cmd>lua require("persistence").load({ last = true })<cr>]], "Last Session" },
+  d = { [[<cmd>lua require("persistence").stop()<cr>]], "Dont save current session" }
 }
 
 lvim.builtin.which_key.mappings["f"] = {
@@ -88,7 +90,7 @@ lvim.builtin.which_key.mappings["f"] = {
 
 -- Paste over selection
 vim.keymap.set("x", "<leader>p", "\"_dP")
-lvim.builtin.which_key.mappings["p"] = {"\"_dP", "Paste Over"}
+lvim.builtin.which_key.mappings["p"] = { "\"_dP", "Paste Over" }
 
 
 
@@ -100,3 +102,8 @@ vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
 lvim.builtin.terminal.open_mapping = "<c-t>"
 -- Enable the use of C-l to clean the terminal
 lvim.keys.term_mode = { ["<C-l>"] = false }
+
+-- Dont message help for which_key
+lvim.builtin.which_key.setup["show_help"] = false
+lvim.builtin.which_key.setup["show_keys"] = false
+

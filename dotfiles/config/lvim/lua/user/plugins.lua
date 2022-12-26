@@ -278,17 +278,16 @@ lvim.plugins = {
     end
   },
   -- UI improvements (mostly useless but cool)
-  {
-    "folke/drop.nvim",
-    event = "VimEnter",
-    config = function()
-      require("drop").setup({
-        theme = "leaves",
-        filetypes = {},
-      })
-    end,
-  },
-
+  -- {
+  --   "folke/drop.nvim",
+  --   event = "VimEnter",
+  --   config = function()
+  --     require("drop").setup({
+  --       theme = "leaves",
+  --       filetypes = {},
+  --     })
+  --   end,
+  -- },
   {
     "rcarriga/nvim-notify",
     config = function()
@@ -315,6 +314,18 @@ lvim.plugins = {
           inc_rename = false, -- enables an input dialog for inc-rename.nvim
           lsp_doc_border = false, -- add a border to hover docs and signature help
         },
+        -- routes
+        routes = {
+          {
+            filter = {
+              event = "msg_show",
+              kind = "",
+              find = "written",
+            },
+            view = "mini"
+            -- opts = { skip = true },
+          },
+        },
       })
     end,
     requires = {
@@ -327,17 +338,17 @@ lvim.plugins = {
     }
   },
   -- Change colortheme depending on filetype
-  {
-    "folke/styler.nvim",
-    config = function()
-      require("styler").setup({
-        themes = {
-          markdown = { colorscheme = "catppuccin-frappe" },
-          -- help = { colorscheme = "catppuccin-mocha", background = "dark" },
-        },
-      })
-    end,
-  },
+  -- {
+  --   "folke/styler.nvim",
+  --   config = function()
+  --     require("styler").setup({
+  --       themes = {
+  --         markdown = { colorscheme = "catppuccin-latte" },
+  --         -- help = { colorscheme = "catppuccin-mocha", background = "dark" },
+  --       },
+  --     })
+  --   end,
+  -- },
   -- Better inputs and UI
   "stevearc/dressing.nvim",
   -- PErsist sessions

@@ -1,7 +1,7 @@
 vim.opt.cursorcolumn = true
 vim.opt.cmdheight = 0
 vim.opt.relativenumber = true
--- vim.opt.nospell = true
+-- vim.opt.spell = false  -- this doesnt work, so done in aucommand
 vim.g["mkdp_theme"] = "light"
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
@@ -54,15 +54,13 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
   "markdown",
   "http",
+  "vim",
+  "regex",
+  "markdown_inline",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
-
--- Disable spell checker
-vim.api.nvim_win_set_option(0, "spell", false)
-
-
 
 -- Text Objects
 --

@@ -42,6 +42,11 @@ lvim.builtin.lualine.on_config_done = function()
       cond = require("noice").api.status.mode.has,
       color = { fg = "#ff9e64" },
   }
+  -- lvim.builtin.lualine.sections.lualine_c[4] = {
+  --     require("noice").api.status.message.get_hl,
+  --     cond = require("noice").api.status.message.has,
+  --     color = { fg = "#ff9e64" },
+  -- }
 
     -- {
     --   require("noice").api.status.message.get_hl,
