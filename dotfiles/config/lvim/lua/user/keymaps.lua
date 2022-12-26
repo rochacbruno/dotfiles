@@ -32,6 +32,7 @@ lvim.builtin.which_key.mappings["x"] = {
   r = { "<cmd>lua require'rest-nvim'.run()<cr>", "Run" },
   p = { "<cmd>lua require'rest-nvim'.run(true)<cr>", "Preview" },
   a = { "<cmd>lua require'rest-nvim'.last()<cr>", "Last Request" },
+  o = { "<cmd>lua require('user.functions').open_rest_nvim_file()<cr>", "Open rest file" }
 }
 
 lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }

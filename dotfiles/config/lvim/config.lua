@@ -1,6 +1,7 @@
 reload "user.plugins"
 reload "user.options"
 reload "user.status"
+reload "user.functions"
 reload "user.keymaps"
 reload "user.autocommands"
 reload "user.lsp"
