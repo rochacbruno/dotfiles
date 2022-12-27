@@ -58,12 +58,12 @@ lvim.plugins = {
     "sindrets/diffview.nvim",
     event = "BufRead",
   },
-  -- IDK if this next one is needed
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function() require "lsp_signature".on_attach() end,
-  -- },
+  -- Complete function signature as we type (handle by lsp)
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require "lsp_signature".on_attach() end,
+  },
   -- { "zbirenbaum/copilot.lua",
   --   event = { "VimEnter" },
   --   config = function()
@@ -102,7 +102,7 @@ lvim.plugins = {
     ft = { "markdown" }
     -- run = "yay -S glow"
   },
-  -- Remenbers where you cursor was when you closed the file
+  -- Remembers where you cursor was when you closed the file
   {
     "ethanholz/nvim-lastplace",
     event = "BufRead",
@@ -294,6 +294,14 @@ lvim.plugins = {
       require("notify").setup()
     end
   },
+  -- Quick moves inside document
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require("hop").setup({ teasing = false })
+    end,
+  },
   {
     "folke/noice.nvim",
     config = function()
@@ -325,6 +333,16 @@ lvim.plugins = {
             view = "mini"
             -- opts = { skip = true },
           },
+          {
+            filter = {
+              event = "msg_show",
+              -- kind = "",
+              find = "Hop",
+            },
+            view = "mini"
+            -- opts = { skip = true },
+          },
+
         },
       })
     end,
@@ -362,5 +380,9 @@ lvim.plugins = {
   },
   -- Texto objects allows wuick moves like `cif` change inner function
   "nvim-treesitter/nvim-treesitter-textobjects",
-
+  -- Literate programming
+  {
+    "metakirby5/codi.vim",
+    cmd = "Codi",
+  },
 }

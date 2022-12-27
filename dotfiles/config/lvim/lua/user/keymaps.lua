@@ -35,6 +35,8 @@ lvim.builtin.which_key.mappings["x"] = {
   o = { "<cmd>lua require('user.functions').open_rest_nvim_file()<cr>", "Open rest file" }
 }
 
+lvim.builtin.which_key.mappings["b"]["t"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Text in Buffer" }
+
 lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 -- lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 
@@ -108,3 +110,22 @@ lvim.keys.term_mode = { ["<C-l>"] = false }
 lvim.builtin.which_key.setup["show_help"] = false
 lvim.builtin.which_key.setup["show_keys"] = false
 
+
+-- Replace fFtT with Hop
+-- place this in one of your configuration file(s)
+local hop = require('hop')
+local directions = require('hop.hint').HintDirection
+vim.keymap.set('', 'f', function()
+  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+end, { remap = true })
+vim.keymap.set('', 'F', function()
+  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+end, { remap = true })
+vim.keymap.set('', 't', function()
+  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
+end, { remap = true })
+vim.keymap.set('', 'T', function()
+  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
+end, { remap = true })
+vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
