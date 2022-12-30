@@ -37,11 +37,11 @@ lvim.builtin.lualine.on_config_done = function()
     return map[mode]
   end
 
-  lvim.builtin.lualine.sections.lualine_c[3] = {
-      require("noice").api.status.mode.get,
-      cond = require("noice").api.status.mode.has,
-      color = { fg = "#ff9e64" },
-  }
+  -- lvim.builtin.lualine.sections.lualine_c[3] = {
+  --     require("noice").api.status.mode.get,
+  --     cond = require("noice").api.status.mode.has,
+  --     color = { fg = "#ff9e64" },
+  -- }
   -- lvim.builtin.lualine.sections.lualine_c[4] = {
   --     require("noice").api.status.message.get_hl,
   --     cond = require("noice").api.status.message.has,

@@ -148,6 +148,7 @@ lvim.plugins = {
   -- :MarkdownPreview live on the browser
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
+    -- alternative: run =  function() vim.fn["mkdp#util#install"](),
     setup = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
@@ -215,12 +216,13 @@ lvim.plugins = {
   -- media_files extension doesn't work well
   -- "nvim-telescope/telescope-media-files.nvim",
   --Show status of LSP
-  -- {
-  --   "j-hui/fidget.nvim",
-  --   config = function()
-  --     require("fidget").setup()
-  --   end,
-  -- },
+  {
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup()
+    end,
+  },
+  -- Temporaty using my fork, move to rest-nvim when it is fixed.
   {
     "rest-nvim/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
@@ -302,59 +304,59 @@ lvim.plugins = {
       require("hop").setup({ teasing = false })
     end,
   },
-  {
-    "folke/noice.nvim",
-    config = function()
-      require("noice").setup({
-        lsp = {
-          -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-          override = {
-            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-            ["vim.lsp.util.stylize_markdown"] = true,
-            ["cmp.entry.get_documentation"] = true,
-          },
-        },
-        -- you can enable a preset for easier configuration
-        presets = {
-          bottom_search = true, -- use a classic bottom cmdline for search
-          command_palette = true, -- position the cmdline and popupmenu together
-          long_message_to_split = true, -- long messages will be sent to a split
-          inc_rename = false, -- enables an input dialog for inc-rename.nvim
-          lsp_doc_border = false, -- add a border to hover docs and signature help
-        },
-        -- routes
-        routes = {
-          {
-            filter = {
-              event = "msg_show",
-              kind = "",
-              find = "written",
-            },
-            view = "mini"
-            -- opts = { skip = true },
-          },
-          {
-            filter = {
-              event = "msg_show",
-              -- kind = "",
-              find = "Hop",
-            },
-            view = "mini"
-            -- opts = { skip = true },
-          },
+  -- {
+  --   "folke/noice.nvim",
+  --   config = function()
+  --     require("noice").setup({
+  --       lsp = {
+  --         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+  --         override = {
+  --           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+  --           ["vim.lsp.util.stylize_markdown"] = true,
+  --           ["cmp.entry.get_documentation"] = true,
+  --         },
+  --       },
+  --       -- you can enable a preset for easier configuration
+  --       presets = {
+  --         bottom_search = true, -- use a classic bottom cmdline for search
+  --         command_palette = true, -- position the cmdline and popupmenu together
+  --         long_message_to_split = true, -- long messages will be sent to a split
+  --         inc_rename = false, -- enables an input dialog for inc-rename.nvim
+  --         lsp_doc_border = false, -- add a border to hover docs and signature help
+  --       },
+  --       -- routes
+  --       routes = {
+  --         {
+  --           filter = {
+  --             event = "msg_show",
+  --             kind = "",
+  --             find = "written",
+  --           },
+  --           view = "mini"
+  --           -- opts = { skip = true },
+  --         },
+  --         {
+  --           filter = {
+  --             event = "msg_show",
+  --             -- kind = "",
+  --             find = "Hop",
+  --           },
+  --           view = "mini"
+  --           -- opts = { skip = true },
+  --         },
 
-        },
-      })
-    end,
-    requires = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
-    }
-  },
+  --       },
+  --     })
+  --   end,
+  --   requires = {
+  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --     "MunifTanjim/nui.nvim",
+  --     -- OPTIONAL:
+  --     --   `nvim-notify` is only needed, if you want to use the notification view.
+  --     --   If not available, we use `mini` as the fallback
+  --     "rcarriga/nvim-notify",
+  --   }
+  -- },
   -- Change colortheme depending on filetype
   -- {
   --   "folke/styler.nvim",
@@ -385,4 +387,18 @@ lvim.plugins = {
     "metakirby5/codi.vim",
     cmd = "Codi",
   },
+  -- Python debugging
+  "mfussenegger/nvim-dap-python",
+  -- Maximizer (it can be done with C-w | and C-w _ and Ctrl w =)
+  -- Other option is opening in a new tab with C-w T
+  -- Another useful tip is :tabedit % (to maximize) :tabclose (to get back)
+  -- but this plugin remembers the size of multiple windows
+  -- <C-w>m or F3
+  "szw/vim-maximizer",
+  -- Select a range and split it with <C-w>gr/gss/gsa/gsb
+  { 'wellle/visual-split.vim', cmd = { 'VSResize', 'VSSplit', 'VSSplitAbove', 'VSSplitBelow' } },
+  -- Splitjoin gS, gJ
+  "AndrewRadev/splitjoin.vim",
+  -- Remove trailing lines and spaces
+  { 'echasnovski/mini.trailspace', branch = 'stable' },
 }

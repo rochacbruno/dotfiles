@@ -1,6 +1,7 @@
 vim.opt.cursorcolumn = true
-vim.opt.cmdheight = 0
+-- vim.opt.cmdheight = 0
 vim.opt.relativenumber = true
+vim.opt.showcmd = true
 -- vim.opt.spell = false  -- this doesnt work, so done in aucommand
 vim.g["mkdp_theme"] = "light"
 lvim.log.level = "warn"

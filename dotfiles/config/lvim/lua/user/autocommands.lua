@@ -45,6 +45,15 @@ autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, {
   command = [[if &nu && mode() != "i" | setlocal relativenumber | endif]],
 })
 
+-- Get out of insert on focuslost
+local focus_group = augroup("Focus", {})
+autocmd({ "FocusLost" }, {
+  group = focus_group,
+  pattern = { "*" },
+  command = "if mode() == 'i' | stopinsert | endif",
+  -- alternative: | call feedkeys("\<C-\>\<C-n>") |
+})
+
 -- TRIM whitespace on specified patterns when saving.
 local trim_group = augroup("Trim", {})
 autocmd({ "BufWritePre" }, {
@@ -60,8 +69,21 @@ autocmd({ "BufWritePre" }, {
     "*.json",
     "*.i3config",
     "*.conf",
+    "*.css",
+    "*.html"
   },
-  command = [[%s/\s\+$//e]],
+  -- command = [[%s/\s\+$//e]],
+  callback = function()
+    -- Save cursor position to later restore
+    local curpos = vim.api.nvim_win_get_cursor(0)
+    -- Search and replace trailing whitespace
+    vim.cmd([[keeppatterns %s/\s\+$//e]])
+    vim.api.nvim_win_set_cursor(0, curpos)
+    -- Clean up last empty lines
+    local n_lines = vim.api.nvim_buf_line_count(0)
+    local last_nonblank = vim.fn.prevnonblank(n_lines)
+    if last_nonblank < n_lines then vim.api.nvim_buf_set_lines(0, last_nonblank, n_lines, true, {}) end
+  end,
 })
 
 local yank_group = augroup('HighlightYank', {})
@@ -75,6 +97,11 @@ autocmd('TextYankPost', {
     })
   end,
 })
+
+autocmd('ColorScheme', {
+  command = "hi MiniTrailspace guibg=lightgreen"
+})
+
 
 -- local customtheme_group = augroup("CustomTheme", {})
 -- autocmd({ "BufWinEnter" }, {

@@ -29,7 +29,7 @@ lvim.builtin.which_key.mappings["t"] = {
 
 lvim.builtin.which_key.mappings["x"] = {
   name = "Rest",
-  r = { "<cmd>lua require'rest-nvim'.run()<cr>", "Run" },
+  r = { "<cmd>lua require'rest-nvim'.run(false)<cr>", "Run" },
   p = { "<cmd>lua require'rest-nvim'.run(true)<cr>", "Preview" },
   a = { "<cmd>lua require'rest-nvim'.last()<cr>", "Last Request" },
   o = { "<cmd>lua require('user.functions').open_rest_nvim_file()<cr>", "Open rest file" }
@@ -91,15 +91,8 @@ lvim.builtin.which_key.mappings["f"] = {
   C = { "<cmd>Telescope commands<cr>", "Commands" },
 }
 
--- Paste over selection
-vim.keymap.set("x", "<leader>p", "\"_dP")
-lvim.builtin.which_key.mappings["p"] = { "\"_dP", "Paste Over" }
-
-
-
 vim.keymap.set("x", "<ScrollWheelLeft>", "5z<Left>")
 vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
-
 
 -- Remove the Ctrl-\ for terminal
 lvim.builtin.terminal.open_mapping = "<c-t>"
@@ -129,3 +122,38 @@ vim.keymap.set('', 'T', function()
 end, { remap = true })
 vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
 vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+
+
+-- Maximize window
+-- F3 is already mapped by plugin
+vim.keymap.set('n', '<C-w>m', "<Cmd>MaximizerToggle!<CR>")
+
+-- emacs-style motion & editing in insert mode
+vim.keymap.set("i", [[<C-a>]], [[<Home>]]) -- "Goto beginning of line")
+vim.keymap.set("i", [[<C-e>]], [[<End>]]) -- "Goto end of line")
+vim.keymap.set("i", [[<C-b>]], [[<Left>]]) --Goto char backward"
+vim.keymap.set("i", [[<C-f>]], [[<Right>]]) -- "Goto char forward")
+vim.keymap.set("i", [[<M-b>]], [[<S-Left>]]) -- "Goto word backward")
+vim.keymap.set("i", [[<M-f>]], [[<S-Right>]]) -- "Goto word forward")
+vim.keymap.set("i", [[<C-d>]], [[<Delete>]]) -- "Kill char forward")
+vim.keymap.set("i", [[<M-d>]], [[<C-o>de]]) -- "Kill word forward")
+vim.keymap.set("i", [[<M-Backspace>]], [[<C-o>dB]]) -- "Kill word backward")
+vim.keymap.set("i", [[<C-k>]], [[<C-o>D]]) -- "Kill to end of line")
+
+-- emacs-style motion & editing in command mode
+vim.keymap.set("c", [[<C-a>]], [[<Home>]]) -- Goto beginning of line
+vim.keymap.set("c", [[<C-b>]], [[<Left>]]) -- Goto char backward
+vim.keymap.set("c", [[<C-d>]], [[<Delete>]]) -- Kill char forward
+vim.keymap.set("c", [[<C-f>]], [[<Right>]]) -- Goto char forward
+vim.keymap.set("c", [[<C-g>]], [[<C-c>]]) -- Cancel
+vim.keymap.set("c", [[<C-k>]], [[<C-\>e(" ".getcmdline())[:getcmdpos()-1][1:]<Cr>]]) -- Kill to end of line
+vim.keymap.set("c", [[<M-f>]], [[<C-\>euser#fn#cmdlineMoveWord( 1, 0)<Cr>]]) -- Goto word forward
+vim.keymap.set("c", [[<M-b>]], [[<C-\>euser#fn#cmdlineMoveWord(-1, 0)<Cr>]]) -- Goto word backward
+vim.keymap.set("c", [[<M-d>]], [[<C-\>euser#fn#cmdlineMoveWord( 1, 1)<Cr>]]) -- Kill word forward
+vim.keymap.set("c", [[<M-Backspace>]], [[<C-\>euser#fn#cmdlineMoveWord(-1, 1)<Cr>]]) -- Kill word backward
+
+-- Visual Split Plugin
+vim.keymap.set({ "v", "n", "x" }, "<C-w>gr", [[<cmd>'<,'>VSResize<cr>]], { remap = true })
+vim.keymap.set({ "v", "n", "x" }, "<C-w>gss", [[<cmd>'<,'>VSSplit<cr>]], { remap = true })
+vim.keymap.set({ "v", "n", "x" }, "<C-w>gsa", [[<cmd>'<,'>VSSplitAbove<cr>]], { remap = true })
+vim.keymap.set({ "v", "n", "x" }, "<C-w>gsb", [[<cmd>'<,'>VSSplitBelow<cr>]], { remap = true })
