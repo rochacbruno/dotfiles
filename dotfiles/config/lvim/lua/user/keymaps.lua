@@ -36,6 +36,7 @@ lvim.builtin.which_key.mappings["x"] = {
 }
 
 lvim.builtin.which_key.mappings["b"]["t"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Text in Buffer" }
+lvim.builtin.which_key.mappings["b"]["p"] = { "<cmd>BufferLinePick<cr>", "Pick a Buffer" }
 
 lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 -- lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
@@ -157,3 +158,7 @@ vim.keymap.set({ "v", "n", "x" }, "<C-w>gr", [[<cmd>'<,'>VSResize<cr>]], { remap
 vim.keymap.set({ "v", "n", "x" }, "<C-w>gss", [[<cmd>'<,'>VSSplit<cr>]], { remap = true })
 vim.keymap.set({ "v", "n", "x" }, "<C-w>gsa", [[<cmd>'<,'>VSSplitAbove<cr>]], { remap = true })
 vim.keymap.set({ "v", "n", "x" }, "<C-w>gsb", [[<cmd>'<,'>VSSplitBelow<cr>]], { remap = true })
+
+
+-- Trying to get sane copy/paste over
+vim.keymap.set({"x", "v"}, "p", '"_dP')
