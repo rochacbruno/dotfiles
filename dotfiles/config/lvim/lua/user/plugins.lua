@@ -1,8 +1,12 @@
--- Additional Plugins
+-- Lunarvim has core plugins already installed:
+-- https://www.lunarvim.org/docs/plugins/core-plugins-list
+-- Extra plugins added:
 lvim.plugins = {
+
   -- Inlay Hints for LSP and Rust
-  "lvimuser/lsp-inlayhints.nvim",
+  "lvimuser/lsp-inlayhints.nvim", -- needed because rust-tools inlay is broken
   "simrat39/rust-tools.nvim",
+
   -- Multicursor (ctrl up/down, ctrl-N)
   -- Ctrl Mouse Click
   -- \\ = leader
@@ -21,21 +25,28 @@ lvim.plugins = {
   -- \\-` = tools menu
   -- C-N - mii - c (select, match inner function, change)
   "mg979/vim-visual-multi",
+
   -- Indentation text object (vai, vii, vaI, viI)
   "michaeljsmith/vim-indent-object",
+
   -- highlight TODO:comments
   "folke/todo-comments.nvim",
+
   -- highlight colors like  #ffcc00
   "NvChad/nvim-colorizer.lua",
+
   -- Group all the problems in a quick fix list (leader-zz)
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+
   -- :ZenMode for writing
   "folke/zen-mode.nvim",
+
   -- Internal scrollbar
   "petertriho/nvim-scrollbar",
+
   -- Search and Replace across all files
   {
     "windwp/nvim-spectre",
@@ -47,7 +58,9 @@ lvim.plugins = {
       })
     end,
   },
+
   -- ,w - shows window picker when working with splits
+  -- ,e - exchange window position
   {
     "s1n7ax/nvim-window-picker",
     tag = "1.*",
@@ -71,38 +84,21 @@ lvim.plugins = {
       })
     end,
   },
+
   -- :DiffViewOpen/Close - For git diffs
   {
     "sindrets/diffview.nvim",
     event = "BufRead",
   },
+
   -- Complete function signature as we type (handle by lsp)
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function() require "lsp_signature".on_attach() end,
   },
-  -- { "zbirenbaum/copilot.lua",
-  --   event = { "VimEnter" },
-  --   config = function()
-  --     vim.defer_fn(function()
-  --       require("copilot").setup {
-  --         plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
-  --       }
-  --     end, 100)
-  --   end,
-  -- },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   after = { "copilot.lua" },
-  --   config = function()
-  --     require("copilot_cmp").setup {
-  --       formatters = {
-  --         insert_text = require("copilot_cmp.format").remove_existing,
-  --       },
-  --     }
-  --   end,
-  -- },
+
+  -- Github Copilot and autocomplete
   {
     "zbirenbaum/copilot-cmp",
     event = "InsertEnter",
@@ -114,12 +110,14 @@ lvim.plugins = {
       end, 100)
     end,
   },
+
   -- Markdown viewer embedded
   {
     "npxbr/glow.nvim",
     ft = { "markdown" }
     -- run = "yay -S glow"
   },
+
   -- Remembers where you cursor was when you closed the file
   {
     "ethanholz/nvim-lastplace",
@@ -134,6 +132,7 @@ lvim.plugins = {
       })
     end,
   },
+
   -- highlight the occurences of the word behind the cursor
   {
     "itchyny/vim-cursorword",
@@ -148,6 +147,7 @@ lvim.plugins = {
       vim.api.nvim_command("augroup END")
     end
   },
+
   -- Theme
   {
     "catppuccin/nvim",
@@ -163,6 +163,7 @@ lvim.plugins = {
       })
     end
   },
+
   -- :MarkdownPreview live on the browser
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
@@ -172,6 +173,7 @@ lvim.plugins = {
     end,
     ft = { "markdown" },
   },
+
   -- Highlights the current mode changing line color
   {
     'mvllow/modes.nvim',
@@ -186,23 +188,20 @@ lvim.plugins = {
         },
         -- Set opacity for cursorline and number background
         line_opacity = 0.15,
-
         -- Enable cursor highlights
         set_cursor = true,
-
         -- Enable cursorline initially, and disable cursorline for inactive windows
         -- or ignored filetypes
         set_cursorline = true,
-
         -- Enable line number highlights to match cursorline
         set_number = true,
-
         -- Disable modes highlights in specified filetypes
         -- Please PR commonly ignored filetypes
         ignore_filetypes = { 'NvimTree', 'TelescopePrompt' }
       })
     end
   },
+
   -- Rust crates helper
   {
     "saecki/crates.nvim",
@@ -217,22 +216,16 @@ lvim.plugins = {
       }
     end,
   },
+
   -- Cycle buffer c-h and c-l
   "ghillb/cybu.nvim",
+
   -- Prevents closing window layouts
   "moll/vim-bbye",
-  -- Show indent guides even on blank lines
-  -- {
-  --   "lukas-reineke/indent-blankline.nvim",
-  --   config = function()
-  --     require('indent_blankline').setup {
-  --       char = '┊',
-  --       show_trailing_blankline_indent = false,
-  --     }
-  --   end,
-  -- },
+
   -- media_files extension doesn't work well
   -- "nvim-telescope/telescope-media-files.nvim",
+
   --Show status of LSP
   {
     "j-hui/fidget.nvim",
@@ -240,7 +233,8 @@ lvim.plugins = {
       require("fidget").setup()
     end,
   },
-  -- Temporaty using my fork, move to rest-nvim when it is fixed.
+
+  -- Runs HTTP requests
   {
     "rest-nvim/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
@@ -281,6 +275,7 @@ lvim.plugins = {
       })
     end
   },
+
   -- Surrounds
   --    Old text                    Command         New text
   --------------------------------------------------------------------------------
@@ -297,6 +292,7 @@ lvim.plugins = {
       require("nvim-surround").setup()
     end
   },
+
   -- UI improvements (mostly useless but cool)
   -- {
   --   "folke/drop.nvim",
@@ -308,13 +304,17 @@ lvim.plugins = {
   --     })
   --   end,
   -- },
-  {
-    "rcarriga/nvim-notify",
-    config = function()
-      require("notify").setup()
-    end
-  },
+
+  -- Annoying notification popups
+  -- {
+  --   "rcarriga/nvim-notify",
+  --   config = function()
+  --     require("notify").setup()
+  --   end
+  -- },
+
   -- Quick moves inside document
+  -- S or s__ or f F t T
   {
     "phaazon/hop.nvim",
     event = "BufRead",
@@ -322,74 +322,11 @@ lvim.plugins = {
       require("hop").setup({ teasing = false })
     end,
   },
-  -- {
-  --   "folke/noice.nvim",
-  --   config = function()
-  --     require("noice").setup({
-  --       lsp = {
-  --         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-  --         override = {
-  --           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-  --           ["vim.lsp.util.stylize_markdown"] = true,
-  --           ["cmp.entry.get_documentation"] = true,
-  --         },
-  --       },
-  --       -- you can enable a preset for easier configuration
-  --       presets = {
-  --         bottom_search = true, -- use a classic bottom cmdline for search
-  --         command_palette = true, -- position the cmdline and popupmenu together
-  --         long_message_to_split = true, -- long messages will be sent to a split
-  --         inc_rename = false, -- enables an input dialog for inc-rename.nvim
-  --         lsp_doc_border = false, -- add a border to hover docs and signature help
-  --       },
-  --       -- routes
-  --       routes = {
-  --         {
-  --           filter = {
-  --             event = "msg_show",
-  --             kind = "",
-  --             find = "written",
-  --           },
-  --           view = "mini"
-  --           -- opts = { skip = true },
-  --         },
-  --         {
-  --           filter = {
-  --             event = "msg_show",
-  --             -- kind = "",
-  --             find = "Hop",
-  --           },
-  --           view = "mini"
-  --           -- opts = { skip = true },
-  --         },
 
-  --       },
-  --     })
-  --   end,
-  --   requires = {
-  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-  --     "MunifTanjim/nui.nvim",
-  --     -- OPTIONAL:
-  --     --   `nvim-notify` is only needed, if you want to use the notification view.
-  --     --   If not available, we use `mini` as the fallback
-  --     "rcarriga/nvim-notify",
-  --   }
-  -- },
-  -- Change colortheme depending on filetype
-  -- {
-  --   "folke/styler.nvim",
-  --   config = function()
-  --     require("styler").setup({
-  --       themes = {
-  --         markdown = { colorscheme = "catppuccin-latte" },
-  --         -- help = { colorscheme = "catppuccin-mocha", background = "dark" },
-  --       },
-  --     })
-  --   end,
-  -- },
-  -- Better inputs and UI
+  -- Better input popups and UI
   "stevearc/dressing.nvim",
-  -- PErsist sessions
+
+  -- Persist sessions
   {
     "folke/persistence.nvim",
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
@@ -398,25 +335,112 @@ lvim.plugins = {
       require("persistence").setup()
     end,
   },
+
   -- Texto objects allows wuick moves like `cif` change inner function
   "nvim-treesitter/nvim-treesitter-textobjects",
+
   -- Literate programming
   {
     "metakirby5/codi.vim",
     cmd = "Codi",
   },
+
   -- Python debugging
   "mfussenegger/nvim-dap-python",
+
   -- Maximizer (it can be done with C-w | and C-w _ and Ctrl w =)
   -- Other option is opening in a new tab with C-w T
   -- Another useful tip is :tabedit % (to maximize) :tabclose (to get back)
   -- but this plugin remembers the size of multiple windows
   -- <C-w>m or F3
   "szw/vim-maximizer",
+
   -- Select a range and split it with <C-w>gr/gss/gsa/gsb
   { 'wellle/visual-split.vim', cmd = { 'VSResize', 'VSSplit', 'VSSplitAbove', 'VSSplitBelow' } },
+
   -- Splitjoin gS, gJ
   "AndrewRadev/splitjoin.vim",
+
   -- Remove trailing lines and spaces
   { 'echasnovski/mini.trailspace', branch = 'stable' },
+
+  -- Creates dirs when `:w path`
+  'jghauser/mkdir.nvim',
+
+  -- :Cheatsheet for vim commands
+  {
+    'sudormrfbin/cheatsheet.nvim',
+    config = function()
+      require('cheatsheet').setup()
+    end,
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-lua/popup.nvim' },
+      { 'nvim-lua/plenary.nvim' },
+    }
+  },
+
+  -- <leader>i inverts text under cursor
+  -- true, on, up, !=, left, yes
+  -- 5 > 4  5 >= 6, 6 <= 6,
+  -- let x = Some
+  {
+    'nguyenvukhang/nvim-toggler',
+    config = function()
+      require('nvim-toggler').setup({
+        inverses = {
+          ["vim"] = "emacs",
+          ["<"] = ">",
+          [">="] = "<=",
+          ["True"] = "False",
+          ["Up"] = "Down",
+          ["Left"] = "Right",
+          ["Some"] = "None",
+        }
+      })
+    end,
+  },
+
+  -- File operations like `<l>gd` (duplicate file)
+  {
+    "chrisgrieser/nvim-genghis",
+    requires = {
+      "stevearc/dressing.nvim",
+      "hrsh7th/nvim-cmp",
+      "hrsh7th/cmp-omni",
+    },
+  },
+
+  -- Automations
+  {
+    'arjunmahishi/flow.nvim',
+    config = function()
+      require('flow').setup({
+        output = {
+          buffer = true,
+          split_cmd = '20split',
+        },
+        filetype_cmd_map = {
+          hurl = "echo %s | hurl | jq",
+          -- hurl = "hurl <<-EOF\n%s\nEOF | jq",
+        }
+      })
+      require('flow.vars').add_vars({
+        name = "Bruno",
+        var_with_func = function()
+          return "test"
+        end,
+      })
+    end,
+  },
+
+  -- Adds a border to windows
+  {
+    "nvim-zh/colorful-winsep.nvim",
+    config = function()
+      require('colorful-winsep').setup({
+        symbols = { "─", "│", "┌", "┐", "└", "┘" },
+      })
+    end,
+  },
 }

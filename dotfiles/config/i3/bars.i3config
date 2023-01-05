@@ -11,34 +11,11 @@ set $darkgray #45475a
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango:PowerlineSymbols, Font Awesome 5 Free 12, MaterialIcons-Regular  
-        # font pango:PowerlineSymbols, Font Awesome 5 Free 12 
-        status_command i3status-rs /home/rochacbruno/.config/i3status-rust/config.toml
-        output dp3-3 
-        output eDP1 
- 
-        colors { 
-                background $bg 
-                statusline $yellow 
-                separator  $gray 
- 
-                #                   border  backgr. text 
-                focused_workspace  $aqua $aqua $darkgray 
-                active_workspace   $darkgray $darkgray $yellow 
-                inactive_workspace $darkgray $darkgray $yellow 
-                binding_mode       $green $yellow $bg 
-                urgent_workspace   $red $red $bg 
-        } 
-} 
- 
- 
-bar { 
         font pango:PowerlineSymbols, Font Awesome 5 Free 12, MaterialIcons-Regular
         # font pango:PowerlineSymbols, Font Awesome 5 Free 12
-        status_command i3status-rs /home/rochacbruno/.config/i3status-rust/config2.toml
-        output dp3-1
-        hidden_state show
-        position top
+        status_command i3status-rs /home/rochacbruno/.config/i3status-rust/config.toml
+        output dp3-3
+        output eDP1
 
         colors {
                 background $bg
@@ -54,3 +31,25 @@ bar {
         }
 }
 
+
+bar {
+        font pango:PowerlineSymbols, Font Awesome 5 Free 12, MaterialIcons-Regular
+        # font pango:PowerlineSymbols, Font Awesome 5 Free 12
+        status_command i3status-rs /home/rochacbruno/.config/i3status-rust/config2.toml
+        output dp3-1
+        hidden_state show
+        # position top
+
+        colors {
+                background $bg
+                statusline $yellow
+                separator  $gray
+
+                #                   border  backgr. text
+                focused_workspace  $aqua $aqua $darkgray
+                active_workspace   $darkgray $darkgray $yellow
+                inactive_workspace $darkgray $darkgray $yellow
+                binding_mode       $green $yellow $bg
+                urgent_workspace   $red $red $bg
+        }
+}

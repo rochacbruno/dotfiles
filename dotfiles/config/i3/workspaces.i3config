@@ -36,11 +36,14 @@ bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 
 # move next previous workspace
 bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+l workspace next
+# bindsym $mod+Ctrl+l workspace next
 bindsym $mod+Ctrl+Left workspace prev
-bindsym $mod+Ctrl+h workspace prev
+# bindsym $mod+Ctrl+h workspace prev
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 bindsym $mod+x move workspace to output left
-
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+l move workspace to output right
+bindsym $mod+Ctrl+j move workspace to output down
+bindsym $mod+Ctrl+k move workspace to output up

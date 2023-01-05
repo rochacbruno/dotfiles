@@ -1,12 +1,8 @@
-lvim.leader = "space"
+vim.leader = "space"
 -- Map Ctrl + s on normal and insert mode
 lvim.keys.normal_mode["<C-s>"] = ":update<cr>"
 lvim.keys.insert_mode["<C-s>"] = "<Esc>:update<CR>a"
 lvim.keys.visual_mode["<C-s>"] = "<Esc>:update<CR>v"
-
--- vim.keymap.set("i", "<c-s>", "<Esc>:w<CR>a", { silent = true, noremap = true })
-
--- Map Ctrl + z to `undo`
 lvim.keys.normal_mode["<C-z>"] = ":undo<cr>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -39,6 +35,8 @@ lvim.builtin.which_key.mappings["b"]["t"] = { "<cmd>Telescope current_buffer_fuz
 lvim.builtin.which_key.mappings["b"]["p"] = { "<cmd>BufferLinePick<cr>", "Pick a Buffer" }
 
 lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
+
+lvim.builtin.which_key.mappings["o"] = { "<cmd>NvimTreeFocus<CR>", "Focus Explorer" }
 -- lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 
 lvim.builtin.which_key.mappings["r"] = {
@@ -48,10 +46,6 @@ lvim.builtin.which_key.mappings["r"] = {
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
   s = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace Cursor Word" },
 }
-
--- Replace all similar words
--- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
 
 lvim.builtin.which_key.mappings["d"] = {
   name = "Debug",
@@ -92,6 +86,19 @@ lvim.builtin.which_key.mappings["f"] = {
   C = { "<cmd>Telescope commands<cr>", "Commands" },
 }
 
+lvim.builtin.which_key.mappings["g"] = {
+  name = "Genghis File Operations",
+  n = { "<cmd>lua require('genghis').createNewFile()<cr>", "New File" },
+  r = { "<cmd>lua require('genghis').renameFile()<cr>", "Rename File" },
+  p = { "<cmd>lua require('genghis').copyFilepath()<cr>", "Copy File Path" },
+  N = { "<cmd>lua require('genghis').copyFilename()<cr>", "Copy File Name" },
+  x = { "<cmd>lua require('genghis').chmodx()<cr>", "chmod x" },
+  m = { "<cmd>lua require('genghis').moveAndRenameFile()<cr>", "Move and Rename" },
+  d = { "<cmd>lua require('genghis').duplicateFile()<cr>", "Duplicate File" },
+  s = { "<cmd>lua require('genghis').moveSelectionToNewFile()<cr>", "Move Selection to New File" },
+  X = { "<cmd>lua require('genghis').trashFile()<cr>", "Delete File" },
+}
+
 vim.keymap.set("x", "<ScrollWheelLeft>", "5z<Left>")
 vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
 
@@ -104,30 +111,32 @@ lvim.keys.term_mode = { ["<C-l>"] = false }
 lvim.builtin.which_key.setup["show_help"] = false
 lvim.builtin.which_key.setup["show_keys"] = false
 
-
 -- Replace fFtT with Hop
 -- place this in one of your configuration file(s)
-local hop = require('hop')
-local directions = require('hop.hint').HintDirection
-vim.keymap.set('', 'f', function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-end, { remap = true })
-vim.keymap.set('', 'F', function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-end, { remap = true })
-vim.keymap.set('', 't', function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
-end, { remap = true })
-vim.keymap.set('', 'T', function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
-end, { remap = true })
-vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
-vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
-
+pcall(function()
+  local hop = require('hop')
+  local directions = require('hop.hint').HintDirection
+  vim.keymap.set('', 'f', function()
+    hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+  end, { remap = true })
+  vim.keymap.set('', 'F', function()
+    hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+  end, { remap = true })
+  vim.keymap.set('', 't', function()
+    hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
+  end, { remap = true })
+  vim.keymap.set('', 'T', function()
+    hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
+  end, { remap = true })
+  vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+  vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+end
+)
 
 -- Maximize window
 -- F3 is already mapped by plugin
 vim.keymap.set('n', '<C-w>m', "<Cmd>MaximizerToggle!<CR>")
+vim.keymap.set('n', '<C-w>z', "<cmd>ZenMode<cr>")
 
 -- emacs-style motion & editing in insert mode
 vim.keymap.set("i", [[<C-a>]], [[<Home>]]) -- "Goto beginning of line")
@@ -159,6 +168,5 @@ vim.keymap.set({ "v", "n", "x" }, "<C-w>gss", [[<cmd>'<,'>VSSplit<cr>]], { remap
 vim.keymap.set({ "v", "n", "x" }, "<C-w>gsa", [[<cmd>'<,'>VSSplitAbove<cr>]], { remap = true })
 vim.keymap.set({ "v", "n", "x" }, "<C-w>gsb", [[<cmd>'<,'>VSSplitBelow<cr>]], { remap = true })
 
-
 -- Trying to get sane copy/paste over
-vim.keymap.set({"x", "v"}, "p", '"_dP')
+vim.keymap.set({ "x", "v" }, "p", '"_dP')

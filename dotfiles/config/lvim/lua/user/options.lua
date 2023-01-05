@@ -99,3 +99,7 @@ lvim.builtin.treesitter.textobjects = {
     },
   },
 }
+
+lvim.builtin.cmp.cmdline.enable = true
+lvim.builtin.cmp.experimental.ghost_text = true
+lvim.transparent_window = true

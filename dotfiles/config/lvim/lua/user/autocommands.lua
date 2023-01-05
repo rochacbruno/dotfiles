@@ -14,8 +14,6 @@ local augroup = vim.api.nvim_create_augroup
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
---
---
 
 autocmd({"BufEnter"}, {
   pattern = "*",
@@ -43,6 +41,11 @@ autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, {
   group = number_group,
   pattern = { "*" },
   command = [[if &nu && mode() != "i" | setlocal relativenumber | endif]],
+})
+
+autocmd({"BufRead", "BufNewFile"}, {
+  pattern="run-code-output",
+  command="set ft=json"
 })
 
 -- Get out of insert on focuslost
@@ -101,30 +104,6 @@ autocmd('TextYankPost', {
 autocmd('ColorScheme', {
   command = "hi MiniTrailspace guibg=lightgreen"
 })
-
-
--- local customtheme_group = augroup("CustomTheme", {})
--- autocmd({ "BufWinEnter" }, {
---   group = customtheme_group,
---   pattern = "*",
---   command = "colorscheme catppuccin-mocha",
--- })
--- autocmd({ "BufWinEnter" }, {
---   group = customtheme_group,
---   pattern = {"markdown"},
---   command = "echo 'aaaaa'",
--- })
--- autocmd({ "BufWinEnter" }, {
---   group = customtheme_group,
---   pattern = "markdown",
---   command = "colorscheme catppuccin-latte",
--- })
-
--- autocmd('RecordingEnter',
---   callback = function()
---       require("noice")
---   end,
--- )
 
 -- MORE EXAMPLES
 -- local aucmd_dict = {

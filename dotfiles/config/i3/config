@@ -5,10 +5,10 @@ set $mod Mod4
 # Includes can read global variables
 # however includes cannot define/export variables
 include ~/.config/i3/options.i3config
-include ~/.config/i3/execs.i3config 
+include ~/.config/i3/execs.i3config
 include ~/.config/i3/keybindings.i3config
 include ~/.config/i3/workspaces.i3config
-include ~/.config/i3/modes.i3config 
+include ~/.config/i3/modes.i3config
 include ~/.config/i3/gaps.i3config
 include ~/.config/i3/catppuccin.i3config
 include ~/.config/i3/bars.i3config
