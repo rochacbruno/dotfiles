@@ -52,5 +52,6 @@ code --install-extension tamasfe.even-better-toml
 code --install-extension tilt-dev.tiltfile
 code --install-extension Tyriar.lorem-ipsum
 code --install-extension vs-publisher-740338.vscode-lorem-ipsum-chuck-norris
+code --install-extension vscodevim.vim
 code --install-extension yiliyl.green-dark-theme
 code --install-extension zhuangtongfa.material-theme

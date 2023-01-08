@@ -1,3 +1,4 @@
+local components = require("lvim.core.lualine.components")
 lvim.builtin.lualine.style = "lvim"
 
 -- lvim.builtin.lualine.on_config_done = function()
@@ -28,4 +29,11 @@ lvim.builtin.lualine.on_config_done = function()
     }
     return map[mode]
   end
+
+  lvim.builtin.lualine.sections.lualine_c ={
+    "%F",
+    components.diff,
+    components.python_env,
+  }
+
 end

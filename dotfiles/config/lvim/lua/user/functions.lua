@@ -19,4 +19,14 @@ M.open_rest_nvim_file = function()
   end
 end
 
+
+vim.api.nvim_create_user_command("RestNvimFile", M.open_rest_nvim_file, {})
+
+
+M.save_as_sudo = function()
+  vim.cmd("w !sudo -S tee %")
+end
+
+vim.api.nvim_create_user_command("SaveAsSudo", M.save_as_sudo, {})
+
 return M

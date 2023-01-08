@@ -9,6 +9,9 @@ vim.g["VM_mouse_mappings"] = 1
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "catppuccin-mocha"
+lvim.builtin.terminal.direction = "horizontal"
+-- Disable annoying virtual text for errors, open it with gl, S-K or gs
+lvim.lsp.diagnostics.virtual_text = false
 
 lvim.builtin.alpha.dashboard.section.header.val = {
   [[                                ]],
@@ -60,6 +63,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "vim",
   "regex",
   "markdown_inline",
+  "zig",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -103,3 +107,6 @@ lvim.builtin.treesitter.textobjects = {
 lvim.builtin.cmp.cmdline.enable = true
 lvim.builtin.cmp.experimental.ghost_text = true
 lvim.transparent_window = true
+
+-- Allow cursor to be positioned one more column after the end of line
+vim.opt.virtualedit = 'onemore'  -- other option is `all`

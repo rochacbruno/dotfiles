@@ -205,6 +205,7 @@ faac 1.30-3
 faad2 2.10.1-1
 fakeroot 1.30.1-1
 faudio 23.01-1
+feh 3.9.1-2
 ffcall 2.4-2
 ffmpeg 2:5.1.2-1
 ffmpeg4.4 4.4.2-3
@@ -481,6 +482,7 @@ kxmlgui 5.101.0-1
 l-smash 2.14.5-2
 lame 3.100-4
 lapack 3.11.0-1
+lazygit 0.36.0-1
 lcms2 2.14-1
 ldb 2:2.6.1-1
 ldns 1.8.3-2
@@ -1379,6 +1381,7 @@ signon-kwallet-extension 22.12.0-1
 signon-plugin-oauth2 0.25-1
 signon-ui 0.17+20171022-3
 signond 8.61-1
+silicon 0.5.1-1
 simple-scan 42.5-1
 skopeo 1.10.0-1
 slang 2.3.3-2

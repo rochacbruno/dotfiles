@@ -92,11 +92,12 @@ lvim.plugins = {
   },
 
   -- Complete function signature as we type (handle by lsp)
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require "lsp_signature".on_attach() end,
-  },
+  -- ANNOYING
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function() require "lsp_signature".on_attach() end,
+  -- },
 
   -- Github Copilot and autocomplete
   {
@@ -400,7 +401,29 @@ lvim.plugins = {
       })
     end,
   },
-
+  -- Same as toggler but uses C-a, C-x
+  {
+    'https://github.com/nat-418/boole.nvim',
+    config = function()
+      require('boole').setup({
+        mappings = {
+          increment = '<C-a>',
+          decrement = '<C-x>'
+        },
+        -- User defined loops
+        additions = {
+          { 'Foo', 'Bar' },
+          { 'tic', 'tac', 'toe' }
+        },
+        allow_caps_additions = {
+          { 'enable', 'disable' }
+          -- enable → disable
+          -- Enable → Disable
+          -- ENABLE → DISABLE
+        }
+      })
+    end
+  },
   -- File operations like `<l>gd` (duplicate file)
   {
     "chrisgrieser/nvim-genghis",
@@ -443,4 +466,39 @@ lvim.plugins = {
       })
     end,
   },
+
+  -- <l>-k mark woord, <l>-K unhilight, n/N navigate marks
+  'lfv89/vim-interestingwords',
+
+  -- Read faster :FSRead, :FSClear, :FSToggle
+  "nullchilly/fsread.nvim",
+
+  -- SHow modes next to cursor
+  {
+    'doums/monark.nvim',
+    config = function()
+      require('monark').setup({
+        sticky = true
+      })
+    end,
+  },
+
+  -- Generate carbon like screenshots from selection
+  -- {
+  --   "narutoxy/silicon.lua",
+  --   requires = { "nvim-lua/plenary.nvim" },
+  --   config = function()
+  --     require('silicon').setup()
+  --   end
+  -- },
+  -- {
+  --   'krivahtoo/silicon.nvim',
+  --   run = './install.sh',
+  --   config = function()
+  --     require('silicon').setup({
+  --       font =  'FiraCode Nerd Font=16',
+  --       theme = 'Monokai Extended',
+  --     })
+  --   end,
+  -- }
 }
