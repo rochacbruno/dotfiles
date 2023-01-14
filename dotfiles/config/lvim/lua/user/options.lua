@@ -110,3 +110,6 @@ lvim.transparent_window = true
 
 -- Allow cursor to be positioned one more column after the end of line
 vim.opt.virtualedit = 'onemore'  -- other option is `all`
+
+-- Show lsp_lines only for current line \
+-- vim.diagnostic.config({ virtual_lines = { only_current_line = true } })

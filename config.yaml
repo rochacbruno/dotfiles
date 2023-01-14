@@ -135,6 +135,9 @@ dotfiles:
   f_starship.toml:
     src: config/starship.toml
     dst: ~/.config/starship.toml
+  d_nitrogen:
+    src: config/nitrogen
+    dst: ~/.config/nitrogen
 profiles:
   rocha:
     dotfiles:
@@ -174,3 +177,4 @@ profiles:
     - d_themes
     - d_flameshot
     - f_starship.toml
+    - d_nitrogen

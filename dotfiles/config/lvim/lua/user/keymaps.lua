@@ -11,6 +11,10 @@ lvim.keys.normal_mode["<C-z>"] = ":undo<cr>"
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
 
+-- Toggle lsp-lines
+lvim.builtin.which_key.mappings["l"]["t"] = {"<cmd>lua require'lsp_lines'.toggle()<CR>", "Toggle Diagnostic Lines"}
+
+
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
@@ -21,6 +25,7 @@ lvim.builtin.which_key.mappings["t"] = {
   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+  t = {"<cmd>ToggleTermToggleAll<cr>", "Term Toggle"}
 }
 
 lvim.builtin.which_key.mappings["x"] = {
@@ -106,6 +111,7 @@ vim.keymap.set("x", "<ScrollWheelRight>", "5z<Right>")
 lvim.builtin.terminal.open_mapping = "<c-t>"
 -- Enable the use of C-l to clean the terminal
 lvim.keys.term_mode = { ["<C-l>"] = false }
+
 
 -- Dont message help for which_key
 lvim.builtin.which_key.setup["show_help"] = false

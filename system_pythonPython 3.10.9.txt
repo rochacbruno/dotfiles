@@ -1,5 +1,6 @@
 ansible==7.1.0
 ansible-core==2.14.1
+anyio==3.6.2
 apparmor==3.1.2
 appdirs==1.4.4
 arandr==0.1.10
@@ -10,11 +11,13 @@ autocommand==2.2.2
 backcall==0.2.0
 bcrypt==4.0.1
 bleach==5.0.0
+blessed==1.19.1
+bpython==0.23
 Brlapi==0.8.4
-btrfsutil==6.1
+btrfsutil==6.1.2
 CacheControl==0.12.11
 cattrs==22.2.0
-certifi==2022.9.24
+certifi==2022.12.7
 cffi==1.15.1
 cfgv==3.3.1
 chardet==5.1.0
@@ -28,7 +31,9 @@ crit==3.17.1
 cryptography==38.0.4
 cssselect==1.2.0
 cupshelpers==1.0
-Cython==0.29.32
+curtsies==0.4.1
+cwcwidth==0.1.8
+Cython==0.29.33
 decorator==5.1.1
 defusedxml==0.7.1
 distlib==0.3.6
@@ -39,6 +44,8 @@ docopt==0.6.2
 docutils==0.18.1
 exceptiongroup==1.1.0
 executing==1.0.0
+fastapi==0.89.1
+fastapi-pagination==0.11.2
 filelock==3.8.2
 future==0.18.2
 gitchangelog==3.0.4
@@ -79,7 +86,7 @@ nftables==0.1
 nodeenv==1.6.0
 nspektr==0.4.0
 numpy==1.23.5
--e git+ssh://git@github.com/rochacbruno/oci_env.git@c6e78efb1bb702737183e6c834c197494017d371#egg=oci_env&subdirectory=client
+-e git+ssh://git@github.com/rochacbruno/oci_env.git@c464c515068fc346a25d31b77ba2d435947627aa#egg=oci_env&subdirectory=client
 ordered-set==4.1.0
 packaging==21.3
 paramiko==2.11.1
@@ -90,7 +97,7 @@ pickleshare==0.7.5
 Pillow==9.4.0
 pipx==1.1.0
 pkginfo==1.8.2
-platformdirs==2.6.0
+platformdirs==2.6.2
 pluggy==1.0.0
 ply==3.11
 powerline-status==2.8.3
@@ -130,26 +137,28 @@ resolvelib==0.9.0
 retrying==1.3.3
 rfc3986==2.0.0
 rich==12.2.0
-ruff==0.0.208
+ruff==0.0.221
 ruff-lsp==0.0.10
 screenkey==1.5
 SecretStorage==3.3.1
 setproctitle==1.3.2
 shtab==1.5.8
 six==1.16.0
+sniffio==1.3.0
 stack-data==0.5.0
+starlette==0.22.0
 stevedore==4.1.1
 TBB==0.2
 team==1.0
 tenacity==8.1.0
-termcolor==2.1.1
+termcolor==2.2.0
 terminator==2.1.2
 tldr==3.1.0
 toml==0.10.2
 tomli==2.0.1
 tox==3.25.0
 traitlets==5.3.0
-trove-classifiers==2022.12.22
+trove-classifiers==2023.1.12
 twine==4.0.0
 typeguard==2.13.3
 typing_extensions==4.4.0

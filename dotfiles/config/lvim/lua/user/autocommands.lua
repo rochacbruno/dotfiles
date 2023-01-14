@@ -42,6 +42,36 @@ autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, {
   pattern = { "*" },
   command = [[if &nu && mode() != "i" | setlocal relativenumber | endif]],
 })
+-- THE SAME BUT IN LUA
+-- ---@param relative boolean #Whether relativenumber should be set
+-- local function set_relativenumber(relative)
+--     local in_insert_mode = vim.api.nvim_get_mode().mode == "i"
+
+--     if vim.o.number then
+--         vim.opt.relativenumber = relative and not in_insert_mode
+--     end
+-- end
+
+-- lvim.autocommands = {
+--     {
+--         { "BufEnter", "FocusGained", "InsertLeave", "WinEnter" },
+--         {
+--             desc = "Set relative number when not in insert mode",
+--             callback = function()
+--                 set_relativenumber(true)
+--             end,
+--         },
+--     },
+--     {
+--         { "BufLeave", "FocusLost", "InsertEnter", "WinLeave" },
+--         {
+--             desc = "Turn off relative number when in insert mode",
+--             callback = function()
+--                 set_relativenumber(false)
+--             end,
+--         },
+--     },
+-- }
 
 autocmd({"BufRead", "BufNewFile"}, {
   pattern="run-code-output",

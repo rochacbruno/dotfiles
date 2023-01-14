@@ -4,9 +4,14 @@
 lvim.plugins = {
 
   -- Inlay Hints for LSP and Rust
-  "lvimuser/lsp-inlayhints.nvim", -- needed because rust-tools inlay is broken
+  -- "lvimuser/lsp-inlayhints.nvim", -- needed because rust-tools inlay is broken
   "simrat39/rust-tools.nvim",
-
+  {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  },
   -- Multicursor (ctrl up/down, ctrl-N)
   -- Ctrl Mouse Click
   -- \\ = leader
@@ -106,7 +111,12 @@ lvim.plugins = {
     requires = { "zbirenbaum/copilot.lua" },
     config = function()
       vim.defer_fn(function()
-        require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+        require("copilot").setup({
+          filetypes = {
+            yaml = true,
+            markdown = true,
+          }
+        }) -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
         require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
       end, 100)
     end,

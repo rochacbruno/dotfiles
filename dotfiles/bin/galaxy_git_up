@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+cd ~/Projects/
+
+repos=(galaxy_ng pulp_container pulp_ansible pulpcore ansible-hub-ui pulp-openapi-generator plugin_template)
+
+# For each repo, detect which branch is the main branch (master or main?)
+# Then, switch to that branch and pull the latest changes.
+for repo in "${repos[@]}"; do
+    cd $repo
+
+    # save the current branch name
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    # stash chenges if any
+    git stash
+    # Change to the main branch
+    branch=$(git branch -r | grep -v HEAD | grep -v master | grep -v main | head -1 | sed 's/origin\///')
+    git checkout $branch
+    git fetch upstream
+    git rebase upstream $branch
+    # get back to the previous current_branch
+    git checkout $current_branch
+    # unstash changes
+    git stash pop
+    # Rebase that branch with $branch 
+    git rebase upstream $branch
+    # Detect if there is any conflict when rebasing with upstream $branch
+    if [ $? -eq 0 ]; then
+        echo "No conflict detected when rebasing $repo $current_branch with upstream $branch"
+    else
+        echo "Conflict detected when rebasing $repo $current_branch with upstream $branch"
+        # abort the rebase 
+        git rebase --abort
+    fi
+done
