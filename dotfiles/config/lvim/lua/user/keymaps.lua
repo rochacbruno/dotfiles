@@ -1,7 +1,7 @@
 vim.leader = "space"
 -- Map Ctrl + s on normal and insert mode
 lvim.keys.normal_mode["<C-s>"] = ":update<cr>"
-lvim.keys.insert_mode["<C-s>"] = "<Esc>:update<CR>a"
+lvim.keys.insert_mode["<C-s>"] = "<Esc>:update<CR>"
 lvim.keys.visual_mode["<C-s>"] = "<Esc>:update<CR>v"
 lvim.keys.normal_mode["<C-z>"] = ":undo<cr>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
@@ -10,7 +10,7 @@ lvim.keys.normal_mode["<C-z>"] = ":undo<cr>"
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
-
+lvim.keys.insert_mode["jk"] = "<Esc>"
 -- Toggle lsp-lines
 lvim.builtin.which_key.mappings["l"]["t"] = {"<cmd>lua require'lsp_lines'.toggle()<CR>", "Toggle Diagnostic Lines"}
 

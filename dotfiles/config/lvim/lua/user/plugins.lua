@@ -6,12 +6,13 @@ lvim.plugins = {
   -- Inlay Hints for LSP and Rust
   -- "lvimuser/lsp-inlayhints.nvim", -- needed because rust-tools inlay is broken
   "simrat39/rust-tools.nvim",
-  {
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    config = function()
-      require("lsp_lines").setup()
-    end,
-  },
+  -- {
+  --   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  --   config = function()
+  --     require("lsp_lines").setup()
+  --   end,
+  -- },
+
   -- Multicursor (ctrl up/down, ctrl-N)
   -- Ctrl Mouse Click
   -- \\ = leader
@@ -178,7 +179,7 @@ lvim.plugins = {
   -- :MarkdownPreview live on the browser
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
-    -- alternative: run =  function() vim.fn["mkdp#util#install"](),
+    -- alternative: run =  function() vim.fn--------[[ [--[[ [ [[ [[ ["mkdp#util#install"] ]] ]] ] ]]] ]](),
     setup = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
@@ -492,7 +493,23 @@ lvim.plugins = {
       })
     end,
   },
+  {
+    "echasnovski/mini.indentscope",
+    config = function()
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy", "mason" },
+        callback = function()
+          vim.b.miniindentscope_disable = true
+        end,
+      })
+      require("mini.indentscope").setup({
+        event = "BufReadPre",
+        symbol = "│",
+        options = { try_as_border = true },
+      })
+    end,
 
+  },
   -- Generate carbon like screenshots from selection
   -- {
   --   "narutoxy/silicon.lua",
@@ -511,4 +528,15 @@ lvim.plugins = {
   --     })
   --   end,
   -- }
+
+  {
+    "m4xshen/smartcolumn.nvim",
+    config = function()
+      require("smartcolumn").setup({
+        colorcolumn = 80,
+      })
+    end,
+
+  },
+  { "ellisonleao/carbon-now.nvim", config = function() require('carbon-now').setup() end },
 }

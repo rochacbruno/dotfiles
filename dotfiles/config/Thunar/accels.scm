@@ -93,6 +93,7 @@
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/c2731c0788339744944161fd8afb74dd" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-as-compact-list" "<Primary>3")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-menu" "")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/b4c5927f6eac39ad3b86ec731654d156" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/search" "<Primary>f")
 ; (gtk_accel_path "<Actions>/ThunarWindow/new-tab" "<Primary>t")
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-reset" "<Primary>KP_0")

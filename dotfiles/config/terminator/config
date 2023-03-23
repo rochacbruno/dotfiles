@@ -6,11 +6,15 @@
 [keybindings]
   go_up = <Primary><Alt>Up
   go_down = <Primary><Alt>Down
+  rotate_cw = <Primary><Shift><Alt>r
+  rotate_ccw = <Primary><Shift>r
   close_term = ""
   close_window = ""
   toggle_zoom = F11
   scaled_zoom = <Primary><Shift>z
   full_screen = <Super>f
+  reset = ""
+  reset_clear = ""
   group_tab = ""
   edit_window_title = ""
   edit_tab_title = ""

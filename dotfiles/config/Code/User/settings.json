@@ -120,7 +120,6 @@
         }
     ],
     "workbench.preferredDarkColorTheme": "SynthWave Refined",
-    "window.zoomLevel": -1,
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
     "vim.statusBarColors.insert": "#BF616A",
@@ -133,4 +132,9 @@
     "vim.statusBarColors.easymotionmode": "#007ACC",
     "vim.statusBarColors.easymotioninputmode": "#007ACC",
     "vim.statusBarColors.surroundinputmode": "#007ACC",
+    "window.zoomLevel": 1,
+    "vim.easymotion": true,
+    "vim.enableNeovim": true,
+    "vim.foldfix": true,
+    "vim.highlightedyank.enable": true,
 }

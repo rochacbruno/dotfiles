@@ -1,6 +1,13 @@
-theme = "nord-dark"
-icons = "material"
+# theme = "nord-dark"
+# icons = "material"
 
+icons_format = "{icon}"
+
+[theme]
+theme = "nord-dark"
+
+[icons]
+icons = "material"
 
 
 # [[block]]
@@ -55,17 +62,18 @@ icons = "material"
 [[block]]
 block = "bluetooth"
 mac = "5C:C6:E9:23:88:18"
-format = ""
+format = "$icon ON"
+disconnected_format = "$icon OFF"
 
 [[block]]
 block = "sound"
-on_click = "pavucontrol"
+# on_click = "pavucontrol"
 
 [[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R 🇵🇹"
-on_click = "gsimplecal"
+format = "$timestamp.datetime(f:'%a %d/%m %R 🇵🇹')"
+# on_click = "gsimplecal"
 
 [[block]]
 block = "battery"

@@ -1,16 +1,25 @@
+icons_format = "{icon}"
+
+[theme]
 theme = "nord-dark"
+
+[icons]
 icons = "material"
 
 
 [[block]]
 block = "focused_window"
-max_width = 50
-show_marks = "visible"
+# max_width = 50
+# show_marks = "visible"
 
 [[block]]
 block = "docker"
 interval = 2
-format = "{running}/{total}/{images}"
+format = "$icon $running/$total/$images"
+
+[[block]]
+block = "custom"
+command = "/home/rochacbruno/bin/container_count.sh"
 
 # [[block]]
 # block = "custom"
@@ -24,18 +33,20 @@ command = "/home/rochacbruno/bin/ustime"
 block = "custom"
 command = "/home/rochacbruno/bin/brtime"
 
-[[block]]
-block = "music"
+# [[block]]
+# block = "music"
 #player = "spotify"
-buttons = ["play", "next"]
-marquee = false
-smart_trim = true
-hide_when_empty = true
-format = "{combo} {player}"
+# buttons = ["play", "next"]
+# marquee = false
+# smart_trim = true
+# hide_when_empty = true
+# format = "{combo} {player}"
 
 [[block]]
 block = "memory"
-display_type = "memory"
+format = " $icon $mem_total_used_percents.eng(w:2) "
+format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+# display_type = "memory"
 # format_mem = "{Mup}%"
 # format_swap = "{SUp}%"
 
@@ -44,9 +55,9 @@ block = "disk_space"
 path = "/"
 info_type = "used"
 #format = "{icon} {used}/{total} ({available} free)"
-format = "{icon} {used}/{total}"
-alert_absolute = true
-unit = "GB"
+format = "$icon $used/$total"
+# alert_absolute = true
+# unit = "GB"
 alert = 400
 warning = 450
 
@@ -57,17 +68,22 @@ interval = 1
 [[block]]
 block = "bluetooth"
 mac = "5C:C6:E9:23:88:18"
-format = ""
+format = "$icon ON"
+disconnected_format = "$icon OFF"
 
 [[block]]
 block = "sound"
-on_click = "pavucontrol"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
 
 [[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R 🇵🇹"
-on_click = "gsimplecal"
+format = "$timestamp.datetime(f:'%a %d/%m %R 🇵🇹')"
+[[block.click]]
+button = "left"
+cmd = "gsimplecal"
 
 [[block]]
 block = "battery"
