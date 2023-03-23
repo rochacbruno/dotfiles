@@ -1,5 +1,7 @@
 bacon v2.2.5:
     bacon
+bottom v0.8.0:
+    btm
 cargo-edit v0.11.6:
     cargo-add
     cargo-rm
@@ -23,6 +25,22 @@ fd-find v8.6.0:
     fd
 irust v1.66.0:
     irust
+mdbook v0.4.25:
+    mdbook
+mdbook-admonish v1.8.0:
+    mdbook-admonish
+mdbook-catppuccin v0.1.1:
+    mdbook-catppuccin
+mdbook-epub v0.4.25:
+    mdbook-epub
+mdbook-mermaid v0.12.6:
+    mdbook-mermaid
+mdbook-pagetoc v0.1.5:
+    mdbook-pagetoc
+mdbook-toc v0.11.0:
+    mdbook-toc
+mdbook-yml-header v0.1.0:
+    mdbook-yml-header
 mdcat v0.25.1:
     mdcat
 ox v0.2.7 (https://github.com/curlpipe/ox#086f6653):
