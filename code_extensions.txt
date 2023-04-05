@@ -36,6 +36,7 @@ code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension ms-toolsai.vscode-jupyter-cell-tags
 code --install-extension ms-toolsai.vscode-jupyter-slideshow
 code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode.live-server
 code --install-extension PKief.material-icon-theme
 code --install-extension pythonfastapisnippet.python-fastapi-snippets
 code --install-extension rangav.vscode-thunder-client
@@ -43,6 +44,7 @@ code --install-extension redhat.ansible
 code --install-extension redhat.vscode-yaml
 code --install-extension RobbOwen.synthwave-vscode
 code --install-extension rust-lang.rust-analyzer
+code --install-extension ryanluker.vscode-coverage-gutters
 code --install-extension samuelcolvin.jinjahtml
 code --install-extension sanchodelniglo.synthwave-80s-color-theme
 code --install-extension somekittens.hot-dog-stand

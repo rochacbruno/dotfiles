@@ -15,6 +15,7 @@ touch dotfiles/config/obs-studio/basic/profiles/Untitled/service.json
 
 # Packages
 pacman -Qe > pacman_installed.txt
+pacman -Qm > pacman_manually.txt
 pacman -Q > pacman_all.txt
 cargo install --list > cargo_install.txt
 micro -plugin list > micro_plugins.txt
