@@ -65,6 +65,7 @@
         "editor.rulers": [79, 99, 119],
         "editor.fontLigatures": false,
         "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnType": true,
     },
     "editor.fontFamily": "FiraCode Nerd Font Mono",
     "editor.fontSize": 16,
