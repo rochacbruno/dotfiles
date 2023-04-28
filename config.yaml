@@ -138,6 +138,9 @@ dotfiles:
   d_nitrogen:
     src: config/nitrogen
     dst: ~/.config/nitrogen
+  f_xmodmap:
+    src: Xmodmap
+    dst: ~/.Xmodmap
 profiles:
   rocha:
     dotfiles:
@@ -178,3 +181,4 @@ profiles:
     - d_flameshot
     - f_starship.toml
     - d_nitrogen
+    - f_xmodmap

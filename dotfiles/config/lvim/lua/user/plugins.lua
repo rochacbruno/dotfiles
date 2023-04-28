@@ -349,7 +349,7 @@ lvim.plugins = {
   },
 
   -- Texto objects allows wuick moves like `cif` change inner function
-  "nvim-treesitter/nvim-treesitter-textobjects",
+  -- "nvim-treesitter/nvim-treesitter-textobjects",
 
   -- Literate programming
   {
