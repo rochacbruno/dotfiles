@@ -1,4 +1,4 @@
-#!/home/rochacbruno/venv/bin/python3.10
+#!/home/rochacbruno/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

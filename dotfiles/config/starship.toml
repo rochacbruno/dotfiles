@@ -1,1 +1,25 @@
 add_newline = false
+
+[cmake]
+disabled = true
+
+[cmd_duration]
+min_time = 500
+format = "[$duration]($style) "
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = ' '
+style = 'bold dimmed green'
+
+[status]
+style = 'bg:blue'
+symbol = '🔴 '
+success_symbol = '🟢 SUCCESS'
+format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
+
+[username]
+format = "[$user]($style)@"

@@ -38,7 +38,7 @@ bar {
         status_command i3status-rs /home/rochacbruno/.config/i3status-rust/config2.toml
         output dp3-1
         hidden_state show
-        position top
+        position bottom
 
         colors {
                 background $bg

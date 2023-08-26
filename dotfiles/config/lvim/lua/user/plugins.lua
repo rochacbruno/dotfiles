@@ -69,7 +69,7 @@ lvim.plugins = {
   -- ,e - exchange window position
   {
     "s1n7ax/nvim-window-picker",
-    tag = "1.*",
+    version = "1.*",
     config = function()
       require("window-picker").setup({
         autoselect_one = true,
@@ -105,11 +105,14 @@ lvim.plugins = {
   --   config = function() require "lsp_signature".on_attach() end,
   -- },
 
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  -- }
   -- Github Copilot and autocomplete
   {
     "zbirenbaum/copilot-cmp",
     event = "InsertEnter",
-    requires = { "zbirenbaum/copilot.lua" },
+    dependencies = { "zbirenbaum/copilot.lua" },
     config = function()
       vim.defer_fn(function()
         require("copilot").setup({
@@ -118,7 +121,7 @@ lvim.plugins = {
             markdown = true,
           }
         }) -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
-        require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+        -- require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
       end, 100)
     end,
   },
@@ -163,7 +166,7 @@ lvim.plugins = {
   -- Theme
   {
     "catppuccin/nvim",
-    as = "catppuccin",
+    name = "catppuccin",
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
@@ -178,9 +181,9 @@ lvim.plugins = {
 
   -- :MarkdownPreview live on the browser
   { "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
+    build = "cd app && npm install",
     -- alternative: run =  function() vim.fn--------[[ [--[[ [ [[ [[ ["mkdp#util#install"] ]] ]] ] ]]] ]](),
-    setup = function()
+    init = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
     ft = { "markdown" },
@@ -189,7 +192,7 @@ lvim.plugins = {
   -- Highlights the current mode changing line color
   {
     'mvllow/modes.nvim',
-    tag = 'v0.2.0',
+    version = 'v0.2.0',
     config = function()
       require('modes').setup({
         colors = {
@@ -217,8 +220,8 @@ lvim.plugins = {
   -- Rust crates helper
   {
     "saecki/crates.nvim",
-    tag = "v0.3.0",
-    requires = { "nvim-lua/plenary.nvim" },
+    version = "v0.3.0",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("crates").setup {
         null_ls = {
@@ -239,17 +242,18 @@ lvim.plugins = {
   -- "nvim-telescope/telescope-media-files.nvim",
 
   --Show status of LSP
-  {
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup()
-    end,
-  },
+  -- {
+  --   "j-hui/fidget.nvim",
+  --   version = "legacy",
+  --   config = function()
+  --     require("fidget").setup()
+  --   end,
+  -- },
 
   -- Runs HTTP requests
   {
     "rest-nvim/rest.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("rest-nvim").setup({
         -- Open request results in a horizontal split
@@ -342,7 +346,8 @@ lvim.plugins = {
   {
     "folke/persistence.nvim",
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
-    module = "persistence",
+    -- module = "persistence",
+    lazy = true,
     config = function()
       require("persistence").setup()
     end,
@@ -385,7 +390,7 @@ lvim.plugins = {
     config = function()
       require('cheatsheet').setup()
     end,
-    requires = {
+    dependencies = {
       { 'nvim-telescope/telescope.nvim' },
       { 'nvim-lua/popup.nvim' },
       { 'nvim-lua/plenary.nvim' },
@@ -414,7 +419,7 @@ lvim.plugins = {
   },
   -- Same as toggler but uses C-a, C-x
   {
-    'https://github.com/nat-418/boole.nvim',
+    url = 'https://github.com/nat-418/boole.nvim',
     config = function()
       require('boole').setup({
         mappings = {
@@ -438,7 +443,7 @@ lvim.plugins = {
   -- File operations like `<l>gd` (duplicate file)
   {
     "chrisgrieser/nvim-genghis",
-    requires = {
+    dependencies = {
       "stevearc/dressing.nvim",
       "hrsh7th/nvim-cmp",
       "hrsh7th/cmp-omni",
@@ -485,14 +490,14 @@ lvim.plugins = {
   "nullchilly/fsread.nvim",
 
   -- SHow modes next to cursor
-  {
-    'doums/monark.nvim',
-    config = function()
-      require('monark').setup({
-        sticky = true
-      })
-    end,
-  },
+  -- {
+  --   'doums/monark.nvim',
+  --   config = function()
+  --     require('monark').setup({
+  --       sticky = true
+  --     })
+  --   end,
+  -- },
   {
     "echasnovski/mini.indentscope",
     config = function()
@@ -542,7 +547,7 @@ lvim.plugins = {
 
   {
     "andythigpen/nvim-coverage",
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
     -- Optional: needed for PHP when using the cobertura parser
     rocks = { 'lua-xmlreader' },
     config = function()

@@ -9,10 +9,12 @@
         "statusBar.debuggingForeground": "#434C5E"
     },
     "github.copilot.enable": {
-        "*": false,
-        "yaml": true,
+        "*": true,
         "plaintext": false,
-        "markdown": true
+        "markdown": true,
+        "scminput": false,
+        "yaml": true,
+        "python": true
     },
     "redhat.telemetry.enabled": false,
     "editor.inlineSuggest.enabled": true,
@@ -143,5 +145,5 @@
     "vim.enableNeovim": true,
     "vim.foldfix": true,
     "vim.highlightedyank.enable": true,
-    "window.zoomLevel": -2,
+    "window.zoomLevel": -1,
 }

@@ -11,8 +11,8 @@ lvim.format_on_save.enabled = false
 lvim.colorscheme = "catppuccin-mocha"
 lvim.builtin.terminal.direction = "horizontal"
 -- Disable annoying virtual text for errors, open it with gl, S-K or gs
-lvim.lsp.diagnostics.virtual_text = false
-
+-- lvim.lsp.diagnostics.virtual_text = false
+vim.diagnostic.config({ virtual_text = false })
 lvim.builtin.alpha.dashboard.section.header.val = {
   [[                                ]],
   [[  ____                          ]],

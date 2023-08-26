@@ -1,14 +1,18 @@
 [KFileDialog Settings]
-Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Pictures/avatars/landa_browsn-removebg-preview.png,file:$HOME/Pictures/avatars/lensa_red_transp.png,file:$HOME/Videos/advent1.mp4,file:$HOME/Videos/02Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/01Aula ao vivo do treinamento Python BASE LINUXtips.mp4,file:$HOME/Videos/karla/dslogo.png,file:$HOME/Videos/karla/À_venda_Moradia_T6_em_Covas_de_450_m²_Manuela_Santos_+351_967_378.mp4,file:$HOME/Videos/curso/D1,file:$HOME/Videos/curso/D1/D1P1-intro-ao-treinamento.mp4
-Recent URLs[$e]=file:$HOME/Videos/curso/D1/,file:$HOME/,file:$HOME/Videos/curso/,file:$HOME/Videos/karla/,file:$HOME/Videos/,file:$HOME/Videos/obs/LT/web/d3/,file:///tmp/,file:$HOME/Videos/obs/canal/,file:$HOME/Videos/obs/canal/aprendarust/parte6/,file:$HOME/Pictures/avatars/,file:$HOME/Pictures/
+Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Videos/obs/LT/avulso/2023-07-10_18-33-30.mkv,file:$HOME/Videos/obs/LT/avulso/essentials_fim.mkv,file:$HOME/Videos/obs/LT/avulso/Essentials_intro.mkv,file:$HOME/Pictures/cs_julio.png,file:$HOME/Pictures/cs_rocha.png,file:$HOME/Pictures/cs_teo.png,file:$HOME/Pictures/cs_jess.png,file:$HOME/Pictures/cs_infoslack.png,file:$HOME/Videos/obs/canal/intro_search.mp4,file:$HOME/Videos/obs/LT/avulso/codeshow+new.mkv,file:$HOME/Videos/obs/LT/web/d7/d7-01-modelagem.mkv,file:$HOME/Pictures/avatars/landa_browsn-removebg-preview.png,file:$HOME/Pictures/avatars/lensa_red_transp.png,file:$HOME/Videos/karla/dslogo.png,file:$HOME/Videos/karla/À_venda_Moradia_T6_em_Covas_de_450_m²_Manuela_Santos_+351_967_378.mp4
+Recent URLs[$e]=file:///tmp/,file:$HOME/Videos/obs/canal/,file:$HOME/Videos/obs/canal/aprendarust/parte6/,file:$HOME/Pictures/avatars/,file:$HOME/Pictures/,file:$HOME/Videos/obs/LT/web/d7/,file:$HOME/Videos/obs/LT/avulso/,file:$HOME/Videos/obs/,file:$HOME/,file:$HOME/Videos/obs/LT/
 detailViewIconSize=16
 
 [MainWindow]
-3 screens: Height=1057
-3 screens: Width=1920
-3 screens: XPosition=1080
-3 screens: YPosition=1080
-DP3-1 DP3-3=DP3-3
+2 screens: Height=1035
+2 screens: Width=944
+2 screens: XPosition=965
+2 screens: YPosition=11
+3 screens: Height=1035
+3 screens: Width=994
+3 screens: XPosition=1995
+3 screens: YPosition=1091
+DP3-1 DP3-3=DP3-1
 DP3-1 DP3-3 Height 1080x1920=1254
 DP3-1 DP3-3 Height 1080x1920 DP3-1=1037
 DP3-1 DP3-3 Height 1920x1080=1037
@@ -33,7 +37,7 @@ DP3-3 DP3-1 XPosition 1080x1920 DP3-1=0
 DP3-3 DP3-1 XPosition 1920x1080 DP3-3=1080
 DP3-3 DP3-1 YPosition 1080x1920 DP3-1=0
 DP3-3 DP3-1 YPosition 1920x1080 DP3-3=480
-State=AAAA/wAAAAD9AAAAAgAAAAEAAAEUAAABzvwCAAAAAfsAAAAKAG0AaQB4AGUAcgAAAAIfAAABzgAAAGIBAAACAAAAAgAAB4AAAAIo/AEAAAAQ+wAAABQAcwBjAHIAZQBlAG4AZwByAGEAYgAAAAAA/////wAAAJMBAAAD+wAAABoAYQB1AGQAaQBvAHMAcABlAGMAdAByAHUAbQAAAAAA/////wAAAGUBAAAD/AAAAAAAAAHPAAAAiwD////6AAAAAAEAAAAE+wAAABYAcAByAG8AagBlAGMAdABfAGIAaQBuAQAAAAD/////AAAAXAEAAAP7AAAAHgB0AHIAYQBuAHMAaQB0AGkAbwBuAF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAAB4AYwBsAGkAcABfAHAAcgBvAHAAZQByAHQAaQBlAHMBAAAAAP////8AAABXAQAAA/sAAAAYAHUAbgBkAG8AXwBoAGkAcwB0AG8AcgB5AQAAAAD/////AAAAWwEAAAP8AAABVAAAAfcAAAAAAP////r/////AgAAAAP7AAAAGABjAGwAaQBwAF8AbQBvAG4AaQB0AG8AcgAAAABEAAABzQAAAMsBAAAC+wAAABIAUwB1AGIAdABpAHQAbABlAHMAAAAAAP////8AAAE+AQAAAvsAAAAOAGwAaQBiAHIAYQByAHkAAAAAAP////8AAACUAQAAAvsAAAAWAGUAZgBmAGUAYwB0AF8AbABpAHMAdAEAAAHQAAABAQAAAAQBAAAD+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAAC0gAAAQAAAABXAQAAA/wAAAPTAAADrQAAAUQA////+gAAAAACAAAAAvsAAAAeAHAAcgBvAGoAZQBjAHQAXwBtAG8AbgBpAHQAbwByAQAAAL8AAAEsAAAAywEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAAAAAAA/////wAAAHwBAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABJgEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAACkAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAACfAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABRQEAAAP7AAAAEAB0AGUAeAB0AGUAZABpAHQAAAAAAP////8AAAGTAQAAA/sAAAASAHQAaQBtAGUAcgBlAG0AYQBwAAAAAAD/////AAAAWwEAAAP7AAAAEABiAGkAbgBfAGMAbABpAHAAAAAAAP////8AAAI2AQAAA/sAAAAeAG8AbgBsAGkAbgBlAHIAZQBzAG8AdQByAGMAZQBzAAAAAAD/////AAABPAEAAAP7AAAADABnAHUAaQBkAGUAcwAAAAAA/////wAAAN4BAAADAAAHgAAAAYkAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAYAGUAeAB0AHIAYQBUAG8AbwBsAEIAYQByAQAAAhb/////AAAAAAAAAAA=
+State=AAAA/wAAAAD9AAAAAgAAAAEAAAEUAAABzvwCAAAAAfsAAAAKAG0AaQB4AGUAcgAAAAIfAAABzgAAAGIBAAACAAAAAgAAA7AAAAGX/AEAAAAQ+wAAABQAcwBjAHIAZQBlAG4AZwByAGEAYgAAAAAA/////wAAAJMBAAAD+wAAABoAYQB1AGQAaQBvAHMAcABlAGMAdAByAHUAbQAAAAAA/////wAAAGUBAAAD/AAAAAAAAAClAAAAiwD////6AAAAAAEAAAAE+wAAABYAcAByAG8AagBlAGMAdABfAGIAaQBuAQAAAAD/////AAAAXAEAAAP7AAAAHgB0AHIAYQBuAHMAaQB0AGkAbwBuAF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAAB4AYwBsAGkAcABfAHAAcgBvAHAAZQByAHQAaQBlAHMBAAAAAP////8AAABXAQAAA/sAAAAYAHUAbgBkAG8AXwBoAGkAcwB0AG8AcgB5AQAAAAD/////AAAAWwEAAAP8AAABVAAAAfcAAAAAAP////r/////AgAAAAP7AAAAGABjAGwAaQBwAF8AbQBvAG4AaQB0AG8AcgAAAABEAAABzQAAAMsBAAAC+wAAABIAUwB1AGIAdABpAHQAbABlAHMAAAAAAP////8AAAE+AQAAAvsAAAAOAGwAaQBiAHIAYQByAHkAAAAAAP////8AAACUAQAAAvsAAAAWAGUAZgBmAGUAYwB0AF8AbABpAHMAdAEAAACmAAAA+wAAAAQBAAAD+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAABogAAAMkAAABXAQAAA/wAAAJsAAABRAAAAUQA////+gAAAAACAAAAAvsAAAAeAHAAcgBvAGoAZQBjAHQAXwBtAG8AbgBpAHQAbwByAQAAAL8AAAEsAAAAywEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAAAAAAA/////wAAAHwBAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABJgEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAACkAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAACfAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABRQEAAAP7AAAAEAB0AGUAeAB0AGUAZABpAHQAAAAAAP////8AAAGTAQAAA/sAAAASAHQAaQBtAGUAcgBlAG0AYQBwAAAAAAD/////AAAAWwEAAAP7AAAAEABiAGkAbgBfAGMAbABpAHAAAAAAAP////8AAAI2AQAAA/sAAAAeAG8AbgBsAGkAbgBlAHIAZQBzAG8AdQByAGMAZQBzAAAAAAD/////AAABPAEAAAP7AAAADABnAHUAaQBkAGUAcwAAAAAA/////wAAAN4BAAADAAADsAAAAgQAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAYAGUAeAB0AHIAYQBUAG8AbwBsAEIAYQByAQAAAhb/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
 eDP1 DP3-3 Height 1920x1080=1060
 eDP1 DP3-3 Width 1920x1080=1920
@@ -50,31 +54,31 @@ provider=Freesound
 zoom=7
 
 [Recent Dirs]
-KdenliveClipFolder[$e]=$HOME/Pictures/avatars/,$HOME/Videos/,$HOME/Videos/obs/LT/web/d3/
+KdenliveClipFolder[$e]=$HOME/Videos/obs/LT/avulso/,$HOME/Pictures/,$HOME/Videos/obs/canal/
 KdenliveFramesFolder[$e]=$HOME/Videos/obs/canal/aprendarust/parte6/,$HOME/Videos/obs/canal/,/tmp/
-KdenliveProjectsFolder[$e]=$HOME/Videos/obs/LT/web/d4,$HOME/Videos/obs/canal/aprendarust/parte8,$HOME/Videos
+KdenliveProjectsFolder[$e]=$HOME/Videos/obs/LT/avulso,$HOME/Videos,$HOME/Videos/obs/LT/web/d7
 
 [Recent Files]
-File1[$e]=$HOME/Videos/obs/LT/workshop/p12.kdenlive
-File10[$e]=$HOME/Videos/obs/LT/web/d4/19.kdenlive
-File2[$e]=$HOME/Videos/obs/canal/aprendarust/parte6/p6.kdenlive
-File3[$e]=$HOME/Videos/advent1.kdenlive
-File4[$e]=$HOME/Videos/advent_speed.kdenlive
-File5[$e]=$HOME/Videos/advent2.kdenlive
-File6[$e]=$HOME/Videos/obs/canal/aprendarust/parte7/p7.kdenlive
-File7[$e]=$HOME/Videos/adv3p1.kdenlive
-File8[$e]=$HOME/Videos/adv3p2.kdenlive
-File9[$e]=$HOME/Videos/obs/canal/aprendarust/parte8/p8.kdenlive
-Name1[$e]=p12.kdenlive
-Name10[$e]=19.kdenlive
-Name2[$e]=p6.kdenlive
-Name3[$e]=advent1.kdenlive
-Name4[$e]=advent_speed.kdenlive
-Name5[$e]=advent2.kdenlive
-Name6[$e]=p7.kdenlive
-Name7[$e]=adv3p1.kdenlive
-Name8[$e]=adv3p2.kdenlive
-Name9[$e]=p8.kdenlive
+File1[$e]=$HOME/Videos/adv3p2.kdenlive
+File10[$e]=$HOME/Videos/obs/LT/avulso/esentials_out.kdenlive
+File2[$e]=$HOME/Videos/obs/canal/aprendarust/parte8/p8.kdenlive
+File3[$e]=$HOME/Videos/obs/LT/web/d4/19.kdenlive
+File4[$e]=$HOME/Videos/obs/LT/web/d7/d1.kdenlive
+File5[$e]=$HOME/Videos/obs/LT/web/d7/09.kdenlive
+File6[$e]=$HOME/Videos/obs/LT/web/d7/10.kdenlive
+File7[$e]=$HOME/Videos/corte_web_intro_fast_api.kdenlive
+File8[$e]=$HOME/Videos/obs/LT/avulso/codeshownew.kdenlive
+File9[$e]=$HOME/Videos/obs/LT/avulso/esentials_intro.kdenlive
+Name1[$e]=adv3p2.kdenlive
+Name10[$e]=esentials_out.kdenlive
+Name2[$e]=p8.kdenlive
+Name3[$e]=19.kdenlive
+Name4[$e]=d1.kdenlive
+Name5[$e]=09.kdenlive
+Name6[$e]=10.kdenlive
+Name7[$e]=corte_web_intro_fast_api.kdenlive
+Name8[$e]=codeshownew.kdenlive
+Name9[$e]=esentials_intro.kdenlive
 
 [RenderWidget]
 showoptions=true
@@ -141,7 +145,7 @@ ColorScheme=Breeze Dark
 ColorSchemePath=BreezeDark.colors
 
 [bin]
-treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAAQAAAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAABAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
+treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAANsAAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAAA2wAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
 
 [capture]
 decklink_capturedevice=4294967295
@@ -159,9 +163,12 @@ defaultprojectfolder[$e]=$HOME/Videos
 ffmpegpath[$e]=/usr/bin/ffmpeg
 ffplaypath[$e]=/usr/bin/ffplay
 ffprobepath[$e]=/usr/bin/ffprobe
-lastCacheCheck=2023,4,6,17,22,2.792
+lastCacheCheck=2023,7,4,20,7,44.888
 mltpath[$e]=/usr/share/mlt-7/profiles
 rendererpath[$e]=/usr/bin/melt-7
+
+[misc]
+cleanCacheMonths=1
 
 [project]
 audiotracks=3
@@ -192,6 +199,7 @@ colorclipcolor=255,255,128
 default_profile=atsc_1080p_30
 defaultrescaleheight=540
 defaultrescalewidth=960
+favorite_effects=volume,lift_gamma_gain,qtblend,simple_zoom,twitter_thumb,mais10db,menos12db,loudness
 force_breeze=true
 guidesCategories=Category 1:0:#9b59b6,Category 2:1:#3daee9,Category 3:2:#1abc9c,Category 4:3:#1cdc9a,Category 5:4:#c9ce3b,Category 6:5:#fdbc4b,Category 7:6:#f39c1f,Category 8:7:#f47750,Category 9:8:#da4453
 lockedGuides=false
@@ -203,4 +211,4 @@ use_dark_breeze=true
 widgetstyle=Default
 
 [version]
-version=22.12.3
+version=23.04.2
