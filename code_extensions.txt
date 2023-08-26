@@ -53,6 +53,7 @@ code --install-extension suhay.vscode-editor-group-minimizer
 code --install-extension tamasfe.even-better-toml
 code --install-extension tilt-dev.tiltfile
 code --install-extension Tyriar.lorem-ipsum
+code --install-extension vintharas.learn-vim
 code --install-extension vs-publisher-740338.vscode-lorem-ipsum-chuck-norris
 code --install-extension vscodevim.vim
 code --install-extension yiliyl.green-dark-theme

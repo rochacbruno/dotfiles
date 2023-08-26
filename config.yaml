@@ -141,6 +141,9 @@ dotfiles:
   f_xmodmap:
     src: Xmodmap
     dst: ~/.Xmodmap
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
 profiles:
   rocha:
     dotfiles:
@@ -182,3 +185,4 @@ profiles:
     - f_starship.toml
     - d_nitrogen
     - f_xmodmap
+    - d_nvim
