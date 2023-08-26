@@ -145,6 +145,21 @@ dotfiles:
     src: config/nvim
     dst: ~/.config/nvim
 profiles:
+  pop-os:
+    dotfiles:
+      - f_gitconfig
+      - d_lvim
+      - d_nvim
+      - d_bat
+      - d_espanso
+      - f_gitignore
+      - f_pypirc
+      - f_zshrc
+      - d_zsh
+      - d_terminator
+      - f_gromit-mpx.cfg
+      - f_gromit-mpx.ini
+      - f_starship.toml
   rocha:
     dotfiles:
     - f_gromit-mpx.cfg
