@@ -94,6 +94,7 @@ cef-minimal 111.2.6-1
 cef-minimal-obs-bin 103.0.0_5060_shared_textures_143.2591+g4204d54+chromium_103.0.5060.134_1-6
 celluloid 0.25-1
 celt 0.11.3-6
+chafa 1.12.4-3
 checkbashisms 2.22.2-1
 cheese 44.1-1
 chmlib 0.40-7

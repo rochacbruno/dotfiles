@@ -40,6 +40,7 @@ catppuccin-gtk-theme-latte 0.6.1-2
 catppuccin-gtk-theme-macchiato 0.6.1-2
 catppuccin-gtk-theme-mocha 0.6.1-2
 celluloid 0.25-1
+chafa 1.12.4-3
 cheese 44.1-1
 clipit 1.4.5-3
 cmatrix 2.0-2
