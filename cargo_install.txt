@@ -23,6 +23,8 @@ evcxr_repl v0.14.1:
     evcxr
 fd-find v8.6.0:
     fd
+helix-term v0.6.0 (/home/rochacbruno/Projects/helix/helix-term):
+    hx
 irust v1.66.0:
     irust
 mdbook v0.4.25:
@@ -45,5 +47,9 @@ mdcat v0.25.1:
     mdcat
 ox v0.2.7 (https://github.com/curlpipe/ox#086f6653):
     ox
+simple-completion-language-server v0.1.0 (/home/rochacbruno/Projects/simple-completion-language-server):
+    simple-completion-language-server
+taplo-cli v0.8.1:
+    taplo
 teetty v0.2.0:
     teetty
