@@ -1,0 +1,121 @@
+## LSPs ##
+[language-server.scls]
+command = "simple-completion-language-server"
+config = { "max_completion_items" = 20 }
+environment = { "RUST_LOG" = "debug,simple-completion-langauge-server=debug", "LOG_FILE" = "/tmp/completion.log" }
+
+[language-server.pylsp.plugins]
+flake8 = { enabled = true }
+rope_autoimport = { enabled = true }
+autopep8 = { enabled = false }
+mccabe = { enabled = false }
+pycodestyle = { enabled = false }
+pyflakes = { enabled = false }
+pylint = { enabled = false }
+yapf = { enabled = false }
+ruff = { enabled = false, ignore = ["F401"], lineLength = 120 }
+
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+
+## Languages ##
+
+[[language]]
+name = "rust"
+auto-format = false
+language-servers = ["rust-analyzer", "scls"]
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+shebangs = ["python"]
+formatter = { command = 'black', args = ["--quiet", "-"] }
+auto-format = false
+roots = [
+  "pyproject.toml",
+  "setup.py",
+  "Poetry.lock",
+  ".git",
+  "requirements.txt",
+  "app.py",
+]
+language-servers = ["pylsp", "scls"]
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+language-servers = ["taplo", "scls"]
+roots = ["config.toml", "Cargo.toml", "pyproject.toml", "settings.toml"]
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server", "scls"]
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server", "scls"]
+
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server", "scls"]
+
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server", "scls"]
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server", "scls"]
+
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server", "scls"]
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = 'shfmt', args = ["-i", "4"] }
+auto-format = false
+
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server", "scls"]
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "scls"]
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-langserver", "scls"]
+
+[[language]]
+name = "sql"
+language-servers = ["scls"]
+
+[[language]]
+name = "env"
+language-servers = ["scls"]
+
+[[language]]
+name = "ini"
+language-servers = ["scls"]
+
+[[language]]
+name = "xml"
+language-servers = ["scls"]
+
+[[language]]
+name = "json"
+language-servers = [ "vscode-json-language-server",  "scls"]
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server",  "scls"]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server",  "scls"]

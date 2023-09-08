@@ -1,0 +1,81 @@
+theme = "catppuccin_frappe"
+
+[editor]
+#line-number = "relative"
+#cursorline = true
+color-modes = true
+gutters = []
+true-color = true
+bufferline = "always"
+# mouse = false
+middle-click-paste = false
+
+[editor.statusline]
+left = []
+center = []
+right = []
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+#render = true
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+max-indent-retain = 0
+wrap-at-text-width = true
+
+[keys.normal]
+h = "move_prev_word_start"
+l = "move_next_word_start"
+j = "move_visual_line_down"
+k = "move_visual_line_up"
+"C-h" = "move_char_left"
+"C-l" = "move_char_right"
+"C-j" = "move_visual_line_down"
+"C-k" = "move_visual_line_up"
+"A-j" = "goto_next_paragraph"
+"A-k" = "goto_prev_paragraph"
+"A-h" = "goto_line_start"
+"A-l" = "goto_line_end_newline"
+H = "goto_line_start"
+L = "goto_line_end_newline"
+"minus" = "search"
+"C-backspace" = "delete_word_backward"
+"A-backspace" = "delete_char_forward"
+"S-backspace" = "delete_word_forward"
+
+"C-A-backspace" = ["goto_prev_paragraph", "goto_next_paragraph", "delete_selection"]
+
+[keys.normal.g]
+g = ["goto_file_start", "goto_line_start"]
+e = ["goto_last_line", "goto_line_end_newline"]
+
+[keys.insert]
+"A-h" = "move_prev_word_start"
+"A-l" = "move_next_word_start"
+"A-j" = "move_visual_line_down"
+"A-k" = "move_visual_line_up"
+"C-h" = "move_char_left"
+"C-l" = "move_char_right"
+"C-j" = "move_visual_line_down"
+"C-k" = "move_visual_line_up"
+# "minus" = "search"
+"C-backspace" = "delete_word_backward"
+"A-backspace" = "delete_char_forward"
+"S-backspace" = "delete_word_forward"
+"C-A-backspace" = ["goto_prev_paragraph", "goto_next_paragraph", "delete_selection"]
+
+
+[keys.select]
+h = "move_prev_word_start"
+l = "move_next_word_start"
+"minus" = "search"
+"C-backspace" = "delete_word_backward"
+"A-backspace" = "delete_char_forward"
+"S-backspace" = "delete_word_forward"
+"C-A-backspace" = ["goto_prev_paragraph", "goto_next_paragraph", "delete_selection"]

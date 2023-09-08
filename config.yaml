@@ -144,22 +144,34 @@ dotfiles:
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
+  f_config.toml:
+    src: config/helix/config.toml
+    dst: ~/.config/helix/config.toml
+  f_languages.toml:
+    src: config/helix/languages.toml
+    dst: ~/.config/helix/languages.toml
+  f_config_vim.toml:
+    src: config/helix/config_vim.toml
+    dst: ~/.config/helix/config_vim.toml
+  f_config_zen.toml:
+    src: config/helix/config_zen.toml
+    dst: ~/.config/helix/config_zen.toml
 profiles:
   pop-os:
     dotfiles:
-      - f_gitconfig
-      - d_lvim
-      - d_nvim
-      - d_bat
-      - d_espanso
-      - f_gitignore
-      - f_pypirc
-      - f_zshrc
-      - d_zsh
-      - d_terminator
-      - f_gromit-mpx.cfg
-      - f_gromit-mpx.ini
-      - f_starship.toml
+    - f_gitconfig
+    - d_lvim
+    - d_nvim
+    - d_bat
+    - d_espanso
+    - f_gitignore
+    - f_pypirc
+    - f_zshrc
+    - d_zsh
+    - d_terminator
+    - f_gromit-mpx.cfg
+    - f_gromit-mpx.ini
+    - f_starship.toml
   rocha:
     dotfiles:
     - f_gromit-mpx.cfg
@@ -201,3 +213,7 @@ profiles:
     - d_nitrogen
     - f_xmodmap
     - d_nvim
+    - f_config.toml
+    - f_languages.toml
+    - f_config_vim.toml
+    - f_config_zen.toml
