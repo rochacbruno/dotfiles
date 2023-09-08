@@ -14,6 +14,7 @@ pyflakes = { enabled = false }
 pylint = { enabled = false }
 yapf = { enabled = false }
 ruff = { enabled = false, ignore = ["F401"], lineLength = 120 }
+isort = {enabled = false}
 
 [language-server.yaml-language-server.config.yaml]
 format = { enable = true }

@@ -11,3 +11,4 @@ opt.virtualedit = "onemore"
 
 vim.g["mkdp_theme"] = "light"
 vim.g["VM_mouse_mappings"] = 1
+vim.lsp.set_log_level("debug")

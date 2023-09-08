@@ -10,6 +10,9 @@ rulers = [80, 100]
 bufferline = "always"
 auto-format = false
 
+[editor.search]
+smart-case = false
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -17,6 +20,8 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+git-global = false # show files hidden by git globally
+max-depth = 20
 
 [editor.indent-guides]
 render = true
@@ -66,9 +71,24 @@ O = ["open_above", "normal_mode"]
 0 = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
 V = ["select_mode", "extend_to_line_bounds"]
+backspace = ["move_line_up", "goto_line_end"]
+ret = ["move_line_down", "goto_first_nonwhitespace"]
+
 # Search for word under cursor
-"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
-"#" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+"*" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_next",
+]
+"#" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_prev",
+]
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection"]
@@ -76,30 +96,79 @@ esc = ["collapse_selection", "keep_primary_selection"]
 [keys.normal.space]
 w = ":write"
 q = ":quit"
-c = ":bc"  # Close buffer
-i = ":toggle lsp.display-inlay-hints"
+c = ":bc"    # Close buffer
 F = "no_op"
+
+# Add comma to the end of the line
+"," = [
+  "save_selection",
+  "goto_line_end",
+  ":append-output echo ','",
+  "collapse_selection",
+  "delete_selection",
+  "jump_backward",
+  "normal_mode",
+]
+# Add semicolumn to the end of the line
+";" = [
+  "save_selection",
+  "goto_line_end",
+  ":append-output echo ';'",
+  "collapse_selection",
+  "delete_selection",
+  "jump_backward",
+  "normal_mode",
+]
+# Add # comment to the end of the line
+"#" = [
+  "save_selection",
+  "goto_line_end",
+  ":append-output echo '  # '",
+  "collapse_selection",
+  "delete_selection",
+  "insert_mode",
+]
+
+[keys.normal.space."="]
+"f" = ":format"
+"b" = ":pipe black --quiet -"
+"i" = ":pipe isort --quiet -m 3 --profile=black -"
 
 # Editor Actions
 [keys.normal.space.e]
 o = ":open ~/.config/helix/config.toml" # Maps Ctrl-o to opening of the helix config file
 r = ":config-reload"
-s = "save_selection"  # Add selection to the Jumplist
+s = "save_selection"                    # Add selection to the Jumplist
 l = ":lsp-restart"
+c = ":toggle-option search.smart-case"
+w = ":toggle-option auto-info"
+i = ":toggle lsp.display-inlay-hints"
 
 # File management
 [keys.normal.space.f]
 f = "file_picker"
 F = "file_picker_in_current_directory"
 b = "file_picker_in_current_buffer_directory"
+"." = ":toggle-option file-picker.git-ignore" # toggle seeing files hidden with the .gitignore in file pickers
 
 [keys.insert]
-j = { k = "normal_mode" }      # Maps `jk` to exit insert mode
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 # Force undo checkpoint (note: granular history is Alt-u/U, undo is u/U)
 A-s = "commit_undo_checkpoint"
 # Save if changed
 C-s = ":update"
 esc = ["collapse_selection", "normal_mode"]
+
+# Emacs style navigation on insert mode
+A-b = ["move_prev_word_start", "collapse_selection"]
+A-f = ["move_next_word_end", "move_char_right"]
+C-a = "goto_first_nonwhitespace"
+C-b = "move_char_left"
+# C-d = "delete_char_forward"
+C-e = "goto_line_end_newline"
+C-f = "move_char_right"
+C-n = "move_line_down"
+C-p = "move_line_up"
 
 [keys.select]
 # Muscle memory
@@ -112,7 +181,7 @@ G = "goto_file_end"
 D = ["extend_to_line_bounds", "delete_selection", "normal_mode"]
 C = ["goto_line_start", "extend_to_line_bounds", "change_selection"]
 "%" = "match_brackets"
-S = "surround_add" # Basically 99% of what I use vim-surround for
+S = "surround_add"                                                   # Basically 99% of what I use vim-surround for
 u = ["switch_to_lowercase", "collapse_selection", "normal_mode"]
 U = ["switch_to_uppercase", "collapse_selection", "normal_mode"]
 
@@ -121,7 +190,10 @@ i = "select_textobject_inner"
 a = "select_textobject_around"
 
 # Some extra binds to allow us to insert/append in select mode because it's nice with multiple cursors
-tab = ["insert_mode", "collapse_selection"] # tab is read by most terminal editors as "C-i"
+tab = [
+  "insert_mode",
+  "collapse_selection",
+] # tab is read by most terminal editors as "C-i"
 C-a = ["append_mode", "collapse_selection"]
 
 # Make selecting lines in visual mode behave sensibly
@@ -130,6 +202,8 @@ j = ["extend_line_down", "extend_to_line_bounds"]
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+
+# c = ["trim_selections", "change_selection"] # when changing a line this stops the cursor moving to the beginning of the line underneath
 
 
 ## PARKING LOT - Notes, Experiments etc ##
@@ -159,4 +233,3 @@ esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 #   "extend_line_below",
 #   ":pipe sgpt --code --no-cache 'Using this comment, fill the line having the comment FILL_THIS.'",
 # ]
-      

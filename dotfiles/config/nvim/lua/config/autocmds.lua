@@ -78,14 +78,14 @@ autocmd({ "FocusLost" }, {
 --     if last_nonblank < n_lines then vim.api.nvim_buf_set_lines(0, last_nonblank, n_lines, true, {}) end
 --   end,
 -- })
-
--- local yank_group = augroup("lazyvim_highlight_yank", {})
+vim.api.nvim_create_augroup("lazyvim_highlight_yank", { clear = true })
+local yank_group = augroup("custom_highlight_yank", {})
 autocmd("TextYankPost", {
-  -- group = yank_group,
+  group = yank_group,
   pattern = "*",
   callback = function()
     vim.highlight.on_yank({
-      -- higroup = "IncSearch",
+      higroup = "IncSearch",
       timeout = 2000,
     })
   end,

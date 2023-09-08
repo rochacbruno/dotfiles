@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-# xinput list 
+# xinput list
 # Default layout
 # "Button Middle"  	"Button Wheel Up"      "Button Horiz Wheel Left"    "Button Side"
 #       2                   4                         6						  8         "Button Extra"
 #                                                                                              9
 # "Button Left"     "Button Wheel Down"    "Button Horiz Wheel Right"   "Button Right"
 #       1					5                         7                       3
-
 
 # "Button Left" "Button Middle" "Button Right" "Button Wheel Up" "Button Wheel Down" "Button Horiz Wheel Left" "Button Horiz Wheel Right" "Button Side" "Button Extra"
 #       1              2             3              4                   5                  6                               7                   8             9
@@ -21,12 +20,13 @@ if [[ ! -z "$check" ]]; then
 	mouse_id=$(xinput | grep "$mouse_name" | sed 's/^.*id=\([0-9]*\)[ \t].*$/\1/')
 	# swap right and back button then swap middle and back button
 	xinput set-button-map $mouse_id 1 8 2 4 5 6 7 3 9
-	# enable better scrolling 
+	# enable better scrolling
 	xinput set-prop $mouse_id "libinput Natural Scrolling Enabled" 0
 	# disable acceliration for the ball
-	xinput set-prop $mouse_id "libinput Accel Profile Enabled" 0, 1
+	# xinput set-prop $mouse_id "libinput Accel Profile Enabled" 0, 1
+	# xinput set-prop $mouse_id "libinput Accel Profile Enabled" 1, 1
 
-	# allow scrolling by holding middle mouse button and using the ball to scroll ( really smooth and fast ). 
+	# allow scrolling by holding middle mouse button and using the ball to scroll ( really smooth and fast ).
 	xinput set-prop $mouse_id "libinput Scroll Method Enabled" 0, 0, 1
 	# allow the remmaped middle mouse to be used for middle mouse scroll
 	xinput set-prop $mouse_id "libinput Button Scrolling Button" 3
