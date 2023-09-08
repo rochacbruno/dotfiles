@@ -1,0 +1,13 @@
+[[snippets]]
+prefix = "ipdb"
+body = '__import__("ipdb").set_trace()'
+description = "Breakpoint"
+
+[[snippets]]
+prefix = "ld"
+body = 'log.debug("$1")'
+description = "Log Debug"
+
+[[snippets]]
+prefix = "pri"
+body = "print($1)"

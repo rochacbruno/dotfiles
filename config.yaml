@@ -156,6 +156,9 @@ dotfiles:
   f_config_zen.toml:
     src: config/helix/config_zen.toml
     dst: ~/.config/helix/config_zen.toml
+  d_snippets:
+    src: config/helix/snippets
+    dst: ~/.config/helix/snippets
 profiles:
   pop-os:
     dotfiles:
@@ -217,3 +220,4 @@ profiles:
     - f_languages.toml
     - f_config_vim.toml
     - f_config_zen.toml
+    - d_snippets
