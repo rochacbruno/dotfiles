@@ -45,6 +45,7 @@ chafa 1.12.4-3
 cheese 44.1-1
 clipit 1.4.5-3
 cmatrix 2.0-2
+cowsay 3.04-3
 croc 9.6.5-1
 cryptsetup 2.6.1-3
 cups 1:2.4.6-1
