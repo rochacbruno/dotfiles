@@ -93,6 +93,9 @@ ret = ["move_line_down", "goto_first_nonwhitespace"]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection"]
 
+# Select current line without trailing white space
+A-x = [ "extend_to_line_bounds", "trim_selections" ]
+
 [keys.normal.space]
 w = ":write"
 q = ":quit"
@@ -130,9 +133,22 @@ F = "no_op"
 ]
 
 [keys.normal.space."="]
-"f" = ":format"
-"b" = ":pipe black --quiet -"
-"i" = ":pipe isort --quiet -m 3 --profile=black -"
+f = ":format"  # Format buffer using lsp
+b = ":pipe black --quiet -"  # format selection using black
+i = ":pipe isort --quiet -m 3 --profile=black -"  # sort selection using isort
+r = ":reflow 79"  # Rewrap text at 79 column
+t = ':pipe sed "s/[[:space:]]\+$//"'  # Trim selection trailing whitespace
+T = [
+    "save_selection",
+    "select_all",
+    # Delete trailing whitespace from end of each line
+    ":pipe sed 's/[ \t]*$//'",
+    # Delete trailing blank lines (including whitespace) from end of the buffer
+    ":pipe awk '/^\\s*$/ {b=b $0 \"\\n\"; next;} {printf \"%s\",b; b=\"\"; print;}'",
+    "collapse_selection",
+    "jump_backward",
+    "commit_undo_checkpoint",
+]
 
 # Editor Actions
 [keys.normal.space.e]
@@ -256,4 +272,19 @@ esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 #   ":insert-output echo 'FILL_THIS'",
 #   "extend_line_below",
 #   ":pipe sgpt --code --no-cache 'Using this comment, fill the line having the comment FILL_THIS.'",
+# ]
+
+# ### Trim whitespace and last line when saving
+# [keys.normal]
+# C-s = [
+#     "save_selection",
+#     "select_all",
+#     # Delete trailing whitespace from end of each line
+#     ":pipe sed 's/[ \t]*$//'",
+#     # Delete trailing blank lines (including whitespace) from end of the buffer
+#     ":pipe awk '/^\\s*$/ {b=b $0 \"\\n\"; next;} {printf \"%s\",b; b=\"\"; print;}'",
+#     "collapse_selection",
+#     "jump_backward",
+#     "commit_undo_checkpoint",
+#     ":write",
 # ]
