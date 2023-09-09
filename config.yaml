@@ -159,6 +159,9 @@ dotfiles:
   d_snippets:
     src: config/helix/snippets
     dst: ~/.config/helix/snippets
+  d_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
 profiles:
   pop-os:
     dotfiles:
@@ -221,3 +224,4 @@ profiles:
     - f_config_vim.toml
     - f_config_zen.toml
     - d_snippets
+    - d_kitty
