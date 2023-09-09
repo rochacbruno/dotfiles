@@ -18,8 +18,9 @@ My Environment configurations featuring:
 - 🧭 Delta - Better git diff
 - 😼 Hub - Add more commands to git
 - 🚢 Starship - Terminal Line Emojis and cool status
-- 🌙 LunarVim  - Neovim customization
-- 🤏 [Micro editor](guides/micro.md) - Simple text editor
+- 🧬 Helix - A post modern terminal code editor
+- 📁 lf - A terminal based file manager
+- ⏲  hstr - A command history manager for terminal
 
 ![desktop](guides/desktop.png)
 
