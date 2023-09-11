@@ -1,0 +1,54 @@
+[Desktop Entry]
+Name=Scratch Terminal
+Comment=Wez's Terminal Emulator
+Keywords=shell;prompt;command;commandline;cmd;
+Icon=appimagekit_3af50de93e20dff4707333c7f47fc4a2_org.wezfurlong.wezterm
+StartupWMClass=scratch
+TryExec=/home/rochacbruno/Applications/wezterm.AppImage
+Exec=/home/rochacbruno/Applications/wezterm.AppImage start --cwd . --class scratch
+Type=Application
+Categories=System;TerminalEmulator;Utility;
+Terminal=false
+X-AppImage-Version=20230712-072601-f4abf8fd
+
+X-AppImage-Old-Icon=org.wezfurlong.wezterm
+X-AppImage-Old-Name=Scratch
+X-AppImage-Identifier=3af50de93e20dff4707333c7f47fc4a2
+Actions=Remove;Update;
+X-AppImageLauncher-Version=2.2.0 (git commit 0f91801), built on 2023-09-11 13:27:04 UTC
+
+[Desktop Action Remove]
+Name=Remove AppImage from system
+Icon=AppImageLauncher
+Exec=/usr/lib/appimagelauncher/remove "/home/rochacbruno/Applications/wezterm.AppImage"
+Name[ast]=Desaniciar AppImage del sistema
+Name[cs]=Odebrat AppImage ze systému
+Name[de]=AppImage vom System entfernen
+Name[en]=Remove AppImage from system
+Name[es]=Eliminar Appimage del Sistema
+Name[fr]=Supprimer l'AppImage du système
+Name[it]=Rimuovi AppImage dal sistema
+Name[nl]=AppImage deïnstalleren
+Name[pl]=Usuń AppImage z systemu
+Name[pt]=Remover AppImage do sistema
+Name[pt_PT]=Remover AppImage do sistema
+Name[ru]=Удалить AppImage из системы
+Name[zh_Hans]=从系统中移除 AppImage
+
+[Desktop Action Update]
+Name=Update AppImage
+Icon=AppImageLauncher
+Exec=/usr/lib/appimagelauncher/update "/home/rochacbruno/Applications/wezterm.AppImage"
+Name[ast]=Anovar AppImage
+Name[cs]=Aktualizovat AppImage
+Name[de]=AppImage aktualisieren
+Name[en]=Update AppImage
+Name[es]=Actualizar Appimage
+Name[fr]=Mettre à jour l'AppImage
+Name[it]=Aggiorna AppImage
+Name[nl]=AppImage bijwerken
+Name[pl]=Uaktualnij AppImage
+Name[pt]=Actualizar AppImage
+Name[pt_PT]=Atualizar AppImage
+Name[ru]=Обновить AppImage
+Name[zh_Hans]=更新 AppImage

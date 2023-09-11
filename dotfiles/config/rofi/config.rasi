@@ -142,7 +142,7 @@ configuration {
 
     icon-theme: "Oranchelo";
     show-icons: true;
-    terminal: "alacritty";
+    terminal: "/home/rochacbruno/Applications/wezterm.AppImage";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
