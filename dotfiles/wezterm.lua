@@ -12,7 +12,6 @@ end
 
 -- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
 config.color_scheme = 'catppuccin-mocha'
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = .8
@@ -22,11 +21,11 @@ config.inactive_pane_hsb = {
   brightness = 0.6,
 }
 
-config.keys ={
+config.keys = {
   {
     key = 'o',
     mods = 'CTRL | SHIFT',
-    action = wezterm.action.SplitHorizontal {domain = 'CurrentPaneDomain'}
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
   },
   {
     key = 'o',
@@ -41,7 +40,7 @@ config.keys ={
   {
     key = 'e',
     mods = 'CTRL | SHIFT',
-    action = wezterm.action.SplitVertical {domain = 'CurrentPaneDomain'}
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
   },
   {
     key = 'e',
@@ -56,7 +55,7 @@ config.keys ={
   {
     key = 'q',
     mods = 'CTRL | SHIFT | ALT',
-    action = wezterm.action.CloseCurrentPane {confirm = true}
+    action = wezterm.action.CloseCurrentPane { confirm = true }
   },
   {
     key = 'r',
