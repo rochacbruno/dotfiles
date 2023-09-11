@@ -92,6 +92,7 @@ exo 4.18.0-1
 expect 5.45.4-4
 f2fs-tools 1.16.0-2
 fakeroot 1.32.1-1
+fd 8.7.0-1
 feh 3.10-1
 ffmpegthumbnailer 2.2.2-5
 figlet 2.2.5-5
@@ -375,6 +376,7 @@ tumbler 4.18.1-1
 tuxpaint 0.9.31-1
 typescript-language-server 3.3.2-1
 ueberzug 18.2.2-1
+unarchiver 1.10.7-9
 unrar 1:6.2.10-1
 unzip 6.0-19
 upower 1.90.2-1
@@ -464,6 +466,7 @@ xorg-xkill 1.0.6-1
 xorg-xrandr 1.5.2-1
 xorg-xwininfo 1.1.6-1
 xournalpp 1.2.1-1
+xplr 0.21.3-1
 xsane 0.999-6
 xsel 1.2.1-1
 xterm 384-1
@@ -471,6 +474,7 @@ yad 13.0-1.1
 yaml-language-server 1.14.0-1
 yarn 1.22.19-1
 yay 12.1.2-1
+yazi-bin 0.1.4-1
 zenity 3.44.2-1
 zig 0.11.0-1
 zls 0.11.0-1

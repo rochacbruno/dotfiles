@@ -71,5 +71,6 @@ vlc-luajit 3.0.18-8
 vlc-luajit-debug 3.0.18-3
 wacom-utility 1.21-7
 xmind-bin 12.0.0-1
+yazi-bin 0.1.4-1
 zoom 5.15.12-1
 zsa-wally 2.1.3-4
