@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'catppuccin_mocha'
+config.color_scheme = 'catppuccin-mocha'
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = .8
 config.use_fancy_tab_bar = false
