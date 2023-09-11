@@ -171,6 +171,10 @@ dotfiles:
   f_catppuccin_mocha_transparent.toml:
     src: config/helix/runtime/themes/catppuccin_mocha_transparent.toml
     dst: ~/.config/helix/runtime/themes/catppuccin_mocha_transparent.toml
+  f_scratch_terminal.desktop:
+    src: config/scratch_terminal.desktop
+    dst: ~/.config/scratch_terminal.desktop
+    chmod: '755'
 profiles:
   pop-os:
     dotfiles:
@@ -237,3 +241,4 @@ profiles:
     - f_wezterm.lua
     - f_wezterm_shell_integrations.sh
     - f_catppuccin_mocha_transparent.toml
+    - f_scratch_terminal.desktop
