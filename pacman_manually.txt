@@ -1,4 +1,5 @@
 apachedirectorystudio 2.0.0.v20210717.17-0
+appimagelauncher 2.2.0-6
 arc-x-icons-theme 2.1-3
 caffeine 2.9.12-1
 catppuccin-gtk-theme-frappe 0.6.1-2
@@ -15,9 +16,9 @@ electron17 17.4.11-6
 electron18 18.3.15-4
 electron19 19.1.9-5
 electron21 21.4.4-1
-gitkraken 9.7.1-1
+gitkraken 9.8.1-1
 gklib 5.1.1-4
-google-chrome 116.0.5845.140-1
+google-chrome 116.0.5845.179-1
 gromit-mpx-git 1.4.r87.gdb0c147-1
 grub-tools 1.6.9-2
 grub2-theme-endeavouros 20220602-1
@@ -39,10 +40,10 @@ libsidplay 1.36.59-10
 libthinkpad 2.6-5
 libvterm01 0.1.4-2
 lite-xl 2.1.1-1
-masterpdfeditor 5.9.60-1
+masterpdfeditor 5.9.61-1
 masterpdfeditor-free 4.3.89-1
 metis 5.2.1-2
-microsoft-edge-stable-bin 116.0.1938.69-1
+microsoft-edge-stable-bin 116.0.1938.76-1
 mspinball-bin v1-2
 ne 3.3.2-1
 neovide-lunarvim 0.1.0-1
@@ -65,10 +66,10 @@ snapd 2.60.2-1
 ttf-ms-fonts 2.0-12
 tuxpaint 0.9.31-1
 ventoy-bin 1.0.95-1
-visual-studio-code-bin 1.81.1-1
+visual-studio-code-bin 1.82.0-1
 vlc-luajit 3.0.18-8
 vlc-luajit-debug 3.0.18-3
 wacom-utility 1.21-7
 xmind-bin 12.0.0-1
-zoom 5.15.11-1
+zoom 5.15.12-1
 zsa-wally 2.1.3-4

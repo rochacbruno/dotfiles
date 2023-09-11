@@ -12,7 +12,7 @@ My Environment configurations featuring:
 - 📂 Thunar - File manager with programmable actions
 - 🚀 Rofi - Launcher for apps, emojis and more
 - ⬆️  Espanso - O.S wide snippets
-- 🖥️ Terminator - Terminal emulator
+- 🖥️ WezTerm - Terminal emulator
 - 🖥️ ZSH - Terminal Framework
 - 🦇 Bat - Replacement for cat 
 - 🧭 Delta - Better git diff

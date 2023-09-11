@@ -70,7 +70,7 @@ jaraco.classes==3.3.0
 jaraco.context==4.3.0
 jaraco.functools==3.9.0
 jaraco.text==3.11.1
-jedi==0.18.2
+jedi==0.19.0
 jeepney==0.8.0
 Jinja2==3.1.2
 keyring==24.2.0
@@ -170,7 +170,7 @@ sgmllib3k==1.0.0
 shell_gpt==0.9.4
 shtab==1.6.4
 six==1.16.0
-soupsieve==2.4.1
+soupsieve==2.5
 stevedore==5.1.0
 TBB==0.2
 tenacity==8.2.3

@@ -162,6 +162,15 @@ dotfiles:
   d_kitty:
     src: config/kitty
     dst: ~/.config/kitty
+  f_wezterm.lua:
+    src: wezterm.lua
+    dst: ~/.wezterm.lua
+  f_wezterm_shell_integrations.sh:
+    src: bin/wezterm_shell_integrations.sh
+    dst: ~/bin/wezterm_shell_integrations.sh
+  f_catppuccin_mocha_transparent.toml:
+    src: config/helix/runtime/themes/catppuccin_mocha_transparent.toml
+    dst: ~/.config/helix/runtime/themes/catppuccin_mocha_transparent.toml
 profiles:
   pop-os:
     dotfiles:
@@ -225,3 +234,6 @@ profiles:
     - f_config_zen.toml
     - d_snippets
     - d_kitty
+    - f_wezterm.lua
+    - f_wezterm_shell_integrations.sh
+    - f_catppuccin_mocha_transparent.toml
