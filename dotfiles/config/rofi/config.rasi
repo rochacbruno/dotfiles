@@ -1,5 +1,5 @@
 configuration {
-	modi: "combi,emoji";
+	modi: "combi,emoji,calc,filebrowser";
   combi-modi: "window,drun,run";
 /*	font: "mono 12";*/
 /*	location: 0;*/
@@ -142,7 +142,7 @@ configuration {
 
     icon-theme: "Oranchelo";
     show-icons: true;
-    terminal: "/home/rochacbruno/Applications/wezterm.AppImage";
+    terminal: "/home/rochacbruno/bin/wezterm";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
