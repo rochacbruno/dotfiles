@@ -52,6 +52,7 @@ cryptsetup 2.6.1-3
 cups 1:2.4.6-1
 cups-filters 1.28.17-4
 cups-pdf 3.0.1-7
+dbeaver 23.2.0-1
 device-mapper 2.03.22-2
 dex 0.9.0-1
 dhclient 4.4.3.P1-2
@@ -319,7 +320,10 @@ rio 0.0.18-2
 ripgrep 13.0.0-3
 ristretto 0.13.1-1
 rofi 1.7.5-2
+rofi-bluetooth-git r33.9d91c04-2
+rofi-calc 2.2.0-1
 rofi-emoji 3.2.0-1
+rofimoji 6.1.0-2
 rp-pppoe 3.15-2
 rsync 3.2.7-4
 ruff 0.0.287-1

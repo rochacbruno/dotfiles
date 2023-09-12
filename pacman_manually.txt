@@ -60,6 +60,7 @@ python2-cairo 1.19.1-2
 python2-gobject2 2.28.7-7
 qt5-webkit 5.212.0alpha4-20
 resp-app 2022.5-1
+rofi-bluetooth-git r33.9d91c04-2
 sdl2_pango 2.1.5-1
 sdl_pango 0.1.2-9
 snapd 2.60.2-1
