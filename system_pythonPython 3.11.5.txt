@@ -111,6 +111,7 @@ pkginfo==1.9.6
 platformdirs==3.10.0
 pluggy==1.2.0
 ply==3.11
+podman-compose==1.0.6
 powerline-status==2.8.3
 pre-commit==3.3.3
 progress==1.6
@@ -143,6 +144,7 @@ PyQt6-WebEngine==6.5.0
 pyserial==3.5
 PySocks==1.7.1
 python-dateutil==2.8.2
+python-dotenv==1.0.0
 python-lsp-jsonrpc==1.0.0
 python-lsp-server==1.7.4
 python-minifier==2.9.0
