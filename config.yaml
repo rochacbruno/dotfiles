@@ -175,6 +175,9 @@ dotfiles:
     src: config/scratch_terminal.desktop
     dst: ~/.config/scratch_terminal.desktop
     chmod: '755'
+  d_kak:
+    src: config/kak
+    dst: ~/.config/kak
 profiles:
   pop-os:
     dotfiles:
@@ -242,3 +245,4 @@ profiles:
     - f_wezterm_shell_integrations.sh
     - f_catppuccin_mocha_transparent.toml
     - f_scratch_terminal.desktop
+    - d_kak
