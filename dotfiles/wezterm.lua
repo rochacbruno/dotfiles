@@ -12,7 +12,15 @@ end
 
 -- This is where you actually apply your config choices
 
+config.window_padding = {
+  left = 2,
+  right = 2,
+  top = 0,
+  bottom = 0,
+}
+config.warn_about_missing_glyphs = false
 config.color_scheme = 'catppuccin-mocha'
+-- config.scrollback_lines = 100000
 -- Allow bold blocks for UI elements
 config.custom_block_glyphs = false
 -- Disable font ligatures =>

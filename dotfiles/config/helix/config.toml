@@ -1,5 +1,6 @@
 ## OPTIONS ##
-theme = "catppuccin_mocha_transparent"
+#theme = "catppuccin_mocha_transparent"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
@@ -192,7 +193,7 @@ e = [
 ### File Picker
 
 [keys.insert]
-j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+# j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 # Force undo checkpoint (note: granular history is Alt-u/U, undo is u/U)
 A-s = "commit_undo_checkpoint"
 # Save if changed
