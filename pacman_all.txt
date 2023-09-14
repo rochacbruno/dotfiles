@@ -13,6 +13,7 @@ adobe-source-han-sans-jp-fonts 2.004-1
 adobe-source-han-sans-kr-fonts 2.004-1
 adwaita-cursors 44.0-1
 adwaita-icon-theme 44.0-1
+alacritty 0.12.2-1
 alsa-card-profiles 1:0.3.79-2
 alsa-firmware 1.2.4-3
 alsa-lib 1.2.10-1
@@ -170,6 +171,7 @@ double-conversion 3.3.0-1
 downgrade 11.3.0-1
 duktape 2.7.0-6
 dunst 1.9.2-1
+dust 0.8.6-1
 e2fsprogs 1.47.0-1
 ebook-tools 0.2.2-7
 efibootmgr 18-2

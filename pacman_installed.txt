@@ -4,6 +4,7 @@ acpi 1.7-3
 adobe-source-han-sans-cn-fonts 2.004-1
 adobe-source-han-sans-jp-fonts 2.004-1
 adobe-source-han-sans-kr-fonts 2.004-1
+alacritty 0.12.2-1
 alsa-firmware 1.2.4-3
 alsa-plugins 1:1.2.7.1-2
 alsa-utils 1.2.10-1
@@ -69,6 +70,7 @@ docker-compose 2.2.2-1
 dosfstools 4.2-3
 downgrade 11.3.0-1
 dunst 1.9.2-1
+dust 0.8.6-1
 e2fsprogs 1.47.0-1
 efibootmgr 18-2
 element 0.46.6-1
