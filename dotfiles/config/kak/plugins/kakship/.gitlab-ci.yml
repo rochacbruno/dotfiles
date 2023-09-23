@@ -1,0 +1,4 @@
+include:
+  - project: gitlab/templates
+    file:
+      - build_rust.yml

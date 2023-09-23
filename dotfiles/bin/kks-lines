@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# jump to line in buffer
+#
+# requires:
+# - fzf (https://github.com/junegunn/fzf)
+
+kks cat |
+	nl -ba -w4 -s' │ ' |
+	fzf --height 100% --prompt 'lines> ' |
+	awk '{print $1}' |
+	xargs -r -I {} kks send "execute-keys '<esc>{}gx'"

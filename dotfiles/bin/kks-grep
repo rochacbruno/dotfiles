@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# search for pattern in workdir
+#
+# requires:
+# - ripgrep (https://github.com/BurntSushi/ripgrep)
+# - fzf (https://github.com/junegunn/fzf)
+# - bat (change to your liking) (https://github.com/sharkdp/bat)
+
+history_file="$HOME/.cache/kks-grep-history"
+query=""
+
+[ -f "$history_file" ] || touch "$history_file"
+[ "$(kks get %val[selection_length])" -gt 1 ] && query="$(kks get %val[selection])"
+
+rg --vimgrep '.+' "$@" |
+	SHELL=sh fzf --delimiter=":" --query="$query" --height="100%" --prompt="grep> " --history="$history_file" \
+		--preview='range="$(echo {2}-5 | bc | sed "s/^-.*/0/"):$(echo {2}+20 | bc)"; bat -r "$range" -n --color always -H {2} {1}' |
+	awk -F':' '{print $1 " " "+" $2 ":" $3 }' |
+	xargs -r kks edit

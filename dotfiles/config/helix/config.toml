@@ -168,10 +168,14 @@ F = "file_picker_in_current_directory"
 b = "file_picker_in_current_buffer_directory"
 "." = ":toggle-option file-picker.git-ignore" # toggle seeing files hidden with the .gitignore in file pickers
 
+# global live grep
+g = ":pipe-to wezterm cli split-pane -- helix-live-grep"
+
 ### requires the script lf-pick on path
 ### Requires lf installed https://github.com/gokcehan/lf
 ### lf has the keybindings: <space> select file, lowercase `l` accept selection
-### This allows selecting multiple files!!
+### or use arrow right to open the file
+### This allows selecting multiple files with space and then hit `l` to open
 # touch ~/.local/bin/lf-pick
 # chmod +x ~/.local/bin/lf-pick
 # function lfp(){
@@ -191,6 +195,16 @@ e = [
   ":redraw",
 ]
 ### File Picker
+
+[keys.normal.space.G]
+b = ":sh hx-wezterm.sh blame"
+e = ":sh hx-wezterm.sh explorer"
+f = ":sh hx-wezterm.sh fzf"
+g = ":sh hx-wezterm.sh lazygit"
+o = ":sh hx-wezterm.sh open"
+r = ":sh hx-wezterm.sh run"
+s = ":sh hx-wezterm.sh test_single"
+t = ":sh hx-wezterm.sh test_all"
 
 [keys.insert]
 # j = { k = "normal_mode" } # Maps `jk` to exit insert mode

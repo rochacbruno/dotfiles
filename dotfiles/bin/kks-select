@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# select kak session and client to set environment
+# use as `eval $(kks-select)`, eg: `alias ks="eval $(kks-select)"` in shell config
+#
+# requires:
+# - fzf (https://github.com/junegunn/fzf)
+
+command kak -clear
+
+kks list |
+	fzf -d '\t*: *' \
+		--header="[c-x] kill, [c-t] new, [c-r] reload" \
+		--bind="ctrl-x:execute-silent(kks kill -s {1})+reload(sleep 0.1; kks list)" \
+		--bind="ctrl-t:execute-silent(kks new {q})+reload(sleep 0.1; kks list)" \
+		--bind="ctrl-r:reload(kks list)" \
+		--preview-window=down:0% --preview="kks send -a info; kks send -s {1} -c {2} info -markup '{2}@{+b}[{1}]'" |
+	awk -F '\t*: *' '{print "export KKS_SESSION=" $1 "; export KKS_CLIENT=" $2}'

@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# jump to heading in markdown file
+#
+# requires:
+# - ripgrep (https://github.com/BurntSushi/ripgrep)
+# - fzf (https://github.com/junegunn/fzf)
+
+kks cat |
+	rg -n '^#+' |
+	column -t -s ':' |
+	fzf --height 100% --prompt 'heading> ' |
+	awk '{print $1}' |
+	xargs -r -I {} kks send "execute-keys '<esc>{}gx'"

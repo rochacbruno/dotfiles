@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Move marked files. If no files are marked, rename the selected file.
+
+set -eu
+
+selection="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection"
+if [ -s "$selection" ]
+then
+  printf "Move selections to: "
+  read -r to
+  xargs -0 -I {} tmv {} "$to" < "$selection"
+elif [ -n "$1" ]
+then
+  printf "Rename %s: " "$1"
+  read -r to
+  tmv "$1" "$to"
+fi

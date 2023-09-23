@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# read from stdin
+INPUT=$(cat)
+
+# format to stdout
+echo "$INPUT" | shfmt --indent 2 | shellharden --transform ""

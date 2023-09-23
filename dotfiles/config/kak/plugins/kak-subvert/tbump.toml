@@ -1,0 +1,32 @@
+github_url = "https://github.com/your-tools/kak-subvert"
+
+[version]
+current = "1.0.3"
+regex = '''
+  (?P<major>\d+)
+  \.
+  (?P<minor>\d+)
+  \.
+  (?P<patch>\d+)
+  '''
+
+[git]
+message_template  = "Bump to {new_version}"
+tag_template = "v{new_version}"
+
+
+[[file]]
+src = "Cargo.toml"
+search = 'version = "{current_version}"'
+
+[[before_commit]]
+name = "Check Changelog"
+cmd = "grep -q {new_version} Changelog.md"
+
+[[before_commit]]
+name = "run tests"  # needed to generate the Cargo.lock
+cmd = "cargo test"
+
+[[after_push]]
+name = "publish to crates.io"
+cmd = "cargo publish"

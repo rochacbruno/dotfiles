@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+
+# Function to check if required tools are installed
+check_dependencies() {
+  command -v ffmpeg >/dev/null 2>&1 || {
+    echo >&2 "I require ffmpeg but it's not installed.  Aborting."
+    exit 1
+  }
+  command -v convert >/dev/null 2>&1 || {
+    echo >&2 "I require convert from ImageMagick but it's not installed.  Aborting."
+    exit 1
+  }
+}
+
+# Function to print the usage instructions
+usage() {
+  echo "Usage:"
+  echo "$ $(basename "$0") input_file [output_path]"
+  echo
+  echo "Parameters:"
+  echo "  input_file  - The path to the video file to convert. This can be any video format that ffmpeg supports."
+  echo "  output_path - (Optional) The path where the converted gif should be saved. This can be:"
+  echo "                a) A full path including the filename, e.g. /path/to/output.gif"
+  echo "                b) A directory, in which case the input filename is used, e.g. /path/to/"
+  echo "                c) A filename, in which case the current directory is used, e.g. output.gif"
+  echo "                If not provided, the gif is saved in the current directory with the same name as the input file."
+  echo
+  echo "Example:"
+  echo "$ $(basename "$0") input.mov output.gif"
+  exit 1
+}
+
+# Function to process the output path
+process_output_path() {
+  if [[ -z "$output" ]]; then
+    output="./$filename.gif"
+  elif [[ -d "$output" ]]; then
+    output="${output%/}/$filename.gif"
+  else
+    output_filename=$(basename -- "$output")
+    if [[ ! "$output_filename" =~ \.gif$ ]]; then
+      output="${output%/}/$filename.gif"
+    fi
+  fi
+}
+
+# Function to convert the input video to gif
+convert_to_gif() {
+  # Create a temporary directory using mktemp
+  tmpdir=$(mktemp -d -t palette)
+
+  # Create the palette.png inside this temporary directory
+  palette="$tmpdir/palette.png"
+  filters="fps=10,scale=-1:-1:flags=lanczos"
+
+  ffmpeg -v warning -i "$input" -vf "$filters,palettegen" -y "$palette"
+  ffmpeg -v warning -i "$input" -i "$palette" -lavfi "$filters [x]; [x][1:v] paletteuse" -y "$output"
+
+  # Remove temporary palette file and directory
+  rm -f "$palette"
+  rmdir "$tmpdir"
+
+  echo "Conversion completed: $output"
+}
+
+# Check dependencies
+check_dependencies
+
+# Check if the input file is provided
+[[ $# -eq 0 ]] && usage
+
+input=$1
+filename=$(basename -- "$input")
+filename="${filename%.*}"
+
+# Process output path
+output=$2
+process_output_path
+
+# Convert to gif
+convert_to_gif

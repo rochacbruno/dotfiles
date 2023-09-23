@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Read a selection from stdin and trim newline characters
+selection=$(cat | tr -d ' \n')
+
+# Start insert mode on the next line
+wezterm cli send-text --no-paste "o"
+
+# Write debug print
+wezterm cli send-text "console.log('==> $selection', $selection)"
+
+# Leave insert mode
+printf "\033" | wezterm cli send-text --no-paste
+
+# TODO
+# - Support multiple selections (no idea how, don't even know if possible)
+# - Support multiple languages (definetly not possible at the moment)

@@ -1,0 +1,22 @@
+#!/bin/bash -x
+
+
+for IMAGEID in $(docker images -a --digests | fgrep -v sha256 | awk '{print $4}' | fgrep -v IMAGE); do
+    echo "Removing ${IMAGEID} ..."
+    docker rmi -f ${IMAGEID}
+done
+
+if [[ ! -z $DELETE_ALL ]]; then
+    echo "DELETING ALL!"
+    for IMAGEID in $(docker images | awk '{print $3}' | fgrep -v IMAGE); do
+        echo $IMAGEID
+        docker rmi -f $IMAGEID
+    done
+fi
+
+for VOLUME in $(docker volume ls | awk '{print $2}' | fgrep -v VOLUME); do
+    docker volume rm $VOLUME
+done
+
+echo "Pruning volumes ..."
+docker volume prune -f

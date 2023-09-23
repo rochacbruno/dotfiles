@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# open lf in single-pane view with current buffer selected
+#
+# requires:
+# - lf (https://github.com/gokcehan/lf)
+
+kks get '%val{buffile}' |
+	xargs -I {} lf -command "set nopreview; set ratios 1" {}

@@ -1,0 +1,13 @@
+[package]
+name = "kakoune-toggler"
+version = "2.1.0"
+authors = ["ABuffSeagull <reecevanatta@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+toml = "0.5.6"
+anyhow = "1.0.31"
+
+[dependencies.serde]
+version = "1.0.112"
+features = [ "derive" ]

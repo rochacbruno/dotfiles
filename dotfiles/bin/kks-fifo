@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# pipe stdin into Kakoune fifo buffer
+#
+# Example:
+#    make | kks-fifo
+set -euf
+
+# Fail early if no session in context
+kks env >/dev/null 2>&1 || {
+    # show error
+    kks env
+    exit 1
+}
+
+tmp=$(mktemp -d "${TMPDIR:-/tmp}"/kks-fifo.XXXXXXXX)
+fifo="$tmp/fifo"
+
+cleanup() {
+	rm -r "$tmp"
+}
+
+trap 'cleanup; trap - EXIT' EXIT INT HUP
+mkfifo "$fifo"
+kks send edit! -fifo "$fifo" '*fifo*'
+cat >"$fifo"

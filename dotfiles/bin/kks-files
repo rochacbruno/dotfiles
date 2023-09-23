@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# pick files
+#
+# requires:
+# - fd (https://github.com/sharkdp/fd)
+# - fzf (https://github.com/junegunn/fzf)
+# - bat (change to your liking) (https://github.com/sharkdp/bat)
+
+preview_cmd="bat --color=always --line-range=:500"
+history_file="$HOME/.cache/kks-files-history"
+
+[ -f "$history_file" ] || touch "$history_file"
+
+fd --type file . "$@" |
+	fzf --multi --height 100% --prompt 'files> ' \
+		--preview "$preview_cmd {}" --history="$history_file" |
+	while read -r file; do
+		kks edit "$file"
+	done

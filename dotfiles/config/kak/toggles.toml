@@ -1,0 +1,18 @@
+[javascript]
+toggles = [
+  ["setTimout", "setInterval"],
+]
+
+# There's a special global table that will work in every filetype
+[global]
+toggles = [
+  ["true", "false"],
+  ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+]
+
+# You can also extend filetypes
+[html]
+extends = ["javascript", "css"]
+toggles = [
+  ["div", "span"],
+]

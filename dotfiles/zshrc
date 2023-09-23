@@ -158,3 +158,5 @@ export FZF_DEFAULT_OPTS=" \
 # export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files'
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/,.git/,.venv/}"'
 alias fzv='lvim $(fzf)'
+
+source /home/rochacbruno/.config/broot/launcher/bash/br

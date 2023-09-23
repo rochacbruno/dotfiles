@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for CONTAINERID in $(docker ps -a | egrep -v ^CONTAINER | awk '{print $1}'); do
+    echo "Killing ${CONTAINERID} ..."
+    docker kill ${CONTAINERID}
+    echo "Removing ${CONTAINERID} ..."
+    docker rm -f --volumes ${CONTAINERID}
+done
+for CONTAINERID in $(podman ps -a | egrep -v ^CONTAINER | awk '{print $1}'); do
+    echo "Killing ${CONTAINERID} ..."
+    podman kill ${CONTAINERID}
+    echo "Removing ${CONTAINERID} ..."
+    podman rm -f --volumes ${CONTAINERID}
+done

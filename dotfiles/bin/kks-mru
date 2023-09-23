@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# pick recent file
+#
+# requires:
+# - fzf (https://github.com/junegunn/fzf)
+# - bat (change to your liking) (https://github.com/sharkdp/bat)
+#
+# for this to work, add the following in kakrc:
+# (requires sponge from moreutils: https://joeyh.name/code/moreutils/)
+# hook global BufCreate [^*].* %{
+#     nop %sh{
+#         mru=~/.cache/kak-mru
+#         echo "$kak_buffile" | awk '!seen[$0]++' - "$mru" | sponge "$mru"
+#     }
+# }
+
+preview_cmd="bat --color=always --line-range=:500"
+
+(fzf --height 100% --prompt 'mru> ' --preview "$preview_cmd {}" |
+	xargs -r kks edit) < ~/.cache/kak-mru

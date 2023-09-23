@@ -12,6 +12,12 @@ end
 
 -- This is where you actually apply your config choices
 
+-- config.use_ime = true
+
+-- config.enable_csi_u_key_encoding = false
+
+config.enable_kitty_keyboard = true
+
 config.window_padding = {
   left = 1,
   right = 1,
@@ -26,7 +32,7 @@ config.custom_block_glyphs = false
 -- Disable font ligatures =>
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = .8
+config.window_background_opacity = .9
 config.use_fancy_tab_bar = false
 config.inactive_pane_hsb = {
   saturation = 0.8,

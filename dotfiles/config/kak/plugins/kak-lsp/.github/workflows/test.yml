@@ -1,0 +1,143 @@
+name: Test kak-lsp
+
+on:
+  push:
+    branches: [ "**", "!changelog" ]
+  pull_request:
+    branches: [ "**", "!changelog" ]
+
+env:
+  CARGO_INCREMENTAL: 0
+  CARGO_TERM_COLOR: always
+
+jobs:
+  unit-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: Swatinem/rust-cache@v1.3.0
+
+    - name: Build kak-lsp
+      run: cargo test --no-run --locked --release
+
+    - name: Run unit tests
+      run: cargo test --release
+
+    - name: Run cargo fmt
+      run: |
+         rustfmt --version
+         cargo fmt --verbose -- --check
+
+  system-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+        kakoune_version:
+          # Empty ref to use the repo's default branch
+          # - ''
+          # Latest release
+          - 'v2021.08.28'
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: Swatinem/rust-cache@v1.3.0
+
+    - name: Build kak-lsp
+      run: cargo build --locked --release
+
+    - name: Fetch Kakoune
+      uses: actions/checkout@v2
+      with:
+        repository: 'mawww/kakoune'
+        ref: ${{ matrix.kakoune_version }}
+        # Always relative to `${{ github.workspace }}`
+        path: 'kakoune'
+
+    # Use the current commit hash as part of the cache key, so that we only
+    # need to rebuild when code changes.
+    - name: Get Kakoune commit id
+      id: kakoune-commit-id
+      run: echo "::set-output name=id::$(git -C $GITHUB_WORKSPACE/kakoune rev-parse HEAD)"
+
+    - name: Install gcc 10 via homebrew
+      if: matrix.kakoune_version == '' && matrix.os == 'macos-latest'
+      run: brew install gcc@10
+
+    - name: Install gcc 10 via apt
+      if: matrix.kakoune_version == '' && matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends gcc-10
+      env:
+        DEBIAN_FRONTEND: noninteractive
+
+    - name: Cache Kakoune
+      id: cache-kakoune
+      uses: actions/cache@v2
+      with:
+        key: ${{ runner.os }}-kakoune-${{ steps.kakoune-commit-id.outputs.id }}
+        path: |
+          ${{ github.workspace }}/kakoune/src/kak
+          ${{ github.workspace }}/kakoune/src/kak.opt
+          ${{ github.workspace }}/kakoune/src/.*.opt.d
+          ${{ github.workspace }}/kakoune/src/.*.opt.o
+
+    - name: Build Kakoune
+      working-directory: ${{ github.workspace }}/kakoune/src
+      run: |
+        if [ "${{ matrix.kakoune_version }}" = "" ]; then
+          export CXX=g++-10
+        fi
+        if [ "${{ steps.cache-kakoune.outputs.cache-hit }}" ]; then
+          # The source files created by actions/checkout are newer than the
+          # output extracted from cache. So we need to touch these targets
+          # to tell "make install" that they are indeed up-to-date.
+          make -t
+        else
+          make -j$([ "${{ matrix.os }}" = "macos-latest" ] && sysctl -n hw.logicalcpu || nproc)
+        fi
+        sudo --preserve-env=CXX make install
+
+    - name: Install gopls
+      run: |
+        go install golang.org/x/tools/gopls@v0.7.1
+        sudo ln "$HOME/go/bin/gopls" /usr/local/bin/
+
+    - name: Download rust-analyzer
+      if: matrix.os == 'ubuntu-latest'
+      run: curl -L -o rust-analyzer.gz https://github.com/rust-analyzer/rust-analyzer/releases/download/2021-10-18/rust-analyzer-x86_64-unknown-linux-gnu.gz
+
+    - name: Install rust-analyzer
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        gunzip rust-analyzer.gz
+        chmod +x rust-analyzer
+        sudo mv rust-analyzer /usr/local/bin/
+
+    - name: Install typescript-language-server
+      run: sudo npm install -g typescript@4.4.4 typescript-language-server@0.6.4
+
+    - name: Install Tmux via homebrew
+      if: matrix.os == 'macos-latest'
+      run: brew install tmux
+
+    - name: Install Tmux via apt
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends tmux
+      env:
+        DEBIAN_FRONTEND: noninteractive
+
+    - name: Run system tests
+      run: sh -x test/run
+
+    - name: Setup tmate session
+      if: ${{ failure() }}
+      uses: mxschmitt/action-tmate@v3
+
