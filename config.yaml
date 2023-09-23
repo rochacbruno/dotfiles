@@ -178,6 +178,16 @@ dotfiles:
   d_kak:
     src: config/kak
     dst: ~/.config/kak
+    cmpignore:
+      - plugins/*/.git
+      - plugins/.build
+      - kakhist.txt
+      - mru_files.txt
+    upignore:
+      - plugins/*/.git
+      - plugins/.build
+      - kakhist.txt
+      - mru_files.txt
 profiles:
   pop-os:
     dotfiles:

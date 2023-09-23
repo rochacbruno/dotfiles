@@ -2,6 +2,8 @@ bacon v2.2.5:
     bacon
 bottom v0.8.0:
     btm
+broot v1.25.1:
+    broot
 cargo-edit v0.11.6:
     cargo-add
     cargo-rm
@@ -27,6 +29,22 @@ helix-term v0.6.0 (/home/rochacbruno/Projects/helix/helix-term):
     hx
 irust v1.66.0:
     irust
+kak-lsp v14.2.0-snapshot (/home/rochacbruno/.config/kak/plugins/kak-lsp):
+    kak-lsp
+kak-popup v0.4.1:
+    kak-popup
+kak-subvert v1.0.3:
+    kak-subvert
+kak-tabs v0.1.4:
+    kak-tabs
+kak-tree-sitter v0.4.6:
+    kak-tree-sitter
+kakoune-toggler v2.1.0 (/home/rochacbruno/.config/kak/plugins/kakoune-toggler):
+    kakoune-toggler
+ktsctl v0.3.2:
+    ktsctl
+log-analyzer-pro v1.0.3:
+    lap
 mdbook v0.4.25:
     mdbook
 mdbook-admonish v1.8.0:
