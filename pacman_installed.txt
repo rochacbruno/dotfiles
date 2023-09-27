@@ -166,6 +166,7 @@ hub 2.14.2-3
 hurl-bin 4.0.0-1
 hwdetect 2023.07.02-1
 hwinfo 23.2-1
+i3-layouts 0.13.2-3
 i3-wm 4.22-4
 i3blocks 1.5-3
 i3lock 2.14.1-1
@@ -281,6 +282,7 @@ paprefs 1.2-1
 parole 4.18.0-1
 patch 2.7.6-10
 pavucontrol 1:5.0+r64+geba9ca6-1
+pcmanfm 1.3.2-1
 pcurses 5-5
 peek 1.5.1-3
 perl 5.38.0-1
@@ -316,6 +318,7 @@ python-reportlab 3.6.12-3
 python-rope 1.8.0-1
 python-ruff 0.0.290-1
 python-virtualenvwrapper 4.8.4-8
+qmk 1.1.2-3
 r8168 8.051.02-70
 rdesktop 1.9.0-2
 rebuild-detector 4.4.2-1
@@ -397,6 +400,7 @@ usbutils 015-3
 vagrant 2.3.7-1
 ventoy-bin 1.0.95-1
 vi 1:070224-6
+via-bin 3.0.0-0
 vim 9.0.1882-1
 virt-manager 4.1.0-2
 virtualbox 7.0.10-2

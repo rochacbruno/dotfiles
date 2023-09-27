@@ -27,6 +27,7 @@ heroku-cli-bin 8.2.0-1
 highlight-pointer 1.1.3-1
 hstr 3.1-1
 hurl-bin 4.0.0-1
+i3-layouts 0.13.2-3
 imgcat 1.2.0-2
 ipw2100-fw 1.3-10
 ipw2200-fw 3.1-8
@@ -67,6 +68,7 @@ snapd 2.60.2-1
 ttf-ms-fonts 2.0-12
 tuxpaint 0.9.31-1
 ventoy-bin 1.0.95-1
+via-bin 3.0.0-0
 visual-studio-code-bin 1.82.0-1
 vlc-luajit 3.0.18-8
 vlc-luajit-debug 3.0.18-3

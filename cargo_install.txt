@@ -27,6 +27,8 @@ fd-find v8.6.0:
     fd
 helix-term v0.6.0 (/home/rochacbruno/Projects/helix/helix-term):
     hx
+i3-highlight-focused v0.1.0 (/home/rochacbruno/Projects/i3-highlight-focused):
+    i3-highlight-focused
 irust v1.66.0:
     irust
 kak-lsp v14.2.0-snapshot (/home/rochacbruno/.config/kak/plugins/kak-lsp):
