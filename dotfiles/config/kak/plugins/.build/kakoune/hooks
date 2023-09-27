@@ -1,0 +1,2 @@
+
+[ -d "/home/rochacbruno/.config/kak/colors" ] || mkdir -p "/home/rochacbruno/.config/kak/colors"; ln -sf "$PWD" "/home/rochacbruno/.config/kak/colors"

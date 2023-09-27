@@ -1,0 +1,5 @@
+
+set -e
+
+	cargo install --force --path . --root ~/.local
+	[ ! -e $kak_config/starship.toml ] && cp starship.toml $kak_config/

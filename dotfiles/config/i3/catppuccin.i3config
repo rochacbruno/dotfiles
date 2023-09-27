@@ -3,9 +3,9 @@
 ##############
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #c6a0f6 #c6a0f6 #1a1826 #c6a0f6   #c6a0f6
-client.focused_inactive #a6da95 #a6da95 #ffffff #a6da95   #a6da95
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.focused          #c6a0f6 #c6a0f6 #1a1826 #c6a0f6   #a6da95
+client.focused_inactive #a6da95 #a6da95 #ffffff #a6da95   #c6a0f6
+client.unfocused        #333333 #222222 #888888 #292d2e   #cccccc
 client.urgent           #cc241d #900000 #ffffff #cc241d   #cc241d
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 

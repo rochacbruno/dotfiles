@@ -6,7 +6,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-clipman &
 exec --no-startup-id xfce4-notes &
 exec --no-startup-id nitrogen --restore
+# exec --no-startup-id i3-layouts
+
 #exec_always --no-startup-id "setxkbmap -option && setxkbmap -option caps:none"
 exec_always --no-startup-id "setxkbmap -option && setxkbmap -option compose:caps"
-exec_always --no-startup-id ~/.config/i3/scripts/kensington.sh
+# exec_always --no-startup-id ~/.config/i3/scripts/kensington.sh
 exec_always --no-startup-id "xmodmap ~/.Xmodmap"
+# exec_always --no-startup-id i3-highlight-focused 8 256

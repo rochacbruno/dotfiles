@@ -1,3 +1,64 @@
+# border mode 
+bindsym $mod+b mode "$border"
+set $border n(0)ne, (1)pixel, (2)pixel, (3)pixel, (4)pixel, (n)ormal 
+mode "$border" {
+    
+    bindsym 0 border none; mode "normal"
+    bindsym 1 border pixel 1; mode "normal"
+    bindsym 2 border pixel 2; mode "normal"
+    bindsym 3 border pixel 3; mode "normal"
+    bindsym 4 border pixel 4; mode "normal"
+    bindsym 5 border pixel 5; mode "normal"
+    bindsym 9 border pixel 9; mode "normal"
+    bindsym n border normal; mode "normal"
+
+    # back to normal: Enter or Escape or $mod+b
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+w mode "default"
+
+}
+
+# Window mode 
+bindsym $mod+w mode "$window_mode"
+set $window_mode (h)orizontal, (v)ertical, hvto(g)gle, stac(k)ing, (t)abbed, (s)plit, (f)ull
+mode "$window_mode" {
+	
+    bindsym h split h;exec notify-send 'tile horizontally';mode "default"
+    bindsym v split v;exec notify-send 'tile verticaly';mode "default"
+    bindsym g split toggle;exec notify-send "tile toggle ${i3_split_direction}";mode "default"
+    bindsym k layout stacking;exec notify-send 'stacking';mode "default"
+    bindsym t layout tabbed;exec notify-send 'tabbed';mode "default"
+    bindsym s layout toggle split;exec notify-send 'split';mode "default"
+    bindsym f fullscreen toggle;mode "default"
+    
+# back to normal: Enter or Escape or $mod+w
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+w mode "default"
+}
+
+# Open Application mode 
+bindsym $mod+o mode "$open"
+set $open (f)ile, (c)ursor, (m)atrix, (a)uthy, (s)cratch, (d)discord, (n)otes
+mode "$open" { 
+    bindsym f exec thunar;mode "default"
+    bindsym p exec pcmanfm;mode "default"
+    bindsym c exec "xfce4-find-cursor";mode "default"
+    bindsym m [class="Element"] scratchpad show;mode "default"
+    bindsym a [title="Twilio Authy"] scratchpad show;mode "default"
+    bindsym s [class="scratch"] scratchpad show;mode "default"
+    bindsym d [class="discord"] scratchpad show;mode "default"
+    # bindsym $mod+F9 [class="obsidian"] scratchpad show;mode "default"
+    bindsym n exec xfce4-notes;mode "default"
+
+    # back to normal: Enter or Escape or $mod+o
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+o mode "default"
+
+}
+
 # resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
@@ -7,10 +68,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -42,4 +103,5 @@ mode "$mode_system" {
     bindsym Escape mode "default"
     bindsym $mod+End mode "default"
 }
+
 

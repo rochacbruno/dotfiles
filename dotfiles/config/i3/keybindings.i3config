@@ -23,25 +23,21 @@ bindsym $mod+Return exec ~/bin/wezterm
 # open clipboard menu
 bindsym $mod+c exec xfce4-popup-clipman
 
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $alt+F2 exec --no-startup-id dmenu_run
+bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $alt+Tab exec --no-startup-id "rofi -show"
-bindsym $mod+F3 exec thunar
 #bindsym Print --release exec --no-startup-id xfce4-screenshooter
 bindsym Print --release exec --no-startup-id "flameshot gui"
 bindsym Caps_Lock nop
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# kill focused window
+bindsym $mod+Shift+q kill
 
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -49,35 +45,18 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split orientation
-bindsym $mod+Shift+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+Shift+v split v;exec notify-send 'tile vertically'
-bindsym $mod+Shif+t split toggle
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking;exec notify-send 'layout stack'
-bindsym $mod+w layout tabbed;exec notify-send 'layout tabbed'
-bindsym $mod+e layout toggle split;exec notify-send 'layout split'
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle;exec notify-send 'floating toggle'
@@ -99,27 +78,12 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+plus scratchpad show
 bindsym $mod+minus scratchpad show
 
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym Control+Shift+$alt+l exec --no-startup-id /home/rochacbruno/bin/blurlock
 bindsym $mod+m bar mode toggle
 
-bindsym $mod+F4 exec "xfce4-find-cursor"
-bindsym $mod+F5 [class="Element"] scratchpad show
-bindsym $mod+F6 [title="Twilio Authy"] scratchpad show
-bindsym $mod+F7 [class="scratch"] scratchpad show
-bindsym $mod+F8 [class="discord"] scratchpad show
-# bindsym $mod+F9 [class="obsidian"] scratchpad show
-bindsym $mod+F9 exec xfce4-notes
-
-
-# change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 2
-bindsym $mod+n border normal

@@ -1,7 +1,9 @@
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move up 30 px
 for_window [class="Tk" title="tk"] floating enable
 for_window [title="KivySum"] floating enable
+for_window [class="(?i)pcmanfm"] floating enable
+for_window [class="(?i)element"] floating enable
 
 # Make every window have no borders
-for_window [tiling] border none
-for_window [floating] border pixel 3
+# for_window [tiling] border pixel 3
+# for_window [floating] border pixel 3

@@ -1,0 +1,29 @@
+try %{ 
+
+    declare-user-mode subvert
+    map global user v ':enter-user-mode subvert<ret>' -docstring 'enter subvert user mode'
+    map global subvert a '<esc>| kak-subvert ada <ret>' -docstring 'convert to Ada case'
+    map global subvert c '<esc>| kak-subvert camel <ret>' -docstring 'convert to camel case'
+    map global subvert k '<esc>| kak-subvert kebab <ret>' -docstring 'convert to kebab case'
+    map global subvert p '<esc>| kak-subvert pascal <ret>' -docstring 'convert to pascal case'
+    map global subvert . '<esc>| kak-subvert sentence <ret>' -docstring 'convert to sentence case'
+    map global subvert s '<esc>| kak-subvert snake <ret>' -docstring 'convert to snake case'
+    map global subvert S '<esc>| kak-subvert screaming <ret>' -docstring 'convert to screaming case'
+    map global subvert t '<esc>| kak-subvert train <ret>' -docstring 'convert to train case'
+    map global subvert T '<esc>| kak-subvert title <ret>' -docstring 'convert to title case'
+ } catch %{
+    echo -debug "Error while evaluating 'kak-subvert' configuration: %val{error}"
+
+    set-option -add current plug_conf_errors "Error while evaluating 'kak-subvert' configuration:"
+    set-option -add current plug_conf_errors %sh{ printf "\n    " }
+    set-option -add current plug_conf_errors %val{error}
+    set-option -add current plug_conf_errors %sh{ printf "\n\n" }
+
+    hook -once -group plug-conf-err global WinDisplay .* %{
+        info -style modal -title "plug.kak error" "%opt{plug_conf_errors}"
+        on-key %{
+            info -style modal
+            execute-keys -with-maps -with-hooks %val{key}
+        }
+    }
+}

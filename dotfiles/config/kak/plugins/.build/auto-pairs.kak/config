@@ -1,0 +1,19 @@
+try %{ 
+
+  enable-auto-pairs
+ } catch %{
+    echo -debug "Error while evaluating 'auto-pairs.kak' configuration: %val{error}"
+
+    set-option -add current plug_conf_errors "Error while evaluating 'auto-pairs.kak' configuration:"
+    set-option -add current plug_conf_errors %sh{ printf "\n    " }
+    set-option -add current plug_conf_errors %val{error}
+    set-option -add current plug_conf_errors %sh{ printf "\n\n" }
+
+    hook -once -group plug-conf-err global WinDisplay .* %{
+        info -style modal -title "plug.kak error" "%opt{plug_conf_errors}"
+        on-key %{
+            info -style modal
+            execute-keys -with-maps -with-hooks %val{key}
+        }
+    }
+}

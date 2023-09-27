@@ -1,0 +1,6 @@
+
+set -e
+
+  cargo install --locked --force --path .
+  mkdir -p ~/.config/kak-lsp
+  cp -n kak-lsp.toml ~/.config/kak-lsp/
