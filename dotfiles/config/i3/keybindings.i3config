@@ -18,7 +18,8 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec ~/Applications/wezterm.AppImage
-bindsym $mod+Return exec ~/bin/wezterm
+# bindsym $mod+Return exec ~/bin/wezterm
+bindsym $mod+Return exec terminator
 
 # open clipboard menu
 bindsym $mod+c exec xfce4-popup-clipman

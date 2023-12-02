@@ -489,6 +489,7 @@ map global goto ':' '<esc>: kakhist-buf-show<ret>' \
 
 plug "natasky/kakoune-multi-file"
 
+plug 'delapouite/kakoune-livedown'
 
 plug "https://gitlab.com/Screwtapello/kakoune-state-save" %{
 hook global KakBegin .* %{

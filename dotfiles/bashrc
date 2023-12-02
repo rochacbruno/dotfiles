@@ -192,5 +192,40 @@ _Pacdiff() {
 # alias pacdiff=_Pacdiff
 ################################################################################
 
-source ~/bin/wezterm_shell_integrations.sh
+#source ~/bin/wezterm_shell_integrations.sh
 source /home/rochacbruno/.config/broot/launcher/bash/br
+
+
+#PS1='[\w@$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)]\$\n'
+#PS1='[\[\e[1m\]\W\[\e[0;2m\]@\[\e[0;92;1m\]$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)\[\e[0m\]]\$\n'
+PS1='[\[\e[1m\]\w\[\e[0;2m\]@\[\e[0;92;1m\]$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)\[\e[0m\]]\$ '
+
+
+alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
+alias ..="cd .."
+alias df='df -h'      # human-readable sizes
+alias free='free -m'  # show sizes in MB
+alias ls='eza'
+
+
+eval "$(zoxide init bash)"
+#eval "$(starship init bash)"
+export EDITOR=nvim
+GO_PATH=$(go env GOPATH)/bin
+export PATH="/home/rochacbruno/bin/:/home/rochacbruno/.local/bin:$GO_PATH:/home/rochacbruno/.cargo/bin:$PATH"
+
+export GITHUB_TOKEN=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
+
+alias hh=hstr                    # hh to be alias for hstr
+export HSTR_CONFIG=hicolor       # get more colors
+export BAT_THEME="Catppuccin-mocha"
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+#export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
+# export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files'
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/,.git/,.venv/}"'
+alias fzv='nvim $(fzf)'
+alias vim=nvim
+alias venv='[ -d .venv ] || python3 -m venv .venv; source .venv/bin/activate'

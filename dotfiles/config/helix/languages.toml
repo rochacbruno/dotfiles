@@ -4,17 +4,17 @@ command = "simple-completion-language-server"
 config = { "max_completion_items" = 20 }
 environment = { "RUST_LOG" = "debug,simple-completion-langauge-server=debug", "LOG_FILE" = "/tmp/completion.log" }
 
-[language-server.pylsp.plugins]
-flake8 = { enabled = true }
-rope_autoimport = { enabled = true }
-autopep8 = { enabled = false }
-mccabe = { enabled = false }
-pycodestyle = { enabled = false }
-pyflakes = { enabled = false }
-pylint = { enabled = false }
-yapf = { enabled = false }
-ruff = { enabled = false, ignore = ["F401"], lineLength = 120 }
-isort = {enabled = false}
+# [language-server.pylsp.plugins]
+# flake8 = { enabled = true }
+# rope_autoimport = { enabled = true }
+# autopep8 = { enabled = false }
+# mccabe = { enabled = false }
+# pycodestyle = { enabled = false }
+# pyflakes = { enabled = false }
+# pylint = { enabled = false }
+# yapf = { enabled = false }
+# ruff = { enabled = false, ignore = ["F401"], lineLength = 120 }
+# isort = {enabled = false}
 
 [language-server.yaml-language-server.config.yaml]
 format = { enable = true }
@@ -23,6 +23,14 @@ validation = true
 [language-server.yaml-language-server.config.yaml.schemas]
 "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
 "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff-lsp"
+config = { settings = { run = "onSave" } }
 
 ## Languages ##
 
@@ -46,7 +54,8 @@ roots = [
   "requirements.txt",
   "app.py",
 ]
-language-servers = ["pylsp", "scls"]
+# language-servers = ["pylsp", "scls"]
+language-servers = ["pyright", "ruff", "scls"]
 
 [[language]]
 name = "toml"

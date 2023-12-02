@@ -19,6 +19,7 @@ code --install-extension dustypomerleau.yarra-valley
 code --install-extension eamodio.gitlens
 code --install-extension gerane.Theme-red
 code --install-extension GitHub.copilot
+code --install-extension GitHub.copilot-chat
 code --install-extension huytd.nord-light
 code --install-extension Hyzeta.vscode-theme-github-light
 code --install-extension IronGeek.vscode-env

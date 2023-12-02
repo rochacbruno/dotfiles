@@ -19,6 +19,10 @@ cargo-show-asm v0.2.4:
     cargo-asm
 cargo-watch v8.1.2:
     cargo-watch
+daktilo v0.1.0:
+    daktilo
+    daktilo-completions
+    daktilo-mangen
 evcxr v0.14.1:
     testing_runtime
 evcxr_repl v0.14.1:
@@ -31,6 +35,8 @@ i3-highlight-focused v0.1.0 (/home/rochacbruno/Projects/i3-highlight-focused):
     i3-highlight-focused
 irust v1.66.0:
     irust
+jetp v0.1.1:
+    jetp
 kak-lsp v14.2.0-snapshot (/home/rochacbruno/.config/kak/plugins/kak-lsp):
     kak-lsp
 kak-popup v0.4.1:

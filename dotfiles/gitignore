@@ -3,3 +3,5 @@ rest_nvim
 .nlsp-settings/
 .ropeproject
 .compose.env*
+.hurl/
+.venv/

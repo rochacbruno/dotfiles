@@ -1,6 +1,7 @@
 ## OPTIONS ##
 #theme = "catppuccin_mocha_transparent"
-theme = "catppuccin_mocha"
+#theme = "catppuccin_mocha"
+theme = "dracula_at_night"
 
 [editor]
 line-number = "relative"

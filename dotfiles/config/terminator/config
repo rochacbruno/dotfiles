@@ -1,6 +1,5 @@
 [global_config]
   handle_size = 2
-  borderless = True
   inactive_color_offset = 0.7900552486187845
   enabled_plugins = CurrDirOpen, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminalShot
   suppress_multiple_term_dialog = True
@@ -15,21 +14,21 @@
   scaled_zoom = <Primary><Shift>z
   full_screen = <Super>f
   reset = ""
-  reset_clear = ""
+  reset_clear = <Primary><Shift>k
   group_tab = ""
   edit_window_title = ""
   edit_tab_title = ""
   edit_terminal_title = ""
   layout_launcher = ""
+  preferences_keybindings = ""
 [profiles]
   [[default]]
     visible_bell = True
     icon_bell = False
     background_color = "#1e1e2e"
     background_darkness = 0.9
-    background_type = transparent
     background_image = None
-    font = Comic Shanns Mono 13
+    font = FiraCode Nerd Font Propo Semi-Bold 13
     foreground_color = "#cdd6f4"
     show_titlebar = False
     scrollbar_position = hidden

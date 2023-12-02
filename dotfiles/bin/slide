@@ -1,0 +1,3 @@
+#!/bin/bash
+
+impressive --nologo -M -q --darkness 70 --noclicks --spot-radius 100 -z 3.0 $@

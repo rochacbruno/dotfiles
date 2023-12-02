@@ -29,6 +29,7 @@ config.color_scheme = 'catppuccin-mocha'
 -- config.scrollback_lines = 100000
 -- Allow bold blocks for UI elements
 config.custom_block_glyphs = false
+config.font_size = 14
 -- Disable font ligatures =>
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.hide_tab_bar_if_only_one_tab = true

@@ -123,6 +123,8 @@ alias ..="cd .."
 
 alias df='df -h'      # human-readable sizes
 alias free='free -m'  # show sizes in MB
+alias ls='eza'
+
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
@@ -160,3 +162,5 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 alias fzv='lvim $(fzf)'
 
 source /home/rochacbruno/.config/broot/launcher/bash/br
+
+alias venv='[ -d .venv ] || python3 -m venv .venv; source .venv/bin/activate'
