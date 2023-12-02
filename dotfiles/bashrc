@@ -214,7 +214,7 @@ export EDITOR=nvim
 GO_PATH=$(go env GOPATH)/bin
 export PATH="/home/rochacbruno/bin/:/home/rochacbruno/.local/bin:$GO_PATH:/home/rochacbruno/.cargo/bin:$PATH"
 
-export GITHUB_TOKEN=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
+export GITHUB_TOKEN=GITTOKENHERE
 
 alias hh=hstr                    # hh to be alias for hstr
 export HSTR_CONFIG=hicolor       # get more colors

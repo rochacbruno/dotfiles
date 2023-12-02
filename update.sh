@@ -5,6 +5,7 @@
 
 # clean passwords and tokens
 sed -i 's/export GITHUB_TOKEN=.*/export GITHUB_TOKEN=GITTOKENHERE/' dotfiles/zshrc
+sed -i 's/export GITHUB_TOKEN=.*/export GITHUB_TOKEN=GITTOKENHERE/' dotfiles/bashrc
 
 sed -i 's/password = pypi-.*/password = pypi-PYPITOKEN/' dotfiles/pypirc
 
@@ -12,6 +13,12 @@ sed -i 's/password = pypi-.*/password = pypi-PYPITOKEN/' dotfiles/pypirc
 # remove unwanted files
 rm -rf dotfiles/config/obs-studio/basic/profiles/Untitled/service.json
 touch dotfiles/config/obs-studio/basic/profiles/Untitled/service.json
+
+rm -rf dotfiles/config/obs-studio/basic/profiles/2024/service.json
+touch dotfiles/config/obs-studio/basic/profiles/2024/service.json
+
+rm -rf dotfiles/config/obs-studio/basic/profiles/default/service.json
+touch dotfiles/config/obs-studio/basic/profiles/default/service.json
 
 # Packages
 pacman -Qe > pacman_installed.txt

@@ -529,7 +529,6 @@ python-defusedxml 0.7.1-5
 python-isort 5.12.0-2
 python-jedi 0.19.1-1
 python-lsp-server 1.8.0-1
-python-pipx 1.2.1-1
 python-pynvim 0.4.3-3
 python-pyqt5 5.15.10-1
 python-reportlab 3.6.12-3
