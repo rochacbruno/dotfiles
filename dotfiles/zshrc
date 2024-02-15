@@ -126,7 +126,7 @@ alias free='free -m'  # show sizes in MB
 alias ls='eza'
 
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 export EDITOR=hx
 GO_PATH=$(go env GOPATH)/bin

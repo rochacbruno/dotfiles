@@ -1,13 +1,13 @@
 [KFileDialog Settings]
-Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Videos/obs/LT/avulso/catch_a_beer.mkv,file:$HOME/Music/Purple Planet Music - Funk City.mp3,file:$HOME/Videos/obs/LT/avulso/2023-07-10_18-33-30.mkv,file:$HOME/Videos/obs/LT/avulso/essentials_fim.mkv,file:$HOME/Videos/obs/LT/avulso/Essentials_intro.mkv,file:$HOME/Pictures/cs_julio.png,file:$HOME/Pictures/cs_rocha.png,file:$HOME/Pictures/cs_teo.png,file:$HOME/Pictures/cs_jess.png,file:$HOME/Pictures/cs_infoslack.png,file:$HOME/Videos/obs/canal/intro_search.mp4,file:$HOME/Videos/obs/LT/avulso/codeshow+new.mkv,file:$HOME/Pictures/avatars/landa_browsn-removebg-preview.png,file:$HOME/Pictures/avatars/lensa_red_transp.png,file:$HOME/Videos/karla/dslogo.png
-Recent URLs[$e]=file:///tmp/,file:$HOME/Videos/obs/canal/,file:$HOME/Videos/obs/canal/aprendarust/parte6/,file:$HOME/Pictures/avatars/,file:$HOME/Pictures/,file:$HOME/Videos/obs/LT/avulso/,file:$HOME/Videos/obs/,file:$HOME/,file:$HOME/Videos/obs/LT/,file:$HOME/Music/,file:$HOME/Videos/obs/random/
+Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Videos/video_senior/screen.mkv,file:$HOME/Videos/video_senior/audio/Audio • Background Music • Audio 1.m4a,file:$HOME/Videos/video_senior/camera.mkv,file:$HOME/Videos/voce_nao_e_senior.mp4,file:$HOME/Videos/video_senior/audio/Bruno Rocha • Camera • Audio 1.m4a,file:$HOME/Music/Purple Planet Music - Funk City.mp3,file:$HOME/Pictures/cs_julio.png,file:$HOME/Pictures/cs_rocha.png,file:$HOME/Pictures/cs_teo.png,file:$HOME/Pictures/cs_jess.png
+Recent URLs[$e]=file:$HOME/Pictures/,file:$HOME/Videos/obs/,file:$HOME/,file:$HOME/Videos/obs/LT/,file:$HOME/Music/,file:$HOME/Videos/obs/random/,file:$HOME/Videos/,file:$HOME/Videos/video_senior/,file:$HOME/Videos/video_senior/audio/
 detailViewIconSize=16
 
 [MainWindow]
-2 screens: Height=1037
+2 screens: Height=1057
 2 screens: Width=1920
 2 screens: XPosition=1080
-2 screens: YPosition=440
+2 screens: YPosition=420
 3 screens: Height=1035
 3 screens: Width=994
 3 screens: XPosition=1995
@@ -37,7 +37,7 @@ DP3-3 DP3-1 XPosition 1080x1920 DP3-1=0
 DP3-3 DP3-1 XPosition 1920x1080 DP3-3=1080
 DP3-3 DP3-1 YPosition 1080x1920 DP3-1=0
 DP3-3 DP3-1 YPosition 1920x1080 DP3-3=480
-State=AAAA/wAAAAD9AAAAAgAAAAEAAAG0AAACb/wCAAAAAfwAAAF+AAACbwAAAMsBAAAd+gAAAAECAAAAAvsAAAAKAG0AaQB4AGUAcgEAAAHwAAACCwAAAK0BAAAC+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAAAAP////8AAAB+AQAAAgAAAAIAAAeAAAABXPwBAAAADvsAAAAUAHMAYwByAGUAZQBuAGcAcgBhAGIAAAAAAP////8AAACTAQAAA/sAAAAaAGEAdQBkAGkAbwBzAHAAZQBjAHQAcgB1AG0AAAAAAP////8AAABlAQAAA/wAAAAAAAACQwAAAIsA////+gAAAAABAAAABfsAAAAWAHAAcgBvAGoAZQBjAHQAXwBiAGkAbgEAAAAA/////wAAAFwBAAAD+wAAAB4AdAByAGEAbgBzAGkAdABpAG8AbgBfAGwAaQBzAHQBAAAAAP////8AAAAEAQAAA/sAAAAWAGUAZgBmAGUAYwB0AF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAAB4AYwBsAGkAcABfAHAAcgBvAHAAZQByAHQAaQBlAHMBAAAAAP////8AAABXAQAAA/sAAAAYAHUAbgBkAG8AXwBoAGkAcwB0AG8AcgB5AQAAAAD/////AAAAWwEAAAP8AAACRAAAAu8AAAFEAP////oAAAAAAgAAAAP7AAAAGABjAGwAaQBwAF8AbQBvAG4AaQB0AG8AcgEAAABEAAABzQAAAMsBAAAC+wAAABIAUwB1AGIAdABpAHQAbABlAHMAAAAAAP////8AAAEgAQAAAvsAAAAOAGwAaQBiAHIAYQByAHkBAAAAAP////8AAACUAQAAAvwAAAU0AAACTAAAAUQA////+gAAAAACAAAAAvsAAAAeAHAAcgBvAGoAZQBjAHQAXwBtAG8AbgBpAHQAbwByAQAAAL8AAAEsAAAAywEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAEAAAAA/////wAAAI4BAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABJgEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAACkAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAACfAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABRQEAAAP7AAAAEAB0AGUAeAB0AGUAZABpAHQAAAAAAP////8AAAGTAQAAA/sAAAASAHQAaQBtAGUAcgBlAG0AYQBwAAAAAAD/////AAAAWwEAAAP7AAAADABnAHUAaQBkAGUAcwAAAAAA/////wAAAN4BAAAD+wAAABAAYgBpAG4AXwBjAGwAaQBwAAAAAAD/////AAABZQEAAAP7AAAAHgBvAG4AbABpAG4AZQByAGUAcwBvAHUAcgBjAGUAcwAAAAAA/////wAAATwBAAADAAAFywAAAm8AAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAYAGUAeAB0AHIAYQBUAG8AbwBsAEIAYQByAAAAAhb/////AAAAAAAAAAA=
+State=AAAA/wAAAAD9AAAAAgAAAAEAAAEUAAABlvwCAAAAAfwAAAJrAAABlgAAAMsBAAAd+gAAAAACAAAAAvsAAAAKAG0AaQB4AGUAcgEAAAHwAAACCwAAAK0BAAAC+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAAAAP////8AAAB+AQAAAgAAAAIAAAeAAAACSfwBAAAADvsAAAAUAHMAYwByAGUAZQBuAGcAcgBhAGIAAAAAAP////8AAACTAQAAA/sAAAAaAGEAdQBkAGkAbwBzAHAAZQBjAHQAcgB1AG0AAAAAAP////8AAABlAQAAA/wAAAAAAAABmwAAAIsA////+gAAAAABAAAABfsAAAAWAHAAcgBvAGoAZQBjAHQAXwBiAGkAbgEAAAAA/////wAAAFwBAAAD+wAAAB4AdAByAGEAbgBzAGkAdABpAG8AbgBfAGwAaQBzAHQBAAAAAP////8AAAAEAQAAA/sAAAAWAGUAZgBmAGUAYwB0AF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAAB4AYwBsAGkAcABfAHAAcgBvAHAAZQByAHQAaQBlAHMBAAAAAP////8AAABXAQAAA/sAAAAYAHUAbgBkAG8AXwBoAGkAcwB0AG8AcgB5AQAAAAD/////AAAAWwEAAAP8AAABnAAAAdwAAAFEAP////oAAAAAAgAAAAP7AAAAGABjAGwAaQBwAF8AbQBvAG4AaQB0AG8AcgEAAABEAAABzQAAAMsBAAAC+wAAABIAUwB1AGIAdABpAHQAbABlAHMAAAAAAP////8AAAEgAQAAAvsAAAAOAGwAaQBiAHIAYQByAHkBAAAAAP////8AAACUAQAAAvwAAAN5AAAEBwAAAUQA////+gAAAAACAAAAAvsAAAAeAHAAcgBvAGoAZQBjAHQAXwBtAG8AbgBpAHQAbwByAQAAAL8AAAEsAAAAywEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAEAAAAA/////wAAAI4BAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABJgEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAACkAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAACfAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABRQEAAAP7AAAAEAB0AGUAeAB0AGUAZABpAHQAAAAAAP////8AAAGTAQAAA/sAAAASAHQAaQBtAGUAcgBlAG0AYQBwAAAAAAD/////AAAAWwEAAAP7AAAADABnAHUAaQBkAGUAcwAAAAAA/////wAAAN4BAAAD+wAAABAAYgBpAG4AXwBjAGwAaQBwAAAAAAD/////AAABZQEAAAP7AAAAHgBvAG4AbABpAG4AZQByAGUAcwBvAHUAcgBjAGUAcwAAAAAA/////wAAATwBAAADAAAGawAAAZYAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAYAGUAeAB0AHIAYQBUAG8AbwBsAEIAYQByAAAAAhb/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
 eDP1 DP3-3 Height 1920x1080=1060
 eDP1 DP3-3 Width 1920x1080=1920
@@ -65,31 +65,31 @@ provider=Freesound
 zoom=7
 
 [Recent Dirs]
-KdenliveClipFolder[$e]=$HOME/Videos/obs/LT/avulso/,$HOME/Music/,$HOME/Videos
+KdenliveClipFolder[$e]=$HOME/Videos/video_senior/,$HOME/Videos/video_senior/audio/,$HOME/Videos/
 KdenliveFramesFolder[$e]=$HOME/Videos/obs/canal/aprendarust/parte6/,$HOME/Videos/obs/canal/,/tmp/
-KdenliveProjectsFolder[$e]=$HOME/Videos/obs/LT/avulso,$HOME/Videos,$HOME/Videos/obs/LT/web/d7
+KdenliveProjectsFolder[$e]=$HOME/Videos/video_senior,$HOME/Videos,$HOME/Videos/obs/LT/avulso
 
 [Recent Files]
-File1[$e]=$HOME/Videos/adv3p2.kdenlive
-File10[$e]=$HOME/Videos/obs/LT/avulso/esentials_out.kdenlive
-File2[$e]=$HOME/Videos/obs/canal/aprendarust/parte8/p8.kdenlive
-File3[$e]=$HOME/Videos/obs/LT/web/d4/19.kdenlive
-File4[$e]=$HOME/Videos/obs/LT/web/d7/d1.kdenlive
-File5[$e]=$HOME/Videos/obs/LT/web/d7/09.kdenlive
-File6[$e]=$HOME/Videos/obs/LT/web/d7/10.kdenlive
-File7[$e]=$HOME/Videos/corte_web_intro_fast_api.kdenlive
-File8[$e]=$HOME/Videos/obs/LT/avulso/codeshownew.kdenlive
-File9[$e]=$HOME/Videos/obs/LT/avulso/esentials_intro.kdenlive
-Name1[$e]=adv3p2.kdenlive
-Name10[$e]=esentials_out.kdenlive
-Name2[$e]=p8.kdenlive
-Name3[$e]=19.kdenlive
-Name4[$e]=d1.kdenlive
-Name5[$e]=09.kdenlive
-Name6[$e]=10.kdenlive
-Name7[$e]=corte_web_intro_fast_api.kdenlive
-Name8[$e]=codeshownew.kdenlive
-Name9[$e]=esentials_intro.kdenlive
+File1[$e]=$HOME/Videos/obs/LT/web/d7/09.kdenlive
+File10[$e]=$HOME/Videos/video_senior/seniorfinal2.kdenlive
+File2[$e]=$HOME/Videos/obs/LT/web/d7/10.kdenlive
+File3[$e]=$HOME/Videos/corte_web_intro_fast_api.kdenlive
+File4[$e]=$HOME/Videos/obs/LT/avulso/codeshownew.kdenlive
+File5[$e]=$HOME/Videos/obs/LT/avulso/esentials_intro.kdenlive
+File6[$e]=$HOME/Videos/obs/LT/avulso/esentials_out.kdenlive
+File7[$e]=$HOME/Videos/flaskcon.kdenlive
+File8[$e]=$HOME/Videos/video_senior/senior.kdenlive
+File9[$e]=$HOME/Videos/video_senior/seniorfinal.kdenlive
+Name1[$e]=09.kdenlive
+Name10[$e]=seniorfinal2.kdenlive
+Name2[$e]=10.kdenlive
+Name3[$e]=corte_web_intro_fast_api.kdenlive
+Name4[$e]=codeshownew.kdenlive
+Name5[$e]=esentials_intro.kdenlive
+Name6[$e]=esentials_out.kdenlive
+Name7[$e]=flaskcon.kdenlive
+Name8[$e]=senior.kdenlive
+Name9[$e]=seniorfinal.kdenlive
 
 [RenderWidget]
 showoptions=true
@@ -156,7 +156,7 @@ ColorScheme=Breeze Dark
 ColorSchemePath=BreezeDark.colors
 
 [bin]
-treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAANQAAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAAA1AAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
+treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAANQAAAAJAQEAAQAAAAAAAAAAAAAAAGX/////AAAAgQAAAAAAAAAJAAAA1AAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
 
 [capture]
 decklink_capturedevice=4294967295
@@ -175,7 +175,7 @@ ffmpegpath[$e]=/usr/bin/ffmpeg
 ffplaypath[$e]=/usr/bin/ffplay
 ffprobepath[$e]=/usr/bin/ffprobe
 kdenliverendererpath[$e]=/usr/bin/kdenlive_render
-lastCacheCheck=2023,9,25,15,23,27.086
+lastCacheCheck=2024,2,2,19,12,32.046
 meltpath[$e]=/usr/bin/melt-7
 mltpath[$e]=/usr/share/mlt-7/profiles
 rendererpath[$e]=/usr/bin/melt-7
@@ -220,11 +220,11 @@ force_breeze=true
 guidesCategories=Category 1:0:#9b59b6,Category 2:1:#3daee9,Category 3:2:#1abc9c,Category 4:3:#1cdc9a,Category 5:4:#c9ce3b,Category 6:5:#fdbc4b,Category 7:6:#f39c1f,Category 8:7:#f47750,Category 9:8:#da4453
 lockedGuides=false
 monitor_audio=false
-producerslist=glaxnimate,decklink,framebuffer,abnormal,color,colour,consumer,hold,loader,loader-nogl,melt,melt_file,noise,timewarp,tone,vorbis,avformat,avformat-novalidate,qimage,qtext,kdenlivetitle,blipflash,count,pgm,xml,xml-string,xml-nogl,pango,pixbuf,frei0r.ising0r,frei0r.lissajous0r,frei0r.nois0r,frei0r.onecol0r,frei0r.partik0l,frei0r.plasma,frei0r.test_pat_B,frei0r.test_pat_C,frei0r.test_pat_G,frei0r.test_pat_I,frei0r.test_pat_L,frei0r.test_pat_R
+producerslist=glaxnimate,decklink,framebuffer,abnormal,blank,color,colour,consumer,hold,loader,loader-nogl,melt,melt_file,noise,timewarp,tone,vorbis,avformat,avformat-novalidate,qimage,qtext,kdenlivetitle,blipflash,count,pgm,xml,xml-string,xml-nogl,pango,pixbuf,frei0r.ising0r,frei0r.lissajous0r,frei0r.nois0r,frei0r.onecol0r,frei0r.partik0l,frei0r.plasma,frei0r.test_pat_B,frei0r.test_pat_C,frei0r.test_pat_G,frei0r.test_pat_I,frei0r.test_pat_L,frei0r.test_pat_R
 project_fps=30
 showtitlebars=false
 use_dark_breeze=true
 widgetstyle=Default
 
 [version]
-version=23.08.1
+version=23.08.4
