@@ -10,15 +10,18 @@ cef-minimal 119.4.3-1
 cef-minimal-obs-bin 1:103.0.0_5060_shared_textures_2594+g17f8588+chromium_103.0.5060.134_1-1
 celt 0.11.3-6
 clipit 1.4.5-3
+davinci-resolve 18.6.4-1
 electron13 13.6.9-3
 electron15 15.5.7-1
 electron17 17.4.11-6
 electron18 18.3.15-4
 electron19 19.1.9-5
 electron21 21.4.4-1
+endeavouros-skel-default 1.9-1
+endeavouros-skel-xfce4 3.7-1
 gitkraken 9.10.0-1
 gklib 5.1.1-4
-google-chrome 119.0.6045.199-1
+google-chrome 120.0.6099.109-1
 googler 4.3.13-1
 gromit-mpx-git 1.4.r87.gdb0c147-1
 grub-tools 1.6.9-2
@@ -58,7 +61,7 @@ python-progress 1.6-8
 python2 2.7.18-5
 python2-cairo 1.19.1-2
 python2-gobject2 2.28.7-7
-qt5-webkit 5.212.0alpha4-20
+qt5-webkit 5.212.0alpha4-21
 resp-app 2022.5-1
 rofi-bluetooth-git r33.9d91c04-2
 sdl2_pango 2.1.5-1
@@ -69,7 +72,7 @@ ttf-ms-fonts 2.0-12
 tuxpaint 0.9.31-1
 ventoy-bin 1.0.96-1
 via-bin 3.0.0-0
-visual-studio-code-bin 1.84.2-1
+visual-studio-code-bin 1.85.1-1
 vlc-luajit-debug 3.0.18-3
 wacom-utility 1.21-7
 wlroots0.15 0.15.1-5

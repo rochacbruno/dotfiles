@@ -1,2 +1,0 @@
-execute-keys <percent>
-inc-dec-modify-numbers + 5
