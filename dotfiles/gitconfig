@@ -8,22 +8,28 @@
     default = simple
 [alias]
     pushu = "push -u origin HEAD"
-    pushf = "push -f origin HEAD"
+    pushf = "push --force-with-lease --force-if-includes origin HEAD"
     hist = "log --decorate --graph --pretty=oneline --abbrev-commit --all"
-    cleanup = "!git branch -D $(git branch| grep -v master) || echo 'No branch to delete'"
-    up = "!git fetch upstream && git rebase upstream/master || git pull --rebase"
+    cleanupmaster = "!git branch -D $(git branch| grep -v master) || echo 'No branch to delete'"
+    cleanup = "!git branch | grep -v main | xargs git branch -D"
+    up = "!git fetch --all && git rebase upstream/$(git branch --show-current) || git pull --rebase"
+    upmaster = "!git fetch --all && git rebase upstream/master || git pull --rebase"
+    upmain = "!git fetch --all && git rebase upstream/main || git pull --rebase"
+    updevel = "!git fetch --all && git rebase upstream/devel || git pull --rebase"
     nvm = "reset --soft HEAD~1"
     s = "status"
     l = "log -n 2"
     work = "checkout -b"
     master = "checkout master"
     main = "checkout main"
+    devel = "checkout devel"
     aah = "!f() { git checkout -b aah-$1; }; f"
+    aap = "!f() { git checkout -b aap-$1; }; f"
     amd = "commit --amend --no-edit --allow-empty"
 
 [core]
     excludesfile = ~/.gitignore
-    editor = hx
+    editor = micro
     pager = delta
 [hub]
     protocol = git
@@ -47,3 +53,25 @@
 	conflicstyle = diff3
 [init]
 	defaultBranch = main
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[maintenance]
+	repo = /home/rochacbruno/Projects/galaxy_ng
+	repo = /home/rochacbruno/Projects/dynaconf
+	repo = /home/rochacbruno/Projects/pulp_ansible
+	repo = /home/rochacbruno/Projects/pulp_container
+	repo = /home/rochacbruno/Projects/pulpcore
+	repo = /home/rochacbruno/Projects/plugin_template
+	repo = /home/rochacbruno/Projects/pulp-openapi-generator
+	repo = /home/rochacbruno/Projects/oci_env
+	repo = /home/rochacbruno/Projects/django-ansible-base
+	repo = /home/rochacbruno/Projects/aap-gateway
+	repo = /home/rochacbruno/Projects/ansible-hub-ui
+[url "https://invent.kde.org/"]
+	insteadOf = kde:
+[url "ssh://git@invent.kde.org/"]
+	pushInsteadOf = kde:

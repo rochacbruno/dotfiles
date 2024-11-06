@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.zsh/catppuccin_latte-zsh-syntax-highlighting.zsh
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -94,8 +94,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
+export LANG=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -128,7 +128,7 @@ alias ls='eza'
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
-export EDITOR=hx
+export EDITOR=micro
 GO_PATH=$(go env GOPATH)/bin
 export PATH="/home/rochacbruno/bin/:/home/rochacbruno/.local/bin:$GO_PATH:/home/rochacbruno/.cargo/bin:$PATH"
 unalias -m 'ipython'
@@ -149,12 +149,12 @@ setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor       # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
-export BAT_THEME="Catppuccin-mocha"
+export BAT_THEME="Catppuccin-latte"
 
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+--color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
+--color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
+--color=marker:#dc8a78,fg+:#4c4f69,prompt:#8839ef,hl+:#d20f39"
 
 #export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
 # export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files'
@@ -164,3 +164,4 @@ alias fzv='lvim $(fzf)'
 source /home/rochacbruno/.config/broot/launcher/bash/br
 
 alias venv='[ -d .venv ] || python3 -m venv .venv; source .venv/bin/activate'
+. "$HOME/.cargo/env"

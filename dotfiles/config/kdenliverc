@@ -1,7 +1,6 @@
-[KFileDialog Settings]
-Recent Files[$e]=D1P1-intro-ao-treinamento.mp4,file:$HOME/Videos/video_senior/screen.mkv,file:$HOME/Videos/video_senior/audio/Audio • Background Music • Audio 1.m4a,file:$HOME/Videos/video_senior/camera.mkv,file:$HOME/Videos/voce_nao_e_senior.mp4,file:$HOME/Videos/video_senior/audio/Bruno Rocha • Camera • Audio 1.m4a,file:$HOME/Music/Purple Planet Music - Funk City.mp3,file:$HOME/Pictures/cs_julio.png,file:$HOME/Pictures/cs_rocha.png,file:$HOME/Pictures/cs_teo.png,file:$HOME/Pictures/cs_jess.png
-Recent URLs[$e]=file:$HOME/Pictures/,file:$HOME/Videos/obs/,file:$HOME/,file:$HOME/Videos/obs/LT/,file:$HOME/Music/,file:$HOME/Videos/obs/random/,file:$HOME/Videos/,file:$HOME/Videos/video_senior/,file:$HOME/Videos/video_senior/audio/
-detailViewIconSize=16
+[FileDialogSize]
+2 screens: Height=540
+2 screens: Width=960
 
 [MainWindow]
 2 screens: Height=1057
@@ -65,31 +64,31 @@ provider=Freesound
 zoom=7
 
 [Recent Dirs]
-KdenliveClipFolder[$e]=$HOME/Videos/video_senior/,$HOME/Videos/video_senior/audio/,$HOME/Videos/
+KdenliveClipFolder[$e]=$HOME/Pictures/,$HOME/Videos/obs/LT/auto/,$HOME/Videos/video_senior/
 KdenliveFramesFolder[$e]=$HOME/Videos/obs/canal/aprendarust/parte6/,$HOME/Videos/obs/canal/,/tmp/
-KdenliveProjectsFolder[$e]=$HOME/Videos/video_senior,$HOME/Videos,$HOME/Videos/obs/LT/avulso
+KdenliveProjectsFolder[$e]=$HOME/Videos,$HOME/Videos/video_senior,$HOME/Videos/obs/LT/avulso
 
 [Recent Files]
-File1[$e]=$HOME/Videos/obs/LT/web/d7/09.kdenlive
-File10[$e]=$HOME/Videos/video_senior/seniorfinal2.kdenlive
-File2[$e]=$HOME/Videos/obs/LT/web/d7/10.kdenlive
-File3[$e]=$HOME/Videos/corte_web_intro_fast_api.kdenlive
-File4[$e]=$HOME/Videos/obs/LT/avulso/codeshownew.kdenlive
-File5[$e]=$HOME/Videos/obs/LT/avulso/esentials_intro.kdenlive
-File6[$e]=$HOME/Videos/obs/LT/avulso/esentials_out.kdenlive
-File7[$e]=$HOME/Videos/flaskcon.kdenlive
-File8[$e]=$HOME/Videos/video_senior/senior.kdenlive
-File9[$e]=$HOME/Videos/video_senior/seniorfinal.kdenlive
-Name1[$e]=09.kdenlive
-Name10[$e]=seniorfinal2.kdenlive
-Name2[$e]=10.kdenlive
-Name3[$e]=corte_web_intro_fast_api.kdenlive
-Name4[$e]=codeshownew.kdenlive
-Name5[$e]=esentials_intro.kdenlive
-Name6[$e]=esentials_out.kdenlive
-Name7[$e]=flaskcon.kdenlive
-Name8[$e]=senior.kdenlive
-Name9[$e]=seniorfinal.kdenlive
+File1[$e]=$HOME/Videos/obs/LT/web/d7/10.kdenlive
+File10[$e]=$HOME/Videos/uv.kdenlive
+File2[$e]=$HOME/Videos/corte_web_intro_fast_api.kdenlive
+File3[$e]=$HOME/Videos/obs/LT/avulso/codeshownew.kdenlive
+File4[$e]=$HOME/Videos/obs/LT/avulso/esentials_intro.kdenlive
+File5[$e]=$HOME/Videos/obs/LT/avulso/esentials_out.kdenlive
+File6[$e]=$HOME/Videos/flaskcon.kdenlive
+File7[$e]=$HOME/Videos/video_senior/senior.kdenlive
+File8[$e]=$HOME/Videos/video_senior/seniorfinal.kdenlive
+File9[$e]=$HOME/Videos/video_senior/seniorfinal2.kdenlive
+Name1[$e]=10.kdenlive
+Name10[$e]=uv.kdenlive
+Name2[$e]=corte_web_intro_fast_api.kdenlive
+Name3[$e]=codeshownew.kdenlive
+Name4[$e]=esentials_intro.kdenlive
+Name5[$e]=esentials_out.kdenlive
+Name6[$e]=flaskcon.kdenlive
+Name7[$e]=senior.kdenlive
+Name8[$e]=seniorfinal.kdenlive
+Name9[$e]=seniorfinal2.kdenlive
 
 [RenderWidget]
 showoptions=true
@@ -132,18 +131,21 @@ rec601=false
 [Shortcut Schemes]
 Current Scheme=Default
 
+[TitleGradients]
+Gradient 1=
+
 [TitleWidget]
 background_alpha=0
 background_color=0,0,0
-dialog_geometry=AdnQywADAAAAAAXgAAACoAAACisAAAV3AAAF4gAAAqAAAAopAAAFdQAAAAEAAAAAB4AAAAXiAAACoAAACikAAAV1
-font_color=255,255,255
-font_family=Noto Sans Bengali Black,-1,143,5,75,0,0,0,0,0
+dialog_geometry=AdnQywADAAAAAAQ4AAABpAAACH8AAAR5AAAEOAAAAaQAAAh/AAAEeQAAAAAAAAAAB4AAAAQ4AAABpAAACH8AAAR5
+font_color=255,255,0
+font_family=Noto Sans Bengali Black,-1,60,5,400,0,0,0,0,0,0,1,0,0,0,1
 font_italic=false
 font_outline=40
 font_outline_color=0,0,0
-font_pixel_size=143
+font_pixel_size=60
 font_underlined=false
-font_weight=75
+font_weight=400
 rect_background_alpha=255
 rect_background_color=0,0,0
 rect_foreground_alpha=255
@@ -156,7 +158,8 @@ ColorScheme=Breeze Dark
 ColorSchemePath=BreezeDark.colors
 
 [bin]
-treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAAEMAAAAHAAAAMAAAAAYAAAAqAAAABQAAAFYAAAAEAAAAMwAAAAMAAAA7AAAAAgAAAGcAAAABAAAAOwAAANQAAAAJAQEAAQAAAAAAAAAAAAAAAGX/////AAAAgQAAAAAAAAAJAAAA1AAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADU
+binMode=1
+treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAABgAAACoAAAADAAAAOwAAAAcAAAA0AAAAAQAAADsAAAAIAAAAQwAAAAIAAABnAAAABQAAAFYAAAAEAAAAMwAAAYkAAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAABiQAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAADUAAAAAA==
 
 [capture]
 decklink_capturedevice=4294967295
@@ -175,7 +178,7 @@ ffmpegpath[$e]=/usr/bin/ffmpeg
 ffplaypath[$e]=/usr/bin/ffplay
 ffprobepath[$e]=/usr/bin/ffprobe
 kdenliverendererpath[$e]=/usr/bin/kdenlive_render
-lastCacheCheck=2024,2,2,19,12,32.046
+lastCacheCheck=2024,9,10,0,3,16.845
 meltpath[$e]=/usr/bin/melt-7
 mltpath[$e]=/usr/share/mlt-7/profiles
 rendererpath[$e]=/usr/bin/melt-7
@@ -208,9 +211,10 @@ trackheight=69
 
 [titles]
 titlerShowbg=true
+titlerVersion=400
 
 [unmanaged]
-colorclipcolor=255,255,128
+colorclipcolor=255,255,255
 consumerslist=decklink,multi,null,avformat,sdl,sdl_audio,sdl_preview,sdl_still,qglsl,sdl2,sdl2_audio,blipflash,xml,jack,cbrts
 default_profile=atsc_1080p_30
 defaultrescaleheight=540
@@ -220,11 +224,11 @@ force_breeze=true
 guidesCategories=Category 1:0:#9b59b6,Category 2:1:#3daee9,Category 3:2:#1abc9c,Category 4:3:#1cdc9a,Category 5:4:#c9ce3b,Category 6:5:#fdbc4b,Category 7:6:#f39c1f,Category 8:7:#f47750,Category 9:8:#da4453
 lockedGuides=false
 monitor_audio=false
-producerslist=glaxnimate,decklink,framebuffer,abnormal,blank,color,colour,consumer,hold,loader,loader-nogl,melt,melt_file,noise,timewarp,tone,vorbis,avformat,avformat-novalidate,qimage,qtext,kdenlivetitle,blipflash,count,pgm,xml,xml-string,xml-nogl,pango,pixbuf,frei0r.ising0r,frei0r.lissajous0r,frei0r.nois0r,frei0r.onecol0r,frei0r.partik0l,frei0r.plasma,frei0r.test_pat_B,frei0r.test_pat_C,frei0r.test_pat_G,frei0r.test_pat_I,frei0r.test_pat_L,frei0r.test_pat_R
+producerslist=decklink,framebuffer,glaxnimate,abnormal,blank,color,colour,consumer,hold,loader,loader-nogl,melt,melt_file,noise,timewarp,tone,vorbis,avformat,avformat-novalidate,blipflash,count,pgm,subtitle,qimage,qtext,kdenlivetitle,xml,xml-string,xml-nogl,pango,pixbuf,frei0r.ising0r,frei0r.lissajous0r,frei0r.nois0r,frei0r.onecol0r,frei0r.partik0l,frei0r.plasma,frei0r.test_pat_B,frei0r.test_pat_C,frei0r.test_pat_G,frei0r.test_pat_I,frei0r.test_pat_L,frei0r.test_pat_R
 project_fps=30
 showtitlebars=false
 use_dark_breeze=true
 widgetstyle=Default
 
 [version]
-version=23.08.4
+version=24.08.0

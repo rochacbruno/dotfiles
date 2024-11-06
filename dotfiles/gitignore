@@ -5,3 +5,10 @@ rest_nvim
 .compose.env*
 .hurl/
 .venv/
+.venv3*/
+*.kate-swp
+**/*.kate-swp
+*.kateproject*
+**/.kateproject*
+profiles/dab_jwt/proxy/proxy
+.idea/

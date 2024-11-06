@@ -1,8 +1,7 @@
 {
     "autoclose": false,
     "backup": false,
-    "colorcolumn": 100,
-    "colorscheme": "catppuccin-mocha",
+    "colorscheme": "monokai",
     "diffgutter": true,
     "ft:makefile": {
         "tabstospaces": false

@@ -12,6 +12,10 @@ echo "Yay update"
 yay
 echo "DONE yay update"
 echo "-------------"
+echo "Flatpak"
+flatpak update -y
 echo "Grub install"
 sudo grub-install
+
+
 echo "OHH YEAHH IT IS GREAT"

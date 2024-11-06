@@ -1,0 +1,3 @@
+#!/bin/bash
+
+WEBKIT_DISABLE_COMPOSITING_MODE=1 /home/rochacbruno/Applications/tauthy_0.2.7_amd64.AppImage
