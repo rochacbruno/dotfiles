@@ -27,27 +27,6 @@ dotfiles:
   f_pypirc:
     src: pypirc
     dst: ~/.pypirc
-  f_wacom_utility:
-    src: wacom_utility
-    dst: ~/.wacom_utility
-  d_screenlayout:
-    src: screenlayout
-    dst: ~/.screenlayout
-  d_autorandr:
-    src: config/autorandr
-    dst: ~/.config/autorandr
-  f_settings.json:
-    src: config/Code/User/settings.json
-    dst: ~/.config/Code/User/settings.json
-  d_espanso:
-    src: config/espanso
-    dst: ~/.config/espanso
-  d_i3:
-    src: config/i3
-    dst: ~/.config/i3
-  d_i3status-rust:
-    src: config/i3status-rust
-    dst: ~/.config/i3status-rust
   f_kdenlive-layoutsrc:
     src: config/kdenlive-layoutsrc
     dst: ~/.config/kdenlive-layoutsrc
@@ -65,9 +44,6 @@ dotfiles:
     upignore:
     - profiler_data/*
     - logs/*
-  d_rofi:
-    src: config/rofi
-    dst: ~/.config/rofi
   d_terminator:
     src: config/terminator
     dst: ~/.config/terminator
@@ -108,21 +84,9 @@ dotfiles:
   f_pacman.conf:
     src: etc/pacman.conf
     dst: /etc/pacman.conf
-  d_lvim:
-    src: config/lvim
-    dst: ~/.config/lvim
   d_bat:
     src: config/bat
     dst: ~/.config/bat
-  d_dunst:
-    src: config/dunst
-    dst: ~/.config/dunst
-  d_share_rofi:
-    src: local/share/rofi
-    dst: ~/.local/share/rofi
-  f_mocha.xresources:
-    src: config/mocha.Xresources
-    dst: ~/.config/mocha.Xresources
   d_zsh:
     src: zsh
     dst: ~/.zsh
@@ -135,96 +99,54 @@ dotfiles:
   f_starship.toml:
     src: config/starship.toml
     dst: ~/.config/starship.toml
-  d_nitrogen:
-    src: config/nitrogen
-    dst: ~/.config/nitrogen
-  f_xmodmap:
-    src: Xmodmap
-    dst: ~/.Xmodmap
-  d_nvim:
-    src: config/nvim
-    dst: ~/.config/nvim
-  f_config.toml:
-    src: config/helix/config.toml
-    dst: ~/.config/helix/config.toml
-  f_languages.toml:
-    src: config/helix/languages.toml
-    dst: ~/.config/helix/languages.toml
-  f_config_vim.toml:
-    src: config/helix/config_vim.toml
-    dst: ~/.config/helix/config_vim.toml
-  f_config_zen.toml:
-    src: config/helix/config_zen.toml
-    dst: ~/.config/helix/config_zen.toml
-  d_snippets:
-    src: config/helix/snippets
-    dst: ~/.config/helix/snippets
-  d_kitty:
-    src: config/kitty
-    dst: ~/.config/kitty
-  f_wezterm.lua:
-    src: wezterm.lua
-    dst: ~/.wezterm.lua
-  f_wezterm_shell_integrations.sh:
-    src: bin/wezterm_shell_integrations.sh
-    dst: ~/bin/wezterm_shell_integrations.sh
-  f_catppuccin_mocha_transparent.toml:
-    src: config/helix/runtime/themes/catppuccin_mocha_transparent.toml
-    dst: ~/.config/helix/runtime/themes/catppuccin_mocha_transparent.toml
-  f_scratch_terminal.desktop:
-    src: config/scratch_terminal.desktop
-    dst: ~/.config/scratch_terminal.desktop
-    chmod: '755'
-  d_kak:
-    src: config/kak
-    dst: ~/.config/kak
-    cmpignore:
-      - plugins/*/.git
-      - plugins/.build
-      - kakhist.txt
-      - mru_files.txt
-    upignore:
-      - plugins/*/.git
-      - plugins/.build
-      - kakhist.txt
-      - mru_files.txt
+  d_kate:
+    src: config/kate
+    dst: ~/.config/kate
+  f_katerc:
+    src: config/katerc
+    dst: ~/.config/katerc
+    chmod: '600'
+  f_katevirc:
+    src: config/katevirc
+    dst: ~/.config/katevirc
+    chmod: '600'
+  f_katemetainfos:
+    src: config/katemetainfos
+    dst: ~/.config/katemetainfos
+    chmod: '600'
+  f_kdeglobals:
+    src: config/kdeglobals
+    dst: ~/.config/kdeglobals
+    chmod: '600'
+  f_kateschemarc:
+    src: config/kateschemarc
+    dst: ~/.config/kateschemarc
+    chmod: '600'
+  d_kxmlgui5_kate:
+    src: local/share/kxmlgui5/kate
+    dst: ~/.local/share/kxmlgui5/kate
+  d_katepart:
+    src: local/share/kxmlgui5/katepart
+    dst: ~/.local/share/kxmlgui5/katepart
+  d_kateproject:
+    src: local/share/kxmlgui5/kateproject
+    dst: ~/.local/share/kxmlgui5/kateproject
+  f_kglobalshortcutsrc:
+    src: config/kglobalshortcutsrc
+    dst: ~/.config/kglobalshortcutsrc
+    chmod: '600'
 profiles:
-  pop-os:
-    dotfiles:
-    - f_gitconfig
-    - d_lvim
-    - d_nvim
-    - d_bat
-    - d_espanso
-    - f_gitignore
-    - f_pypirc
-    - f_zshrc
-    - d_zsh
-    - d_terminator
-    - f_gromit-mpx.cfg
-    - f_gromit-mpx.ini
-    - f_starship.toml
   rocha:
     dotfiles:
-    - f_gromit-mpx.cfg
-    - f_gromit-mpx.ini
     - f_bashrc
     - f_gitconfig
     - f_gitignore
     - f_gtkrc-2.0
     - f_zshrc
     - f_pypirc
-    - f_wacom_utility
-    - d_screenlayout
-    - d_autorandr
-    - f_settings.json
-    - d_espanso
-    - d_i3
-    - d_i3status-rust
     - f_kdenlive-layoutsrc
     - f_kdenliverc
     - d_obs-studio
-    - d_rofi
     - d_terminator
     - d_bin
     - f_bindings.json
@@ -233,26 +155,18 @@ profiles:
     - f_micro_settings.json
     - d_thunar
     - f_pacman.conf
-    - d_lvim
     - d_bat
-    - d_dunst
-    - d_share_rofi
-    - f_mocha.xresources
     - d_zsh
     - d_themes
     - d_flameshot
     - f_starship.toml
-    - d_nitrogen
-    - f_xmodmap
-    - d_nvim
-    - f_config.toml
-    - f_languages.toml
-    - f_config_vim.toml
-    - f_config_zen.toml
-    - d_snippets
-    - d_kitty
-    - f_wezterm.lua
-    - f_wezterm_shell_integrations.sh
-    - f_catppuccin_mocha_transparent.toml
-    - f_scratch_terminal.desktop
-    - d_kak
+    - d_kate
+    - f_katerc
+    - f_katevirc
+    - f_katemetainfos
+    - f_kdeglobals
+    - f_kateschemarc
+    - d_kxmlgui5_kate
+    - d_katepart
+    - d_kateproject
+    - f_kglobalshortcutsrc

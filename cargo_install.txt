@@ -4,7 +4,11 @@ bottom v0.8.0:
     btm
 broot v1.25.1:
     broot
-cargo-edit v0.11.6:
+cargo-bump v1.1.0:
+    cargo-bump
+cargo-deny v0.16.1:
+    cargo-deny
+cargo-edit v0.13.0:
     cargo-add
     cargo-rm
     cargo-set-version
@@ -17,6 +21,12 @@ cargo-modules v0.7.1:
     cargo-modules
 cargo-show-asm v0.2.4:
     cargo-asm
+cargo-udeps v0.1.50:
+    cargo-udeps
+cargo-unused-features v0.2.0:
+    unused-features
+cargo-upgrades v2.1.2:
+    cargo-upgrades
 cargo-watch v8.1.2:
     cargo-watch
 daktilo v0.1.0:
@@ -29,14 +39,20 @@ evcxr_repl v0.14.1:
     evcxr
 fd-find v8.6.0:
     fd
+glues v0.3.2:
+    glues
 helix-term v23.10.0 (/home/rochacbruno/Projects/helix/helix-term):
     hx
+hyperfine v1.18.0:
+    hyperfine
 i3-highlight-focused v0.1.0 (/home/rochacbruno/Projects/i3-highlight-focused):
     i3-highlight-focused
 irust v1.66.0:
     irust
 jetp v0.1.1:
     jetp
+just v1.36.0:
+    just
 kak-lsp v14.2.0-snapshot (/home/rochacbruno/.config/kak/plugins/kak-lsp):
     kak-lsp
 kak-popup v0.4.1:
@@ -71,6 +87,8 @@ mdbook-yml-header v0.1.0:
     mdbook-yml-header
 mdcat v0.25.1:
     mdcat
+openapi-tui v0.3.0:
+    openapi-tui
 ox v0.2.7 (https://github.com/curlpipe/ox#086f6653):
     ox
 simple-completion-language-server v0.1.0 (/home/rochacbruno/Projects/simple-completion-language-server):
@@ -79,3 +97,5 @@ taplo-cli v0.8.1:
     taplo
 teetty v0.2.0:
     teetty
+when-cli v0.4.0:
+    when

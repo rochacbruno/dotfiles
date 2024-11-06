@@ -1,11 +1,1 @@
-code --install-extension dracula-theme.theme-dracula
-code --install-extension drcika.apc-extension
-code --install-extension eamodio.gitlens
-code --install-extension kishannareshpal.easy-terminal-zoom
-code --install-extension miguelsolorio.min-theme
-code --install-extension miguelsolorio.symbols
-code --install-extension ms-python.python
-code --install-extension ms-python.vscode-pylance
-code --install-extension ms-vscode.makefile-tools
-code --install-extension rangav.vscode-thunder-client
-code --install-extension rust-lang.rust-analyzer
+code --install-extension
