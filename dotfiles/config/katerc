@@ -1,0 +1,332 @@
+[BuildConfig]
+AllowedCommandLines=
+AutoSwitchToOutput=true
+BlockedCommandLines=
+UseDiagnosticsOutput=true
+
+[ColorPicker]
+HexLengths=6
+NamedColors=true
+PreviewAfterColor=true
+
+[ColoredBrackets]
+color1=#1275ef
+color2=#f83c1f
+color3=#9dba1e
+color4=#e219e2
+color5=#37d21c
+
+[Desktop Entry]
+DefaultProfile=Profile 1.profile
+
+[FileDialogSize]
+2 screens: Height=540
+2 screens: Width=960
+
+[General]
+Allow Tab Scrolling=true
+Auto Hide Tabs=true
+Close After Last=false
+Close documents with window=true
+Days Meta Infos=30
+Diagnostics Limit=12000
+Diff Show Style=0
+DiffWidget Show Commit Info=false
+Elide Tab Text=true
+Expand Tabs=true
+Icon size for left and right sidebar buttons=16
+Last Session=dynaconf
+Modified Notification=false
+Mouse back button action=0
+Mouse forward button action=0
+Open New Tab To The Right Of Current=true
+Output History Limit=100
+Output With Date=false
+Quickopen Filter Mode=0
+Quickopen List Mode=true
+Recent File List Entry Count=10
+Restore Window Configuration=true
+SDI Mode=false
+Save Meta Infos=true
+Session Manager Sort Column=2
+Session Manager Sort Order=0
+Show Full Path in Title=true
+Show Menu Bar=false
+Show Status Bar=true
+Show Symbol In Navigation Bar=true
+Show Tab Bar=true
+Show Tabs Close Button=true
+Show Url Nav Bar=true
+Show output view for message type=1
+Show text for left and right sidebar=false
+Show welcome view for new window=true
+Startup Session=manual
+Stash new unsaved files=true
+Stash unsaved file changes=false
+Sync section size with tab positions=true
+Tab Double Click New Document=true
+Tab Middle Click Close Document=false
+Tabbar Tab Limit=0
+
+[KTextEditor Document]
+Allow End of Line Detection=true
+Auto Detect Indent=true
+Auto Reload If State Is In Version Control=true
+Auto Save=false
+Auto Save Interval=0
+Auto Save On Focus Out=false
+BOM=false
+Backup Local=false
+Backup Prefix=
+Backup Remote=false
+Backup Suffix=~
+Camel Cursor=true
+Encoding=UTF-8
+End of Line=0
+Indent On Backspace=true
+Indent On Tab=true
+Indent On Text Paste=true
+Indentation Mode=none
+Indentation Width=4
+Keep Extra Spaces=false
+Line Length Limit=10000
+Newline at End of File=true
+On-The-Fly Spellcheck=true
+Overwrite Mode=false
+PageUp/PageDown Moves Cursor=false
+Remove Spaces=0
+ReplaceTabsDyn=true
+Show Spaces=1
+Show Tabs=true
+Smart Home=true
+Swap Directory=
+Swap File Mode=1
+Swap Sync Interval=15
+Tab Handling=2
+Tab Width=4
+Trailing Marker Size=2
+Word Wrap=false
+Word Wrap Column=80
+
+[KTextEditor Editor]
+Encoding Prober Type=1
+Fallback Encoding=ISO 8859-6
+
+[KTextEditor Renderer]
+Animate Bracket Matching=true
+Auto Color Theme Selection=false
+Color Theme=Solarized Light
+Line Height Multiplier=1.3
+Show Indentation Lines=true
+Show Whole Bracket Expression=false
+Text Font=JetBrainsMonoNL NF SemiBold,12,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,Regular
+Text Font Features=
+Word Wrap Marker=true
+
+[KTextEditor View]
+Allow Mark Menu=true
+Auto Brackets=true
+Auto Center Lines=0
+Auto Completion=true
+Auto Completion Preselect First Entry=true
+Backspace Remove Composed Characters=false
+Bookmark Menu Sorting=0
+Bracket Match Preview=true
+Chars To Enclose Selection=<>(){}[]'"
+Default Mark Type=1
+Dynamic Word Wrap=true
+Dynamic Word Wrap Align Indent=80
+Dynamic Word Wrap At Static Marker=false
+Dynamic Word Wrap Indicators=1
+Dynamic Wrap not at word boundaries=false
+Enable Accessibility=true
+Enable Tab completion=true
+Enter To Insert Completion=true
+Fold First Line=true
+Folding Bar=true
+Folding Preview=true
+Icon Bar=false
+Input Mode=0
+Keyword Completion=true
+Line Modification=true
+Line Numbers=true
+Max Clipboard History Entries=20
+Maximum Search History Size=100
+Mouse Paste At Cursor Position=false
+Multiple Cursor Modifier=134217728
+Persistent Selection=false
+Scroll Bar Marks=true
+Scroll Bar Mini Map All=true
+Scroll Bar Mini Map Width=40
+Scroll Bar MiniMap=true
+Scroll Bar Preview=true
+Scroll Past End=true
+Search/Replace Flags=140
+Shoe Line Ending Type in Statusbar=true
+Show Documentation With Completion=true
+Show File Encoding=true
+Show Focus Frame Around Editor=true
+Show Folding Icons On Hover Only=true
+Show Line Count=true
+Show Scrollbars=1
+Show Statusbar Dictionary=true
+Show Statusbar Highlighting Mode=true
+Show Statusbar Input Mode=true
+Show Statusbar Line Column=true
+Show Statusbar Tab Settings=true
+Show Word Count=true
+Smart Copy Cut=true
+Statusbar Line Column Compact Mode=true
+Text Drag And Drop=true
+User Sets Of Chars To Enclose Selection=
+Vi Input Mode Steal Keys=false
+Vi Relative Line Numbers=true
+Word Completion=true
+Word Completion Minimal Word Length=2
+Word Completion Remove Tail=false
+
+[KTextEditor::Search]
+Replace History=
+Search History=serde_yaml,serde_,serde_json,chain,KEYRING,keyring,dynaconf,create,Created,print,client_utils,LAST_POSTED_FILE,path=,DOCKER_IMAGE_NAME,./compose,check-manifest,markdown,get_current_active_user,SuperUser,mastodon,alt,render,unit,__validators,release,to_dict,DYNABOXIFY,DynaBox,DYNA,post_hooks,_post_hooks,xfail,print(,UnionType,is_optional,new_union,Optional,union,validator_condition_factory,is_type_of,it_type_of,raise_for_invalid_annotated,allows_em,allow_emp,validate_enclosed_list,_issubclass,issubclass,Union,_defaults,importlib,.write,json.dumps,json,_prepare_json,junit,dynacon,jwt_consumer,INSTALLED_APPS,dynaconf_merge,ansible_base,GALAXY_AUTHENTICATION_CLASSES,create_api_client,client,OUTDATED,self.stdout,transaction,FRESH_VARS,def __init__,def get,AAP,aap,return,hash,tasks,ResourceSyncStatus,!!! info,task.enc_kwargs,task.kwargs,enc_kwargs,task.,pulp_container
+
+[Konsole]
+AutoSyncronize=true
+AutoSyncronizeMode=0
+KonsoleEscKeyBehaviour=true
+KonsoleEscKeyExceptions=vi,vim,nvim,git,hx,helix,micro
+RemoveExtension=false
+RunPrefix=
+SetEditor=true
+
+[MainWindow]
+2 screens: Height=1367
+2 screens: Width=1078
+2 screens: Window-Maximized=true
+3 screens: Height=939
+3 screens: Width=1516
+3 screens: Window-Maximized=true
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+HideMenuBarWarning=false
+Kate hide sidebars notification message=false
+
+[PluginSymbolViewer]
+ExpandTree=true
+SortSymbols=false
+TreeView=true
+ViewTypes=true
+
+[Printing][HeaderFooter]
+FooterBackground=211,211,211
+FooterBackgroundEnabled=false
+FooterEnabled=true
+FooterForeground=0,0,0
+FooterFormatCenter=
+FooterFormatLeft=
+FooterFormatRight=%U
+HeaderBackground=211,211,211
+HeaderBackgroundEnabled=false
+HeaderEnabled=true
+HeaderFooterFont=JetBrains Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+HeaderForeground=0,0,0
+HeaderFormatCenter=%f
+HeaderFormatLeft=%y
+HeaderFormatRight=%p
+
+[Printing][Layout]
+BackgroundColorEnabled=false
+BoxColor=invalid
+BoxEnabled=false
+BoxMargin=6
+BoxWidth=1
+ColorScheme=Printing
+Font=JetBrains Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[Printing][Text]
+DontPrintFoldedCode=true
+Legend=false
+LineNumbers=false
+
+[Shortcut Schemes]
+Current Scheme=Default
+
+[Snippets]
+enabledRepositories=/home/rochacbruno/.local/share/ktexteditor_snippets/data/137116-Python Snippets.xml
+
+[Snippets][repository /home/rochacbruno/.local/share/ktexteditor_snippets/data/1137116-Python Snippets.xml]
+shortcut #!=
+shortcut class=
+shortcut def=
+shortcut for=
+shortcut gplheader=
+shortcut ifmain=
+shortcut ipdb=
+shortcut lambda=
+shortcut moduledoc=
+shortcut try=
+shortcut while=
+
+[Snippets][repository /home/rochacbruno/.local/share/ktexteditor_snippets/data/137116-Python Snippets.xml]
+shortcut #!=
+shortcut class=
+shortcut def=
+shortcut for=
+shortcut gplheader=
+shortcut ifmain=
+shortcut ipdb=
+shortcut lambda=
+shortcut moduledoc=
+shortcut try=
+shortcut while=
+
+[UiSettings]
+ColorScheme=Breeze Solarized Light
+
+[debugplugin]
+DAPConfiguration=
+
+[filetree]
+editShade=183,220,246
+listMode=false
+middleClickToClose=false
+shadingEnabled=true
+showCloseButton=true
+showFullPathOnRoots=true
+showToolbar=true
+sortRole=0
+viewShade=211,190,222
+
+[lspclient]
+AllowedServerCommandLines=/home/rochacbruno/.local/bin/ruff-lsp,/home/rochacbruno/.local/bin/rust-analyzer,/home/rochacbruno/Projects/aap-gateway/.venv/bin/pylsp --check-parent-process,/home/rochacbruno/Projects/aap-gateway/django-ansible-base/.venv/bin/pylsp --check-parent-process,/home/rochacbruno/Projects/aap-gateway/django-ansible-base/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/dundie-api/.venv/bin/pylsp --check-parent-process,/home/rochacbruno/Projects/dundie-api/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/dundie-rewards/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/dynaconf/.venv/bin/pylsp --check-parent-process,/home/rochacbruno/Projects/dynaconf/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/galaxy-importer/.venv/bin/python -m esbonio,/home/rochacbruno/Projects/galaxy-importer/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/galaxy_ng/.venv/bin/pylsp --check-parent-process,/home/rochacbruno/Projects/galaxy_ng/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/galaxy_ng/.venv311/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/parkencantado/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/pulpcore/.venv/bin/python3 -m pylsp --check-parent-process -v,/home/rochacbruno/Projects/rss2bsky/.venv/bin/python3 -m pylsp --check-parent-process -v,/usr/bin/bash-language-server start,/usr/bin/marksman server,/usr/bin/pylsp --check-parent-process,/usr/bin/python -m esbonio,/usr/bin/python3 -m pylsp --check-parent-process -v,/usr/bin/typescript-language-server --stdio,/usr/bin/yaml-language-server --stdio,/usr/lib/rustup/bin/rust-analyzer
+AutoHover=true
+AutoImport=true
+BlockedServerCommandLines=
+CompletionDocumentation=true
+CompletionParens=true
+Diagnostics=true
+FormatOnSave=false
+HighlightGoto=true
+IncrementalSync=true
+InlayHints=true
+Messages=true
+ReferencesDeclaration=true
+SemanticHighlighting=true
+ServerConfiguration=
+SignatureHelp=true
+SymbolDetails=true
+SymbolExpand=true
+SymbolSort=true
+SymbolTree=true
+TypeFormatting=false
+
+[project]
+autorepository=
+gitStatusDoubleClick=3
+gitStatusSingleClick=1
+index=true
+indexDirectory=file:///home/rochacbruno/Projects/kate_index
+multiProjectCompletion=true
+multiProjectGoto=true
+restoreProjectsForSessions=true

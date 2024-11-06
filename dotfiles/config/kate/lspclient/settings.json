@@ -1,0 +1,43 @@
+{
+  "servers": {
+    "python": {
+      "command": ["python3", "-m", "pylsp", "--check-parent-process", "-v"],
+      "rootIndicationFileNames": ["setup.py", "pyproject.toml", "setup.cfg"],
+      "settings":{
+        "pylsp": {
+          "plugins": {
+            "pylint": {"enabled": false},
+            "flake8": {"enabled": false},
+	  "ruff": {"enabled": true, "lineLength": 160},
+	  "mypy": {
+    	   "enabled": true,
+    	   "live_mode": true,
+             "strict": true,
+             "exclude": ["tests/*", ".venv*"]
+             },
+	  "pycodestyle": {"enabled": false, "maxLineLength": 160},
+	  "mccabe": {"threshold": 25},
+	  "rope_autoimport": {
+                "memory": false,
+                "enabled": false,
+                "completions": {"enabled": true},
+                "code_actions": {"enabled": true}
+             },
+	  "jedi_completion": {"fuzzy": true},
+            "jedi_rename": {"enabled": true},
+            "rope_rename": {"enabled": false}
+          }
+        }
+      }
+    },
+    "rust": {
+            "rootIndicationFileNames": ["Cargo.toml"],
+            "initializationOptions": {
+                "check": {
+                    "allTargets": false
+                }
+            }
+        }
+   
+  }
+}

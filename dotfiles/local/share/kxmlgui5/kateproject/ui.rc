@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
+<gui library="kateprojectplugin" name="kateprojectplugin" translationDomain="kateproject" version="14">
+ <MenuBar>
+  <Menu name="file">
+   <Action group="open_merge" name="projects_open_project"/>
+  </Menu>
+  <Menu name="projects">
+   <text>&amp;Projects</text>
+   <Action name="projects_prev_project"/>
+   <Action name="projects_next_project"/>
+   <Separator/>
+   <Action name="projects_goto_index"/>
+   <Action name="projects_goto_symbol"/>
+   <Separator/>
+   <Action name="projects_close"/>
+   <Action name="projects_close_all"/>
+   <Action name="projects_close_without_open_documents"/>
+   <Separator/>
+   <Action name="projects_todos"/>
+  </Menu>
+ </MenuBar>
+ <Menu name="ktexteditor_popup" noMerge="1">
+  <Action name="popup_project"/>
+ </Menu>
+ <ActionProperties scheme="Default">
+  <Action name="projects_next_project" shortcut=""/>
+  <Action name="projects_prev_project" shortcut=""/>
+ </ActionProperties>
+</gui>
+<!-- kate: space-indent on; indent-width 4; replace-tabs on; -->

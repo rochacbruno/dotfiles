@@ -1,0 +1,33 @@
+[file:///home/rochacbruno/Projects/galaxy_ng/Dockerfile.rhel8]
+Checksum=d547a9ea967236a4b07c46d90edc7af070e87283
+Mode=Normal
+Mode Set By User=true
+Time=2024,10,11,13,53,27.989
+URL=file:///home/rochacbruno/Projects/galaxy_ng/Dockerfile.rhel8
+
+[file:///home/rochacbruno/Projects/galaxy_ng/dev/compose/Dockerfile.extension]
+Checksum=5a54e8f0183f4fffcb656a5d4b22a8c0203c4d4e
+Mode=Normal
+Mode Set By User=true
+Time=2024,10,11,15,24,34.219
+URL=file:///home/rochacbruno/Projects/galaxy_ng/dev/compose/Dockerfile.extension
+
+[file:///home/rochacbruno/Projects/galaxy_ng/dev/compose/bin/devinstall]
+Checksum=79167d1eeaa2a9ff60a739345ef73637a9408788
+Mode=Bash
+Mode Set By User=true
+Time=2024,10,11,13,10,55.347
+URL=file:///home/rochacbruno/Projects/galaxy_ng/dev/compose/bin/devinstall
+
+[file:///home/rochacbruno/Projects/galaxy_ng/dev/compose/bin/reloader]
+Checksum=90723be0bdbd398459b66b38db659a0f3de11217
+Mode=Bash
+Mode Set By User=true
+Time=2024,10,11,12,2,33.506
+URL=file:///home/rochacbruno/Projects/galaxy_ng/dev/compose/bin/reloader
+
+[file:///home/rochacbruno/Projects/marmite/assets/_resized/logo_160x120.png]
+Checksum=95f37344072b09b9c6128a5f64ffdf152bfe6fda
+Encoding=ISO-8859-1
+Time=2024,10,14,13,4,58.712
+URL=file:///home/rochacbruno/Projects/marmite/assets/_resized/logo_160x120.png
