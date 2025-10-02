@@ -4,8 +4,12 @@ bottom v0.8.0:
     btm
 broot v1.25.1:
     broot
+cargo-binstall v1.10.13:
+    cargo-binstall
 cargo-bump v1.1.0:
     cargo-bump
+cargo-clean-recursive v1.1.1:
+    cargo-clean-recursive
 cargo-deny v0.16.1:
     cargo-deny
 cargo-edit v0.13.0:
@@ -17,10 +21,18 @@ cargo-eval v0.1.0:
     cargo-eval
 cargo-expand v1.0.34:
     cargo-expand
+cargo-info v0.7.7:
+    cargo-info
+cargo-llvm-cov v0.6.18:
+    cargo-llvm-cov
 cargo-modules v0.7.1:
     cargo-modules
+cargo-nextest v0.9.102:
+    cargo-nextest
 cargo-show-asm v0.2.4:
     cargo-asm
+cargo-tarpaulin v0.31.2:
+    cargo-tarpaulin
 cargo-udeps v0.1.50:
     cargo-udeps
 cargo-unused-features v0.2.0:
@@ -33,6 +45,10 @@ daktilo v0.1.0:
     daktilo
     daktilo-completions
     daktilo-mangen
+docx-parser v0.1.1:
+    docx-parser
+drft v0.1.1:
+    drft
 evcxr v0.14.1:
     testing_runtime
 evcxr_repl v0.14.1:
@@ -41,8 +57,6 @@ fd-find v8.6.0:
     fd
 glues v0.3.2:
     glues
-helix-term v23.10.0 (/home/rochacbruno/Projects/helix/helix-term):
-    hx
 hyperfine v1.18.0:
     hyperfine
 i3-highlight-focused v0.1.0 (/home/rochacbruno/Projects/i3-highlight-focused):
@@ -53,7 +67,7 @@ jetp v0.1.1:
     jetp
 just v1.36.0:
     just
-kak-lsp v14.2.0-snapshot (/home/rochacbruno/.config/kak/plugins/kak-lsp):
+kak-lsp v18.2.0-snapshot (/home/rochacbruno/.config/kak/plugins/kak-lsp):
     kak-lsp
 kak-popup v0.4.1:
     kak-popup
@@ -65,10 +79,16 @@ kak-tree-sitter v0.4.6:
     kak-tree-sitter
 kakoune-toggler v2.1.0 (/home/rochacbruno/.config/kak/plugins/kakoune-toggler):
     kakoune-toggler
+kibi v0.2.2:
+    kibi
 ktsctl v0.3.2:
     ktsctl
 log-analyzer-pro v1.0.3:
     lap
+lychee v0.19.1:
+    lychee
+mask v0.11.6:
+    mask
 mdbook v0.4.25:
     mdbook
 mdbook-admonish v1.8.0:
@@ -87,15 +107,29 @@ mdbook-yml-header v0.1.0:
     mdbook-yml-header
 mdcat v0.25.1:
     mdcat
+onefetch v2.25.0:
+    onefetch
 openapi-tui v0.3.0:
     openapi-tui
 ox v0.2.7 (https://github.com/curlpipe/ox#086f6653):
     ox
+presenterm v0.15.1 (/home/rochacbruno/Projects/presenterm):
+    presenterm
+rioterm v0.2.17:
+    rio
+rustowl v0.1.4:
+    cargo-owl
+    cargo-owlsp
+    rustowlc
 simple-completion-language-server v0.1.0 (/home/rochacbruno/Projects/simple-completion-language-server):
     simple-completion-language-server
+systemd-manager-tui v1.0.3:
+    systemd-manager-tui
 taplo-cli v0.8.1:
     taplo
 teetty v0.2.0:
     teetty
 when-cli v0.4.0:
     when
+zee v0.4.0:
+    zee
