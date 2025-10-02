@@ -135,6 +135,49 @@ dotfiles:
     src: config/kglobalshortcutsrc
     dst: ~/.config/kglobalshortcutsrc
     chmod: '600'
+  d_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
+  f_current-theme.conf:
+    src: config/kitty/current-theme.conf
+    dst: ~/.config/kitty/current-theme.conf
+  f_dark-theme.auto.conf:
+    src: config/kitty/dark-theme.auto.conf
+    dst: ~/.config/kitty/dark-theme.auto.conf
+  f_kitty.commented.conf:
+    src: config/kitty/kitty.commented.conf
+    dst: ~/.config/kitty/kitty.commented.conf
+  f_kitty.conf:
+    src: config/kitty/kitty.conf
+    dst: ~/.config/kitty/kitty.conf
+  f_kitty.conf.bak:
+    src: config/kitty/kitty.conf.bak
+    dst: ~/.config/kitty/kitty.conf.bak
+    chmod: '600'
+  d_kitty_search:
+    src: config/kitty/kitty_search
+    dst: ~/.config/kitty/kitty_search
+  f_light-theme.auto.conf:
+    src: config/kitty/light-theme.auto.conf
+    dst: ~/.config/kitty/light-theme.auto.conf
+  f_no-preference-theme.auto.conf:
+    src: config/kitty/no-preference-theme.auto.conf
+    dst: ~/.config/kitty/no-preference-theme.auto.conf
+  f_open-actions.conf:
+    src: config/kitty/open-actions.conf
+    dst: ~/.config/kitty/open-actions.conf
+  f_purify.conf:
+    src: config/kitty/purify.conf
+    dst: ~/.config/kitty/purify.conf
+  f_quick-access-terminal.conf:
+    src: config/kitty/quick-access-terminal.conf
+    dst: ~/.config/kitty/quick-access-terminal.conf
+  f_quick.conf:
+    src: config/kitty/quick.conf
+    dst: ~/.config/kitty/quick.conf
+  f_session.vim:
+    src: config/kitty/Session.vim
+    dst: ~/.config/kitty/Session.vim
 profiles:
   rocha:
     dotfiles:
@@ -170,3 +213,17 @@ profiles:
     - d_katepart
     - d_kateproject
     - f_kglobalshortcutsrc
+    - d_kitty
+    - f_current-theme.conf
+    - f_dark-theme.auto.conf
+    - f_kitty.commented.conf
+    - f_kitty.conf
+    - f_kitty.conf.bak
+    - d_kitty_search
+    - f_light-theme.auto.conf
+    - f_no-preference-theme.auto.conf
+    - f_open-actions.conf
+    - f_purify.conf
+    - f_quick-access-terminal.conf
+    - f_quick.conf
+    - f_session.vim
